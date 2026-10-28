@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="theme-color" content="#fff4e0">
+<title>Session 1 – Sounds and words</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#fff4e0;--bg2:#ffe1ec;--ink:#2b2340;--muted:#7a6f8a;--btn:#ff7a45;--btn2:#ff5a7a;--ok:#2fb36d;--line:#e6dcef}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%}
+body{font-family:Lexend,system-ui,sans-serif;color:var(--ink);font-size:18px;line-height:1.35;
+  background:linear-gradient(170deg,var(--bg1),var(--bg2)) fixed}
+#app{display:flex;flex-direction:column;min-height:100dvh}
+#top{padding:max(10px,env(safe-area-inset-top)) 16px 6px}
+#blk{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;min-height:17px}
+#bar{height:8px;background:rgba(0,0,0,.08);border-radius:8px;margin-top:6px;overflow:hidden}
+#barfill{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--btn),var(--btn2));transition:width .3s}
+#main{flex:1;padding:8px 16px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+#main.top{justify-content:flex-start}
+#bottom{position:sticky;bottom:0;padding:10px 16px max(14px,env(safe-area-inset-bottom));background:rgba(255,255,255,.78);
+  backdrop-filter:blur(6px);border-top:1px solid var(--line)}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+h1{font-size:28px;margin:0 0 10px;font-weight:800}
+p{margin:0 0 12px}
+.muted{color:var(--muted);font-size:16px}
+.count{font-size:15px;color:var(--muted);margin-bottom:10px}
+.emoji{font-size:64px;margin-bottom:6px}
+.primary{width:100%;min-height:56px;border-radius:16px;color:#fff;font-weight:800;font-size:22px;
+  background:linear-gradient(135deg,var(--btn),var(--btn2));box-shadow:0 6px 16px rgba(255,90,122,.3)}
+.primary:active{transform:scale(.98)}
+.primary:disabled{opacity:.45}
+.ghost{min-height:48px;padding:0 16px;border-radius:14px;border:2px solid var(--line);background:#fff;font-weight:600;font-size:16px;color:var(--muted)}
+.word{font-size:52px;font-weight:800;letter-spacing:.02em;margin:10px 0}
+.spk{min-width:72px;min-height:72px;border-radius:50%;font-size:34px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.12);margin:6px 0 14px}
+.spk:active{transform:scale(.94)}
+.opts{display:flex;gap:12px;width:100%;justify-content:center;margin-top:8px}
+.opt{flex:1;max-width:110px;min-height:96px;border-radius:20px;background:#fff;font-size:52px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.opt:active{background:#ffe9d9}
+.q{font-size:22px;font-weight:600;margin:0 0 6px}
+.say{font-size:20px;font-weight:600}
+.toast{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:800;
+  background:rgba(255,244,224,.92);z-index:5;animation:pop .5s ease}
+@keyframes pop{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:none}}
+/* parent panel */
+.parent{border:2px dashed #b9a8d6;border-radius:16px;padding:10px;background:#fff}
+.plabel{font-size:12px;font-weight:700;color:#6b5a8a;margin-bottom:8px;text-align:left;letter-spacing:.05em}
+.prow{display:flex;gap:8px}
+.pb{flex:1;min-height:56px;border-radius:14px;font-size:22px;font-weight:800;color:#fff}
+.pb.ok{background:var(--ok)}.pb.no{background:#d9822b}.pb.sk{background:#9a92a8;font-size:16px;flex:.6}
+.pb.slow{background:#e0a21a;font-size:18px}.pb.part{background:#e0a21a;font-size:18px}.pb.fl{background:#6a8fd8;font-size:15px;line-height:1.1}
+.pb.mini{min-height:48px;font-size:16px}
+.said{flex:1;min-width:0;min-height:44px;border:2px solid var(--line);border-radius:12px;padding:0 10px;font:inherit;font-size:16px;margin-top:8px}
+.undo{min-width:52px;min-height:44px;margin-top:8px;border-radius:12px;border:2px solid var(--line);background:#fff;font-size:20px}
+.hint{font-size:14px;color:var(--muted);margin:8px 0 0;text-align:left}
+/* cards & forms (parent screens) */
+.card{background:#fff;border-radius:18px;padding:14px 16px;text-align:left;width:100%;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.card h2{font-size:17px;margin:0 0 8px}
+.card ul{margin:0;padding-left:20px;font-size:16px}
+.card li{margin-bottom:6px}
+label{display:block;font-size:15px;font-weight:600;margin:10px 0 4px;text-align:left}
+select,input[type=text],textarea{width:100%;min-height:48px;border:2px solid var(--line);border-radius:12px;padding:8px 10px;font:inherit;font-size:17px;background:#fff;color:var(--ink)}
+textarea{min-height:90px}
+.typebox{font-size:40px;text-align:center;font-weight:800;letter-spacing:.04em;min-height:76px;margin-top:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:6px 14px;border-radius:22px;border:2px solid var(--line);background:#fff;font-size:15px}
+.chip.on{background:#ffe1ec;border-color:var(--btn2);font-weight:600}
+.emojis{display:flex;gap:14px;justify-content:center;margin-top:10px}
+.emojis button{font-size:56px;min-width:88px;min-height:88px;border-radius:24px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.emojis button:active{transform:scale(.92)}
+/* letters grid */
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;width:100%;margin:6px 0 4px}
+.tile{aspect-ratio:1;min-height:56px;border-radius:14px;background:#fff;border:2px solid var(--line);font-size:34px;font-weight:800;position:relative}
+.tile.s1{background:#c9f0d9;border-color:var(--ok)}
+.tile.s2{background:#ffe3a8;border-color:#e0a21a}
+.tile.s2::after{content:"name";position:absolute;bottom:2px;left:0;right:0;font-size:10px;font-weight:600;color:#8a5f00}
+table{border-collapse:collapse;width:100%;font-size:14px}
+td,th{padding:4px 6px;border-bottom:1px solid var(--line);text-align:left}
+td.n,th.n{text-align:right;white-space:nowrap}
+.low{color:#c0561b;font-weight:700}.good{color:#1f8f55;font-weight:700}
+@media (prefers-reduced-motion:reduce){.toast{animation:none}}
+</style>
+</head>
+<body>
+<div id="app">
+  <header id="top"><div id="blk"></div><div id="bar"><i id="barfill"></i></div></header>
+  <main id="main"></main>
+  <footer id="bottom"></footer>
+</div>
+
+<script>
+(() => {
+"use strict";
+
+/* ====================================================================
+   Session 1 – Baseline: sounds and words  (schema deniz-session/1)
+   ==================================================================== */
+const KEY = "deniz-s01-v1";
+const SESSION = 1;
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const now = () => new Date().toISOString();
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+
+/* ---------- speech (en-AU preferred) ---------- */
+let voice = null;
+function pickVoice() {
+  try { const vs = speechSynthesis.getVoices();
+    voice = vs.find(v => /^en[-_]AU/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang)) || null; } catch (e) {}
+}
+try { speechSynthesis.onvoiceschanged = pickVoice; pickVoice(); } catch (e) {}
+function say(text, rate) {
+  try {
+    if (!window.speechSynthesis) return;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    if (voice) u.voice = voice;
+    u.lang = (voice && voice.lang) || "en-AU";
+    u.rate = rate || 0.85;
+    speechSynthesis.speak(u);
+  } catch (e) {}
+}
+
+/* ---------- wake lock ---------- */
+let wl = null;
+async function wake() { try { if ("wakeLock" in navigator) wl = await navigator.wakeLock.request("screen"); } catch (e) {} }
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible" && S.started_at && !S.exported) wake();
+});
+
+/* ---------- state (autosaved) ---------- */
+const fresh = () => ({ v: 1, pos: 0, steps: [], ctx: {}, started_at: null, letters: {}, feeling: null, obs: [], note: "", exported: false });
+function load() { try { const s = JSON.parse(localStorage.getItem(KEY)); return s && s.v === 1 ? s : null; } catch (e) { return null; } }
+function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+let S = load() || fresh();
+
+/* ====================================================================
+   CONTENT
+   ==================================================================== */
+const mk = words => words.map(w => ({ prompt: w, expected: w }));
+
+// Warm-up: hear a word, tap the first letter  [word, letter, distractors...]
+const WARM = [["sun","s","p","l"],["map","m","t","g"],["top","t","n","b"],["hat","h","d","k"],
+              ["net","n","r","f"],["pig","p","s","w"],["can","c","m","j"],["dog","d","h","y"]]
+  .map(a => ({ prompt: a[0], expected: a[1], options: [a[1], a[2], a[3]] }));
+
+// Letter sounds grid (mixed order, lower case)
+const LETTERS = "satpinmdgockeubhfrljwvyzxq".split("");
+
+// Block A – real-word phonics groups, easiest to hardest
+const GROUPS = [
+  { key: "cvc",        skills: ["ph1"],  label: "Short vowel words",        words: ["mat","pig","hot","bun","wet","dig"] },
+  { key: "digraphs",   skills: ["ph2"],  label: "Digraphs sh ch th",        words: ["ship","chat","thin","shop","much","wish"] },
+  { key: "blends",     skills: ["ph3"],  label: "Consonant blends",         words: ["frog","stop","jump","nest","clap","swim"] },
+  { key: "split",      skills: ["ph4"],  label: "Split digraphs (magic e)", words: ["cake","time","hope","tune","kite","bone"] },
+  { key: "teams",      skills: ["ph5"],  label: "Long vowel teams",         words: ["rain","feet","boat","play","team","snow"] },
+  { key: "rcontrol",   skills: ["ph6"],  label: "R-controlled vowels",      words: ["car","fork","girl","turn","shark","storm"] },
+  { key: "diphthongs", skills: ["ph7"],  label: "Diphthongs",               words: ["out","boy","cow","coin","house","down"] },
+  { key: "twosyl",     skills: ["ph10"], label: "Two-syllable words",       words: ["rabbit","sunset","window","picnic","garden","pencil"] },
+  { key: "endings",    skills: ["ph11"], label: "Words with endings",       words: ["jumped","hopping","played","boxes","smallest","carried"] },
+  { key: "trigraphs",  skills: ["ph8"],  label: "Trigraphs / quadgraphs",   words: ["light","high","catch","bridge","eight","fudge"] },
+  { key: "uncommon",   skills: ["ph9"],  label: "Less common spellings",    words: ["knee","write","phone","wrap","climb","ghost"] }
+];
+const PSEUDO = ["sib","vop","chim","blen","dack","fape","loat","perd","shub","trin"];
+
+// Block B – high-frequency words in three tiers
+const TIERS = [
+  { key: "t1", label: "Sight words 1", words: ["the","and","said","you","was","they","are","have","one","we","my","like","go","she","for","of","his","no","do","so"] },
+  { key: "t2", label: "Sight words 2", words: ["when","what","where","there","their","were","some","come","little","people","would","could","friend","again","because","which","going","want","put","school"] },
+  { key: "t3", label: "Sight words 3", words: ["thought","through","enough","always","together","another","different","every","beautiful","answer","mother","laugh","whole","once","great","world","sometimes","children","important","early"] }
+];
+
+// Block C – meaning (word is also spoken so this is NOT a reading test)
+const MEANING = [["hungry","vo1"],["tired","vo1"],["freezing","vo1"],["whisper","vo2"],["enormous","vo2"],["curious","vo2"],["gentle","vo2"],["borrow","vo2"]]
+  .map(a => ({ prompt: a[0], expected: a[0], skills: [a[1]] }));
+
+// Block C – dictated spelling, typed  [word, sentence, skills]
+const SPELL = [
+  ["pig","The pig is in the mud.",["sp1"]], ["ship","The ship is big.",["sp1","sp3"]], ["jump","I can jump high.",["sp1"]],
+  ["rain","I like the rain.",["sp3"]], ["cake","We ate the cake.",["sp3"]], ["said","She said hello.",["sp2"]],
+  ["because","I am happy because it is sunny.",["sp2"]], ["little","A little dog ran by.",["sp2","sp4"]],
+  ["kicked","He kicked the ball.",["sp8"]], ["catch","Let us catch the bus.",["sp5"]]
+].map(a => ({ prompt: a[0], expected: a[0], sentence: a[1], skills: a[2] }));
+
+/* ====================================================================
+   FLOW
+   ==================================================================== */
+const flow = [];
+const scr = (id, label, w, render) => flow.push({ kind: "screen", id, label, w, render });
+const stp = o => flow.push(Object.assign({ kind: "step" }, o));
+
+scr("setup", "Parent setup", 0, renderSetup);
+scr("intro", "Welcome", 4, renderIntro);
+stp({ id: "s1-warmup", label: "Warm-up", skills: ["ph1"], mode: "auto", type: "pick", w: 90, items: WARM, count: true,
+      note: "Hear a word, tap its first letter (auto-scored). Evidence of initial-sound + letter link." });
+scr("introLetters", "Letter sounds", 4, d => blockIntro(d, "🔤", "Letter sounds", "Say the sound each letter makes.",
+      "Parent: Deniz says the SOUND each letter makes (like /s/ for s), not its name."));
+stp({ id: "s1-letters", label: "Letter sounds", skills: ["ph1"], mode: "parent", type: "letters", w: 120,
+      note: "Parent-scored grid. response: sound | name (said letter name only) | none." });
+scr("introA", "Reading words", 4, d => blockIntro(d, "📖", "Read the words", "Read each word out loud. If it is tricky, just have a go!",
+      "Parent: no hints. Self-corrections count as ✓. If she is stuck for about 5 seconds tap ✗."));
+GROUPS.forEach(g => stp({ id: "s1-" + g.key, label: "Reading words", skills: g.skills, mode: "parent", type: "read", w: 33,
+      items: mk(g.words), rule: "group", note: g.label }));
+scr("introPseudo", "Made-up words", 4, d => blockIntro(d, "👽", "Words from planet Zog", "These are silly made-up words. Read them the way they sound!",
+      "Parent: any sensible way of sounding the word out counts ✓ (e.g. sib = sib, vop = vop)."));
+stp({ id: "s1-pseudo", label: "Made-up words", skills: ["ph12"], mode: "parent", type: "read", w: 70, items: mk(PSEUDO), rule: "pseudo",
+      note: "Nonsense words: pure decoding, no memory or guessing." });
+scr("break1", "Break", 15, renderBreak);
+TIERS.forEach(t => stp({ id: "s1-hf-" + t.key, label: "Quick words", skills: ["fl1"], mode: "parent", type: "hf", w: 90,
+      items: mk(t.words), rule: "tier", note: t.label }));
+scr("break2", "Break", 15, renderBreak);
+scr("introMeaning", "Word meanings", 4, d => blockIntro(d, "💬", "What does it mean?", "I will tell you a word. Tell me what it means.",
+      "Parent: acting it out or a simple description is fine. The word is spoken aloud, so this is about meaning, not reading."));
+stp({ id: "s1-meaning", label: "Word meanings", skills: ["vo1", "vo2"], mode: "parent", type: "meaning", w: 130, items: MEANING, count: true,
+      note: "Spoken word; parent judges whether Deniz knows the meaning." });
+scr("introSpell", "Spelling", 4, d => blockIntro(d, "⌨️", "Type the word", "Listen to the word. Then type it with the keyboard.",
+      "Parent: predictive text and auto-correct must be OFF. Don't spell for her; 'I don't know' is fine."));
+stp({ id: "s1-spelling", label: "Spelling", skills: ["sp1", "sp2", "sp3", "sp4", "sp5", "sp8", "hw6"], mode: "auto", type: "spell", w: 240,
+      items: SPELL, count: true, note: "Dictated words typed on the phone keyboard (auto-scored exact match; review the raw responses)." });
+scr("finishChild", "All done", 0, renderFinishChild);
+scr("finishParent", "Parent wrap-up", 0, renderFinishParent);
+
+const TOTAL_W = flow.reduce((a, e) => a + (e.w || 0), 0);
+
+/* ====================================================================
+   ENGINE
+   ==================================================================== */
+let H = {}, lock = false, t0 = 0;
+document.addEventListener("click", ev => {
+  const b = ev.target.closest("[data-act]");
+  if (!b || b.disabled) return;
+  const f = H[b.dataset.act];
+  if (f) f(b, ev);
+});
+function screen(label, main, bottom, acts, topAlign) {
+  H = acts || {}; lock = false; t0 = Date.now();
+  $("#blk").textContent = label || "";
+  const m = $("#main"); m.innerHTML = main; m.className = topAlign ? "top" : "";
+  const b = $("#bottom"); b.innerHTML = bottom || ""; b.style.display = bottom ? "" : "none";
+  window.scrollTo(0, 0);
+}
+function updateBar(frac) {
+  let done = 0;
+  for (let i = 0; i < S.pos && i < flow.length; i++) done += flow[i].w || 0;
+  const e = flow[S.pos];
+  if (e) done += (e.w || 0) * (frac || 0);
+  $("#barfill").style.width = Math.min(100, Math.round(done / TOTAL_W * 100)) + "%";
+}
+function stepRec(e) {
+  let r = S.steps.find(x => x.id === e.id);
+  if (!r) {
+    r = { id: e.id, skills: e.skills, mode: e.mode, label: e.label, started_at: now(), duration_sec: 0, items: [], notes: e.note || "" };
+    S.steps.push(r);
+  }
+  return r;
+}
+const shown = r => r.items.filter(i => !i.notShown && !i.skipped);
+const itemScore = i => i.score != null ? i.score : (i.correct ? 1 : 0);
+const isStep = e => e && e.kind === "step";
+
+function preSkip(e) {
+  if (e.rule === "group") {
+    const g = flow.filter(x => x.rule === "group"), i = g.indexOf(e);
+    if (i >= 3) {
+      const prev = g.slice(i - 3, i).map(x => S.steps.find(r => r.id === x.id));
+      if (prev.every(r => r && r.stopped_early)) return true;
+    }
+  }
+  if (e.rule === "pseudo") {
+    const r = S.steps.find(x => x.id === "s1-cvc"); if (r && r.stopped_early) return true;
+  }
+  if (e.rule === "tier") {
+    const t = flow.filter(x => x.rule === "tier"), i = t.indexOf(e);
+    if (i > 0) { const r = S.steps.find(x => x.id === t[i - 1].id); if (r && r.stopped_early) return true; }
+  }
+  return false;
+}
+function fillNotShown(e, rec, why) {
+  for (let i = rec.items.length; i < e.items.length; i++) {
+    const it = e.items[i];
+    rec.items.push({ prompt: it.prompt, expected: it.expected, response: null, correct: false, attempts: 0, ms: 0, skipped: true, notShown: true });
+  }
+  rec.stopped_early = why;
+}
+function applyRule(e, rec) {
+  const s = shown(rec), c = s.filter(i => i.correct).length;
+  if (rec.items.length >= e.items.length) return;
+  if (e.rule === "group" && s.length >= 4 && c <= 1) fillNotShown(e, rec, "group too hard (<=1 of first " + s.length + " correct)");
+  if (e.rule === "tier" && s.length >= 10 && c <= 2) fillNotShown(e, rec, "tier too hard (<=2 of first 10 correct)");
+}
+
+function go() {
+  if (S.pos >= flow.length) return;
+  const e = flow[S.pos];
+  if (e.kind === "screen") {
+    updateBar(0);
+    e.render(() => { S.pos++; save(); go(); });
+    return;
+  }
+  const rec = stepRec(e);
+  if (rec.items.length === 0 && preSkip(e)) { fillNotShown(e, rec, "halted after earlier steps were too hard"); save(); S.pos++; return go(); }
+  if (e.type === "letters") {
+    if (rec.items.length >= LETTERS.length) { S.pos++; save(); return go(); }
+    updateBar(0); return renderLetters(e, rec);
+  }
+  if (rec.items.length >= e.items.length) { S.pos++; save(); return go(); }
+  updateBar(rec.items.length / e.items.length);
+  const idx = rec.items.length;
+  ({ pick: renderPick, read: renderRead, hf: renderHF, meaning: renderMeaning, spell: renderSpell })[e.type](e, rec, idx);
+}
+function record(e, rec, item, after) {
+  if (lock) return; lock = true;
+  rec.items.push(item);
+  applyRule(e, rec);
+  rec.duration_sec = Math.round(rec.items.reduce((a, i) => a + (i.ms || 0), 0) / 1000);
+  save();
+  after ? after() : go();
+}
+function cheer(msg, then) {
+  const d = document.createElement("div"); d.className = "toast"; d.textContent = msg; document.body.appendChild(d);
+  setTimeout(() => { d.remove(); then(); }, 650);
+}
+const counter = (e, idx) => e.count ? `<div class="count">${idx + 1} of ${e.items.length}</div>` : "";
+
+/* ---------- undo (parent-scored steps only) ---------- */
+function canUndo() {
+  for (let p = S.pos; p >= 0; p--) {
+    const e = flow[p]; if (!isStep(e) || e.mode !== "parent" || e.type === "letters") continue;
+    const r = S.steps.find(x => x.id === e.id);
+    if (r && r.items.some(i => !i.notShown)) return true;
+  }
+  return false;
+}
+function undo() {
+  for (let p = S.pos; p >= 0; p--) {
+    const e = flow[p]; if (!isStep(e) || e.mode !== "parent" || e.type === "letters") continue;
+    const r = S.steps.find(x => x.id === e.id); if (!r) continue;
+    while (r.items.length && r.items[r.items.length - 1].notShown) r.items.pop();
+    if (!r.items.length) { S.steps = S.steps.filter(x => x !== r); continue; }
+    r.items.pop(); delete r.stopped_early;
+    S.pos = p; save(); return go();
+  }
+}
+const undoBtn = () => canUndo() ? `<button class="undo" data-act="undo" aria-label="Undo last">↩</button>` : "";
+
+/* ====================================================================
+   SCREENS
+   ==================================================================== */
+function sel(id, label, opts, val) {
+  return `<label for="${id}">${label}</label><select id="${id}">${opts.map(o => `<option value="${esc(o[0])}"${o[0] === val ? " selected" : ""}>${esc(o[1])}</option>`).join("")}</select>`;
+}
+function renderSetup(done) {
+  const c = S.ctx || {};
+  screen("Parent setup", `
+    <h1 style="font-size:24px">Session 1 · Sounds and words</h1>
+    <p class="muted" style="margin-bottom:10px">About 30 minutes. Progress saves automatically, so you can stop if she is tired.</p>
+    <div class="card"><h2>Before you start</h2><ul>
+      <li>🔊 Volume up, quiet room. <button class="ghost" style="min-height:36px;padding:0 10px" data-act="test">Test sound</button></li>
+      <li>⌨️ Samsung Keyboard: turn <b>Predictive text</b> and <b>Auto-correct</b> off.</li>
+      <li>👤 Sit beside her. You tap ✓ / ✗ for words she reads aloud. <b>No hints</b>, and stay relaxed. It is a game, not a test.</li>
+      <li>⏱ If she is stuck for about 5 seconds, tap ✗ and move on. ↩ undoes your last tap.</li>
+    </ul></div>
+    <div class="card"><h2>A few quick questions (optional)</h2>
+      ${sel("c_home", "How often does Deniz read at home?", [["","Choose…"],["daily","Most days"],["weekly","A few times a week"],["rarely","Rarely"]], c.home_reading)}
+      ${sel("c_l1", "Does she read in her first language?", [["","Choose…"],["fluent","Yes, fairly well"],["some","A little"],["no","Not yet"]], c.first_language_reading)}
+      ${sel("c_eye", "Any vision or hearing concerns?", [["","Choose…"],["none","No"],["vision","Vision"],["hearing","Hearing"],["both","Both / not sure"]], c.vision_hearing)}
+      <label for="c_t">What the school has told you (phonics check result, EAL/D phase, reading level)</label>
+      <input type="text" id="c_t" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" value="${esc(c.teacher_info || "")}">
+    </div>`,
+    `<button class="primary" data-act="go">Hand the phone to Deniz ➜</button>`,
+    {
+      test: () => say("Hello Deniz! Can you hear me?"),
+      go: () => {
+        S.ctx = { home_reading: $("#c_home").value || null, first_language_reading: $("#c_l1").value || null,
+                  vision_hearing: $("#c_eye").value || null, teacher_info: $("#c_t").value.trim() || null };
+        if (!S.started_at) S.started_at = now();
+        wake(); save(); done();
+      }
+    }, true);
+}
+function renderIntro(done) {
+  const msg = "Hi Deniz! Let's play some word games. Do your best. It's okay if some are tricky!";
+  screen("Welcome", `<div class="emoji">👋</div><h1>Hi Deniz!</h1><p class="say">Let's play some word games.<br>Do your best. It's okay if some are tricky!</p>
+    <button class="spk" data-act="spk">🔊</button>`,
+    `<button class="primary" data-act="next">Let's go! ➜</button>`,
+    { spk: () => say(msg), next: () => { say(""); done(); } });
+}
+function blockIntro(done, emoji, title, text, parentTip) {
+  screen(title, `<div class="emoji">${emoji}</div><h1>${esc(title)}</h1><p class="say">${esc(text)}</p>
+    <button class="spk" data-act="spk">🔊</button>
+    <div class="parent" style="margin-top:8px"><div class="plabel">👤 PARENT</div><div class="hint" style="margin:0">${esc(parentTip)}</div></div>`,
+    `<button class="primary" data-act="next">Ready ➜</button>`,
+    { spk: () => say(text), next: () => { speechCancel(); done(); } });
+}
+function speechCancel() { try { speechSynthesis.cancel(); } catch (e) {} }
+function renderBreak(done) {
+  screen("Break", `<div class="emoji">🌈</div><h1>Brain break!</h1><p class="say">Stand up, stretch, and have a drink of water. 💧</p>
+    <p class="muted">Take a minute or two. Tap when you are ready.</p>`,
+    `<button class="primary" data-act="next">I'm ready ➜</button>`, { next: done });
+}
+
+/* ---------- warm-up: hear word, tap first letter ---------- */
+function renderPick(e, rec, idx) {
+  const it = e.items[idx], opts = shuffle(it.options);
+  screen(e.label, `${counter(e, idx)}<p class="q">What letter does it start with?</p>
+    <button class="spk" data-act="spk">🔊</button>
+    <div class="opts">${opts.map(o => `<button class="opt" data-act="opt" data-v="${o}">${o}</button>`).join("")}</div>`,
+    "", {
+      spk: () => say(it.prompt, 0.8),
+      opt: b => record(e, rec, { prompt: it.prompt, expected: it.expected, response: b.dataset.v, options: it.options,
+        correct: b.dataset.v === it.expected, attempts: 1, ms: Date.now() - t0, skipped: false }, () => cheer("⭐ Nice!", go))
+    });
+  setTimeout(() => say(it.prompt, 0.8), 350);
+}
+
+/* ---------- letters grid (parent taps) ---------- */
+function renderLetters(e, rec) {
+  const st = S.letters || (S.letters = {});
+  const draw = () => LETTERS.map(l => `<button class="tile s${st[l] || 0}" data-act="tile" data-l="${l}">${l}</button>`).join("");
+  const counts = () => { const v = Object.values(st); return `${v.filter(x => x === 1).length} sounds · ${v.filter(x => x === 2).length} names only`; };
+  screen(e.label, `<p class="q" style="margin-bottom:4px">Say the SOUND of each letter</p>
+    <div class="grid" id="grid">${draw()}</div>`,
+    `<div class="parent"><div class="plabel">👤 PARENT – tap once = said the sound ✓ · twice = said the letter NAME only · blank = didn't know</div>
+     <div class="prow"><button class="pb ok" data-act="done" id="doneBtn">Done · ${counts()}</button></div></div>`,
+    {
+      tile: b => { const l = b.dataset.l; st[l] = ((st[l] || 0) + 1) % 3; b.className = "tile s" + st[l]; save(); $("#doneBtn").textContent = "Done · " + counts(); },
+      done: () => {
+        if (lock) return; lock = true;
+        const ms = Date.now() - t0;
+        rec.items = LETTERS.map(l => ({ prompt: l, expected: "sound of " + l, response: ["none", "sound", "name"][st[l] || 0],
+          correct: st[l] === 1, attempts: 1, ms: null, skipped: false }));
+        rec.duration_sec = Math.round(ms / 1000);
+        save(); go();
+      }
+    });
+}
+
+/* ---------- parent-scored reading ---------- */
+function readPanel(buttons, extra) {
+  return `<div class="parent"><div class="plabel">👤 PARENT – did she read it?</div>
+    <div class="prow">${buttons}</div>
+    <div class="prow"><input class="said" id="said" placeholder="She said… (optional)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done">${undoBtn()}</div></div>`;
+}
+function saidVal() { const v = $("#said"); return v ? v.value.trim() : ""; }
+function renderRead(e, rec, idx) {
+  const it = e.items[idx];
+  const finish = (res) => record(e, rec, { prompt: it.prompt, expected: it.expected, response: res === "skip" ? null : (saidVal() || (res === "ok" ? it.expected : null)),
+    correct: res === "ok", attempts: 1, ms: Date.now() - t0, skipped: res === "skip" });
+  screen(e.label, `<div class="word">${esc(it.prompt)}</div>`,
+    readPanel(`<button class="pb ok" data-act="ok">✓</button><button class="pb no" data-act="no">✗</button><button class="pb sk" data-act="sk">skip</button>`),
+    { ok: () => finish("ok"), no: () => finish("no"), sk: () => finish("skip"), undo });
+}
+function renderHF(e, rec, idx) {
+  const it = e.items[idx];
+  const finish = (res) => record(e, rec, { prompt: it.prompt, expected: it.expected,
+    response: res === "skip" ? null : (saidVal() || (res === "quick" || res === "slow" ? it.expected : null)),
+    correct: res === "quick" || res === "slow", quality: res === "skip" ? null : res, attempts: 1, ms: Date.now() - t0, skipped: res === "skip" });
+  screen(e.label, `<div class="word">${esc(it.prompt)}</div>`,
+    readPanel(`<button class="pb ok" data-act="quick">✓ Quick</button><button class="pb slow" data-act="slow">🐢 Slow</button><button class="pb no" data-act="no">✗</button><button class="pb sk" data-act="sk">skip</button>`),
+    { quick: () => finish("quick"), slow: () => finish("slow"), no: () => finish("wrong"), sk: () => finish("skip"), undo });
+  const hint = document.createElement("div");
+}
+function renderMeaning(e, rec, idx) {
+  const it = e.items[idx];
+  const finish = (res) => {
+    const score = { yes: 1, part: 0.5, l1: 0.5, no: 0 }[res];
+    record(e, rec, { prompt: it.prompt, expected: "knows meaning", response: res, correct: res === "yes", score,
+      skills: it.skills, attempts: 1, ms: Date.now() - t0, skipped: res === "skip" });
+  };
+  screen(e.label, `${counter(e, idx)}<p class="q">What does this word mean?</p><div class="word" style="font-size:44px">${esc(it.prompt)}</div>
+    <button class="spk" data-act="spk">🔊</button>`,
+    `<div class="parent"><div class="plabel">👤 PARENT – ask “What does ${esc(it.prompt)} mean?” (acting it out is fine)</div>
+      <div class="prow"><button class="pb ok" data-act="yes">✓ Knows</button><button class="pb part" data-act="part">~ Partly</button></div>
+      <div class="prow" style="margin-top:8px"><button class="pb fl" data-act="l1">🗣 Knows it,<br>not in English</button><button class="pb no" data-act="no">✗ No</button></div>
+      <div class="prow" style="justify-content:flex-end">${undoBtn()}</div></div>`,
+    { spk: () => say(it.prompt, 0.8), yes: () => finish("yes"), part: () => finish("part"), l1: () => finish("l1"), no: () => finish("no"), undo });
+  setTimeout(() => say(it.prompt, 0.8), 350);
+}
+
+/* ---------- typed spelling ---------- */
+function renderSpell(e, rec, idx) {
+  const it = e.items[idx];
+  const speakAll = () => say(`${it.prompt}. ${it.sentence} ${it.prompt}.`, 0.8);
+  const submit = (dk) => {
+    const box = $("#sp"), val = (box.value || "").trim();
+    record(e, rec, { prompt: it.prompt, sentence: it.sentence, expected: it.expected, response: dk ? "" : val,
+      correct: !dk && val.toLowerCase() === it.expected, skills: it.skills, attempts: 1, ms: Date.now() - t0, skipped: false,
+      note: dk ? "dont_know" : undefined }, () => cheer("⭐ Thanks!", go));
+  };
+  screen(e.label, `${counter(e, idx)}<p class="q">Listen, then type the word</p>
+    <button class="spk" data-act="spk">🔊</button>
+    <input class="typebox" id="sp" type="text" inputmode="text" enterkeyhint="done" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="Type the word">`,
+    `<div class="prow"><button class="ghost" data-act="dk" style="flex:.7">I don't know</button><button class="primary" data-act="sub" style="flex:1.3">Next ➜</button></div>`,
+    { spk: () => { speakAll(); const b = $("#sp"); if (b) b.focus(); }, sub: () => submit(false), dk: () => submit(true) });
+  $("#sp").addEventListener("keydown", ev => { if (ev.key === "Enter") { ev.preventDefault(); submit(false); } });
+  setTimeout(() => { speakAll(); const b = $("#sp"); if (b) b.focus(); }, 400);
+}
+
+/* ---------- finish ---------- */
+function renderFinishChild(done) {
+  screen("All done", `<div class="emoji">🎉</div><h1>All done, Deniz!</h1><p class="say">You worked so hard.<br>How did that feel?</p>
+    <div class="emojis"><button data-act="f" data-v="great" aria-label="Great">😀</button><button data-act="f" data-v="ok" aria-label="OK">🙂</button><button data-act="f" data-v="hard" aria-label="Hard">😓</button></div>`,
+    "", { f: b => { S.feeling = b.dataset.v; save(); done(); } });
+}
+const OBS = ["Sounds out letter by letter", "Guesses from the first letter", "Mixes up b / d / p / q", "Skips or swaps small words",
+  "Reads smoothly when she knows the word", "Self-corrects", "Needed lots of encouragement", "Got tired or distracted",
+  "Seemed worried about getting it wrong", "Proud and engaged", "Knew the idea but not the English word"];
+function renderFinishParent() {
+  const res = buildResult(), sm = res.summary;
+  const pc = v => v == null ? "–" : `<span class="${v >= 80 ? "good" : v < 50 ? "low" : ""}">${v}%</span>`;
+  const row = (name, o) => `<tr><td>${esc(name)}</td><td class="n">${o ? o.correct + "/" + o.total : "–"}</td><td class="n">${pc(o ? o.pct : null)}</td></tr>`;
+  const rows = sm.phonics_groups.map(g => row(g.label + (g.stopped_early ? " (stopped)" : ""), g))
+    .concat([row("Made-up words", sm.pseudo)]).concat(sm.hf_tiers.map(t => row(t.label + (t.quick_pct != null ? " · quick " + t.quick_pct + "%" : ""), t)))
+    .concat([row("Word meanings", sm.meaning), row("Spelling (typed)", sm.spelling)]).join("");
+  screen("Parent wrap-up", `
+    <h1 style="font-size:24px">Well done! 🎉</h1>
+    <div class="card"><h2>Quick view (indicative only)</h2>
+      <p style="font-size:16px;margin:0 0 6px"><b>Letter sounds:</b> ${sm.letters.sound}/26 sounds, ${sm.letters.name_only} names only.</p>
+      <p style="font-size:16px;margin:0 0 6px"><b>Word reading:</b> ${esc(sm.decoding_label)}.</p>
+      <p style="font-size:16px;margin:0 0 6px"><b>Sight words:</b> ${esc(sm.hf_label)}.</p>
+      <p style="font-size:16px;margin:0"><b>Overall (rough guide):</b> ${esc(sm.indicative_level)}</p></div>
+    <div class="card"><h2>Scores</h2><table><tr><th>Part</th><th class="n">Right</th><th class="n">%</th></tr>${rows}</table></div>
+    <div class="card"><h2>What did you notice? (tap any)</h2><div class="chips">
+      ${OBS.map(o => `<button class="chip${S.obs.includes(o) ? " on" : ""}" data-act="chip" data-v="${esc(o)}">${esc(o)}</button>`).join("")}</div>
+      <label for="note">Anything else (optional)</label>
+      <textarea id="note" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">${esc(S.note || "")}</textarea></div>
+    <p class="muted" style="text-align:center">Tap <b>Export</b> and send the file to this chat.</p>`,
+    `<div class="prow"><button class="ghost" data-act="copy" style="flex:.6">Copy</button><button class="primary" data-act="export" style="flex:1.6">Export results ➜</button></div><div class="hint" id="msg" style="text-align:center"></div>`,
+    {
+      chip: b => { const v = b.dataset.v, i = S.obs.indexOf(v); if (i >= 0) S.obs.splice(i, 1); else S.obs.push(v); b.classList.toggle("on"); save(); },
+      export: () => exportJson(),
+      copy: async () => { S.note = $("#note").value; save(); const txt = JSON.stringify(buildResult(), null, 2);
+        try { await navigator.clipboard.writeText(txt); $("#msg").textContent = "Copied ✓"; } catch (e) { $("#msg").textContent = "Copy not available. Use Export."; } }
+    }, true);
+}
+
+/* ====================================================================
+   RESULT + SUMMARY
+   ==================================================================== */
+function pctOf(r) { if (!r) return null; const s = shown(r); if (!s.length) return null; return Math.round(s.reduce((a, i) => a + itemScore(i), 0) / s.length * 100); }
+function tally(r) { const s = shown(r); return { correct: Math.round(s.reduce((a, i) => a + itemScore(i), 0) * 2) / 2, total: s.length, pct: pctOf(r) }; }
+
+function computeSummary(steps) {
+  const get = id => steps.find(r => r.id === id);
+  // letters
+  const lr = get("s1-letters"), li = lr ? lr.items : [];
+  const letters = { total: LETTERS.length, sound: li.filter(i => i.response === "sound").length, name_only: li.filter(i => i.response === "name").length,
+    none: li.filter(i => i.response === "none").length, unknown: li.filter(i => i.response === "none").map(i => i.prompt), name_only_letters: li.filter(i => i.response === "name").map(i => i.prompt) };
+  // phonics
+  const phonics_groups = GROUPS.map(g => { const r = get("s1-" + g.key); const t = r ? tally(r) : { correct: 0, total: 0, pct: null };
+    return { id: "s1-" + g.key, label: g.label, skills: g.skills, correct: t.correct, total: t.total, pct: t.pct, stopped_early: !!(r && r.stopped_early) }; });
+  const pr = get("s1-pseudo"), pseudo = pr ? tally(pr) : { correct: 0, total: 0, pct: null };
+  // decoding stage: groups must be >= 80% in order
+  const P = k => { const g = phonics_groups.find(x => x.id === "s1-" + k); return g && g.pct != null ? g.pct : 0; };
+  const seq = [["cvc"], ["digraphs", "blends"], ["split", "teams"], ["rcontrol", "diphthongs"], ["twosyl", "endings"], ["trigraphs", "uncommon"]];
+  let stage = 0; for (const grp of seq) { if (grp.every(k => P(k) >= 80)) stage++; else break; }
+  const stageLabels = ["Foundation-level phonics (short vowel words not yet secure)", "Early Year 1 phonics", "Mid Year 1 phonics", "Late Year 1 phonics",
+    "Year 1–2 transition", "Year 2 phonics, working towards", "Year 2 phonics or above"];
+  const nextTeach = stage < seq.length ? seq[stage].map(k => GROUPS.find(g => g.key === k).label) : [];
+  // high-frequency
+  const hf_tiers = TIERS.map(t => { const r = get("s1-hf-" + t.key); const s = r ? shown(r) : []; const tl = r ? tally(r) : { correct: 0, total: 0, pct: null };
+    return { id: "s1-hf-" + t.key, label: t.label, correct: tl.correct, total: tl.total, pct: tl.pct, stopped_early: !!(r && r.stopped_early),
+      quick_pct: s.length ? Math.round(s.filter(i => i.quality === "quick").length / s.length * 100) : null }; });
+  const H1 = hf_tiers[0].pct || 0, H2 = hf_tiers[1].pct || 0, H3 = hf_tiers[2].pct || 0;
+  const hfStage = H1 < 90 ? 0 : H2 < 80 ? 1 : H3 < 70 ? 2 : 3;
+  const hfLabels = ["Below Year 1 sight words", "Year 1 sight words", "Year 2 sight words, working towards", "Year 2 sight words secure"];
+  const overallIdx = Math.min(stage, [0, 2, 4, 6][hfStage]);
+  const meaning = get("s1-meaning") ? tally(get("s1-meaning")) : { correct: 0, total: 0, pct: null };
+  const spelling = get("s1-spelling") ? tally(get("s1-spelling")) : { correct: 0, total: 0, pct: null };
+  // flags useful for planning
+  const flags = [];
+  const realShown = phonics_groups.filter(g => g.total > 0), realAvg = realShown.length ? Math.round(realShown.reduce((a, g) => a + g.pct, 0) / realShown.length) : null;
+  if (realAvg != null && pseudo.pct != null && pseudo.pct <= realAvg - 25) flags.push("Reads real words noticeably better than made-up words: may be relying on memory / guessing rather than sounding out.");
+  if (letters.sound < 24) flags.push("Not all letter sounds are secure." + (letters.unknown.length ? " Not known: " + letters.unknown.join(", ") + "." : "") + (letters.name_only ? " Said the name only for: " + letters.name_only_letters.join(", ") + "." : ""));
+  const hfSlow = hf_tiers.filter(t => t.quick_pct != null && t.pct != null && t.pct >= 80 && t.quick_pct < 60);
+  if (hfSlow.length) flags.push("Sight words are accurate but slow (not yet automatic): " + hfSlow.map(t => t.label).join(", ") + ".");
+  if (meaning.pct != null && hf_tiers[0].pct != null && meaning.pct < 50) flags.push("Spoken word-meaning knowledge is low: vocabulary work needed alongside decoding.");
+  const l1 = (get("s1-meaning") || { items: [] }).items.filter(i => i.response === "l1").map(i => i.prompt);
+  if (l1.length) flags.push("Knew the idea but not the English word for: " + l1.join(", ") + ".");
+  // suggested progress (this session only; 'secure' needs 2 sessions)
+  const acc = {}, evidence = [];
+  steps.forEach(r => {
+    const per = {};
+    shown(r).forEach(i => (i.skills || r.skills).forEach(k => { const o = per[k] || (per[k] = { c: 0, t: 0 }); o.c += itemScore(i); o.t += 1; }));
+    Object.keys(per).forEach(k => {
+      const a = acc[k] || (acc[k] = { correct: 0, total: 0 }); a.correct += per[k].c; a.total += per[k].t;
+      evidence.push({ skill: k, session: SESSION, step: r.id, correct: Math.round(per[k].c * 2) / 2, total: per[k].t, note: r.notes || "" });
+    });
+  });
+  const suggested_progress = {};
+  Object.keys(acc).forEach(k => { const p = acc[k].correct / acc[k].total * 100;
+    suggested_progress[k] = { status: p < 50 ? "not_yet" : "learning", likely_secure: p >= 90, correct: Math.round(acc[k].correct * 2) / 2, total: acc[k].total, pct: Math.round(p) }; });
+  // skills never reached because of early stop
+  const not_reached = steps.filter(r => r.stopped_early && r.skills).map(r => ({ step: r.id, skills: r.skills, why: r.stopped_early }));
+  return { letters, phonics_groups, pseudo: Object.assign({ label: "Made-up words", skills: ["ph12"] }, pseudo),
+    hf_tiers, meaning, spelling,
+    decoding_stage: stage, decoding_label: stageLabels[stage], next_phonics_to_teach: nextTeach,
+    hf_label: hfLabels[hfStage], indicative_level: stageLabels[overallIdx].replace(/ \(.*\)/, "") + " (lower of phonics and sight-word results)",
+    flags, suggested_progress, evidence, not_reached,
+    caveat: "Indicative only. Based on one short session; not an official reading level. Session 2 adds connected text and comprehension." };
+}
+function buildResult() {
+  S.note = ($("#note") && $("#note").value) || S.note || "";
+  const steps = S.steps.map(r => {
+    const t = tally(r);
+    const o = { id: r.id, skills: r.skills, mode: r.mode, started_at: r.started_at, duration_sec: r.duration_sec || 0, items: r.items,
+      score: { correct: t.correct, total: t.total }, notes: r.notes };
+    if (r.stopped_early) o.stopped_early = r.stopped_early;
+    return o;
+  });
+  const fin = now();
+  return { schema: "deniz-session/1", session: SESSION, kind: "assessment", title: "Baseline 1 – sounds and words",
+    started_at: S.started_at, finished_at: fin, duration_sec: Math.round((Date.parse(fin) - Date.parse(S.started_at || fin)) / 1000),
+    device: navigator.userAgent, parent_context: S.ctx, steps, child_feeling: S.feeling, parent_note: S.note,
+    observations: S.obs, summary: computeSummary(steps) };
+}
+async function exportJson() {
+  const res = buildResult(); save();
+  const text = JSON.stringify(res, null, 2);
+  const file = new File([text], "session-01-result.json", { type: "application/json" });
+  const msg = $("#msg");
+  try {
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({ files: [file], title: "Deniz – session 1 result" });
+      S.exported = true; save(); msg.textContent = "Shared ✓"; return;
+    }
+  } catch (e) { if (e && e.name === "AbortError") return; }
+  try {
+    const url = URL.createObjectURL(file), a = document.createElement("a");
+    a.href = url; a.download = file.name; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 3000);
+    S.exported = true; save(); msg.textContent = "Saved to Downloads ✓";
+  } catch (e) { msg.textContent = "Could not save. Try Copy."; }
+}
+
+/* ====================================================================
+   BOOT
+   ==================================================================== */
+function boot() {
+  if (S.pos > 1 && S.pos < flow.length) {
+    screen("Parent", `<div class="emoji">💾</div><h1 style="font-size:24px">Session in progress</h1>
+      <p class="muted">Your answers are saved. Pick up where you stopped?</p>`,
+      `<div class="prow"><button class="ghost" data-act="restart" style="flex:.7">Start over</button><button class="primary" data-act="cont" style="flex:1.3">Continue ➜</button></div>`,
+      { cont: () => { wake(); go(); },
+        restart: () => { if (confirm("Start over? Saved answers will be erased.")) { S = fresh(); save(); go(); } } });
+    return;
+  }
+  go();
+}
+boot();
+})();
+</script>
+</body>
+</html>

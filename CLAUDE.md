@@ -82,6 +82,17 @@ Schedule: daily sessions.
   "parent_note": ""
 }
 ```
+- Optional extra fields (added in Session 1, additive, so the schema version stays `deniz-session/1`):
+  `parent_context` (home reading, first-language reading, vision/hearing, school info),
+  `observations` (parent-tapped behaviour chips), `summary` (letters, per-group and per-tier
+  scores, indicative level, `flags`, `suggested_progress`, `evidence`, `not_reached`).
+  Items may carry `quality` (`quick | slow | wrong` for sight words), `score` (0, 0.5 or 1 for
+  meaning items), `skills` (item-level skill IDs) and `notShown: true` (skipped by an
+  early-stop rule, so exclude from totals). A step may carry `stopped_early`.
+- Early-stop rules in Session 1: a phonics group stops after 4 shown words with 1 or fewer
+  correct; phonics halts after 3 stopped groups in a row; made-up words are skipped if the
+  first group stopped; a sight-word tier stops after 10 words with 2 or fewer correct, and
+  later tiers are then skipped.
 - Every step lists the skill IDs it gives evidence for. Skill IDs come from
   `docs/curriculum/year2-reading-writing.html` (ph1–ph12, fl1–fl7, co1–co13, wr1–wr22,
   sp1–sp15, hw1–hw6, vo1–vo7, li1–li5, ol1–ol4).
