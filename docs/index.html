@@ -2,44 +2,61 @@
 <html lang="en-AU">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Deniz's Reading &amp; Writing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fff4e0">
+<title>Deniz's Reading</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@600;800&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#fbf8f3;--card:#fff;--ink:#22252b;--muted:#5d6370;--line:#e6e0d6;--accent:#0f766e}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#16181c;--card:#1f2228;--ink:#ecedef;--muted:#a3a9b5;--line:#33373f;--accent:#5eead4}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Atkinson Hyperlegible",system-ui,sans-serif}
-.wrap{max-width:860px;margin:0 auto;padding:48px 16px}
-h1,h2{font-family:Lexend,system-ui,sans-serif;line-height:1.2;margin:0}
-h1{font-size:clamp(30px,6vw,44px)}
-.lede{color:var(--muted);font-size:19px;margin:10px 0 32px;max-width:60ch}
-h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:28px 0 12px}
-.cards{display:grid;gap:12px}
-a.card{display:block;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:12px;padding:16px 18px;text-decoration:none;color:inherit}
-a.card:hover{border-color:var(--accent)}
-a.card b{font-family:Lexend,sans-serif;font-size:19px}
-a.card span{display:block;color:var(--muted);font-size:15px;margin-top:4px}
-.soon{background:transparent;border:1px dashed var(--line);border-radius:12px;padding:14px 18px;color:var(--muted)}
+:root{--bg1:#fff4e0;--bg2:#ffe1ec;--ink:#2b2340;--btn:#ff7a45;--btn2:#ff5a7a;--muted:#7a6f8a}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;margin:0}
+body{min-height:100dvh;background:linear-gradient(170deg,var(--bg1),var(--bg2));color:var(--ink);
+  font-family:Lexend,system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:max(24px,env(safe-area-inset-top)) 16px max(24px,env(safe-area-inset-bottom));overflow:hidden;position:relative}
+.hi{font-size:34px;font-weight:800;margin:0 0 8px;text-align:center}
+.sub{font-size:18px;color:var(--muted);margin:0 0 40px;text-align:center}
+a.start{width:min(72vw,280px);aspect-ratio:1;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-decoration:none;color:#fff;background:radial-gradient(circle at 35% 30%,#ffb36b,var(--btn) 45%,var(--btn2));
+  box-shadow:0 18px 40px rgba(255,90,122,.35),inset 0 -8px 0 rgba(0,0,0,.08);animation:bob 2.6s ease-in-out infinite;
+  transition:transform .12s}
+a.start:active{transform:scale(.94)}
+a.start .label{font-size:52px;font-weight:800;letter-spacing:.02em}
+a.start .n{font-size:17px;font-weight:600;opacity:.9;margin-top:4px}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media (prefers-reduced-motion:reduce){a.start{animation:none}}
+.stars{position:absolute;inset:0;pointer-events:none;font-size:22px}
+.stars span{position:absolute;opacity:.55}
+a.parent{position:absolute;top:max(12px,env(safe-area-inset-top));right:12px;width:44px;height:44px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:20px;background:rgba(255,255,255,.6);
+  color:var(--muted);border:1px solid rgba(0,0,0,.06)}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>Hi Deniz 👋</h1>
-  <p class="lede">Reading and writing practice for Year 2, plus the plan and progress notes behind it.</p>
-
-  <h2>Plan</h2>
-  <div class="cards">
-    <a class="card" href="curriculum/year2-reading-writing.html">
-      <b>Year 2 Reading &amp; Writing: everything to cover</b>
-      <span>All NSW Stage 1 reading and writing skills as a checklist, with a suggested order of work and benchmarks.</span>
-    </a>
-  </div>
-
-  <h2>Coming next</h2>
-  <div class="soon">Baseline assessment · Phonics practice · Reading fluency passages · Writing prompts · Progress tracker</div>
+<div class="stars" aria-hidden="true">
+  <span style="top:9%;left:10%">⭐</span><span style="top:16%;left:78%">✨</span>
+  <span style="top:78%;left:14%">✨</span><span style="top:84%;left:80%">⭐</span>
+  <span style="top:46%;left:6%">🌟</span>
 </div>
+
+<a class="parent" href="progress/" aria-label="Parent: progress">📊</a>
+
+<p class="hi">Hi Deniz! 👋</p>
+<p class="sub">Ready for today's adventure?</p>
+
+<a class="start" id="start" href="sessions/session-01.html">
+  <span class="label">Start</span>
+  <span class="n" id="n">Session 1</span>
+</a>
+
+<script>
+// The next session comes from progress/progress.json; the href above is the fallback.
+fetch("progress/progress.json",{cache:"no-store"}).then(r=>r.json()).then(p=>{
+  const s=p.next_session; if(!s||!s.url) return;
+  document.getElementById("start").href=s.url;
+  document.getElementById("n").textContent="Session "+s.number;
+}).catch(()=>{});
+</script>
 </body>
 </html>

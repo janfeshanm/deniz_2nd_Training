@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Deniz's Progress</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f4f0;--card:#fff;--ink:#22252b;--muted:#646a76;--line:#e7e2d9;
+  --read:#0f766e;--write:#c2410c;--found:#6d28d9;
+  --s0:#c9ccd2;--s1:#dc2626;--s2:#d97706;--s3:#16a34a;
+  --s1bg:#fde8e8;--s2bg:#fef3c7;--s3bg:#dcfce7;--s0bg:#f0f1f3;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#15171b;--card:#1f2228;--ink:#eceef1;--muted:#a2a8b4;--line:#31353d;
+  --read:#5eead4;--write:#fdba74;--found:#c4b5fd;
+  --s0:#4b505a;--s1:#f87171;--s2:#fbbf24;--s3:#4ade80;
+  --s1bg:#3b1a1a;--s2bg:#3a2d0c;--s3bg:#123321;--s0bg:#2a2d33;
+}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.5 "Atkinson Hyperlegible",system-ui,sans-serif}
+h1,h2,h3{font-family:Lexend,system-ui,sans-serif;margin:0;line-height:1.25}
+.wrap{max-width:520px;margin:0 auto;padding:max(12px,env(safe-area-inset-top)) 16px 40px}
+.top{display:flex;align-items:center;gap:10px;margin:4px 0 16px}
+.top a{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);font-size:20px;flex:none}
+.top h1{font-size:22px}
+.top .upd{font-size:13px;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:12px}
+.card h2{font-size:16px;margin-bottom:8px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+.stats b{display:block;font:700 24px/1.1 Lexend,sans-serif}
+.stats span{font-size:13px;color:var(--muted)}
+.bar{display:flex;height:12px;border-radius:6px;overflow:hidden;background:var(--s0bg);margin-top:12px}
+.bar i{display:block;height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:13px;color:var(--muted);margin-top:8px}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px;background:var(--c)}
+.next{display:flex;align-items:center;gap:12px}
+.next .ico{font-size:28px}
+.next .t{font-weight:700}
+.next .k{font-size:14px;color:var(--muted)}
+.focus li{padding:8px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;align-items:center}
+.focus li:first-child{border-top:0}
+ul{list-style:none;margin:0;padding:0}
+.chip{font:700 12px/1 Lexend,sans-serif;padding:5px 8px;border-radius:999px;white-space:nowrap;flex:none}
+.c0{background:var(--s0bg);color:var(--muted)}
+.c1{background:var(--s1bg);color:var(--s1)}
+.c2{background:var(--s2bg);color:var(--s2)}
+.c3{background:var(--s3bg);color:var(--s3)}
+details.area{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--ac);border-radius:14px;margin-bottom:10px;overflow:hidden}
+details.area summary{list-style:none;padding:12px 14px;cursor:pointer;min-height:48px}
+details.area summary::-webkit-details-marker{display:none}
+.ah{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.ah h3{font-size:16px;color:var(--ac)}
+.ah .cnt{font-size:13px;color:var(--muted);white-space:nowrap}
+details.area .bar{margin-top:8px;height:8px}
+details.area ul{padding:0 14px 8px}
+details.area li{padding:10px 0;border-top:1px solid var(--line)}
+.sk{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.sk .nm{font-weight:700;font-size:16px}
+.sk .id{font:12px ui-monospace,monospace;color:var(--muted)}
+.ev{font-size:14px;color:var(--muted);margin-top:2px}
+.hist li{padding:10px 0;border-top:1px solid var(--line)}
+.hist li:first-child{border-top:0}
+.hist .h1{display:flex;justify-content:space-between;gap:8px;font-weight:700}
+.hist .h2{font-size:14px;color:var(--muted)}
+.empty{color:var(--muted);font-size:15px}
+.links a{display:flex;align-items:center;justify-content:space-between;min-height:48px;color:var(--ink);text-decoration:none;border-top:1px solid var(--line)}
+.links a:first-of-type{border-top:0}
+.err{background:var(--s1bg);color:var(--s1);border-radius:12px;padding:12px 14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <a href="../" aria-label="Back to start">←</a>
+    <div><h1>Deniz's progress</h1><div class="upd" id="upd"></div></div>
+  </div>
+  <div id="app"><p class="empty">Loading…</p></div>
+</div>
+
+<script>
+const AREAS={
+  phonics:{name:"Phonic knowledge",g:"read"},
+  fluency:{name:"Reading fluency",g:"read"},
+  comp:{name:"Reading comprehension",g:"read"},
+  writing:{name:"Creating written texts",g:"write"},
+  spelling:{name:"Spelling",g:"write"},
+  handwriting:{name:"Handwriting & digital",g:"write"},
+  vocab:{name:"Vocabulary",g:"found"},
+  lit:{name:"Responding to literature",g:"found"},
+  oral:{name:"Oral language",g:"found"}
+};
+const ST=["not_checked","not_yet","learning","secure"];
+const LBL=["Not checked","Not yet","Learning","Secure"];
+const FEEL={great:"😄",ok:"🙂",hard:"😕"};
+const idx=s=>Math.max(0,ST.indexOf(s));
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function bar(c){const n=c.reduce((a,b)=>a+b,0)||1;
+  return `<div class="bar"><i style="width:${c[3]/n*100}%;background:var(--s3)"></i><i style="width:${c[2]/n*100}%;background:var(--s2)"></i><i style="width:${c[1]/n*100}%;background:var(--s1)"></i></div>`}
+function counts(list){const c=[0,0,0,0];list.forEach(s=>c[idx(s.status)]++);return c}
+function lastEv(s){const e=(s.evidence||[]).slice(-1)[0];if(!e)return"";
+  const pct=e.total?` · ${e.correct}/${e.total}`:"";return `Session ${e.session}${pct}${e.note?" · "+esc(e.note):""}`}
+
+fetch("progress.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(p=>{
+  const skills=Object.entries(p.skills).map(([id,s])=>({id,...s}));
+  const all=counts(skills);
+  document.getElementById("upd").textContent="Updated "+new Date(p.updated).toLocaleDateString("en-AU",{day:"numeric",month:"short",year:"numeric"});
+  const done=(p.sessions_completed||[]).length;
+  const ns=p.next_session;
+  const focus=skills.filter(s=>s.status==="not_yet"||s.status==="learning")
+    .sort((a,b)=>idx(a.status)-idx(b.status)).slice(0,8);
+
+  let h=`<div class="card">
+    <div class="stats">
+      <div><b>${done}</b><span>sessions done</span></div>
+      <div><b>${all[3]}</b><span>skills secure</span></div>
+      <div><b>${all[0]}</b><span>not checked</span></div>
+    </div>
+    ${bar(all)}
+    <div class="legend"><span style="--c:var(--s3)">Secure ${all[3]}</span><span style="--c:var(--s2)">Learning ${all[2]}</span><span style="--c:var(--s1)">Not yet ${all[1]}</span><span style="--c:var(--s0)">Not checked ${all[0]}</span></div>
+  </div>`;
+
+  if(ns) h+=`<div class="card next"><div class="ico">${ns.kind==="assessment"?"🔍":ns.kind==="recheck"?"🔁":"🎯"}</div>
+    <div><div class="k">Next: Session ${ns.number} · ${esc(ns.kind)}</div><div class="t">${esc(ns.title)}</div></div></div>`;
+
+  h+=`<div class="card focus"><h2>Focus now</h2>${focus.length?`<ul>${focus.map(s=>`<li><span>${esc(s.name)}</span><span class="chip c${idx(s.status)}">${LBL[idx(s.status)]}</span></li>`).join("")}</ul>`:`<p class="empty">Nothing yet. This fills in after the baseline sessions.</p>`}</div>`;
+
+  h+=`<h2 style="font-size:16px;margin:18px 0 10px">All skills by area</h2>`;
+  Object.entries(AREAS).forEach(([aid,a])=>{
+    const list=skills.filter(s=>s.area===aid); if(!list.length) return;
+    const c=counts(list);
+    h+=`<details class="area" style="--ac:var(--${a.g})"><summary>
+      <div class="ah"><h3>${a.name}</h3><span class="cnt">${c[3]}/${list.length} secure</span></div>${bar(c)}</summary>
+      <ul>${list.map(s=>`<li><div class="sk"><div><div class="nm">${esc(s.name)}</div><div class="id">${s.id}</div>${lastEv(s)?`<div class="ev">${lastEv(s)}</div>`:""}</div><span class="chip c${idx(s.status)}">${LBL[idx(s.status)]}</span></div></li>`).join("")}</ul>
+    </details>`;
+  });
+
+  const hist=(p.history||[]).slice().reverse();
+  h+=`<div class="card hist" style="margin-top:18px"><h2>Session history</h2>${hist.length?`<ul>${hist.map(x=>`<li><div class="h1"><span>${x.session}. ${esc(x.title)}</span><span>${FEEL[x.feeling]||""}</span></div><div class="h2">${esc(x.date||"")}${x.duration_min?` · ${x.duration_min} min`:""}${x.summary?` · ${esc(x.summary)}`:""}</div></li>`).join("")}</ul>`:`<p class="empty">No sessions yet.</p>`}</div>`;
+
+  h+=`<div class="card links"><a href="../curriculum/year2-reading-writing.html"><span>Year 2 curriculum map</span><span>›</span></a></div>`;
+  document.getElementById("app").innerHTML=h;
+}).catch(()=>{
+  document.getElementById("app").innerHTML=`<div class="err">Couldn't load progress data. Open this page from the GitHub Pages link (it doesn't load from a local file).</div>`;
+});
+</script>
+</body>
+</html>

@@ -71,6 +71,7 @@ ol.priority b{font-family:Lexend,sans-serif}
 .toolbar{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);padding:10px 0}
 .toolbar .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
 .toolbar button,.toolbar select{font:inherit;font-size:14px;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+@media (max-width:600px){.toolbar{position:static}}
 .chip{font:700 12px/1 Lexend,sans-serif;padding:6px 9px;border-radius:999px;border:1.5px solid currentColor;background:transparent;cursor:pointer;white-space:nowrap;min-width:86px;text-align:center}
 .chip[data-s="0"]{color:var(--unchecked);border-style:dashed}
 .chip[data-s="1"]{color:var(--notyet);background:var(--notyet-soft)}
@@ -152,7 +153,6 @@ footer ol{padding-left:20px}
         <option value="1">Not yet only</option>
         <option value="2">Learning only</option>
       </select>
-      <button id="print">Print</button>
       <button id="reset">Reset</button>
     </div>
   </div>
@@ -584,7 +584,6 @@ document.addEventListener("click",e=>{
   updateBars(); applyFilter();
 });
 document.getElementById("filter").addEventListener("change",applyFilter);
-document.getElementById("print").addEventListener("click",()=>window.print());
 const resetBtn=document.getElementById("reset");
 let armed=null;
 resetBtn.addEventListener("click",()=>{

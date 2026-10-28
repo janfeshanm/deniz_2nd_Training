@@ -1,0 +1,568 @@
+{
+  "schema": "deniz-progress/1",
+  "child": "Deniz",
+  "year": 2,
+  "updated": "2026-10-28",
+  "status_scale": [
+    "not_checked",
+    "not_yet",
+    "learning",
+    "secure"
+  ],
+  "next_session": {
+    "number": 1,
+    "kind": "assessment",
+    "title": "Baseline 1 – sounds and words",
+    "url": "sessions/session-01.html"
+  },
+  "sessions_completed": [],
+  "history": [],
+  "skills": {
+    "ph1": {
+      "area": "phonics",
+      "name": "All single letter sounds, instantly",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "ph2": {
+      "area": "phonics",
+      "name": "Consonant digraphs",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "ph3": {
+      "area": "phonics",
+      "name": "Words with consonant blends",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "ph4": {
+      "area": "phonics",
+      "name": "Split digraphs (\"magic e\")",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "ph5": {
+      "area": "phonics",
+      "name": "Long vowel teams",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "ph6": {
+      "area": "phonics",
+      "name": "R-controlled vowels",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "ph7": {
+      "area": "phonics",
+      "name": "Diphthongs",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "ph8": {
+      "area": "phonics",
+      "name": "Trigraphs and quadgraphs",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "ph9": {
+      "area": "phonics",
+      "name": "Less common spellings",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "ph10": {
+      "area": "phonics",
+      "name": "Two-syllable words",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "ph11": {
+      "area": "phonics",
+      "name": "Base words with endings",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "ph12": {
+      "area": "phonics",
+      "name": "Reads made-up words",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "fl1": {
+      "area": "fluency",
+      "name": "Instant high-frequency words",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "fl2": {
+      "area": "fluency",
+      "name": "Accurate on unseen text",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "fl3": {
+      "area": "fluency",
+      "name": "Comfortable pace",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "fl4": {
+      "area": "fluency",
+      "name": "Self-corrects",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "fl5": {
+      "area": "fluency",
+      "name": "Reads in phrases",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "fl6": {
+      "area": "fluency",
+      "name": "Uses punctuation",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "fl7": {
+      "area": "fluency",
+      "name": "Expression matches meaning",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co1": {
+      "area": "comp",
+      "name": "Works out unknown words",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co2": {
+      "area": "comp",
+      "name": "Understands longer sentences",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co3": {
+      "area": "comp",
+      "name": "Tracks who \"he\", \"she\", \"it\", \"they\" refer to",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co4": {
+      "area": "comp",
+      "name": "Figurative language and wordplay",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co5": {
+      "area": "comp",
+      "name": "Retells in order",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co6": {
+      "area": "comp",
+      "name": "Literal questions",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co7": {
+      "area": "comp",
+      "name": "Inference",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co8": {
+      "area": "comp",
+      "name": "Non-fiction features",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co9": {
+      "area": "comp",
+      "name": "Main idea and summary",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co10": {
+      "area": "comp",
+      "name": "Forms an opinion",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co11": {
+      "area": "comp",
+      "name": "Notices when meaning breaks down",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co12": {
+      "area": "comp",
+      "name": "Predicts and checks",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co13": {
+      "area": "comp",
+      "name": "Makes connections",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr1": {
+      "area": "writing",
+      "name": "Recount",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr2": {
+      "area": "writing",
+      "name": "Narrative (story)",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr3": {
+      "area": "writing",
+      "name": "Opinion",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr4": {
+      "area": "writing",
+      "name": "Procedure and information report",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr5": {
+      "area": "writing",
+      "name": "Plans before writing",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr6": {
+      "area": "writing",
+      "name": "Sequences ideas",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr7": {
+      "area": "writing",
+      "name": "Paragraphs",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr8": {
+      "area": "writing",
+      "name": "Complete simple sentences",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr9": {
+      "area": "writing",
+      "name": "Compound sentences",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr10": {
+      "area": "writing",
+      "name": "Complex sentences",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr11": {
+      "area": "writing",
+      "name": "Varied sentence openings",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr12": {
+      "area": "writing",
+      "name": "Noun groups",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr13": {
+      "area": "writing",
+      "name": "Precise verbs",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr14": {
+      "area": "writing",
+      "name": "Adding detail",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr15": {
+      "area": "writing",
+      "name": "Articles, pronouns, tense",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr16": {
+      "area": "writing",
+      "name": "Capital letters and full stops",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr17": {
+      "area": "writing",
+      "name": "Question and exclamation marks",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr18": {
+      "area": "writing",
+      "name": "Commas in lists",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr19": {
+      "area": "writing",
+      "name": "Apostrophes",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr20": {
+      "area": "writing",
+      "name": "Speech marks",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr21": {
+      "area": "writing",
+      "name": "Re-reads and edits",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr22": {
+      "area": "writing",
+      "name": "Uses feedback",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp1": {
+      "area": "spelling",
+      "name": "Segments words to spell",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp2": {
+      "area": "spelling",
+      "name": "High-frequency words",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp3": {
+      "area": "spelling",
+      "name": "Choosing vowel patterns",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp4": {
+      "area": "spelling",
+      "name": "Double letters and ck",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp5": {
+      "area": "spelling",
+      "name": "tch and dge",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp6": {
+      "area": "spelling",
+      "name": "Two-syllable words",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp7": {
+      "area": "spelling",
+      "name": "Plurals",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp8": {
+      "area": "spelling",
+      "name": "-ed and -ing rules",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp9": {
+      "area": "spelling",
+      "name": "-er and -est",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp10": {
+      "area": "spelling",
+      "name": "-ful, -y, -ly, -less",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp11": {
+      "area": "spelling",
+      "name": "Prefixes",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp12": {
+      "area": "spelling",
+      "name": "Compound words",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp13": {
+      "area": "spelling",
+      "name": "Contractions",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp14": {
+      "area": "spelling",
+      "name": "Common homophones",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp15": {
+      "area": "spelling",
+      "name": "Uses spelling strategies",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "hw1": {
+      "area": "handwriting",
+      "name": "Posture and grip",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "hw2": {
+      "area": "handwriting",
+      "name": "Correct letter formation",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "hw3": {
+      "area": "handwriting",
+      "name": "Letter sizes",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "hw4": {
+      "area": "handwriting",
+      "name": "Spacing",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "hw5": {
+      "area": "handwriting",
+      "name": "Fluent and automatic",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "hw6": {
+      "area": "handwriting",
+      "name": "Keyboard basics",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "vo1": {
+      "area": "vocab",
+      "name": "Tier 1 everyday words",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "vo2": {
+      "area": "vocab",
+      "name": "Tier 2 book words",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "vo3": {
+      "area": "vocab",
+      "name": "Tier 3 subject words",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "vo4": {
+      "area": "vocab",
+      "name": "Synonyms and antonyms",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "vo5": {
+      "area": "vocab",
+      "name": "Word families and parts",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "vo6": {
+      "area": "vocab",
+      "name": "Multiple meanings and idioms",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "vo7": {
+      "area": "vocab",
+      "name": "Chooses precise words",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "li1": {
+      "area": "lit",
+      "name": "Wide reading",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "li2": {
+      "area": "lit",
+      "name": "Opinions with reasons",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "li3": {
+      "area": "lit",
+      "name": "Characters",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "li4": {
+      "area": "lit",
+      "name": "Author's language",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "li5": {
+      "area": "lit",
+      "name": "Writes like an author",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "ol1": {
+      "area": "oral",
+      "name": "Retells and explains clearly",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "ol2": {
+      "area": "oral",
+      "name": "Follows multi-step instructions",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "ol3": {
+      "area": "oral",
+      "name": "Says sentences before writing",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "ol4": {
+      "area": "oral",
+      "name": "Asks questions to understand",
+      "status": "not_checked",
+      "evidence": []
+    }
+  }
+}
