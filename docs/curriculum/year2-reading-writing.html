@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Year 2 Reading &amp; Writing Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#fbf8f3; --card:#ffffff; --ink:#22252b; --muted:#5d6370; --line:#e6e0d6;
+  --read:#0f766e; --read-soft:#e0f2ef;
+  --write:#c2410c; --write-soft:#fdeee5;
+  --found:#6d28d9; --found-soft:#efe9fd;
+  --notyet:#b91c1c; --notyet-soft:#fde8e8;
+  --learning:#b45309; --learning-soft:#fef3c7;
+  --secure:#15803d; --secure-soft:#dcfce7;
+  --unchecked:#8a8f99;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#16181c; --card:#1f2228; --ink:#ecedef; --muted:#a3a9b5; --line:#33373f;
+    --read:#5eead4; --read-soft:#123a36;
+    --write:#fdba74; --write-soft:#3d2414;
+    --found:#c4b5fd; --found-soft:#2b2245;
+    --notyet:#fca5a5; --notyet-soft:#3b1a1a;
+    --learning:#fcd34d; --learning-soft:#3a2d0c;
+    --secure:#86efac; --secure-soft:#123321;
+    --unchecked:#8a8f99;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Atkinson Hyperlegible",system-ui,sans-serif}
+h1,h2,h3,h4{font-family:Lexend,system-ui,sans-serif;line-height:1.25;margin:0}
+a{color:inherit}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+header.hero{padding:40px 0 24px;border-bottom:1px solid var(--line)}
+.crumb{font-size:14px;color:var(--muted);margin-bottom:14px}
+.crumb a{color:var(--muted)}
+.hero h1{font-size:clamp(28px,5vw,42px);font-weight:700;letter-spacing:-.01em}
+.hero p.lede{font-size:19px;color:var(--muted);max-width:68ch;margin:12px 0 0}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.pill{font-size:13px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--muted)}
+section{padding:36px 0;border-bottom:1px solid var(--line)}
+section > h2{font-size:26px;margin-bottom:6px}
+section > p.sub{color:var(--muted);margin:0 0 20px;max-width:70ch}
+.callout{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--found);border-radius:10px;padding:16px 18px;margin:16px 0}
+.callout h3{font-size:17px;margin-bottom:6px}
+.callout p{margin:6px 0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:760px){.grid3{grid-template-columns:1fr}}
+.group{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;border-top:5px solid var(--c)}
+.group h3{font-size:18px;color:var(--c);margin-bottom:4px}
+.group p{margin:0 0 10px;font-size:15px;color:var(--muted)}
+.group ul{list-style:none;padding:0;margin:0}
+.group li{padding:8px 0;border-top:1px dashed var(--line);display:flex;justify-content:space-between;gap:8px;align-items:center}
+.group li a{text-decoration:none;font-weight:700}
+.group li a:hover{text-decoration:underline}
+.mini{flex:0 0 72px;height:8px;border-radius:4px;background:var(--line);overflow:hidden;display:flex}
+.mini i{display:block;height:100%}
+.reading{--c:var(--read);--cs:var(--read-soft)}
+.writing{--c:var(--write);--cs:var(--write-soft)}
+.found{--c:var(--found);--cs:var(--found-soft)}
+ol.priority{counter-reset:p;list-style:none;padding:0;margin:0;display:grid;gap:10px}
+ol.priority li{counter-increment:p;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px 12px 56px;position:relative}
+ol.priority li::before{content:counter(p);position:absolute;left:14px;top:12px;width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--paper);font:700 15px/28px Lexend,sans-serif;text-align:center}
+ol.priority b{font-family:Lexend,sans-serif}
+.legend{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:14px;color:var(--muted)}
+.toolbar{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);padding:10px 0}
+.toolbar .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.toolbar button,.toolbar select{font:inherit;font-size:14px;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.chip{font:700 12px/1 Lexend,sans-serif;padding:6px 9px;border-radius:999px;border:1.5px solid currentColor;background:transparent;cursor:pointer;white-space:nowrap;min-width:86px;text-align:center}
+.chip[data-s="0"]{color:var(--unchecked);border-style:dashed}
+.chip[data-s="1"]{color:var(--notyet);background:var(--notyet-soft)}
+.chip[data-s="2"]{color:var(--learning);background:var(--learning-soft)}
+.chip[data-s="3"]{color:var(--secure);background:var(--secure-soft)}
+.area{padding:32px 0;border-bottom:1px solid var(--line);scroll-margin-top:60px}
+.area-head{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:baseline;margin-bottom:8px}
+.area-head h2{font-size:24px;color:var(--c)}
+.code{font:600 13px/1 ui-monospace,Consolas,monospace;padding:5px 8px;border-radius:6px;background:var(--cs);color:var(--c)}
+.kind{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.outcome{margin:4px 0 6px;max-width:72ch}
+.why{color:var(--muted);margin:0 0 16px;max-width:72ch;font-size:16px}
+.cols{display:grid;grid-template-columns:1.6fr 1fr;gap:18px}
+@media (max-width:820px){.cols{grid-template-columns:1fr}}
+.topics{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.subhead{font:600 13px/1 Lexend,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:var(--c);background:var(--cs);padding:9px 14px}
+.row{display:flex;gap:12px;align-items:flex-start;padding:11px 14px;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row .txt{flex:1;min-width:0}
+.row .t{font-weight:700}
+.row .eg{font-size:15px;color:var(--muted)}
+.row .eg em{font-style:normal;background:var(--cs);color:var(--ink);padding:0 4px;border-radius:4px}
+.side{display:flex;flex-direction:column;gap:14px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.box h4{font-size:15px;margin-bottom:6px;color:var(--c)}
+.box p,.box ul{margin:4px 0;font-size:15px}
+.box ul{padding-left:18px}
+.box.ex{background:var(--cs);border-color:transparent}
+table{border-collapse:collapse;width:100%;font-size:15px;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+th,td{text-align:left;padding:9px 12px;border-top:1px solid var(--line);vertical-align:top}
+th{font-family:Lexend,sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:var(--paper);border-top:0}
+td.g{font-family:ui-monospace,Consolas,monospace;font-weight:700;white-space:nowrap}
+.tablewrap{overflow-x:auto}
+.num{font-variant-numeric:tabular-nums}
+footer{padding:28px 0 60px;font-size:14px;color:var(--muted)}
+footer ol{padding-left:20px}
+.hidden{display:none !important}
+@media print{
+  @page{size:A4;margin:14mm}
+  body{background:#fff;color:#000;font-size:11.5pt}
+  .toolbar,.noprint{display:none !important}
+  section,.area{padding:14px 0;break-inside:auto}
+  .row{break-inside:avoid}
+  .box,.topics,.group,table{border-color:#bbb}
+  .chip{min-width:70px}
+  a{text-decoration:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="crumb"><a href="../index.html">Deniz's training home</a> › Curriculum</div>
+    <h1>Year 2 Reading &amp; Writing: everything to cover</h1>
+    <p class="lede">A complete map of the reading and writing skills in the NSW English K–10 syllabus for Year 2 (the end of Stage 1). Use it as a checklist: tap each skill's status as you find out where Deniz is.</p>
+    <div class="meta">
+      <span class="pill">NSW English K–10 Syllabus (2022)</span>
+      <span class="pill">Stage 1 = Years 1 &amp; 2</span>
+      <span class="pill">9 focus areas · <span id="total-count">–</span> skills</span>
+    </div>
+  </div>
+</header>
+
+<div class="toolbar noprint">
+  <div class="wrap">
+    <div class="legend">
+      Status (tap to change):
+      <span class="chip" data-s="0">Not checked</span>
+      <span class="chip" data-s="1">Not yet</span>
+      <span class="chip" data-s="2">Learning</span>
+      <span class="chip" data-s="3">Secure</span>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <select id="filter" aria-label="Filter skills">
+        <option value="all">Show all skills</option>
+        <option value="todo">Hide secure skills</option>
+        <option value="0">Not checked only</option>
+        <option value="1">Not yet only</option>
+        <option value="2">Learning only</option>
+      </select>
+      <button id="print">Print</button>
+      <button id="reset">Reset</button>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+<section>
+  <h2>How the syllabus is organised</h2>
+  <p class="sub">NSW groups Years 1 and 2 together as <b>Stage 1</b>. The outcomes describe what a student should be able to do by the <b>end of Year 2</b>, so this map is the target for the end of this school year and the start of next. English has nine focus areas. Six of them are directly about reading and writing; the other three support both.</p>
+
+  <div class="grid3" id="overview"></div>
+
+  <div class="callout">
+    <h3>Reading = decoding × understanding language</h3>
+    <p>Reading needs two things together: <b>working out the words on the page</b> (phonics, spelling patterns, fluency) and <b>understanding the language</b> (vocabulary, sentences, background knowledge). Writing is the same in reverse, plus handwriting.</p>
+    <p>Deniz already speaks and listens well, which is a strong base for the "understanding" side. When a child speaks well but reads and writes poorly, the gap is often in the <b>code</b>: letter-sound knowledge, spelling patterns and automatic word reading. The assessment will confirm whether that is true for her. Vocabulary still needs attention, because written English uses many "book words" that rarely come up in conversation.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Suggested order of work for Deniz</h2>
+  <p class="sub">All areas matter, but some skills unlock others. This order puts the foundations first. It is a starting plan and will change once we have her assessment results.</p>
+  <ol class="priority">
+    <li><b>Find her starting point.</b> Quick checks of letter sounds, phonics patterns, high-frequency words, a short read-aloud and a writing sample.</li>
+    <li><b>Phonics &amp; high-frequency words.</b> Fill gaps in the code: digraphs, vowel teams, r-controlled vowels. Daily and short (10–15 minutes).</li>
+    <li><b>Fluency.</b> Re-read short decodable and levelled texts until they sound like talking. Paired reading with a parent.</li>
+    <li><b>Spelling &amp; handwriting.</b> Spell the same patterns she is learning to read. Correct letter formation so writing becomes automatic.</li>
+    <li><b>Sentences, then short texts.</b> Say it, then write it. Simple → compound → complex sentences, then recounts and opinions.</li>
+    <li><b>Comprehension &amp; vocabulary throughout.</b> Read aloud to her from books above her reading level, talk about word meanings, ask "why" and "how do you know" questions.</li>
+  </ol>
+</section>
+
+<div id="areas"></div>
+
+<section>
+  <h2>Reference: Stage 1 phonics patterns</h2>
+  <p class="sub">The letter patterns ("graphemes") Year 1 and 2 students learn to read and spell. Use this chart when choosing words for practice or reading checks.</p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Group</th><th>Patterns</th><th>Example words</th></tr></thead>
+    <tbody id="phonics-table"></tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>Reference: what "on track" looks like</h2>
+  <p class="sub">Benchmarks to compare against during assessment.</p>
+  <div class="cols">
+    <div>
+      <h3 style="font-size:18px;margin-bottom:8px">Reading speed (oral reading fluency)</h3>
+      <div class="tablewrap">
+      <table>
+        <thead><tr><th>Year 2 (US Grade 2)</th><th class="num">Start</th><th class="num">Middle</th><th class="num">End</th></tr></thead>
+        <tbody>
+          <tr><td>75th percentile</td><td class="num">84</td><td class="num">109</td><td class="num">124</td></tr>
+          <tr><td><b>50th percentile (typical)</b></td><td class="num"><b>50</b></td><td class="num"><b>84</b></td><td class="num"><b>100</b></td></tr>
+          <tr><td>25th percentile</td><td class="num">36</td><td class="num">59</td><td class="num">72</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p style="font-size:14px;color:var(--muted)">Words read correctly in one minute from an unseen grade-level passage. Hasbrouck &amp; Tindal (2017) US norms; there is no official NSW equivalent, but US Grade 2 students are a similar age. Accuracy matters too: aim for at least 95% of words correct.</p>
+    </div>
+    <div class="side">
+      <div class="box ex found">
+        <h4>A typical end-of-Year-2 recount (NESA "C grade" sample)</h4>
+        <ul>
+          <li>Understands what a recount is for and how it is organised</li>
+          <li>Events in a logical order</li>
+          <li>Sentences start in different ways; some are complex</li>
+          <li>Uses spelling strategies well; punctuation mostly accurate</li>
+          <li>Could add more detail about <i>who</i> and <i>where</i></li>
+        </ul>
+      </div>
+      <div class="box found">
+        <h4>Year 1 Phonics Screening Check</h4>
+        <p>NSW public schools check all Year 1 students in Term 3: 40 words (20 real, 20 nonsense) read one-to-one with the teacher in about 5–7 minutes. Ask the school whether Deniz did it in 2025 and what her result was. It is a useful clue to her phonics gaps.</p>
+      </div>
+      <div class="box found">
+        <h4>EAL/D support at school</h4>
+        <p>NSW places EAL/D (English as an additional language) students on a progression with four phases: <b>Beginning, Emerging, Developing, Consolidating</b>. Ask her teacher which phase she has been placed in and whether she gets EAL/D teacher support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <h3 style="font-size:16px;color:var(--ink);margin-bottom:6px">Sources</h3>
+  <ol>
+    <li><a href="https://curriculum.nsw.edu.au/learning-areas/english/english-k-10-2022/outcomes">NSW Curriculum: English K–10 (2022) outcomes</a> and the Stage 1 content pages for each focus area</li>
+    <li><a href="https://mortlake-p.schools.nsw.gov.au/content/dam/doe/sws/schools/m/mortlake-p/download-box/english-k-10-2022-parent-and-carer-guide-1-2.pdf">NSW Department of Education: English K–10 parent and carer guide, Years 1–2</a></li>
+    <li><a href="https://www.fireflyeducation.com.au/downloads/Sound_Waves_NSW_Syllabus_Match_Stage_1.pdf">Sound Waves: NSW syllabus match, Stage 1</a> (Year 1 vs Year 2 phonics split)</li>
+    <li><a href="https://arc.nesa.nsw.edu.au/go/stage-1/english/stu-work/c/excursion-recount-sam/grade-commentary">NESA: Stage 1 work sample, excursion recount (Grade C)</a></li>
+    <li><a href="https://www.readingrockets.org/article/fluency-norms-chart-2017-update">Reading Rockets: Hasbrouck &amp; Tindal fluency norms (2017)</a></li>
+    <li><a href="https://education.nsw.gov.au/teaching-and-learning/curriculum/literacy-and-numeracy/phonics-screening-check">NSW Department of Education: Year 1 Phonics Screening Check</a></li>
+    <li><a href="https://education.nsw.gov.au/content/dam/main-education/teaching-and-learning/curriculum/multicultural-education/eald/Advice_on_using_the_EAL_D_Learning_Progressions_2025.pdf">NSW Department of Education: Advice on using the EAL/D Learning Progressions (2025)</a></li>
+  </ol>
+  <p>Skill descriptions are plain-English summaries of the syllabus, not the official wording. Status marks are saved only in this browser on this device.</p>
+</footer>
+
+<script>
+const AREAS = [
+{
+  id:"phonics", group:"reading", name:"Phonic knowledge", code:"EN1-PHOKW-01",
+  outcome:"Uses initial and extended phonics, including vowel digraphs and trigraphs, to decode and encode words when reading and creating texts.",
+  why:"Turning letters into sounds (reading) and sounds into letters (spelling). This is the engine of reading, and usually the first thing to fix when reading is behind.",
+  sections:[
+    ["Foundations (from Kindergarten)",[
+      ["ph1","All single letter sounds, instantly","Short vowels <em>a e i o u</em> and every consonant; reads CVC words like <em>pig, ten, hot</em>"],
+      ["ph2","Consonant digraphs","<em>sh ch th wh ck ng qu ph</em>: ship, chop, thin, when, duck, ring, quick, phone"],
+    ]],
+    ["One-syllable words",[
+      ["ph3","Words with consonant blends","CCVC <em>frog</em>, CVCC <em>jump</em>, CCVCC <em>stamp</em>, CCCVC <em>split</em>, CCCVCC <em>script</em>"],
+      ["ph4","Split digraphs (\"magic e\")","<em>a_e i_e o_e</em> (Year 1), <em>e_e u_e</em> (Year 2): cake, bike, home, these, cube"],
+      ["ph5","Long vowel teams","<em>ai ay · ee ea · igh ie · oa ow · oo ew ue</em>: rain, play, tree, seat, night, pie, boat, snow, moon, new, blue"],
+      ["ph6","R-controlled vowels","<em>ar · or ore aw au · er ir ur · air are · ear</em>: car, fork, more, saw, bird, turn, chair, care, hear"],
+      ["ph7","Diphthongs","<em>oi oy · ou ow</em>: coin, boy, cloud, cow"],
+      ["ph8","Trigraphs and quadgraphs","<em>tch dge igh air ear eigh</em>: catch, bridge, light, hair, near, eight"],
+      ["ph9","Less common spellings","Silent letters <em>kn wr mb</em> (knee, write, lamb); soft <em>c</em> and <em>g</em> (city, giant); <em>y</em> as in happy and fly"],
+    ]],
+    ["Longer words",[
+      ["ph10","Two-syllable words","Compound <em>sunset</em>, double consonants <em>rabbit</em>, vowel teams <em>rainbow, garden</em>"],
+      ["ph11","Base words with endings","Reads <em>-s -es -ed -ing -er -est</em>: jumped, running, bigger"],
+      ["ph12","Reads made-up words","e.g. <em>strom, blain, vurt</em>. Proves real decoding, not memorised words"],
+    ]],
+  ],
+  end:"Reads almost any one- and two-syllable word using the patterns above, without guessing from the first letter or the picture.",
+  check:"Show 10 real words and 10 made-up words for each pattern group and note which patterns she misreads."
+},
+{
+  id:"fluency", group:"reading", name:"Reading fluency", code:"EN1-REFLU-01",
+  outcome:"Sustains reading of unseen texts with automaticity and prosody, and self-corrects errors.",
+  why:"Reading smoothly and with expression. When word reading is automatic, the brain is free to think about meaning.",
+  sections:[
+    ["Automaticity",[
+      ["fl1","Instant high-frequency words","Reads common and \"tricky\" words on sight: <em>said, was, could, because, people, through</em>"],
+      ["fl2","Accurate on unseen text","At least 95% of words correct on an unseen Year 2 text"],
+      ["fl3","Comfortable pace","Around 90–100 words per minute by end of Year 2 (see benchmark table)"],
+      ["fl4","Self-corrects","Notices when a word doesn't make sense or sound right, and goes back to fix it"],
+    ]],
+    ["Prosody (expression)",[
+      ["fl5","Reads in phrases","Groups words naturally: \"the big dog / ran to the gate\", not word… by… word"],
+      ["fl6","Uses punctuation","Pauses at <em>. ,</em> · voice rises for <em>?</em> · stronger voice for <em>!</em> · character voice for \"speech\""],
+      ["fl7","Expression matches meaning","Adjusts volume, pace and tone for poems, plays and dialogue"],
+    ]],
+  ],
+  end:"Reads an unseen Year 2 book aloud smoothly, like talking, with few errors and fixing her own mistakes.",
+  check:"Time a one-minute read of an unseen passage; count words correct and note phrasing and self-corrections."
+},
+{
+  id:"comp", group:"reading", name:"Reading comprehension", code:"EN1-RECOM-01",
+  outcome:"Comprehends independently read texts that require sustained reading by activating background and word knowledge, connecting and understanding sentences and whole text, and monitoring for meaning.",
+  why:"Understanding what she reads, not just saying the words. For EAL/D learners, unfamiliar vocabulary and cultural background knowledge are the usual barriers.",
+  sections:[
+    ["Words and sentences",[
+      ["co1","Works out unknown words","Uses the sentence, pictures and word parts; asks or uses a dictionary"],
+      ["co2","Understands longer sentences","Sentences joined with <em>because, so, but, when, if, although</em>"],
+      ["co3","Tracks who \"he\", \"she\", \"it\", \"they\" refer to","Links pronouns back to the right character or thing"],
+      ["co4","Figurative language and wordplay","Idioms (<em>raining cats and dogs</em>), jokes, puns"],
+    ]],
+    ["Whole text",[
+      ["co5","Retells in order","Beginning, middle and end, with key details"],
+      ["co6","Literal questions","Who, what, where, when: the answer is \"right there\" in the text"],
+      ["co7","Inference","Why did…? How does the character feel? How do you know? Clues are spread across sentences"],
+      ["co8","Non-fiction features","Title, headings, contents page, captions, diagrams, glossary"],
+      ["co9","Main idea and summary","Says what the text is mostly about in one or two sentences"],
+      ["co10","Forms an opinion","Pulls together events from different parts of the text"],
+    ]],
+    ["Monitoring",[
+      ["co11","Notices when meaning breaks down","Stops, re-reads, or asks a question"],
+      ["co12","Predicts and checks","Uses title, type of text and events to predict, then confirms or changes the prediction"],
+      ["co13","Makes connections","Text to self, text to another text, text to the world"],
+    ]],
+  ],
+  end:"Reads a short chapter or information text on her own and can retell it, answer \"why\" questions, and explain what a new word means from clues.",
+  check:"After she reads a passage, ask 2 literal, 2 inference and 1 vocabulary question, then ask for a retell."
+},
+{
+  id:"writing", group:"writing", name:"Creating written texts", code:"EN1-CWT-01",
+  outcome:"Plans, creates and revises texts written for different purposes, including paragraphs, using knowledge of vocabulary, text features and sentence structure.",
+  why:"Composing her own ideas in writing, from sentences to short texts. Strong speakers often have plenty of ideas; the challenge is getting them onto paper correctly.",
+  sections:[
+    ["Types of text and organisation",[
+      ["wr1","Recount","What happened: weekend, excursion, birthday. Who, where, when, then events in order"],
+      ["wr2","Narrative (story)","Characters, setting, problem, solution"],
+      ["wr3","Opinion","\"I think… because…\" with reasons"],
+      ["wr4","Procedure and information report","How to make or do something; facts about a topic"],
+      ["wr5","Plans before writing","Talks it through, draws, or uses a simple planner"],
+      ["wr6","Sequences ideas","Time words: <em>first, next, then, after that, finally</em>"],
+      ["wr7","Paragraphs","Groups related sentences, starting with a topic sentence"],
+    ]],
+    ["Sentences and grammar",[
+      ["wr8","Complete simple sentences","Who + doing what: <em>The dog ran.</em>"],
+      ["wr9","Compound sentences","Joined with <em>and, but, so, or</em>"],
+      ["wr10","Complex sentences","With <em>because, when, if, after, before</em>: <em>When the bell rang, we went inside.</em>"],
+      ["wr11","Varied sentence openings","Not every sentence starting with \"I\" or \"Then\""],
+      ["wr12","Noun groups","<em>the small brown puppy</em>"],
+      ["wr13","Precise verbs","Action <em>raced</em>, saying <em>whispered</em>, thinking/feeling <em>wondered</em>"],
+      ["wr14","Adding detail","Adverbs and phrases: <em>quickly, in the park, after lunch</em>"],
+      ["wr15","Articles, pronouns, tense","<em>a/an/the</em>; he/she/they; past tense kept consistent. Often tricky for EAL/D learners"],
+    ]],
+    ["Punctuation",[
+      ["wr16","Capital letters and full stops","Every sentence; names; the word <em>I</em>"],
+      ["wr17","Question and exclamation marks","Used correctly and for effect"],
+      ["wr18","Commas in lists","<em>apples, bananas and grapes</em>"],
+      ["wr19","Apostrophes","Contractions <em>don't, I'm</em>; possession <em>Deniz's bag</em>"],
+      ["wr20","Speech marks","Simple dialogue: <em>\"Come here,\" said Mum.</em>"],
+    ]],
+    ["Revising",[
+      ["wr21","Re-reads and edits","Does it make sense? Capitals? Full stops? Spelling?"],
+      ["wr22","Uses feedback","Improves a draft after feedback; publishes a neat or typed copy"],
+    ]],
+  ],
+  end:"Writes a recount or opinion of a paragraph or more: ideas in order, a mix of sentence types, mostly correct punctuation, and the spelling patterns she has learnt.",
+  check:"Collect a 15-minute writing sample (\"Write about your weekend\") and mark it against this list."
+},
+{
+  id:"spelling", group:"writing", name:"Spelling", code:"EN1-SPELL-01",
+  outcome:"Applies phonological, orthographic and morphological generalisations and strategies to spell words in a range of writing contexts.",
+  why:"Spelling uses three kinds of knowledge: sounds, letter patterns and word parts (meaning). It mirrors phonics, so practise them together.",
+  sections:[
+    ["Sounds (phonological)",[
+      ["sp1","Segments words to spell","Says each sound, claps syllables, and writes a grapheme for each sound"],
+    ]],
+    ["Letter patterns (orthographic)",[
+      ["sp2","High-frequency words","Spells taught common words correctly in her own writing"],
+      ["sp3","Choosing vowel patterns","Knows which spelling is likely: <em>ay</em> at the end of a word (day), <em>ai</em> in the middle (rain)"],
+      ["sp4","Double letters and ck","<em>ff ll ss zz</em> after a short vowel (off, bell, kiss); <em>ck</em> after a short vowel (back)"],
+      ["sp5","tch and dge","After a short vowel at the end of a word: catch, bridge"],
+      ["sp6","Two-syllable words","Applies patterns across syllables: <em>rab-bit, gar-den</em>"],
+    ]],
+    ["Word parts (morphological)",[
+      ["sp7","Plurals","<em>-s</em>, <em>-es</em>, <em>y → ies</em>: cats, boxes, babies"],
+      ["sp8","-ed and -ing rules","Just add (jumped), double (hopping), drop e (making), change y (cried)"],
+      ["sp9","-er and -est","Person: <em>teacher</em>. Comparing: <em>bigger, biggest</em>"],
+      ["sp10","-ful, -y, -ly, -less","helpful, windy, slowly, careless"],
+      ["sp11","Prefixes","<em>un- re- dis-</em>: undo, redo, dislike"],
+      ["sp12","Compound words","playground, sometimes, sunflower"],
+      ["sp13","Contractions","can't, it's, we're, I'll"],
+      ["sp14","Common homophones","to/too/two · there/their · see/sea"],
+    ]],
+    ["Strategies",[
+      ["sp15","Uses spelling strategies","Look–Say–Cover–Write–Check, personal word book, have a go then check"],
+    ]],
+  ],
+  end:"Spells most common words and taught patterns correctly in everyday writing, and makes reasonable, sound-based attempts at new words.",
+  check:"Dictate 20 words covering the pattern groups, plus 3 short sentences."
+},
+{
+  id:"handwriting", group:"writing", name:"Handwriting & digital tools", code:"EN1-HANDW-01",
+  outcome:"Uses a legible, fluent and automatic handwriting style, and digital technology, including word-processing applications, when creating texts.",
+  why:"If forming letters takes effort, there is less attention left for ideas and spelling. NSW schools teach NSW Foundation Style; joined writing mostly comes from Year 3.",
+  sections:[
+    ["Handwriting",[
+      ["hw1","Posture and grip","Sits comfortably, holds the pencil with a relaxed tripod grip, steadies the page"],
+      ["hw2","Correct letter formation","All lower-case and capital letters, starting in the right place and moving in the right direction (NSW Foundation Style)"],
+      ["hw3","Letter sizes","Tall letters <em>b d f h k l t</em>, tail letters <em>g j p q y</em>, short letters sit on the line"],
+      ["hw4","Spacing","Finger spaces between words; even spacing"],
+      ["hw5","Fluent and automatic","Writes legibly at a steady speed without stopping to think about letters"],
+    ]],
+    ["Digital",[
+      ["hw6","Keyboard basics","Finds letters, space bar, Shift for capitals, full stop; types a few sentences"],
+    ]],
+  ],
+  end:"Neat, readable writing at a steady speed, with consistent letter sizes and spacing, and can type a short text.",
+  check:"Ask her to copy a sentence and write the alphabet; watch how she forms letters, not just the result."
+},
+{
+  id:"vocab", group:"found", name:"Vocabulary", code:"EN1-VOCAB-01",
+  outcome:"Understands and effectively uses Tier 1, taught Tier 2 and Tier 3 vocabulary to extend and elaborate ideas.",
+  why:"Supports both reading and writing. Tier 1 = everyday words. Tier 2 = \"book\" words common in writing but rare in talk. Tier 3 = subject words. Tier 2 is often the gap for EAL/D learners who speak well.",
+  sections:[
+    ["Word knowledge",[
+      ["vo1","Tier 1 everyday words","Everyday words used confidently in speech. Likely a strength"],
+      ["vo2","Tier 2 book words","<em>enormous, whispered, suddenly, delighted, discover, fair</em>"],
+      ["vo3","Tier 3 subject words","From school topics: <em>habitat, materials, volume, friction</em>"],
+      ["vo4","Synonyms and antonyms","big / large / huge · hot / cold"],
+      ["vo5","Word families and parts","happy → unhappy, happily, happiness"],
+      ["vo6","Multiple meanings and idioms","bat, light, park · \"raining cats and dogs\""],
+      ["vo7","Chooses precise words","said → shouted, whispered, replied. Uses new words in her own talk and writing"],
+    ]],
+  ],
+  end:"Understands most words in Year 2 texts, explains new words in her own words, and starts using \"book words\" in her writing.",
+  check:"Ask what 10 Tier 2 words from a Year 2 book mean, and to use 3 of them in a sentence."
+},
+{
+  id:"lit", group:"found", name:"Understanding & responding to literature", code:"EN1-UARL-01",
+  outcome:"Understands and responds to literature by creating texts using similar structures, intentional language choices and features appropriate to audience and purpose.",
+  why:"Enjoying and talking about books, and borrowing their ideas and language for her own writing.",
+  sections:[
+    ["Responding to books",[
+      ["li1","Wide reading","Stories, poems, non-fiction, Aboriginal stories and stories from many cultures, including her own"],
+      ["li2","Opinions with reasons","\"I liked… because…\""],
+      ["li3","Characters","Compares characters and notices how they change"],
+      ["li4","Author's language","Rhyme, repetition, alliteration, describing words, and how they make the reader feel"],
+      ["li5","Writes like an author","Writes her own version using a book's structure or pattern"],
+    ]],
+  ],
+  end:"Talks about books with opinions and reasons, and uses ideas and language from books in her own writing.",
+  check:"After a shared book, ask \"Which part did you like most, and why?\" and \"How did the character change?\""
+},
+{
+  id:"oral", group:"found", name:"Oral language & communication", code:"EN1-OLC-01",
+  outcome:"Communicates effectively by using interpersonal conventions and language to extend and elaborate ideas for social and learning interactions.",
+  why:"Deniz's strength. Use it as the bridge: if she can say it, she can learn to write it.",
+  sections:[
+    ["Talk for reading and writing",[
+      ["ol1","Retells and explains clearly","Gives detail and order when describing events or ideas"],
+      ["ol2","Follows multi-step instructions","3–4 steps, using position words (left/right, above/below)"],
+      ["ol3","Says sentences before writing","Rehearses a sentence aloud, then writes it"],
+      ["ol4","Asks questions to understand","Asks what a word means or why something happened"],
+    ]],
+  ],
+  end:"Explains, retells and asks questions confidently in English, and uses talk to plan writing.",
+  check:"Ask her to retell a short story or film, and listen for sequence words and detail."
+}];
+
+const GROUPS = {
+  reading:{label:"Reading", blurb:"Working out the words and understanding them."},
+  writing:{label:"Writing", blurb:"Composing, spelling and forming letters."},
+  found:{label:"Foundations for both", blurb:"Language that powers reading and writing."}
+};
+
+const PHONICS = [
+  ["Consonant digraphs","sh ch th wh ck ng qu ph","ship, chin, thank, whale, sock, king, queen, photo"],
+  ["Silent letters","kn wr mb gn","knot, wrap, thumb, gnat"],
+  ["Soft c / soft g","ce ci cy · ge gi gy","face, city, cycle, page, giraffe, gym"],
+  ["Split digraphs","a_e e_e i_e o_e u_e","make, these, time, rope, tune"],
+  ["Long a","ai ay a_e eigh","train, day, gate, eight"],
+  ["Long e","ee ea e_e y ey","feet, beach, these, happy, key"],
+  ["Long i","igh ie i_e y","high, tie, kite, my"],
+  ["Long o","oa ow o_e oe","coat, grow, bone, toe"],
+  ["Long oo / yoo","oo ew ue u_e","food, chew, glue, cute"],
+  ["Short oo","oo u","book, put"],
+  ["R-controlled","ar · or ore aw au · er ir ur · air are · ear","star · horn, sore, paw, launch · her, girl, fur · fair, care · ear"],
+  ["Diphthongs","oi oy · ou ow","oil, toy · out, how"],
+  ["Trigraphs","tch dge igh air ear ure","match, badge, sigh, stair, fear, pure"],
+  ["Suffixes","-s -es -ed -ing -er -est -ful -ly -y -less","hats, wishes, jumped, swimming, faster, biggest, helpful, softly, rainy, careless"],
+  ["Prefixes","un- re- dis-","unlock, replay, disagree"],
+];
+
+const KEY="deniz.y2map.v1";
+let state={};
+try{state=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){state={}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
+const LABELS=["Not checked","Not yet","Learning","Secure"];
+
+function esc(s){return s}
+
+function render(){
+  const host=document.getElementById("areas");
+  let total=0, html="";
+  AREAS.forEach(a=>{
+    let rows="";
+    a.sections.forEach(([sub,items])=>{
+      rows+=`<div class="subhead">${sub}</div>`;
+      items.forEach(([id,t,eg])=>{
+        total++;
+        const s=state[id]||0;
+        rows+=`<div class="row" data-id="${id}" data-s="${s}">
+          <div class="txt"><div class="t">${t}</div><div class="eg">${eg}</div></div>
+          <button class="chip" data-id="${id}" data-s="${s}" aria-label="Status for ${t.replace(/"/g,'&quot;')}">${LABELS[s]}</button>
+        </div>`;
+      });
+    });
+    html+=`<section class="area ${a.group}" id="${a.id}">
+      <div class="area-head"><span class="kind">${GROUPS[a.group].label}</span><h2>${a.name}</h2><span class="code">${a.code}</span></div>
+      <p class="outcome"><b>Syllabus outcome:</b> ${a.outcome}</p>
+      <p class="why">${a.why}</p>
+      <div class="cols">
+        <div class="topics">${rows}</div>
+        <div class="side">
+          <div class="box ex"><h4>By the end of Year 2</h4><p>${a.end}</p></div>
+          <div class="box"><h4>Quick check idea</h4><p>${a.check}</p></div>
+          <div class="box"><h4>Progress</h4><div class="mini" style="flex:none;width:100%;height:12px" data-bar="${a.id}"></div><p class="eg" data-sum="${a.id}" style="color:var(--muted);font-size:14px;margin-top:8px"></p></div>
+        </div>
+      </div>
+    </section>`;
+  });
+  host.innerHTML=html;
+  document.getElementById("total-count").textContent=total;
+
+  const ov=document.getElementById("overview");
+  ov.innerHTML=Object.entries(GROUPS).map(([g,info])=>`
+    <div class="group ${g==='found'?'found':g}">
+      <h3>${info.label}</h3><p>${info.blurb}</p>
+      <ul>${AREAS.filter(a=>a.group===g).map(a=>`<li><a href="#${a.id}">${a.name}</a><span class="mini" data-bar="${a.id}"></span></li>`).join("")}</ul>
+    </div>`).join("");
+
+  document.getElementById("phonics-table").innerHTML=PHONICS.map(([g,p,e])=>`<tr><td>${g}</td><td class="g">${p}</td><td>${e}</td></tr>`).join("");
+  updateBars();
+}
+
+function updateBars(){
+  AREAS.forEach(a=>{
+    const ids=a.sections.flatMap(([,items])=>items.map(i=>i[0]));
+    const c=[0,0,0,0]; ids.forEach(id=>c[state[id]||0]++);
+    const n=ids.length;
+    const segs=`<i style="width:${c[3]/n*100}%;background:var(--secure)"></i><i style="width:${c[2]/n*100}%;background:var(--learning)"></i><i style="width:${c[1]/n*100}%;background:var(--notyet)"></i>`;
+    document.querySelectorAll(`[data-bar="${a.id}"]`).forEach(el=>el.innerHTML=segs);
+    const s=document.querySelector(`[data-sum="${a.id}"]`);
+    if(s) s.textContent=`${c[3]} secure · ${c[2]} learning · ${c[1]} not yet · ${c[0]} not checked (of ${n})`;
+  });
+}
+
+function applyFilter(){
+  const f=document.getElementById("filter").value;
+  document.querySelectorAll(".row").forEach(r=>{
+    const s=r.dataset.s;
+    let show=true;
+    if(f==="todo") show=s!=="3";
+    else if(f!=="all") show=s===f;
+    r.classList.toggle("hidden",!show);
+  });
+}
+
+document.addEventListener("click",e=>{
+  const b=e.target.closest("button.chip[data-id]");
+  if(!b) return;
+  const id=b.dataset.id;
+  const s=((state[id]||0)+1)%4;
+  if(s===0) delete state[id]; else state[id]=s;
+  save();
+  b.dataset.s=s; b.textContent=LABELS[s];
+  b.closest(".row").dataset.s=s;
+  updateBars(); applyFilter();
+});
+document.getElementById("filter").addEventListener("change",applyFilter);
+document.getElementById("print").addEventListener("click",()=>window.print());
+const resetBtn=document.getElementById("reset");
+let armed=null;
+resetBtn.addEventListener("click",()=>{
+  if(!Object.keys(state).length) return;
+  if(!armed){
+    resetBtn.textContent="Click again to clear all";
+    armed=setTimeout(()=>{armed=null;resetBtn.textContent="Reset"},4000);
+    return;
+  }
+  clearTimeout(armed); armed=null; resetBtn.textContent="Reset";
+  state={}; save(); render(); applyFilter();
+});
+render();
+</script>
+</body>
+</html>

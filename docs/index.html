@@ -1,5 +1,45 @@
 <!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deniz's Reading &amp; Writing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#fbf8f3;--card:#fff;--ink:#22252b;--muted:#5d6370;--line:#e6e0d6;--accent:#0f766e}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#16181c;--card:#1f2228;--ink:#ecedef;--muted:#a3a9b5;--line:#33373f;--accent:#5eead4}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Atkinson Hyperlegible",system-ui,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:48px 16px}
+h1,h2{font-family:Lexend,system-ui,sans-serif;line-height:1.2;margin:0}
+h1{font-size:clamp(30px,6vw,44px)}
+.lede{color:var(--muted);font-size:19px;margin:10px 0 32px;max-width:60ch}
+h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:28px 0 12px}
+.cards{display:grid;gap:12px}
+a.card{display:block;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:12px;padding:16px 18px;text-decoration:none;color:inherit}
+a.card:hover{border-color:var(--accent)}
+a.card b{font-family:Lexend,sans-serif;font-size:19px}
+a.card span{display:block;color:var(--muted);font-size:15px;margin-top:4px}
+.soon{background:transparent;border:1px dashed var(--line);border-radius:12px;padding:14px 18px;color:var(--muted)}
+</style>
+</head>
 <body>
-Hi Deniz
+<div class="wrap">
+  <h1>Hi Deniz 👋</h1>
+  <p class="lede">Reading and writing practice for Year 2, plus the plan and progress notes behind it.</p>
+
+  <h2>Plan</h2>
+  <div class="cards">
+    <a class="card" href="curriculum/year2-reading-writing.html">
+      <b>Year 2 Reading &amp; Writing: everything to cover</b>
+      <span>All NSW Stage 1 reading and writing skills as a checklist, with a suggested order of work and benchmarks.</span>
+    </a>
+  </div>
+
+  <h2>Coming next</h2>
+  <div class="soon">Baseline assessment · Phonics practice · Reading fluency passages · Writing prompts · Progress tracker</div>
+</div>
 </body>
 </html>
