@@ -10,91 +10,205 @@
     "secure"
   ],
   "next_session": {
-    "number": 1,
+    "number": 2,
     "kind": "assessment",
-    "title": "Baseline 1 – sounds and words",
-    "url": "sessions/session-01.html"
+    "title": "Baseline 2 – reading stories",
+    "url": "sessions/session-02.html"
   },
-  "sessions_completed": [],
-  "history": [],
+  "sessions_completed": [
+    1
+  ],
+  "history": [
+    {
+      "session": 1,
+      "title": "Baseline 1 – sounds and words",
+      "date": "2026-10-28",
+      "duration_min": 11,
+      "feeling": "ok",
+      "summary": "Simple words fine; gaps in six letter sounds, tricky words and spelling patterns. Vowel patterns onward unverified (taps too fast)."
+    }
+  ],
   "skills": {
     "ph1": {
       "area": "phonics",
       "name": "All single letter sounds, instantly",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 20,
+          "total": 26,
+          "note": "Letter sounds. Said the letter NAME instead of the sound for t, g, k, b, h, y."
+        },
+        {
+          "session": 1,
+          "correct": 6,
+          "total": 8,
+          "note": "First-sound match (missed can, dog)"
+        },
+        {
+          "session": 1,
+          "correct": 5,
+          "total": 6,
+          "note": "Short-vowel words"
+        }
+      ]
     },
     "ph2": {
       "area": "phonics",
       "name": "Consonant digraphs",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 5,
+          "total": 6,
+          "note": "Digraphs sh ch th"
+        }
+      ]
     },
     "ph3": {
       "area": "phonics",
       "name": "Words with consonant blends",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 6,
+          "total": 6,
+          "note": "Consonant blends"
+        }
+      ]
     },
     "ph4": {
       "area": "phonics",
       "name": "Split digraphs (\"magic e\")",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 6,
+          "total": 6,
+          "note": "Split digraphs (magic e)"
+        }
+      ]
     },
     "ph5": {
       "area": "phonics",
       "name": "Long vowel teams",
       "status": "not_checked",
-      "evidence": []
+      "evidence": [
+        {
+          "session": 1,
+          "correct": null,
+          "total": null,
+          "note": "unverified: parent taps were too fast (median ~0.2 s). Re-check in Session 2."
+        }
+      ]
     },
     "ph6": {
       "area": "phonics",
       "name": "R-controlled vowels",
       "status": "not_checked",
-      "evidence": []
+      "evidence": [
+        {
+          "session": 1,
+          "correct": null,
+          "total": null,
+          "note": "unverified: parent taps were too fast (median ~0.2 s). Re-check in Session 2."
+        }
+      ]
     },
     "ph7": {
       "area": "phonics",
       "name": "Diphthongs",
       "status": "not_checked",
-      "evidence": []
+      "evidence": [
+        {
+          "session": 1,
+          "correct": null,
+          "total": null,
+          "note": "unverified: parent taps were too fast (median ~0.2 s). Re-check in Session 2."
+        }
+      ]
     },
     "ph8": {
       "area": "phonics",
       "name": "Trigraphs and quadgraphs",
       "status": "not_checked",
-      "evidence": []
+      "evidence": [
+        {
+          "session": 1,
+          "correct": null,
+          "total": null,
+          "note": "unverified: parent taps were too fast (median ~0.2 s). Re-check in Session 2."
+        }
+      ]
     },
     "ph9": {
       "area": "phonics",
       "name": "Less common spellings",
       "status": "not_checked",
-      "evidence": []
+      "evidence": [
+        {
+          "session": 1,
+          "correct": null,
+          "total": null,
+          "note": "unverified: parent taps were too fast (median ~0.2 s). Re-check in Session 2."
+        }
+      ]
     },
     "ph10": {
       "area": "phonics",
       "name": "Two-syllable words",
       "status": "not_checked",
-      "evidence": []
+      "evidence": [
+        {
+          "session": 1,
+          "correct": null,
+          "total": null,
+          "note": "unverified: parent taps were too fast (median ~0.2 s). Re-check in Session 2."
+        }
+      ]
     },
     "ph11": {
       "area": "phonics",
       "name": "Base words with endings",
       "status": "not_checked",
-      "evidence": []
+      "evidence": [
+        {
+          "session": 1,
+          "correct": null,
+          "total": null,
+          "note": "unverified: parent taps were too fast (median ~0.2 s). Re-check in Session 2."
+        }
+      ]
     },
     "ph12": {
       "area": "phonics",
       "name": "Reads made-up words",
       "status": "not_checked",
-      "evidence": []
+      "evidence": [
+        {
+          "session": 1,
+          "correct": null,
+          "total": null,
+          "note": "unverified: parent taps were too fast (median ~0.2 s). Re-check in Session 2."
+        }
+      ]
     },
     "fl1": {
       "area": "fluency",
       "name": "Instant high-frequency words",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 56,
+          "total": 60,
+          "note": "Sight words, 3 tiers. Tier 3 17/20 but only 60% quick. Missed put, together, another, once."
+        }
+      ]
     },
     "fl2": {
       "area": "fluency",
@@ -345,32 +459,67 @@
     "sp1": {
       "area": "spelling",
       "name": "Segments words to spell",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 3,
+          "total": 3,
+          "note": "Typed spelling. pig, ship, jump correct"
+        }
+      ]
     },
     "sp2": {
       "area": "spelling",
       "name": "High-frequency words",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 2,
+          "total": 3,
+          "note": "said, little correct; because wrong"
+        }
+      ]
     },
     "sp3": {
       "area": "spelling",
       "name": "Choosing vowel patterns",
-      "status": "not_checked",
-      "evidence": []
+      "status": "not_yet",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 1,
+          "total": 3,
+          "note": "ship correct; rain→then, cake→kake wrong. Spells by sound, not by pattern."
+        }
+      ]
     },
     "sp4": {
       "area": "spelling",
       "name": "Double letters and ck",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 1,
+          "total": 1,
+          "note": "little correct"
+        }
+      ]
     },
     "sp5": {
       "area": "spelling",
       "name": "tch and dge",
-      "status": "not_checked",
-      "evidence": []
+      "status": "not_yet",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 0,
+          "total": 1,
+          "note": "catch→cach"
+        }
+      ]
     },
     "sp6": {
       "area": "spelling",
@@ -387,8 +536,15 @@
     "sp8": {
       "area": "spelling",
       "name": "-ed and -ing rules",
-      "status": "not_checked",
-      "evidence": []
+      "status": "not_yet",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 0,
+          "total": 1,
+          "note": "kicked→kik"
+        }
+      ]
     },
     "sp9": {
       "area": "spelling",
@@ -471,14 +627,28 @@
     "vo1": {
       "area": "vocab",
       "name": "Tier 1 everyday words",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 3,
+          "total": 3,
+          "note": "Parent-rated knows meaning (quick answers, confirm later)"
+        }
+      ]
     },
     "vo2": {
       "area": "vocab",
       "name": "Tier 2 book words",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 5,
+          "total": 5,
+          "note": "Parent-rated knows meaning (quick answers, confirm later)"
+        }
+      ]
     },
     "vo3": {
       "area": "vocab",
@@ -564,5 +734,13 @@
       "status": "not_checked",
       "evidence": []
     }
+  },
+  "school_context": {
+    "eal_d_phase": "Emerging English (Semester 1 2026 report)",
+    "oral_interaction": "level 4 of 5 in all four areas",
+    "reading_and_responding": "level 2 of the numbered steps (scale B1–B3, 1, 2, 3) in all four areas",
+    "writing": "same as reading: level 2",
+    "teacher_notes": "Predicts events from a text read aloud; working towards picking key points from short spoken texts; spells by sound or visual features; beginning to write texts in a clear sequence.",
+    "pending": "Year 1 Phonics Screening Check result not yet received"
   }
 }

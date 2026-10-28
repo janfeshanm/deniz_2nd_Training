@@ -13,7 +13,7 @@ Year 2 level.
 3. Deniz works through it on the parent's phone, with the parent next to her.
 4. The last screen exports `session-NN-result.json` (Web Share API, with a download fallback).
 5. The parent uploads the JSON in chat. Save it to `data/results/session-NN-result.json`,
-   update `data/progress.json` (skill statuses and evidence), and plan the next session
+   update `docs/progress/progress.json` (skill statuses and evidence), and plan the next session
    around the gaps.
 
 Schedule: daily sessions.
@@ -44,7 +44,8 @@ Schedule: daily sessions.
   where she was.
 - Self-contained: inline CSS and JS, no frameworks. Google Fonts are optional, with system
   font fallbacks.
-- Link every new session from `docs/index.html`.
+- **Every time a new session page is built**, update BOTH `next_session` in `docs/progress/progress.json` and the
+  fallback `href` and "Session N" label in `docs/index.html`, so the child's Start button always opens the latest session.
 
 ## Session page structure
 1. Parent setup screen: keyboard tips, volume on, "hand the phone to Deniz".
@@ -98,7 +99,7 @@ Schedule: daily sessions.
   sp1–sp15, hw1–hw6, vo1–vo7, li1–li5, ol1–ol4).
 - Keep timing data: it gives evidence for automaticity.
 
-## Progress (`data/progress.json`, schema `deniz-progress/1`)
+## Progress (`docs/progress/progress.json`, schema `deniz-progress/1`)
 - One entry per skill: `status` (`not_checked` | `not_yet` | `learning` | `secure`) and
   an `evidence` list of `{ "session": N, "correct": x, "total": y, "note": "" }`.
 - Rough guide: below 50% correct = `not_yet`; 50–89% = `learning`; 90% or more,
@@ -116,3 +117,17 @@ Schedule: daily sessions.
 
 ## Git
 - Default branch: `main`. Remote: GitHub (`janfeshanm/deniz_2nd_Training`).
+
+## Scoring rules (from Session 2)
+- A skipped or "couldn't read" item counts as **wrong** and stays in the totals. Only items never shown
+  because of an early-stop rule (`notShown: true`) are excluded. (Session 1 results excluded skips, so its
+  sight-word, trigraph and less-common-spelling totals are slightly generous.)
+- Parent ✓ / ✗ buttons are disabled for about 1.8 s after each word appears, so taps reflect real reading.
+- Session 2 adds step-level fields on passage steps: `level`, `words`, `errors`, `accuracy`, `seconds`, `wcpm`,
+  `self_corrections`, `behaviours`. Comprehension items carry `kind` and `modality` (`reading` or `listening`);
+  listening evidence is kept but not used for a skill's status.
+- `docs/progress/progress.json` also holds `school_context` (EAL/D phase and levels only: no names).
+- **Voice recordings** (Session 2 on): the page can record Deniz reading each story and exports the audio files
+  next to the result JSON (`session-NN-<step>.webm`). Audio is never committed: the repo is public. Keep it in
+  `data/audio/` (git-ignored). Do not put the EAL/D report or other school documents in the repo; only extracted
+  levels go in `progress.json` (`school_context`).

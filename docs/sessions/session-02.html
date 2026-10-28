@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="theme-color" content="#fff4e0">
+<title>Session 2 – Reading stories</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#fff4e0;--bg2:#ffe1ec;--ink:#2b2340;--muted:#7a6f8a;--btn:#ff7a45;--btn2:#ff5a7a;--ok:#2fb36d;--line:#e6dcef}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%}
+body{font-family:Lexend,system-ui,sans-serif;color:var(--ink);font-size:18px;line-height:1.35;
+  background:linear-gradient(170deg,var(--bg1),var(--bg2)) fixed}
+#app{display:flex;flex-direction:column;min-height:100dvh}
+#top{padding:max(10px,env(safe-area-inset-top)) 16px 6px}
+#blk{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;min-height:17px}
+#bar{height:8px;background:rgba(0,0,0,.08);border-radius:8px;margin-top:6px;overflow:hidden}
+#barfill{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--btn),var(--btn2));transition:width .3s}
+#main{flex:1;padding:8px 16px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+#main.top{justify-content:flex-start}
+#bottom{position:sticky;bottom:0;padding:10px 16px max(14px,env(safe-area-inset-bottom));background:rgba(255,255,255,.78);
+  backdrop-filter:blur(6px);border-top:1px solid var(--line)}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+h1{font-size:28px;margin:0 0 10px;font-weight:800}
+p{margin:0 0 12px}
+.muted{color:var(--muted);font-size:16px}
+.count{font-size:15px;color:var(--muted);margin-bottom:10px}
+.emoji{font-size:64px;margin-bottom:6px}
+.primary{width:100%;min-height:56px;border-radius:16px;color:#fff;font-weight:800;font-size:22px;
+  background:linear-gradient(135deg,var(--btn),var(--btn2));box-shadow:0 6px 16px rgba(255,90,122,.3)}
+.primary:active{transform:scale(.98)}
+.primary:disabled{opacity:.45}
+.ghost{min-height:48px;padding:0 16px;border-radius:14px;border:2px solid var(--line);background:#fff;font-weight:600;font-size:16px;color:var(--muted)}
+.word{font-size:52px;font-weight:800;letter-spacing:.02em;margin:10px 0}
+.spk{min-width:72px;min-height:72px;border-radius:50%;font-size:34px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.12);margin:6px 0 14px}
+.spk:active{transform:scale(.94)}
+.opts{display:flex;gap:12px;width:100%;justify-content:center;margin-top:8px}
+.opt{flex:1;max-width:110px;min-height:96px;border-radius:20px;background:#fff;font-size:52px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.opt:active{background:#ffe9d9}
+.q{font-size:22px;font-weight:600;margin:0 0 6px}
+.say{font-size:20px;font-weight:600}
+.toast{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:800;
+  background:rgba(255,244,224,.92);z-index:5;animation:pop .5s ease}
+@keyframes pop{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:none}}
+/* parent panel */
+.parent{border:2px dashed #b9a8d6;border-radius:16px;padding:10px;background:#fff}
+.plabel{font-size:12px;font-weight:700;color:#6b5a8a;margin-bottom:8px;text-align:left;letter-spacing:.05em}
+.prow{display:flex;gap:8px}
+.pb{flex:1;min-height:56px;border-radius:14px;font-size:20px;font-weight:800;color:#fff}
+.pb.ok{background:var(--ok)}.pb.no{background:#d9822b}
+.pb:disabled{opacity:.3}
+.hold{height:5px;border-radius:5px;background:#eee;margin:0 0 8px;overflow:hidden}
+.hold i{display:block;height:100%;width:0;background:var(--ok);animation:fill linear forwards}
+@keyframes fill{to{width:100%}}
+.said{flex:1;min-width:0;min-height:44px;border:2px solid var(--line);border-radius:12px;padding:0 10px;font:inherit;font-size:16px;margin-top:8px}
+.undo{min-width:52px;min-height:44px;margin-top:8px;border-radius:12px;border:2px solid var(--line);background:#fff;font-size:20px}
+.hint{font-size:14px;color:var(--muted);margin:8px 0 0;text-align:left}
+.card{background:#fff;border-radius:18px;padding:14px 16px;text-align:left;width:100%;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.card h2{font-size:17px;margin:0 0 8px}
+.card ul{margin:0;padding-left:20px;font-size:16px}
+.card li{margin-bottom:6px}
+label{display:block;font-size:15px;font-weight:600;margin:10px 0 4px;text-align:left}
+select,textarea{width:100%;min-height:48px;border:2px solid var(--line);border-radius:12px;padding:8px 10px;font:inherit;font-size:17px;background:#fff;color:var(--ink)}
+textarea{min-height:90px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:6px 14px;border-radius:22px;border:2px solid var(--line);background:#fff;font-size:15px}
+.chip.on{background:#ffe1ec;border-color:var(--btn2);font-weight:600}
+.emojis{display:flex;gap:14px;justify-content:center;margin-top:10px}
+.emojis button{font-size:56px;min-width:88px;min-height:88px;border-radius:24px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;margin:6px 0 4px}
+.tile{aspect-ratio:1;min-height:72px;border-radius:14px;background:#fff;border:2px solid var(--line);font-size:44px;font-weight:800;position:relative}
+.tile.s1{background:#c9f0d9;border-color:var(--ok)}
+.tile.s2{background:#ffe3a8;border-color:#e0a21a}
+.tile.s2::after{content:"name";position:absolute;bottom:2px;left:0;right:0;font-size:11px;font-weight:600;color:#8a5f00}
+table{border-collapse:collapse;width:100%;font-size:14px}
+td,th{padding:4px 6px;border-bottom:1px solid var(--line);text-align:left}
+td.n,th.n{text-align:right;white-space:nowrap}
+.low{color:#c0561b;font-weight:700}.good{color:#1f8f55;font-weight:700}
+/* passages */
+.passage{font-size:26px;line-height:1.75;font-weight:600;text-align:left;background:#fff;border-radius:18px;padding:16px;width:100%;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.pw{display:flex;flex-wrap:wrap;gap:6px;text-align:left;width:100%}
+.w{min-height:44px;padding:4px 10px;border-radius:10px;border:2px solid var(--line);background:#fff;font-size:18px}
+.w.bad{background:#ffd9b8;border-color:#e0822b;font-weight:700}
+.step{display:flex;align-items:center;gap:10px;margin:10px 0}
+.step button{min-width:48px;min-height:48px;border-radius:12px;border:2px solid var(--line);background:#fff;font-size:22px;font-weight:800}
+/* multiple choice */
+.mcqs{display:flex;flex-direction:column;gap:10px;width:100%;margin-top:6px}
+.mcq{display:flex;align-items:center;gap:12px;min-height:68px;padding:8px 14px;border-radius:18px;background:#fff;
+  box-shadow:0 4px 12px rgba(0,0,0,.1);font-size:21px;font-weight:600;text-align:left}
+.mcq:active{background:#ffe9d9}
+.mcq .em{font-size:34px}
+.peek{background:#fff;border-radius:14px;padding:12px;margin-top:10px;font-size:18px;text-align:left;width:100%}
+.peek[hidden]{display:none}
+/* sequencing */
+.slots{display:flex;flex-direction:column;gap:8px;width:100%;margin:8px 0}
+.slot{min-height:60px;border:2px dashed var(--line);border-radius:14px;padding:8px 12px;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.6);font-size:19px;text-align:left}
+.slot b{font-size:22px;color:var(--btn2)}
+.slot.big{font-size:34px}
+.crow{display:flex;gap:8px;width:100%;margin-bottom:8px}
+.crow .cd{flex:1;min-height:60px;border-radius:14px;background:#fff;box-shadow:0 3px 10px rgba(0,0,0,.1);font-size:19px;font-weight:600;padding:8px 12px;text-align:left}
+.crow .cd.big{font-size:40px;text-align:center}
+.crow .cs{min-width:52px;border-radius:14px;background:#fff;border:2px solid var(--line);font-size:22px}
+.crow.used{opacity:.3;pointer-events:none}
+@media (prefers-reduced-motion:reduce){.toast{animation:none}}
+</style>
+</head>
+<body>
+<div id="app">
+  <header id="top"><div id="blk"></div><div id="bar"><i id="barfill"></i></div></header>
+  <main id="main"></main>
+  <footer id="bottom"></footer>
+</div>
+
+<script>
+(() => {
+"use strict";
+
+/* ====================================================================
+   Session 2 – Baseline: reading stories  (schema deniz-session/1)
+   Changes from Session 1: parent buttons wait before they can be tapped,
+   there is no "skip" (skipped = not read = wrong, counted in totals).
+   ==================================================================== */
+const KEY = "deniz-s02-v1";
+const SESSION = 2;
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const now = () => new Date().toISOString();
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const median = a => { if (!a.length) return null; const s = a.slice().sort((x, y) => x - y), m = Math.floor(s.length / 2); return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
+
+/* ---------- speech (en-AU preferred) ---------- */
+let voice = null;
+function pickVoice() {
+  try { const vs = speechSynthesis.getVoices();
+    voice = vs.find(v => /^en[-_]AU/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang)) || null; } catch (e) {}
+}
+try { speechSynthesis.onvoiceschanged = pickVoice; pickVoice(); } catch (e) {}
+function utter(text, rate) {
+  const u = new SpeechSynthesisUtterance(text);
+  if (voice) u.voice = voice;
+  u.lang = (voice && voice.lang) || "en-AU";
+  u.rate = rate || 0.85;
+  return u;
+}
+function say(text, rate) { try { if (!window.speechSynthesis) return; speechSynthesis.cancel(); speechSynthesis.speak(utter(text, rate)); } catch (e) {} }
+function sayList(arr, rate, onend) {
+  try {
+    if (!window.speechSynthesis) return false;
+    speechSynthesis.cancel();
+    arr.forEach((t, i) => { const u = utter(t, rate); if (onend && i === arr.length - 1) u.onend = onend; speechSynthesis.speak(u); });
+    return true;
+  } catch (e) { return false; }
+}
+function speechCancel() { try { speechSynthesis.cancel(); } catch (e) {} }
+
+/* ---------- optional voice recording (stays in memory until exported; never uploaded) ---------- */
+let micStream = null;
+const AUDIO = {};   // step id -> { blob, seconds, mime }
+async function initMic() {
+  try {
+    if (!navigator.mediaDevices || !window.MediaRecorder) return false;
+    micStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    return true;
+  } catch (e) { micStream = null; return false; }
+}
+function recStart() {
+  try {
+    if (!micStream) return null;
+    const mt = ["audio/webm;codecs=opus", "audio/webm", "audio/mp4"].find(t => MediaRecorder.isTypeSupported(t)) || "";
+    const mr = new MediaRecorder(micStream, mt ? { mimeType: mt } : undefined), chunks = [];
+    mr.ondataavailable = ev => { if (ev.data && ev.data.size) chunks.push(ev.data); };
+    const done = new Promise(res => { mr.onstop = () => res(new Blob(chunks, { type: mr.mimeType || mt || "audio/webm" })); });
+    mr.start();
+    return { mr, done };
+  } catch (e) { return null; }
+}
+const audioExt = t => /mp4/.test(t) ? "m4a" : /ogg/.test(t) ? "ogg" : "webm";
+
+/* ---------- wake lock ---------- */
+let wl = null;
+async function wake() { try { if ("wakeLock" in navigator) wl = await navigator.wakeLock.request("screen"); } catch (e) {} }
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible" && S.started_at && !S.exported) wake();
+});
+
+/* ---------- state (autosaved) ---------- */
+const fresh = () => ({ v: 1, pos: 0, steps: [], ctx: {}, started_at: null, letters: {}, feeling: null, obs: [], note: "", exported: false, listenPlays: 0, endedEarly: false });
+function load() { try { const s = JSON.parse(localStorage.getItem(KEY)); return s && s.v === 1 ? s : null; } catch (e) { return null; } }
+function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+let S = load() || fresh();
+
+/* ====================================================================
+   CONTENT
+   ==================================================================== */
+const mk = (words, skills) => words.map(w => ({ prompt: w, expected: w, skills }));
+
+// Warm-up: hear a word, tap its first letter (checks b / d / p / q)
+const BDPQ = [["bed","b","d","p"],["dog","d","b","q"],["pen","p","q","b"],["queen","q","p","d"],["bat","b","d","q"],["pig","p","b","d"]]
+  .map(a => ({ prompt: a[0], expected: a[1], options: [a[1], a[2], a[3]] }));
+
+// Letter sounds re-check: the six she said by NAME in Session 1, plus b d p q
+const LETTERS2 = ["t","g","k","b","h","y","d","p","q"];
+
+// Phonics re-check: NEW words (not the Session 1 words), 4 per group, easiest to hardest
+const GROUPS = [
+  { key: "teams",      skills: ["ph5"],  label: "Long vowel teams",       words: ["mail","coat","seed","tray"] },
+  { key: "rcontrol",   skills: ["ph6"],  label: "R-controlled vowels",    words: ["farm","horn","fern","sport"] },
+  { key: "diphthongs", skills: ["ph7"],  label: "Diphthongs",             words: ["loud","toy","brown","soil"] },
+  { key: "endings",    skills: ["ph11"], label: "Words with endings",     words: ["helped","running","fastest","hoping"] },
+  { key: "twosyl",     skills: ["ph10"], label: "Two-syllable words",     words: ["napkin","basket","insect","muffin"] },
+  { key: "trigraphs",  skills: ["ph8"],  label: "Trigraphs / quadgraphs", words: ["night","match","badge","fetch"] },
+  { key: "uncommon",   skills: ["ph9"],  label: "Less common spellings",  words: ["knife","wrong","photo","lamb"] }
+];
+const PSEUDO = ["zib","thom","clup","dake","boap","nerm","fowd","slib"];
+
+// Reading passages A -> B -> C (easier to harder). q = [question, [[option, emoji]...], correct index (always 0 here, shuffled on screen), skill, kind]
+const PASS = [
+  { key: "A", level: "A", label: "Story 1", title: "Sam's frog", about: "early Year 1 text",
+    text: "Sam has a pet frog. The frog sits in a pond. It can hop and swim. Sam likes to sit and see the frog. Then the frog jumps on a log. Splash!",
+    q: [["Where does the frog sit?", [["In a pond","💧"],["On a bed","🛏️"],["In a hat","🎩"]], "co6", "literal"],
+        ["What can the frog do?", [["Hop and swim","🐸"],["Sing and dance","🎤"],["Read a book","📖"]], "co6", "literal"],
+        ["What did the frog do last?", [["Jumped on a log","🪵"],["Sat in the pond","💧"],["Went to bed","🛏️"]], "co5", "sequence"]] },
+  { key: "B", level: "B", label: "Story 2", title: "At the beach", about: "Year 1 text",
+    text: "It was a hot day, so Mia and her dad went to the beach. They swam in the sea. Then Mia made a big hole in the sand. A wave came and filled it with water. A little crab came out of the hole. Mia was so happy!",
+    q: [["Where did Mia and her dad go?", [["To the beach","🏖️"],["To the shop","🛒"],["To school","🏫"]], "co6", "literal"],
+        ["What came out of the hole?", [["A little crab","🦀"],["A big fish","🐟"],["A dog","🐕"]], "co6", "literal"],
+        ["Why did they swim in the sea?", [["To cool down","🌊"],["To catch a fish","🎣"],["To find a hat","🎩"]], "co7", "inference"]] },
+  { key: "C", level: "C", label: "Story 3", title: "The picnic", about: "Year 2 text",
+    text: "Last weekend, our family went for a picnic in the park. Dad carried a basket full of sandwiches and fruit. We found a shady spot under a tall tree. After lunch, my brother kicked the ball and I ran after it. Suddenly, it started to rain, so we packed up quickly and ran to the car. We were wet, but we were laughing.",
+    q: [["What did Dad carry?", [["A basket of food","🧺"],["A big ball","⚽"],["A tall tree","🌳"]], "co6", "literal"],
+        ["What did her brother kick?", [["The ball","⚽"],["A tree","🌳"],["The car","🚗"]], "co6", "literal"],
+        ["Why did they run to the car?", [["It started to rain","🌧️"],["They were hungry","🍎"],["They lost the ball","⚽"]], "co7", "inference"],
+        ["What does “suddenly” mean?", [["All at once","⚡"],["Very slowly","🐢"],["A long time ago","⏳"]], "co1", "vocabulary"]] }
+];
+PASS.forEach(p => { p.words = p.text.split(/\s+/).map(raw => ({ raw, prompt: raw.replace(/[^A-Za-z'’-]/g, "").toLowerCase() })); });
+
+// Listening story: the phone reads it aloud, the text is never shown
+const LISTEN = {
+  sents: ["Tom and his grandma planted a vegetable garden.", "First, they dug the soil and dropped in tiny seeds.", "Every morning, Tom watered the seeds with a little can.",
+          "Weeks later, green leaves poked out of the dirt.", "Tom was thrilled.", "He picked a juicy tomato and took a big bite.",
+          "“This is the best tomato ever,” he said, “because I grew it myself!”"],
+  q: [["Who helped Tom plant the garden?", [["His grandma","👵"],["His dad","👨"],["His teacher","🧑‍🏫"]], "co6", "literal"],
+      ["Why did Tom water the seeds every morning?", [["So they would grow","🌱"],["So they would be clean","🧼"],["Because Grandma was thirsty","🥤"]], "co7", "inference"],
+      ["What does “thrilled” mean?", [["Very excited","🤩"],["Very sleepy","😴"],["Very cross","😠"]], "co1", "vocabulary"],
+      ["What happened after the leaves came out?", [["Tom picked a tomato","🍅"],["Tom dug the soil","⛏️"],["Tom dropped in seeds","🌰"]], "co5", "sequence"]]
+};
+
+// Putting things in order [cards in the CORRECT order, emoji?, spoken instruction]
+const SEQ = [
+  { cards: ["🥚","🐣","🐥"], big: true, skills: ["co5", "wr6"], prompt: "Put the pictures in order. What happens first, next and last?" },
+  { cards: ["First, Ben put on his socks.","Next, he put on his shoes.","Last, he ran out the door."], skills: ["co5", "wr6"], prompt: "Put the sentences in order." },
+  { cards: ["Mum filled the bath with water.","The baby got into the bath.","Mum dried the baby with a towel."], skills: ["co5", "wr6"], prompt: "Put the sentences in order." }
+];
+
+const BEH = ["Reads word by word", "Reads in phrases", "Pauses at full stops", "Ignores full stops", "Uses expression", "Points with a finger",
+  "Guesses from the first letter", "Sounds words out aloud first", "Needed a long time on some words"];
+
+/* ====================================================================
+   FLOW
+   ==================================================================== */
+const flow = [];
+const scr = (id, label, w, render) => flow.push({ kind: "screen", id, label, w, render });
+const stp = o => flow.push(Object.assign({ kind: "step" }, o));
+
+scr("setup", "Parent setup", 0, renderSetup);
+scr("intro", "Welcome", 4, renderIntro);
+stp({ id: "s2-bdpq", label: "Warm-up", skills: ["ph1"], mode: "auto", type: "pick", w: 60, items: BDPQ, count: true,
+      note: "Hear a word, tap its first letter (b / d / p / q check). Auto-scored." });
+scr("introLetters", "Letter sounds", 4, d => blockIntro(d, "🔤", "Letter sounds", "Say the sound each letter makes.",
+      "Parent: the SOUND (like /t/), not the name. In Session 1 she said the names for t, g, k, b, h, y. Tap once = sound, twice = name only, blank = unsure."));
+stp({ id: "s2-letters", label: "Letter sounds", skills: ["ph1"], mode: "parent", type: "letters", w: 60, letters: LETTERS2,
+      note: "Re-check of letters she said by name in Session 1 (t g k b h y) plus d p q. response: sound | name | none." });
+scr("introA", "Reading words", 4, d => blockIntro(d, "📖", "Read the words", "Read each word out loud. If it is tricky, just have a go!",
+      "Parent: no hints. The ✓ / ✗ buttons wake up after about 2 seconds, so wait for her to read. If she can't read it, tap “Couldn't read”. That counts as not read."));
+GROUPS.forEach(g => stp({ id: "s2-" + g.key, label: "Reading words", skills: g.skills, mode: "parent", type: "read", w: 25,
+      items: mk(g.words, g.skills), rule: "group", note: g.label + " (re-check, new words)" }));
+scr("introPseudo", "Made-up words", 4, d => blockIntro(d, "👽", "Words from planet Zog", "These are silly made-up words. Read them the way they sound!",
+      "Parent: any sensible way of sounding the word out counts ✓."));
+stp({ id: "s2-pseudo", label: "Made-up words", skills: ["ph12"], mode: "parent", type: "read", w: 50, items: mk(PSEUDO, ["ph12"]), rule: "pseudo",
+      note: "Nonsense words: pure decoding, no memory or guessing (re-check)." });
+scr("break1", "Break", 10, renderBreak);
+scr("introPass", "Stories", 4, d => blockIntro(d, "📚", "Let's read stories", "Read each story out loud. Then I will ask you some questions.",
+      "Parent: start the timer when she starts reading. Stop it when she finishes. Then tap the words she got wrong. No hints, but you can say “have a go”."));
+PASS.forEach(p => {
+  stp({ id: "s2-read-" + p.key, label: p.label, skills: ["fl2"], mode: "parent", type: "passage", w: 110, items: p.words.map(w => ({ prompt: w.prompt, expected: w.prompt })),
+        passage: p, rule: "passage", note: "Reading aloud, level " + p.level + " (" + p.about + ")" });
+  stp({ id: "s2-comp-" + p.key, label: "Questions", skills: Array.from(new Set(p.q.map(x => x[2]))), mode: "auto", type: "mcq", w: 70, count: true,
+        items: p.q.map(x => mcqItem(x)), passage: p, modality: "reading", needs: "s2-read-" + p.key,
+        note: "Questions about story " + p.key + " that she read herself (questions are spoken aloud)." });
+});
+scr("break2", "Break", 10, renderBreak);
+scr("introListen", "Listening", 4, d => blockIntro(d, "👂", "Listen to a story", "I will read you a story. Listen carefully. Then I will ask you questions.",
+      "Parent: she only listens this time, with no reading. Comparing this with the stories she read herself shows whether reading or understanding is the gap."));
+scr("listen", "Listen", 40, renderListen);
+stp({ id: "s2-listen-q", label: "Questions", skills: ["co1", "co5", "co6", "co7"], mode: "auto", type: "mcq", w: 80, count: true,
+      items: LISTEN.q.map(x => mcqItem(x)), modality: "listening", note: "Questions about a story she LISTENED to (no reading needed)." });
+scr("introSeq", "In order", 4, d => blockIntro(d, "🔢", "Put it in order", "Tap the cards in the right order: first, next, last.",
+      "Parent: let her work it out. Tap 🔊 on a card to hear it."));
+stp({ id: "s2-seq", label: "In order", skills: ["co5", "wr6"], mode: "auto", type: "seq", w: 80, items: SEQ.map(s => ({ prompt: s.prompt, expected: s.cards.join(" > "), cards: s.cards, big: s.big, skills: s.skills })), count: true,
+      note: "Put events in order (pictures, then sentences). Auto-scored." });
+scr("finishChild", "All done", 0, renderFinishChild);
+scr("finishParent", "Parent wrap-up", 0, renderFinishParent);
+
+function mcqItem(x) { return { prompt: x[0], expected: x[1][0][0], options: x[1].map(o => ({ t: o[0], e: o[1] })), skills: [x[2]], kind: x[3] }; }
+
+const TOTAL_W = flow.reduce((a, e) => a + (e.w || 0), 0);
+
+/* ====================================================================
+   ENGINE
+   ==================================================================== */
+let H = {}, lock = false, t0 = 0;
+document.addEventListener("click", ev => {
+  const b = ev.target.closest("[data-act]");
+  if (!b || b.disabled) return;
+  const f = H[b.dataset.act];
+  if (f) f(b, ev);
+});
+function screen(label, main, bottom, acts, topAlign) {
+  H = acts || {}; lock = false; t0 = Date.now();
+  $("#blk").textContent = label || "";
+  const m = $("#main"); m.innerHTML = main; m.className = topAlign ? "top" : "";
+  const b = $("#bottom"); b.innerHTML = bottom || ""; b.style.display = bottom ? "" : "none";
+  window.scrollTo(0, 0);
+}
+// parent buttons cannot be tapped until she has had time to read
+function hold(ms) {
+  const bs = Array.from(document.querySelectorAll("#bottom .pb")); if (!bs.length) return;
+  bs.forEach(b => b.disabled = true);
+  const bar = document.createElement("div"); bar.className = "hold"; bar.innerHTML = `<i style="animation-duration:${ms}ms"></i>`;
+  const p = $("#bottom .parent"); if (p) p.insertBefore(bar, p.children[1] || null);
+  const my = H;
+  setTimeout(() => { if (H !== my) return; bs.forEach(b => b.disabled = false); bar.remove(); }, ms);
+}
+function updateBar(frac) {
+  let done = 0;
+  for (let i = 0; i < S.pos && i < flow.length; i++) done += flow[i].w || 0;
+  const e = flow[S.pos];
+  if (e) done += (e.w || 0) * (frac || 0);
+  $("#barfill").style.width = Math.min(100, Math.round(done / TOTAL_W * 100)) + "%";
+}
+function stepRec(e) {
+  let r = S.steps.find(x => x.id === e.id);
+  if (!r) {
+    r = { id: e.id, skills: e.skills, mode: e.mode, label: e.label, started_at: now(), duration_sec: 0, items: [], notes: e.note || "" };
+    if (e.modality) r.modality = e.modality;
+    S.steps.push(r);
+  }
+  return r;
+}
+// skipped / couldn't-read items COUNT (as wrong). Only items never shown (early stop) are excluded.
+const shown = r => r.items.filter(i => !i.notShown);
+const itemScore = i => i.score != null ? i.score : (i.correct ? 1 : 0);
+const isStep = e => e && e.kind === "step";
+const recOf = id => S.steps.find(r => r.id === id);
+
+function preSkip(e) {
+  if (e.rule === "group") {
+    const g = flow.filter(x => x.rule === "group"), i = g.indexOf(e);
+    if (i >= 2) { const prev = g.slice(i - 2, i).map(x => recOf(x.id)); if (prev.every(r => r && r.stopped_early)) return true; }
+  }
+  if (e.rule === "pseudo") {
+    const g = flow.filter(x => x.rule === "group").map(x => recOf(x.id));
+    const last2 = g.slice(-2); if (last2.length === 2 && last2.every(r => r && r.stopped_early)) return true;
+  }
+  if (e.rule === "passage") {
+    const p = flow.filter(x => x.rule === "passage"), i = p.indexOf(e);
+    if (i > 0) { const r = recOf(p[i - 1].id); if (r && (r.stopped_early || (r.accuracy != null && r.accuracy < 85))) return true; }
+  }
+  if (e.needs) { const r = recOf(e.needs); if (r && r.stopped_early) return true; }
+  return false;
+}
+function fillNotShown(e, rec, why) {
+  const list = e.letters ? e.letters : e.items;
+  for (let i = rec.items.length; i < list.length; i++) {
+    const it = e.letters ? { prompt: list[i], expected: "sound of " + list[i] } : list[i];
+    rec.items.push({ prompt: it.prompt, expected: it.expected, response: null, correct: false, attempts: 0, ms: 0, skipped: true, notShown: true });
+  }
+  rec.stopped_early = why;
+}
+function applyRule(e, rec) {
+  const s = shown(rec), c = s.filter(i => i.correct).length;
+  if (rec.items.length >= e.items.length) return;
+  if (e.rule === "group" && s.length >= 3 && c === 0) fillNotShown(e, rec, "group too hard (0 of first " + s.length + " correct)");
+}
+
+function go() {
+  if (S.pos >= flow.length) return;
+  const e = flow[S.pos];
+  if (e.kind === "screen") {
+    updateBar(0);
+    e.render(() => { S.pos++; save(); go(); });
+    return;
+  }
+  const rec = stepRec(e);
+  if (rec.items.length === 0 && preSkip(e)) { fillNotShown(e, rec, "skipped: earlier step was too hard"); save(); S.pos++; return go(); }
+  if (e.type === "letters") {
+    if (rec.items.length >= e.letters.length) { S.pos++; save(); return go(); }
+    updateBar(0); return renderLetters(e, rec);
+  }
+  if (rec.items.length >= e.items.length) { S.pos++; save(); return go(); }
+  if (e.type === "passage") { updateBar(0); return renderPassage(e, rec); }
+  updateBar(rec.items.length / e.items.length);
+  const idx = rec.items.length;
+  ({ pick: renderPick, read: renderRead, mcq: renderMCQ, seq: renderSeq })[e.type](e, rec, idx);
+}
+function record(e, rec, item, after) {
+  if (lock) return; lock = true;
+  rec.items.push(item);
+  applyRule(e, rec);
+  rec.duration_sec = Math.round(rec.items.reduce((a, i) => a + (i.ms || 0), 0) / 1000);
+  save();
+  after ? after() : go();
+}
+function cheer(msg, then) {
+  const d = document.createElement("div"); d.className = "toast"; d.textContent = msg; document.body.appendChild(d);
+  setTimeout(() => { d.remove(); then(); }, 650);
+}
+const counter = (e, idx) => e.count ? `<div class="count">${idx + 1} of ${e.items.length}</div>` : "";
+
+/* ---------- undo (word-reading steps only) ---------- */
+function canUndo() {
+  for (let p = S.pos; p >= 0; p--) {
+    const e = flow[p]; if (!isStep(e) || e.type !== "read") continue;
+    const r = recOf(e.id);
+    if (r && r.items.some(i => !i.notShown)) return true;
+  }
+  return false;
+}
+function undo() {
+  for (let p = S.pos; p >= 0; p--) {
+    const e = flow[p]; if (!isStep(e) || e.type !== "read") continue;
+    const r = recOf(e.id); if (!r) continue;
+    while (r.items.length && r.items[r.items.length - 1].notShown) r.items.pop();
+    if (!r.items.length) { S.steps = S.steps.filter(x => x !== r); continue; }
+    r.items.pop(); delete r.stopped_early;
+    S.pos = p; save(); return go();
+  }
+}
+const undoBtn = () => canUndo() ? `<button class="undo" data-act="undo" aria-label="Undo last">↩</button>` : "";
+
+/* ====================================================================
+   SCREENS
+   ==================================================================== */
+function sel(id, label, opts, val) {
+  return `<label for="${id}">${label}</label><select id="${id}">${opts.map(o => `<option value="${esc(o[0])}"${o[0] === val ? " selected" : ""}>${esc(o[1])}</option>`).join("")}</select>`;
+}
+function renderSetup(done) {
+  const c = S.ctx || {};
+  screen("Parent setup", `
+    <h1 style="font-size:24px">Session 2 · Reading stories</h1>
+    <p class="muted" style="margin-bottom:10px">About 25 minutes. Progress saves automatically, so you can stop if she is tired. There is no typing this time.</p>
+    <div class="card"><h2>Before you start</h2><ul>
+      <li>🔊 Volume up, quiet room. The phone reads the questions aloud. <button class="ghost" style="min-height:36px;padding:0 10px" data-act="test">Test sound</button></li>
+      <li>👤 Sit beside her. <b>No hints</b>, and stay relaxed. It is a game, not a test.</li>
+      <li>⏳ Your ✓ / ✗ buttons wake up after about 2 seconds. Wait for her to read the word before you tap.</li>
+      <li>❌ No skip button now. If she can't read a word, tap <b>Couldn't read</b>. That counts as not read.</li>
+      <li>☕ Short breaks are built in. You can stop at a break and finish early.</li>
+    </ul></div>
+    <div class="card"><h2>One quick question</h2>
+      ${sel("c_energy", "How is Deniz right now?", [["","Choose…"],["fresh","Fresh and keen"],["ok","OK"],["tired","A bit tired"]], c.energy)}
+      ${sel("c_rec", "Record Deniz's voice while she reads the stories?", [["yes","Yes (audio stays on this phone until you export)"],["no","No"]], c.record || "yes")}
+      <div class="hint">The phone will ask to use the microphone. Tap Allow. Recordings are only made while the timer runs on a story.</div>
+    </div>`,
+    `<button class="primary" data-act="go">Hand the phone to Deniz ➜</button><div class="hint" id="micmsg" style="text-align:center"></div>`,
+    {
+      test: () => say("Hello Deniz! Can you hear me?"),
+      go: async () => {
+        S.ctx = { energy: $("#c_energy").value || null, record: $("#c_rec").value };
+        if (S.ctx.record === "yes") { const ok = await initMic(); S.ctx.mic_ok = ok; if (!ok) { const m = $("#micmsg"); if (m) m.textContent = "Microphone not available. Carrying on without recording."; } }
+        if (!S.started_at) S.started_at = now();
+        wake(); save(); done();
+      }
+    }, true);
+}
+function renderIntro(done) {
+  const msg = "Hi Deniz! Let's read some stories today. Do your best. It's okay if some words are tricky!";
+  screen("Welcome", `<div class="emoji">👋</div><h1>Hi Deniz!</h1><p class="say">Let's read some stories today.<br>Do your best. It's okay if some words are tricky!</p>
+    <button class="spk" data-act="spk">🔊</button>`,
+    `<button class="primary" data-act="next">Let's go! ➜</button>`,
+    { spk: () => say(msg), next: () => { speechCancel(); done(); } });
+}
+function blockIntro(done, emoji, title, text, parentTip) {
+  screen(title, `<div class="emoji">${emoji}</div><h1>${esc(title)}</h1><p class="say">${esc(text)}</p>
+    <button class="spk" data-act="spk">🔊</button>
+    <div class="parent" style="margin-top:8px"><div class="plabel">👤 PARENT</div><div class="hint" style="margin:0">${esc(parentTip)}</div></div>`,
+    `<button class="primary" data-act="next">Ready ➜</button>`,
+    { spk: () => say(text), next: () => { speechCancel(); done(); } });
+}
+function renderBreak(done) {
+  screen("Break", `<div class="emoji">🌈</div><h1>Brain break!</h1><p class="say">Stand up, stretch, and have a drink of water. 💧</p>
+    <p class="muted">Take a minute or two. Tap when you are ready.</p>`,
+    `<button class="primary" data-act="next">I'm ready ➜</button>
+     <div style="text-align:center;margin-top:8px"><button class="ghost" data-act="stop" style="min-height:40px;font-size:14px">👤 Parent: that's enough for today</button></div>`,
+    { next: done,
+      stop: () => { if (confirm("Finish here? Parts not done will be left out of the results.")) { S.endedEarly = true; S.pos = flow.findIndex(x => x.id === "finishChild"); save(); go(); } } });
+}
+
+/* ---------- warm-up: hear word, tap first letter ---------- */
+function renderPick(e, rec, idx) {
+  const it = e.items[idx], opts = shuffle(it.options);
+  screen(e.label, `${counter(e, idx)}<p class="q">What letter does it start with?</p>
+    <button class="spk" data-act="spk">🔊</button>
+    <div class="opts">${opts.map(o => `<button class="opt" data-act="opt" data-v="${o}">${o}</button>`).join("")}</div>`,
+    "", {
+      spk: () => say(it.prompt, 0.8),
+      opt: b => record(e, rec, { prompt: it.prompt, expected: it.expected, response: b.dataset.v, options: it.options,
+        correct: b.dataset.v === it.expected, attempts: 1, ms: Date.now() - t0, skipped: false }, () => cheer("⭐ Nice!", go))
+    });
+  setTimeout(() => say(it.prompt, 0.8), 350);
+}
+
+/* ---------- letters grid (parent taps) ---------- */
+function renderLetters(e, rec) {
+  const L = e.letters, st = S.letters || (S.letters = {});
+  const draw = () => L.map(l => `<button class="tile s${st[l] || 0}" data-act="tile" data-l="${l}">${l}</button>`).join("");
+  const counts = () => { const v = L.map(l => st[l] || 0); return `${v.filter(x => x === 1).length} sounds · ${v.filter(x => x === 2).length} names only`; };
+  screen(e.label, `<p class="q" style="margin-bottom:4px">Say the SOUND of each letter</p>
+    <div class="grid" id="grid">${draw()}</div>`,
+    `<div class="parent"><div class="plabel">👤 PARENT – tap once = said the sound ✓ · twice = said the letter NAME only · blank = didn't know</div>
+     <div class="prow"><button class="pb ok" data-act="done" id="doneBtn">Done · ${counts()}</button></div></div>`,
+    {
+      tile: b => { const l = b.dataset.l; st[l] = ((st[l] || 0) + 1) % 3; b.className = "tile s" + st[l]; save(); $("#doneBtn").textContent = "Done · " + counts(); },
+      done: () => {
+        if (lock) return; lock = true;
+        rec.items = L.map(l => ({ prompt: l, expected: "sound of " + l, response: ["none", "sound", "name"][st[l] || 0],
+          correct: st[l] === 1, attempts: 1, ms: null, skipped: false }));
+        rec.duration_sec = Math.round((Date.now() - t0) / 1000);
+        save(); go();
+      }
+    });
+}
+
+/* ---------- parent-scored word reading (wait before tapping) ---------- */
+function renderRead(e, rec, idx) {
+  const it = e.items[idx];
+  const finish = ok => {
+    const v = ($("#said") || { value: "" }).value.trim();
+    record(e, rec, { prompt: it.prompt, expected: it.expected, response: ok ? it.expected : (v || null), correct: ok, attempts: 1, ms: Date.now() - t0, skipped: false });
+  };
+  screen(e.label, `<div class="word">${esc(it.prompt)}</div>`,
+    `<div class="parent"><div class="plabel">👤 PARENT – did she read it?</div>
+      <div class="prow"><button class="pb ok" data-act="ok">✓ Read it</button><button class="pb no" data-act="no">✗ Couldn't read</button></div>
+      <div class="prow"><input class="said" id="said" placeholder="She said… (optional)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done">${undoBtn()}</div></div>`,
+    { ok: () => finish(true), no: () => finish(false), undo });
+  hold(1800);
+}
+
+/* ---------- reading a passage aloud ---------- */
+function renderPassage(e, rec) {
+  const p = e.passage, words = p.words, bad = new Set(), beh = new Set();
+  let sc = 0, tStart = 0, secs = 0, tick = null, rh = null;
+  const readView = () => {
+    screen(p.label, `<p class="q">Read the story out loud</p><button class="spk" data-act="spk">🔊</button>
+      <div class="passage">${esc(p.text)}</div>`,
+      `<div class="parent"><div class="plabel">👤 PARENT – tap Start when she begins reading, Stop when she finishes</div>
+        <div class="prow"><button class="pb ok" data-act="tm" id="tbtn">▶ Start timer</button></div>
+        <div class="hint" id="tt" style="text-align:center"></div></div>`,
+      { spk: () => say("Read the story out loud. Take your time."),
+        tm: () => {
+          if (!tStart) {
+            speechCancel(); rh = recStart();
+            tStart = Date.now(); $("#tbtn").textContent = (rh ? "🎙 " : "") + "■ Stop – she finished"; $("#tbtn").className = "pb no";
+            tick = setInterval(() => { const t = $("#tt"); if (t) t.textContent = Math.round((Date.now() - tStart) / 1000) + " s"; }, 500);
+          } else {
+            secs = (Date.now() - tStart) / 1000; clearInterval(tick);
+            if (rh) { const r = rh; rh = null; try { r.mr.stop(); } catch (e) {} r.done.then(b => { if (b && b.size) AUDIO[e.id] = { blob: b, seconds: Math.round(secs), mime: b.type }; }); }
+            markView();
+          }
+        } }, true);
+  };
+  const markView = () => {
+    const cnt = () => `${bad.size} word${bad.size === 1 ? "" : "s"} marked`;
+    screen("Parent: mark words", `
+      <h1 style="font-size:22px">👤 Parent: tap the words she got wrong</h1>
+      <p class="hint" style="margin-top:0">Tap any word she misread, couldn't read or left out. Don't tap words she fixed herself.</p>
+      <div class="pw">${words.map((w, i) => `<button class="w" data-act="w" data-i="${i}">${esc(w.raw)}</button>`).join("")}</div>
+      <div class="step"><span>Fixed herself:</span><button data-act="m">−</button><b id="sc">0</b><button data-act="pl">+</button></div>
+      <div class="chips">${BEH.map(o => `<button class="chip" data-act="chip" data-v="${esc(o)}">${esc(o)}</button>`).join("")}</div>`,
+      `<div class="hint" id="cnt" style="text-align:center;margin:0 0 6px">${cnt()}</div><button class="primary" data-act="save">Save ➜</button>`,
+      {
+        w: b => { const i = +b.dataset.i; if (bad.has(i)) bad.delete(i); else bad.add(i); b.classList.toggle("bad"); $("#cnt").textContent = cnt(); },
+        m: () => { sc = Math.max(0, sc - 1); $("#sc").textContent = sc; },
+        pl: () => { sc++; $("#sc").textContent = sc; },
+        chip: b => { const v = b.dataset.v; if (beh.has(v)) beh.delete(v); else beh.add(v); b.classList.toggle("on"); },
+        save: () => {
+          if (lock) return; lock = true;
+          const n = words.length, errs = bad.size;
+          rec.items = words.map((w, i) => ({ prompt: w.prompt, expected: w.prompt, response: bad.has(i) ? "misread" : w.prompt, correct: !bad.has(i), attempts: 1, ms: null, skipped: false, skills: ["fl2"] }));
+          rec.level = p.level; rec.words = n; rec.errors = errs; rec.accuracy = Math.round((n - errs) / n * 100);
+          rec.seconds = Math.round(secs); rec.wcpm = secs > 0 ? Math.round((n - errs) / (secs / 60)) : null;
+          rec.self_corrections = sc; rec.behaviours = Array.from(beh); rec.duration_sec = rec.seconds;
+          save(); cheer("⭐ Well done!", go);
+        }
+      }, true);
+  };
+  readView();
+}
+
+/* ---------- multiple choice (questions are spoken) ---------- */
+function renderMCQ(e, rec, idx) {
+  const it = e.items[idx], opts = shuffle(it.options); let peek = false;
+  const speakAll = () => sayList([it.prompt].concat(opts.map(o => o.t)), 0.85);
+  const canPeek = e.modality === "reading" && e.passage;
+  screen(e.label, `${counter(e, idx)}<p class="q">${esc(it.prompt)}</p><button class="spk" data-act="spk">🔊</button>
+    <div class="mcqs">${opts.map((o, i) => `<button class="mcq" data-act="o" data-i="${i}"><span class="em">${o.e || ""}</span><span>${esc(o.t)}</span></button>`).join("")}</div>
+    ${canPeek ? `<button class="ghost" data-act="peek" style="margin-top:12px">📖 Look at the story</button><div class="peek" id="peek" hidden>${esc(e.passage.text)}</div>` : ""}`,
+    "", {
+      spk: speakAll,
+      peek: () => { peek = true; $("#peek").hidden = false; },
+      o: b => { const o = opts[+b.dataset.i];
+        record(e, rec, { prompt: it.prompt, expected: it.expected, response: o.t, correct: o.t === it.expected, skills: it.skills, kind: it.kind,
+          modality: e.modality, peeked: peek, attempts: 1, ms: Date.now() - t0, skipped: false }, () => cheer("⭐ Thanks!", go)); }
+    }, true);
+  setTimeout(speakAll, 350);
+}
+
+/* ---------- listening story (never shown as text) ---------- */
+function renderListen(done) {
+  let played = false, shownText = false;
+  const enable = () => { played = true; const b = $("#nextBtn"); if (b) b.disabled = false; };
+  const play = () => {
+    S.listenPlays = (S.listenPlays || 0) + 1; save();
+    const ok = sayList(LISTEN.sents, 0.85, enable);
+    if (!ok) { $("#ptxt").hidden = false; enable(); }
+    setTimeout(enable, 25000);
+  };
+  screen("Listen", `<div class="emoji">👂</div><h1>Listen to the story</h1><p class="say">Tap the speaker and listen. You can listen again.</p>
+    <button class="spk" data-act="play" style="min-width:110px;min-height:110px;font-size:52px">🔊</button>
+    <div class="parent" style="margin-top:10px"><div class="plabel">👤 PARENT</div>
+      <div class="hint" style="margin:0">If the voice isn't working, tap below and read the story aloud to her. Don't let her see the text.</div>
+      <button class="ghost" data-act="txt" style="margin-top:8px;min-height:40px">Show text for parent</button>
+      <div class="peek" id="ptxt" hidden>${esc(LISTEN.sents.join(" "))}</div></div>`,
+    `<button class="primary" id="nextBtn" data-act="next" disabled>Questions ➜</button>`,
+    { play, txt: () => { $("#ptxt").hidden = false; shownText = true; S.listenParentRead = true; save(); enable(); }, next: () => { speechCancel(); done(); } }, true);
+}
+
+/* ---------- put in order ---------- */
+function renderSeq(e, rec, idx) {
+  const it = e.items[idx];
+  let cards = shuffle(it.cards.map((t, i) => ({ t, i })));
+  let guard = 0; while (cards.every((c, i) => c.i === i) && guard++ < 10) cards = shuffle(cards);
+  let order = [];
+  const view = () => {
+    $("#main").innerHTML = `${counter(e, idx)}<p class="q">${esc(it.prompt)}</p><button class="spk" data-act="spk">🔊</button>
+      <div class="slots">${it.cards.map((_, s) => { const c = cards[order[s]]; return `<div class="slot${it.big ? " big" : ""}"><b>${s + 1}</b><span>${c ? esc(c.t) : ""}</span></div>`; }).join("")}</div>
+      ${cards.map((c, k) => `<div class="crow${order.includes(k) ? " used" : ""}"><button class="cd${it.big ? " big" : ""}" data-act="pick" data-k="${k}">${esc(c.t)}</button>${it.big ? "" : `<button class="cs" data-act="cs" data-k="${k}" aria-label="Hear it">🔊</button>`}</div>`).join("")}
+      <button class="ghost" data-act="reset" style="margin-top:6px">↺ Start again</button>`;
+    const nb = $("#nextBtn"); if (nb) nb.disabled = order.length < cards.length;
+  };
+  screen(e.label, "", `<button class="primary" id="nextBtn" data-act="sub" disabled>Done ➜</button>`, {
+    spk: () => say(it.prompt),
+    cs: b => say(cards[+b.dataset.k].t, 0.85),
+    pick: b => { const k = +b.dataset.k; if (!order.includes(k)) { order.push(k); view(); } },
+    reset: () => { order = []; view(); },
+    sub: () => {
+      if (order.length < cards.length) return;
+      const ok = order.every((k, pos) => cards[k].i === pos);
+      record(e, rec, { prompt: it.prompt, expected: it.expected, response: order.map(k => cards[k].t).join(" > "), correct: ok, skills: it.skills,
+        attempts: 1, ms: Date.now() - t0, skipped: false }, () => cheer("⭐ Thanks!", go));
+    }
+  }, true);
+  view();
+  setTimeout(() => say(it.prompt), 350);
+}
+
+/* ---------- finish ---------- */
+function renderFinishChild(done) {
+  screen("All done", `<div class="emoji">🎉</div><h1>All done, Deniz!</h1><p class="say">You worked so hard.<br>How did that feel?</p>
+    <div class="emojis"><button data-act="f" data-v="great" aria-label="Great">😀</button><button data-act="f" data-v="ok" aria-label="OK">🙂</button><button data-act="f" data-v="hard" aria-label="Hard">😓</button></div>`,
+    "", { f: b => { S.feeling = b.dataset.v; save(); done(); } });
+}
+const OBS = ["Sounds out letter by letter", "Guesses from the first letter", "Mixes up b / d / p / q", "Skips or swaps small words",
+  "Reads smoothly when she knows the word", "Self-corrects", "Needed lots of encouragement", "Got tired or distracted",
+  "Seemed worried about getting it wrong", "Proud and engaged", "Understood the stories well", "Tapped answers without thinking"];
+function renderFinishParent() {
+  const res = buildResult(), sm = res.summary;
+  const pc = v => v == null ? "–" : `<span class="${v >= 80 ? "good" : v < 50 ? "low" : ""}">${v}%</span>`;
+  const row = (name, o) => `<tr><td>${esc(name)}</td><td class="n">${o && o.total ? o.correct + "/" + o.total : "–"}</td><td class="n">${pc(o && o.total ? o.pct : null)}</td></tr>`;
+  const prow = sm.passages.map(p => p.read ? `<tr><td>${esc(p.label)} (${p.level})</td><td class="n">${p.errors} wrong</td><td class="n">${p.accuracy}% · ${p.wcpm == null ? "–" : p.wcpm} wpm</td></tr>`
+    : `<tr><td>${esc(p.label)} (${p.level})</td><td class="n" colspan="2">not read</td></tr>`).join("");
+  const rows = [row("Letters re-check (sounds)", { correct: sm.letters.sound, total: sm.letters.total, pct: Math.round(sm.letters.sound / sm.letters.total * 100) }), row("b / d / p / q first sounds", sm.bdpq)]
+    .concat(sm.phonics_groups.map(g => row(g.label + (g.stopped_early ? " (stopped)" : ""), g)))
+    .concat([row("Made-up words", sm.pseudo)])
+    .concat(sm.comprehension.reading_by_story.map(c => row("Questions – " + c.label + " (read)", c)))
+    .concat([row("Questions – listened story", sm.comprehension.listening), row("Putting in order", sm.sequencing)]).join("");
+  screen("Parent wrap-up", `
+    <h1 style="font-size:24px">Well done! 🎉</h1>
+    <div class="card"><h2>Quick view (indicative only)</h2>
+      <p style="font-size:16px;margin:0 0 6px"><b>Reading aloud:</b> ${esc(sm.reading_level_label)}</p>
+      <p style="font-size:16px;margin:0 0 6px"><b>🎙 Recordings:</b> ${Object.keys(AUDIO).length ? Object.keys(AUDIO).length + " ready to export with the results" : (S.ctx && S.ctx.record === "yes" ? "none saved (microphone off or page was reloaded)" : "not recording")}</p>
+      ${sm.flags.map(f => `<p style="font-size:15px;margin:0 0 6px">• ${esc(f)}</p>`).join("")}</div>
+    <div class="card"><h2>Stories read aloud</h2><table><tr><th>Story</th><th class="n">Errors</th><th class="n">Accuracy · pace</th></tr>${prow}</table></div>
+    <div class="card"><h2>Scores</h2><table><tr><th>Part</th><th class="n">Right</th><th class="n">%</th></tr>${rows}</table></div>
+    <div class="card"><h2>What did you notice? (tap any)</h2><div class="chips">
+      ${OBS.map(o => `<button class="chip${S.obs.includes(o) ? " on" : ""}" data-act="chip" data-v="${esc(o)}">${esc(o)}</button>`).join("")}</div>
+      <label for="note">Anything else (optional)</label>
+      <textarea id="note" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">${esc(S.note || "")}</textarea></div>
+    <p class="muted" style="text-align:center">Tap <b>Export</b> and send the file to this chat.</p>`,
+    `<div class="prow"><button class="ghost" data-act="copy" style="flex:.6">Copy</button><button class="primary" data-act="export" style="flex:1.6">Export results ➜</button></div><div class="hint" id="msg" style="text-align:center"></div>`,
+    {
+      chip: b => { const v = b.dataset.v, i = S.obs.indexOf(v); if (i >= 0) S.obs.splice(i, 1); else S.obs.push(v); b.classList.toggle("on"); save(); },
+      export: () => exportJson(),
+      copy: async () => { S.note = $("#note").value; save(); const txt = JSON.stringify(buildResult(), null, 2);
+        try { await navigator.clipboard.writeText(txt); $("#msg").textContent = "Copied ✓"; } catch (e) { $("#msg").textContent = "Copy not available. Use Export."; } }
+    }, true);
+}
+
+/* ====================================================================
+   RESULT + SUMMARY
+   ==================================================================== */
+const pctOf = r => { if (!r) return null; const s = shown(r); if (!s.length) return null; return Math.round(s.reduce((a, i) => a + itemScore(i), 0) / s.length * 100); };
+const tally = r => { if (!r) return { correct: 0, total: 0, pct: null }; const s = shown(r); return { correct: Math.round(s.reduce((a, i) => a + itemScore(i), 0) * 2) / 2, total: s.length, pct: pctOf(r) }; };
+const band = a => a >= 95 ? "independent" : a >= 90 ? "instructional" : "frustration";
+
+function computeSummary(steps) {
+  const get = id => steps.find(r => r.id === id);
+  // letters re-check
+  const lr = get("s2-letters"), li = lr ? lr.items : [];
+  const letters = { total: LETTERS2.length, sound: li.filter(i => i.response === "sound").length, name_only: li.filter(i => i.response === "name").length,
+    none: li.filter(i => i.response === "none").length, name_only_letters: li.filter(i => i.response === "name").map(i => i.prompt),
+    unknown: li.filter(i => i.response === "none").map(i => i.prompt) };
+  const bdpq = tally(get("s2-bdpq"));
+  const phonics_groups = GROUPS.map(g => { const r = get("s2-" + g.key), t = tally(r);
+    return { id: "s2-" + g.key, label: g.label, skills: g.skills, correct: t.correct, total: t.total, pct: t.pct, stopped_early: !!(r && r.stopped_early) }; });
+  const pseudo = Object.assign({ label: "Made-up words", skills: ["ph12"] }, tally(get("s2-pseudo")));
+  // passages
+  const passages = PASS.map(p => { const r = get("s2-read-" + p.key);
+    if (!r || !r.items.length || r.items.every(i => i.notShown) || r.accuracy == null) return { id: "s2-read-" + p.key, label: p.label, level: p.level, about: p.about, read: false };
+    return { id: "s2-read-" + p.key, label: p.label, level: p.level, about: p.about, read: true, words: r.words, errors: r.errors, accuracy: r.accuracy, band: band(r.accuracy),
+      seconds: r.seconds, wcpm: r.wcpm, self_corrections: r.self_corrections, behaviours: r.behaviours }; });
+  let indep = null, instr = null;
+  passages.forEach(p => { if (p.read) { if (p.accuracy >= 95) indep = p.level; if (p.accuracy >= 90) instr = p.level; } });
+  const about = l => (PASS.find(p => p.key === l) || {}).about;
+  const reading_level_label = !passages.some(p => p.read) ? "No story was read."
+    : instr ? "Reads " + about(instr) + " with at least 90% accuracy (level " + instr + ")" + (indep ? "; independent (95%+) at level " + indep + "." : ".")
+    : "Under 90% accuracy even on the easiest story (frustration level). Text needs to be easier.";
+  // comprehension
+  const reading_by_story = PASS.map(p => Object.assign({ id: "s2-comp-" + p.key, label: p.label }, tally(get("s2-comp-" + p.key))));
+  const rAll = steps.filter(r => r.id.startsWith("s2-comp-")), rc = { correct: 0, total: 0 };
+  rAll.forEach(r => { const t = tally(r); rc.correct += t.correct; rc.total += t.total; }); rc.pct = rc.total ? Math.round(rc.correct / rc.total * 100) : null;
+  const listening = tally(get("s2-listen-q"));
+  const peeks = rAll.reduce((a, r) => a + shown(r).filter(i => i.peeked).length, 0);
+  const byKind = {}; steps.filter(r => r.id.startsWith("s2-comp-") || r.id === "s2-listen-q").forEach(r => shown(r).forEach(i => {
+    const k = (r.modality || "") + ":" + i.kind; const o = byKind[k] || (byKind[k] = { correct: 0, total: 0 }); o.correct += itemScore(i); o.total++; }));
+  const sequencing = tally(get("s2-seq"));
+  // flags
+  const flags = [];
+  if (rc.pct != null && listening.pct != null) {
+    if (listening.pct - rc.pct >= 25) flags.push("Understands a story she hears much better (" + listening.pct + "%) than one she reads (" + rc.pct + "%): reading the words is the main barrier, not understanding.");
+    else if (rc.pct >= listening.pct - 10) flags.push("Understanding of stories she reads (" + rc.pct + "%) is close to what she gets from listening (" + listening.pct + "%): comprehension holds up when she can read the words.");
+  }
+  if (rc.total && listening.total === 0) flags.push("Listening part was not done, so reading and listening can't be compared yet.");
+  if (letters.name_only || letters.none) flags.push("Letter sounds still not secure for: " + letters.name_only_letters.concat(letters.unknown).join(", ") + ".");
+  if (bdpq.total && bdpq.pct < 85) flags.push("Mixed up first letters in the b / d / p / q check (" + bdpq.correct + "/" + bdpq.total + ").");
+  passages.filter(p => p.read && p.wcpm != null && (p.wcpm > 220 || p.seconds < 4)).forEach(p => flags.push(p.label + ": timer looks too short to be real. Treat the pace as unverified."));
+  const fast = steps.filter(r => r.mode === "parent" && r.items.length && r.id !== "s2-letters" && !r.id.startsWith("s2-read-")).reduce((a, r) => a.concat(shown(r).map(i => i.ms).filter(x => x)), []);
+  const med = median(fast);
+  if (med != null && med < 1500) flags.push("Parent-scored taps were very fast (median " + Math.round(med) + " ms). Treat parent-scored word results as unverified.");
+  if (peeks) flags.push("Looked back at the story for " + peeks + " question" + (peeks === 1 ? "" : "s") + ".");
+  if (S.endedEarly) flags.push("Finished early at a break. Later parts were not done.");
+  // suggested progress: reading evidence only (listening is kept in evidence, labelled, but not used for status)
+  const acc = {}, evidence = [];
+  steps.forEach(r => {
+    const per = {};
+    shown(r).forEach(i => (i.skills || r.skills).forEach(k => { const o = per[k] || (per[k] = { c: 0, t: 0 }); o.c += itemScore(i); o.t += 1; }));
+    Object.keys(per).forEach(k => {
+      if (r.modality !== "listening") { const a = acc[k] || (acc[k] = { correct: 0, total: 0 }); a.correct += per[k].c; a.total += per[k].t; }
+      const ev = { skill: k, session: SESSION, step: r.id, correct: Math.round(per[k].c * 2) / 2, total: per[k].t, note: r.notes || "" };
+      if (r.modality) ev.modality = r.modality;
+      evidence.push(ev);
+    });
+  });
+  const suggested_progress = {};
+  Object.keys(acc).forEach(k => { const p = acc[k].correct / acc[k].total * 100;
+    suggested_progress[k] = { status: p < 50 ? "not_yet" : "learning", likely_secure: p >= 90, correct: Math.round(acc[k].correct * 2) / 2, total: acc[k].total, pct: Math.round(p) }; });
+  const not_reached = steps.filter(r => r.stopped_early && r.skills).map(r => ({ step: r.id, skills: r.skills, why: r.stopped_early }));
+  return { letters, bdpq, phonics_groups, pseudo, passages, reading_level_label, independent_level: indep, instructional_level: instr,
+    comprehension: { reading_by_story, reading: rc, listening, by_kind: byKind, looked_back: peeks }, sequencing,
+    fluency_notes: passages.filter(p => p.read).map(p => ({ level: p.level, accuracy: p.accuracy, wcpm: p.wcpm, self_corrections: p.self_corrections, behaviours: p.behaviours })),
+    flags, suggested_progress, evidence, not_reached,
+    caveat: "Indicative only. Based on short passages; not an official reading level. Pace (words correct per minute) is a rough guide. Session 3 covers spelling and writing." };
+}
+function buildResult() {
+  S.note = ($("#note") && $("#note").value) || S.note || "";
+  const steps = S.steps.map(r => {
+    const t = tally(r);
+    const o = { id: r.id, skills: r.skills, mode: r.mode, started_at: r.started_at, duration_sec: r.duration_sec || 0, items: r.items,
+      score: { correct: t.correct, total: t.total }, notes: r.notes };
+    if (r.modality) o.modality = r.modality;
+    if (r.stopped_early) o.stopped_early = r.stopped_early;
+    if (r.accuracy != null) Object.assign(o, { level: r.level, words: r.words, errors: r.errors, accuracy: r.accuracy, seconds: r.seconds, wcpm: r.wcpm, self_corrections: r.self_corrections, behaviours: r.behaviours });
+    return o;
+  });
+  const fin = now();
+  const res = { schema: "deniz-session/1", session: SESSION, kind: "assessment", title: "Baseline 2 – reading stories",
+    started_at: S.started_at, finished_at: fin, duration_sec: Math.round((Date.parse(fin) - Date.parse(S.started_at || fin)) / 1000),
+    device: navigator.userAgent, parent_context: S.ctx, steps, child_feeling: S.feeling, parent_note: S.note,
+    observations: S.obs, summary: computeSummary(steps) };
+  if (S.endedEarly) res.ended_early = true;
+  if (S.listenParentRead) res.listening_text_shown_to_parent = true;
+  res.listen_plays = S.listenPlays || 0;
+  res.recordings = Object.keys(AUDIO).map(id => ({ step: id, file: "session-02-" + id.replace("s2-", "") + "." + audioExt(AUDIO[id].mime), seconds: AUDIO[id].seconds, mime: AUDIO[id].mime, bytes: AUDIO[id].blob.size }));
+  return res;
+}
+async function exportJson() {
+  const res = buildResult(); save();
+  const text = JSON.stringify(res, null, 2);
+  const file = new File([text], "session-02-result.json", { type: "application/json" });
+  const audio = res.recordings.map(r => new File([AUDIO[r.step].blob], r.file, { type: AUDIO[r.step].mime || "audio/webm" }));
+  const files = [file].concat(audio);
+  const msg = $("#msg");
+  try {
+    if (navigator.canShare && navigator.canShare({ files })) {
+      await navigator.share({ files, title: "Deniz – session 2 result" });
+      S.exported = true; save(); msg.textContent = "Shared ✓" + (audio.length ? " (with " + audio.length + " recordings)" : ""); return;
+    }
+  } catch (e) { if (e && e.name === "AbortError") return; }
+  try {
+    files.forEach((f, i) => setTimeout(() => {
+      const url = URL.createObjectURL(f), a = document.createElement("a");
+      a.href = url; a.download = f.name; document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 3000);
+    }, i * 700));
+    S.exported = true; save(); msg.textContent = "Saved to Downloads ✓" + (audio.length ? " (results + " + audio.length + " recordings)" : "");
+  } catch (e) { msg.textContent = "Could not save. Try Copy."; }
+}
+
+/* ====================================================================
+   BOOT
+   ==================================================================== */
+function boot() {
+  if (S.pos > 1 && S.pos < flow.length) {
+    screen("Parent", `<div class="emoji">💾</div><h1 style="font-size:24px">Session in progress</h1>
+      <p class="muted">Your answers are saved. Pick up where you stopped?</p>`,
+      `<div class="prow"><button class="ghost" data-act="restart" style="flex:.7">Start over</button><button class="primary" data-act="cont" style="flex:1.3">Continue ➜</button></div>`,
+      { cont: async () => { if (S.ctx && S.ctx.record === "yes") await initMic(); wake(); go(); },
+        restart: () => { if (confirm("Start over? Saved answers will be erased.")) { S = fresh(); save(); go(); } } });
+    return;
+  }
+  go();
+}
+boot();
+})();
+</script>
+</body>
+</html>

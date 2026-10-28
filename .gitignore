@@ -1,0 +1,8 @@
+# Child's voice recordings and school documents must never be committed (public repo)
+data/audio/
+*.webm
+*.m4a
+*.ogg
+*.wav
+*.mp3
+*.pdf
