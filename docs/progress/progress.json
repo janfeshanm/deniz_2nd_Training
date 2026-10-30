@@ -10,10 +10,10 @@
     "secure"
   ],
   "next_session": {
-    "number": 3,
-    "kind": "assessment",
-    "title": "Baseline 3 – spelling and writing",
-    "url": "sessions/session-03.html"
+    "number": 4,
+    "kind": "training",
+    "title": "Training 1 – magic e (a_e, i_e)",
+    "url": "sessions/session-04.html"
   },
   "sessions_completed": [
     1,

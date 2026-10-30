@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="theme-color" content="#fff4e0">
+<title>Session 4 – Magic e</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#fff4e0;--bg2:#ffe1ec;--ink:#2b2340;--muted:#7a6f8a;--btn:#ff7a45;--btn2:#ff5a7a;--ok:#2fb36d;--line:#e6dcef}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%}
+body{font-family:Lexend,system-ui,sans-serif;color:var(--ink);font-size:18px;line-height:1.35;
+  background:linear-gradient(170deg,var(--bg1),var(--bg2)) fixed}
+#app{display:flex;flex-direction:column;min-height:100dvh}
+#top{padding:max(10px,env(safe-area-inset-top)) 16px 6px}
+#blk{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;min-height:17px}
+#bar{height:8px;background:rgba(0,0,0,.08);border-radius:8px;margin-top:6px;overflow:hidden}
+#barfill{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--btn),var(--btn2));transition:width .3s}
+#main{flex:1;padding:8px 16px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+#main.top{justify-content:flex-start}
+#bottom{position:sticky;bottom:0;padding:10px 16px max(14px,env(safe-area-inset-bottom));background:rgba(255,255,255,.78);
+  backdrop-filter:blur(6px);border-top:1px solid var(--line)}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+h1{font-size:28px;margin:0 0 10px;font-weight:800}
+p{margin:0 0 12px}
+.muted{color:var(--muted);font-size:16px}
+.count{font-size:15px;color:var(--muted);margin-bottom:10px}
+.emoji{font-size:64px;margin-bottom:6px}
+.primary{width:100%;min-height:56px;border-radius:16px;color:#fff;font-weight:800;font-size:22px;
+  background:linear-gradient(135deg,var(--btn),var(--btn2));box-shadow:0 6px 16px rgba(255,90,122,.3)}
+.primary:active{transform:scale(.98)}
+.primary:disabled{opacity:.45}
+.ghost{min-height:48px;padding:0 16px;border-radius:14px;border:2px solid var(--line);background:#fff;font-weight:600;font-size:16px;color:var(--muted)}
+.word{font-size:52px;font-weight:800;letter-spacing:.02em;margin:10px 0}
+.spk{min-width:72px;min-height:72px;border-radius:50%;font-size:34px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.12);margin:6px 0 14px}
+.spk:active{transform:scale(.94)}
+.opts{display:flex;gap:12px;width:100%;justify-content:center;margin-top:8px}
+.opt{flex:1;max-width:110px;min-height:96px;border-radius:20px;background:#fff;font-size:52px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.opt:active{background:#ffe9d9}
+.q{font-size:22px;font-weight:600;margin:0 0 6px}
+.say{font-size:20px;font-weight:600}
+.toast{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:800;
+  background:rgba(255,244,224,.92);z-index:5;animation:pop .5s ease}
+@keyframes pop{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:none}}
+/* parent panel */
+.parent{border:2px dashed #b9a8d6;border-radius:16px;padding:10px;background:#fff}
+.plabel{font-size:12px;font-weight:700;color:#6b5a8a;margin-bottom:8px;text-align:left;letter-spacing:.05em}
+.prow{display:flex;gap:8px}
+.pb{flex:1;min-height:56px;border-radius:14px;font-size:20px;font-weight:800;color:#fff}
+.pb.ok{background:var(--ok)}.pb.no{background:#d9822b}
+.pb:disabled{opacity:.3}
+.hold{height:5px;border-radius:5px;background:#eee;margin:0 0 8px;overflow:hidden}
+.hold i{display:block;height:100%;width:0;background:var(--ok);animation:fill linear forwards}
+@keyframes fill{to{width:100%}}
+.said{flex:1;min-width:0;min-height:44px;border:2px solid var(--line);border-radius:12px;padding:0 10px;font:inherit;font-size:16px;margin-top:8px}
+.undo{min-width:52px;min-height:44px;margin-top:8px;border-radius:12px;border:2px solid var(--line);background:#fff;font-size:20px}
+.hint{font-size:14px;color:var(--muted);margin:8px 0 0;text-align:left}
+.card{background:#fff;border-radius:18px;padding:14px 16px;text-align:left;width:100%;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.card h2{font-size:17px;margin:0 0 8px}
+.card ul{margin:0;padding-left:20px;font-size:16px}
+.card li{margin-bottom:6px}
+label{display:block;font-size:15px;font-weight:600;margin:10px 0 4px;text-align:left}
+select,textarea{width:100%;min-height:48px;border:2px solid var(--line);border-radius:12px;padding:8px 10px;font:inherit;font-size:17px;background:#fff;color:var(--ink)}
+textarea{min-height:90px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:6px 14px;border-radius:22px;border:2px solid var(--line);background:#fff;font-size:15px}
+.chip.on{background:#ffe1ec;border-color:var(--btn2);font-weight:600}
+.emojis{display:flex;gap:14px;justify-content:center;margin-top:10px}
+.emojis button{font-size:56px;min-width:88px;min-height:88px;border-radius:24px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;margin:6px 0 4px}
+.tile{aspect-ratio:1;min-height:72px;border-radius:14px;background:#fff;border:2px solid var(--line);font-size:44px;font-weight:800;position:relative}
+.tile.s1{background:#c9f0d9;border-color:var(--ok)}
+.tile.s2{background:#ffe3a8;border-color:#e0a21a}
+.tile.s2::after{content:"name";position:absolute;bottom:2px;left:0;right:0;font-size:11px;font-weight:600;color:#8a5f00}
+table{border-collapse:collapse;width:100%;font-size:14px}
+td,th{padding:4px 6px;border-bottom:1px solid var(--line);text-align:left}
+td.n,th.n{text-align:right;white-space:nowrap}
+.low{color:#c0561b;font-weight:700}.good{color:#1f8f55;font-weight:700}
+/* passages */
+.passage{font-size:26px;line-height:1.75;font-weight:600;text-align:left;background:#fff;border-radius:18px;padding:16px;width:100%;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.pw{display:flex;flex-wrap:wrap;gap:6px;text-align:left;width:100%}
+.w{min-height:44px;padding:4px 10px;border-radius:10px;border:2px solid var(--line);background:#fff;font-size:18px}
+.w.bad{background:#ffd9b8;border-color:#e0822b;font-weight:700}
+.step{display:flex;align-items:center;gap:10px;margin:10px 0}
+.step button{min-width:48px;min-height:48px;border-radius:12px;border:2px solid var(--line);background:#fff;font-size:22px;font-weight:800}
+/* multiple choice */
+.mcqs{display:flex;flex-direction:column;gap:10px;width:100%;margin-top:6px}
+.mcq{display:flex;align-items:center;gap:12px;min-height:68px;padding:8px 14px;border-radius:18px;background:#fff;
+  box-shadow:0 4px 12px rgba(0,0,0,.1);font-size:21px;font-weight:600;text-align:left}
+.mcq:active{background:#ffe9d9}
+.mcq .em{font-size:34px}
+.peek{background:#fff;border-radius:14px;padding:12px;margin-top:10px;font-size:18px;text-align:left;width:100%}
+.peek[hidden]{display:none}
+/* sequencing */
+.slots{display:flex;flex-direction:column;gap:8px;width:100%;margin:8px 0}
+.slot{min-height:60px;border:2px dashed var(--line);border-radius:14px;padding:8px 12px;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.6);font-size:19px;text-align:left}
+.slot b{font-size:22px;color:var(--btn2)}
+.slot.big{font-size:34px}
+.crow{display:flex;gap:8px;width:100%;margin-bottom:8px}
+.crow .cd{flex:1;min-height:60px;border-radius:14px;background:#fff;box-shadow:0 3px 10px rgba(0,0,0,.1);font-size:19px;font-weight:600;padding:8px 12px;text-align:left}
+.crow .cd.big{font-size:40px;text-align:center}
+.crow .cs{min-width:52px;border-radius:14px;background:#fff;border:2px solid var(--line);font-size:22px}
+.crow.used{opacity:.3;pointer-events:none}
+@media (prefers-reduced-motion:reduce){.toast{animation:none}}
+/* session 3: typing */
+.optw{font-size:36px;max-width:150px}
+.spin{width:100%;max-width:340px;min-height:64px;border:3px solid var(--line);border-radius:16px;padding:0 14px;font:inherit;font-size:34px;font-weight:600;text-align:center;background:#fff;color:var(--ink);margin:4px 0 6px}
+.spin:focus,.wt:focus{outline:none;border-color:var(--btn)}
+.wt{width:100%;min-height:150px;border:3px solid var(--line);border-radius:16px;padding:12px;font:inherit;font-size:22px;line-height:1.5;background:#fff;color:var(--ink);resize:vertical}
+.toprow{display:flex;align-items:center;gap:8px;min-height:44px}
+#back{min-width:72px;min-height:40px;padding:0 10px;border-radius:12px;border:2px solid var(--line);background:rgba(255,255,255,.85);font-size:15px;font-weight:600;color:var(--muted)}
+#back[hidden]{display:none}
+body.kb #bottom{display:none}
+.inl{margin-top:12px}
+.pic{font-size:72px;letter-spacing:12px;margin:4px 0 8px}
+/* session 4: training */
+.m{color:var(--btn2);text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px}
+.big{font-size:64px;font-weight:800;letter-spacing:.04em;margin:8px 0}
+.magicbtn{min-height:64px;padding:0 22px;border-radius:20px;font-size:24px;font-weight:800;color:#fff;background:linear-gradient(135deg,#8a5cf6,#ff5a7a);box-shadow:0 6px 16px rgba(138,92,246,.35);margin:10px 0}
+.pair{display:flex;gap:12px;justify-content:center;margin:10px 0}
+.pair button{min-width:120px;min-height:80px;border-radius:18px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.1);font-size:38px;font-weight:800}
+.fb{font-size:20px;font-weight:600;margin:6px 0 10px}
+.hl{background:#fff1a8;border-radius:6px}
+.bank{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:4px 0 10px}
+.bank button{min-height:44px;padding:4px 14px;border-radius:22px;background:#fff;border:2px solid var(--line);font-size:19px;font-weight:600}
+.tries{font-size:15px;color:var(--muted);margin-top:4px}
+</style>
+</head>
+<body>
+<div id="app">
+  <header id="top"><div class="toprow"><button id="back" type="button" hidden aria-label="Go back">‹ Back</button><div id="blk"></div></div><div id="bar"><i id="barfill"></i></div></header>
+  <main id="main"></main>
+  <footer id="bottom"></footer>
+</div>
+
+<script>
+(() => {
+"use strict";
+
+/* ====================================================================
+   Session 4 – Training 1: magic e (a_e, i_e) + tricky words said / was / with
+   schema deniz-session/1, kind "training".
+   Training = feedback is shown after a mistake and she has another go.
+   Scores always use her FIRST try (correct), retries are kept separately.
+   ==================================================================== */
+const KEY = "deniz-s04-v1";
+const SESSION = 4;
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const now = () => new Date().toISOString();
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const norm = s => String(s || "").trim().toLowerCase().replace(/[.!?,]+$/, "").replace(/\s+/g, " ");
+
+/* ---------- speech ---------- */
+let voice = null;
+function pickVoice() { try { const vs = speechSynthesis.getVoices(); voice = vs.find(v => /^en[-_]AU/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang)) || null; } catch (e) {} }
+try { speechSynthesis.onvoiceschanged = pickVoice; pickVoice(); } catch (e) {}
+function utter(text, rate) { const u = new SpeechSynthesisUtterance(text); if (voice) u.voice = voice; u.lang = (voice && voice.lang) || "en-AU"; u.rate = rate || 0.85; return u; }
+function say(text, rate) { try { if (!window.speechSynthesis) return; speechSynthesis.cancel(); speechSynthesis.speak(utter(text, rate)); } catch (e) {} }
+function sayList(arr, rate, onend, onstart) {
+  try {
+    if (!window.speechSynthesis) return false;
+    speechSynthesis.cancel();
+    arr.forEach((t, i) => { const u = utter(t, rate); if (onstart) u.onstart = () => onstart(i); if (onend && i === arr.length - 1) u.onend = onend; speechSynthesis.speak(u); });
+    return true;
+  } catch (e) { return false; }
+}
+function speechCancel() { try { speechSynthesis.cancel(); } catch (e) {} }
+
+/* ---------- voice recording (stays on the phone until exported) ---------- */
+let micStream = null;
+const AUDIO = {};
+async function initMic() {
+  try { if (!navigator.mediaDevices || !window.MediaRecorder) return false; micStream = await navigator.mediaDevices.getUserMedia({ audio: true }); return true; }
+  catch (e) { micStream = null; return false; }
+}
+function recStart() {
+  try {
+    if (!micStream) return null;
+    const mt = ["audio/webm;codecs=opus", "audio/webm", "audio/mp4"].find(t => MediaRecorder.isTypeSupported(t)) || "";
+    const mr = new MediaRecorder(micStream, mt ? { mimeType: mt } : undefined), chunks = [];
+    mr.ondataavailable = ev => { if (ev.data && ev.data.size) chunks.push(ev.data); };
+    const done = new Promise(res => { mr.onstop = () => res(new Blob(chunks, { type: mr.mimeType || mt || "audio/webm" })); });
+    mr.start(); return { mr, done };
+  } catch (e) { return null; }
+}
+const audioExt = t => /mp4/.test(t) ? "m4a" : /ogg/.test(t) ? "ogg" : "webm";
+
+/* ---------- wake lock ---------- */
+async function wake() { try { if ("wakeLock" in navigator) await navigator.wakeLock.request("screen"); } catch (e) {} }
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible" && S.started_at && !S.exported) wake(); });
+
+/* ---------- state ---------- */
+const fresh = () => ({ v: 1, pos: 0, steps: [], ctx: {}, started_at: null, feeling: null, obs: [], note: "", exported: false, endedEarly: false, draft: {} });
+function load() { try { const s = JSON.parse(localStorage.getItem(KEY)); return s && s.v === 1 ? s : null; } catch (e) { return null; } }
+function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+let S = load() || fresh();
+
+/* ====================================================================
+   CONTENT
+   ==================================================================== */
+const VNAME = { a: "ay", e: "ee", i: "eye", o: "oh", u: "you" };
+const isMagic = w => /^[a-z]*[aeiou][^aeiou]e$/.test(w);
+// highlight the vowel and the final e in a magic-e word
+const mark = w => isMagic(w) ? esc(w).replace(/([aeiou])([^aeiou])e$/, '<span class="m">$1</span>$2<span class="m">e</span>') : esc(w);
+const magicTip = w => { const v = (w.match(/([aeiou])[^aeiou]e$/) || [])[1]; return v ? `The e is silent. It makes the ${v} say its name: ${VNAME[v]}.` : ""; };
+
+// Warm-up: hear a short-vowel word, tap its spelling (also practises u vs o)
+const WARM = [["cup","cop","cap"],["hot","hut","hat"],["bug","bag","big"],["pin","pen","pan"],["mud","mad","mod"]]
+  .map(a => ({ prompt: a[0], expected: a[0], options: a, skills: ["sp1"] }));
+// Teach: tap the magic e
+const TEACH = [["cap","cape"],["kit","kite"],["tap","tape"],["pin","pine"],["hat","hate"],["bit","bite"]]
+  .map(a => ({ prompt: a[0] + " → " + a[1], short: a[0], long: a[1] }));
+// Hear: which word? (mix of long and short answers)
+const HEAR = [["cape","cap"],["kit","kite"],["made","mad"],["pine","pin"],["tap","tape"],["ride","rid"],["fine","fin"],["hat","hate"]]
+  .map(a => ({ prompt: a[0], expected: a[0], options: [a[0], a[1]], skills: ["ph4", "sp3"] }));
+// Read aloud (parent marks); two short-vowel words check that she looks for the e
+const READ = ["cake","time","bike","tap","lake","pin","game","five"].map(w => ({ prompt: w, expected: w, skills: ["ph4"] }));
+// Spell (typed), one retry after seeing it
+const SPELL = [["cake","We ate the cake."],["bike","I ride my bike."],["like","I like my dog."],["time","It is time for bed."],["made","Mum made a cake."]]
+  .map(a => ({ prompt: a[0], sentence: a[1], expected: a[0], skills: ["sp3"] }));
+// Tricky words: look, say, cover, write, check
+const TRICKY = [
+  { w: "said", html: 's<span class="m">ai</span>d', tip: "In said, the a i says e. Said.", tipShow: "ai says /e/" },
+  { w: "was",  html: 'w<span class="m">a</span>s',  tip: "In was, the a says o. Was.", tipShow: "a says /o/" },
+  { w: "with", html: 'wi<span class="m">th</span>', tip: "With ends with t h. Put your tongue between your teeth: th.", tipShow: "th: tongue between your teeth" }
+].map(t => Object.assign(t, { prompt: t.w, expected: t.w, skills: ["sp2", "fl1"] }));
+// Story for repeated reading (magic e + tricky words)
+const STORY = { key: "kite", title: "Jake's kite",
+  text: "Jake has a red kite. “I like my kite,” said Jake. Jake was at the lake with Mum. The wind made the kite go up. It was a fine time! Then the kite fell in the lake. Mum got it back with a stick." };
+STORY.words = STORY.text.split(/\s+/).map(raw => ({ raw, prompt: raw.replace(/[^A-Za-z'’-]/g, "").toLowerCase() }));
+STORY.sents = STORY.text.match(/[^.!?]+[.!?]+[”"]?(\s+said Jake\.)?/g).map(s => s.trim());
+const COMP = [["What did Jake have?", [["A red kite","🪁"],["A red bike","🚲"],["A red cake","🎂"]], "co6", "literal"],
+              ["Where did the kite fall?", [["In the lake","🏞️"],["In a tree","🌳"],["On the bike","🚲"]], "co6", "literal"]]
+  .map(x => ({ prompt: x[0], expected: x[1][0][0], options: x[1].map(o => ({ t: o[0], e: o[1] })), skills: [x[2]], kind: x[3] }));
+const WRITE = { kind: "picture", pic: "🧒 🪁 🏞️", picSay: "A child, a kite and a lake.",
+  prompt: "Write a sentence about the picture. Who is it? What are they doing? Where?",
+  bank: ["kite", "lake", "like", "made", "time", "with", "was"], skills: ["wr8", "wr14", "wr16", "sp3"] };
+const BEH = ["Reads word by word", "Reads in phrases", "Pauses at full stops", "Sounds words out aloud first", "Guesses from the first letter", "Needed a long time on some words"];
+
+/* ====================================================================
+   FLOW
+   ==================================================================== */
+const flow = [];
+const scr = (id, label, w, render) => flow.push({ kind: "screen", id, label, w, render });
+const stp = o => flow.push(Object.assign({ kind: "step" }, o));
+
+scr("setup", "Parent setup", 0, renderSetup);
+scr("intro", "Welcome", 3, renderIntro);
+stp({ id: "s4-warm", label: "Warm-up", skills: ["sp1"], mode: "auto", type: "pick", w: 25, items: WARM, count: true, feedback: "short",
+      note: "Hear a short-vowel word, tap its spelling (cup / cop / cap)." });
+scr("introTeach", "Magic e", 3, d => blockIntro(d, "🪄", "Magic e!", "Watch what happens when we add a magic e to the end of a word.",
+      "Parent: this part is teaching. Let her tap the magic e and repeat each word after the phone."));
+stp({ id: "s4-teach", label: "Magic e", skills: ["ph4"], mode: "teach", type: "teach", w: 40, items: TEACH, count: true,
+      note: "Teaching: tap the magic e to turn cap into cape (not scored)." });
+stp({ id: "s4-hear", label: "Which word?", skills: ["ph4", "sp3"], mode: "auto", type: "pick", w: 35, items: HEAR, count: true, feedback: "magic",
+      note: "Hear a word, tap the right spelling (magic e or not). Feedback after a mistake; first try is scored." });
+scr("introRead", "Reading", 3, d => blockIntro(d, "📖", "Read the words", "Read each word out loud. Look for a magic e at the end!",
+      "Parent: wait for her to read, then tap. If she gets it wrong, the phone shows her how to say it. Ask her to say it again."));
+stp({ id: "s4-read", label: "Reading", skills: ["ph4"], mode: "parent", type: "read", w: 40, items: READ, count: true,
+      note: "Read magic-e words aloud (2 short-vowel words mixed in). Parent-scored, first try." });
+scr("break1", "Break", 8, renderBreak);
+scr("introSpell", "Spelling", 3, d => blockIntro(d, "✏️", "Spell with magic e", "Listen and type the word. Remember: a long sound might need a magic e!",
+      "Parent: no help on the first try. If it's wrong, she sees the right spelling and types it again."));
+stp({ id: "s4-spell", label: "Spelling", skills: ["sp3"], mode: "auto", type: "spell", w: 60, items: SPELL, count: true,
+      note: "Dictated magic-e words, typed. First try scored; after a mistake she sees it and types it again (retry kept separately)." });
+scr("introTricky", "Tricky words", 3, d => blockIntro(d, "🧩", "Tricky words", "Some words don't follow the rules. Look at the tricky part, then cover it and write it.",
+      "Parent: look, say, cover, write, check. She gets up to 3 goes per word."));
+stp({ id: "s4-tricky", label: "Tricky words", skills: ["sp2", "fl1"], mode: "auto", type: "tricky", w: 60, items: TRICKY, count: true,
+      note: "Look-say-cover-write-check for said, was, with. First try scored; tries kept." });
+scr("break2", "Break", 8, renderBreak);
+scr("introStory", "Story", 3, d => blockIntro(d, "📚", "Read a story twice", "Read the story. Then listen to me read it. Then read it again. It gets easier!",
+      "Parent: tap Start when she begins and Stop when she finishes, both times. Then tap the words she got wrong."));
+stp({ id: "s4-read-kite", label: "Story", skills: ["fl2", "fl3"], mode: "parent", type: "passage", w: 120, items: STORY.words.map(w => ({ prompt: w.prompt, expected: w.prompt })),
+      note: "Repeated reading: read 1 (cold, scored), model read by the phone, read 2 (practised). Items are read 1." });
+stp({ id: "s4-comp", label: "Questions", skills: ["co6"], mode: "auto", type: "mcq", w: 20, items: COMP, count: true, note: "Questions about the kite story." });
+stp({ id: "s4-write", label: "Writing", skills: WRITE.skills, mode: "writing", type: "write", w: 50, items: [WRITE], note: "One sentence about a picture, with a word bank." });
+scr("finishChild", "All done", 0, renderFinishChild);
+scr("finishParent", "Parent wrap-up", 0, renderFinishParent);
+const TOTAL_W = flow.reduce((a, e) => a + (e.w || 0), 0);
+
+/* ====================================================================
+   ENGINE
+   ==================================================================== */
+let H = {}, lock = false, t0 = 0, inBoot = false;
+document.addEventListener("click", ev => {
+  if (ev.target.closest("#back")) return goBack();
+  const b = ev.target.closest("[data-act]"); if (!b || b.disabled) return;
+  const f = H[b.dataset.act]; if (f) f(b, ev);
+});
+function screen(label, main, bottom, acts, topAlign) {
+  H = acts || {}; lock = false; t0 = Date.now();
+  $("#blk").textContent = label || "";
+  $("#back").hidden = inBoot || S.pos <= 0;
+  const m = $("#main"); m.innerHTML = main; m.className = topAlign ? "top" : "";
+  const b = $("#bottom"); b.innerHTML = bottom || ""; b.style.display = bottom ? "" : "none";
+  // typing screens: put Done right under the text box, so the keyboard can't cover it
+  const inp = m.querySelector("#sp, #wt"), dn = b.querySelector("#doneBtn");
+  if (inp && dn) { dn.classList.add("inl"); const after = inp.nextElementSibling && inp.nextElementSibling.id === "wc" ? inp.nextElementSibling : inp; after.insertAdjacentElement("afterend", dn); if (!b.children.length) b.style.display = "none"; }
+  window.scrollTo(0, 0);
+}
+// keyboard open: hide the bottom bar and keep the text box in view
+document.addEventListener("focusin", ev => {
+  const t = ev.target; if (!t.matches || !t.matches("#main input, #main textarea")) return;
+  document.body.classList.add("kb");
+  setTimeout(() => { try { t.scrollIntoView({ block: "center", behavior: "smooth" }); } catch (e) {} }, 350);
+});
+document.addEventListener("focusout", () => setTimeout(() => {
+  const a = document.activeElement; if (!(a && a.matches && a.matches("#main input, #main textarea"))) document.body.classList.remove("kb");
+}, 120));
+function hold(ms) {
+  const bs = Array.from(document.querySelectorAll("#bottom .pb")); if (!bs.length) return;
+  bs.forEach(b => b.disabled = true);
+  const bar = document.createElement("div"); bar.className = "hold"; bar.innerHTML = `<i style="animation-duration:${ms}ms"></i>`;
+  const p = $("#bottom .parent"); if (p) p.insertBefore(bar, p.children[1] || null);
+  const my = H; setTimeout(() => { if (H !== my) return; bs.forEach(b => b.disabled = false); bar.remove(); }, ms);
+}
+function updateBar(frac) {
+  let done = 0; for (let i = 0; i < S.pos && i < flow.length; i++) done += flow[i].w || 0;
+  const e = flow[S.pos]; if (e) done += (e.w || 0) * (frac || 0);
+  $("#barfill").style.width = Math.min(100, Math.round(done / TOTAL_W * 100)) + "%";
+}
+function stepRec(e) {
+  let r = S.steps.find(x => x.id === e.id);
+  if (!r) { r = { id: e.id, skills: e.skills, mode: e.mode, label: e.label, started_at: now(), duration_sec: 0, items: [], notes: e.note || "" }; S.steps.push(r); }
+  return r;
+}
+const shown = r => r.items.filter(i => !i.notShown);
+const scored = r => r.mode === "auto" || r.mode === "parent";
+const itemScore = i => i.score != null ? i.score : (i.correct ? 1 : 0);
+const isStep = e => e && e.kind === "step";
+const recOf = id => S.steps.find(r => r.id === id);
+
+function go() {
+  if (S.pos >= flow.length) return;
+  const e = flow[S.pos];
+  if (e.kind === "screen") { updateBar(0); e.render(() => { S.pos++; save(); go(); }); return; }
+  const rec = stepRec(e);
+  if (rec.items.length >= e.items.length) { S.pos++; save(); return go(); }
+  if (e.type === "passage") { updateBar(0); return renderPassage(e, rec); }
+  updateBar(rec.items.length / e.items.length);
+  ({ pick: renderPick, teach: renderTeach, read: renderRead, spell: renderSpell, tricky: renderTricky, mcq: renderMCQ, write: renderWrite })[e.type](e, rec, rec.items.length);
+}
+function record(e, rec, item, after) {
+  if (lock) return; lock = true;
+  rec.items.push(item);
+  rec.duration_sec = Math.round(rec.items.reduce((a, i) => a + (i.ms || 0), 0) / 1000);
+  save(); after ? after() : go();
+}
+function cheer(msg, then) {
+  const d = document.createElement("div"); d.className = "toast"; d.textContent = msg; document.body.appendChild(d);
+  setTimeout(() => { d.remove(); then(); }, 650);
+}
+const counter = (e, idx) => e.count ? `<div class="count">${idx + 1} of ${e.items.length}</div>` : "";
+const CHEERS = ["⭐ Nice!", "⭐ Great!", "⭐ Yes!", "⭐ Super!"];
+const cheerMsg = () => CHEERS[Math.floor(Math.random() * CHEERS.length)];
+const INPUT_ATTRS = `autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" inputmode="text" enterkeyhint="done"`;
+function trackEdits(el, st) { el.addEventListener("beforeinput", ev => { if (/^delete/.test(ev.inputType || "")) st.deletes++; }); }
+
+/* ---------- ‹ Back ---------- */
+function popItem(e, r) {
+  if (e.type === "passage") { const had = r.items.length > 0; r.items = []; ["read1", "read2", "level", "words", "errors", "accuracy", "seconds", "wcpm", "self_corrections", "behaviours"].forEach(k => delete r[k]);
+    delete AUDIO[e.id + "-1"]; delete AUDIO[e.id + "-2"]; return had; }
+  if (!r.items.length) return false;
+  const it = r.items.pop();
+  if (e.type === "write") S.draft[e.id] = { text: it.response || "", deletes: it.deletes || 0, ms: it.ms || 0 };
+  return true;
+}
+function goBack() {
+  if (lock || inBoot || S.pos <= 0) return;
+  speechCancel();
+  const e = flow[S.pos];
+  if (isStep(e)) { const r = stepRec(e); if (e.type !== "passage" && popItem(e, r)) { save(); return go(); } }
+  let p = S.pos - 1;
+  while (p > 0 && isStep(flow[p])) { const r = recOf(flow[p].id); if (r && popItem(flow[p], r)) break; p--; }
+  S.pos = Math.max(0, p); save(); go();
+}
+try { history.pushState({ s4: 1 }, ""); } catch (e) {}
+window.addEventListener("popstate", () => { try { history.pushState({ s4: 1 }, ""); } catch (e) {} goBack(); });
+
+/* ====================================================================
+   SCREENS
+   ==================================================================== */
+function sel(id, label, opts, val) {
+  return `<label for="${id}">${label}</label><select id="${id}">${opts.map(o => `<option value="${esc(o[0])}"${o[0] === val ? " selected" : ""}>${esc(o[1])}</option>`).join("")}</select>`;
+}
+function renderSetup(done) {
+  const c = S.ctx || {};
+  screen("Parent setup", `
+    <h1 style="font-size:24px">Session 4 · Magic e</h1>
+    <p class="muted" style="margin-bottom:10px">First training session, about 20–25 minutes. This time the phone <b>teaches</b>: after a mistake it shows the right answer and she tries again.</p>
+    <div class="card"><h2>Before you start</h2><ul>
+      <li>⌨️ Predictive text and auto-correct still off.</li>
+      <li>🔊 Volume up. <button class="ghost" style="min-height:36px;padding:0 10px" data-act="test">Test sound</button></li>
+      <li>👤 Sit beside her. On a first try, let her work it out. After the phone shows the answer, you can help her say it.</li>
+      <li>‹ <b>Back</b> (top left) undoes the last answer if a button was pressed by mistake.</li>
+    </ul></div>
+    <div class="card"><h2>Quick questions</h2>
+      ${sel("c_energy", "How is Deniz right now?", [["","Choose…"],["fresh","Fresh and keen"],["ok","OK"],["tired","A bit tired"]], c.energy)}
+      ${sel("c_pred", "Predictive text and auto-correct turned off?", [["","Choose…"],["yes","Yes, both off"],["no","No / not sure"]], c.predictive_off)}
+      ${sel("c_rec", "Record Deniz's voice while she reads the story?", [["yes","Yes (audio stays on this phone until you export)"],["no","No"]], c.record || "yes")}
+    </div>`,
+    `<button class="primary" data-act="go">Hand the phone to Deniz ➜</button><div class="hint" id="micmsg" style="text-align:center"></div>`,
+    { test: () => say("Hello Deniz! Can you hear me?"),
+      go: async () => {
+        S.ctx = { energy: $("#c_energy").value || null, predictive_off: $("#c_pred").value || null, record: $("#c_rec").value };
+        if (S.ctx.record === "yes") { S.ctx.mic_ok = await initMic(); if (!S.ctx.mic_ok) { const m = $("#micmsg"); if (m) m.textContent = "Microphone not available. Carrying on without recording."; } }
+        if (!S.started_at) S.started_at = now();
+        wake(); save(); done();
+      } }, true);
+}
+function renderIntro(done) {
+  const msg = "Hi Deniz! Today you will learn a magic trick for reading and spelling. It's called magic e!";
+  screen("Welcome", `<div class="emoji">🪄</div><h1>Hi Deniz!</h1><p class="say">Today you will learn a magic trick for reading and spelling.<br>It's called <b>magic e</b>!</p>
+    <button class="spk" data-act="spk">🔊</button>`, `<button class="primary" data-act="next">Let's go! ➜</button>`,
+    { spk: () => say(msg), next: () => { speechCancel(); done(); } });
+  setTimeout(() => say(msg), 350);
+}
+function blockIntro(done, emoji, title, text, parentTip) {
+  screen(title, `<div class="emoji">${emoji}</div><h1>${esc(title)}</h1><p class="say">${esc(text)}</p><button class="spk" data-act="spk">🔊</button>
+    <div class="parent" style="margin-top:8px"><div class="plabel">👤 PARENT</div><div class="hint" style="margin:0">${esc(parentTip)}</div></div>`,
+    `<button class="primary" data-act="next">Ready ➜</button>`, { spk: () => say(text), next: () => { speechCancel(); done(); } });
+  setTimeout(() => say(text), 350);
+}
+function renderBreak(done) {
+  screen("Break", `<div class="emoji">🌈</div><h1>Brain break!</h1><p class="say">Stand up, stretch, and have a drink of water. 💧</p><p class="muted">Tap when you are ready.</p>`,
+    `<button class="primary" data-act="next">I'm ready ➜</button>
+     <div style="text-align:center;margin-top:8px"><button class="ghost" data-act="stop" style="min-height:40px;font-size:14px">👤 Parent: that's enough for today</button></div>`,
+    { next: done, stop: () => { if (confirm("Finish here? Parts not done will be left out of the results.")) { S.endedEarly = true; S.pos = flow.findIndex(x => x.id === "finishChild"); save(); go(); } } });
+}
+
+/* ---------- show-me screen after a mistake ---------- */
+function showMe(label, html, speakArr, msg, then) {
+  screen(label, `<div class="emoji">💡</div><p class="fb">${msg}</p><div class="big">${html}</div><button class="spk" data-act="spk">🔊</button>
+    <p class="muted">Say it with me!</p>`, `<button class="primary" data-act="next">Next ➜</button>`,
+    { spk: () => sayList(speakArr, 0.8), next: () => { speechCancel(); then(); } });
+  setTimeout(() => sayList(speakArr, 0.8), 300);
+}
+
+/* ---------- hear a word, tap the spelling (feedback after a mistake) ---------- */
+function renderPick(e, rec, idx) {
+  const it = e.items[idx], opts = shuffle(it.options);
+  screen(e.label, `${counter(e, idx)}<p class="q">Which word did you hear?</p><button class="spk" data-act="spk">🔊</button>
+    <div class="opts">${opts.map(o => `<button class="opt optw" data-act="opt" data-v="${o}">${o}</button>`).join("")}</div>`, "",
+    { spk: () => say(it.prompt, 0.8),
+      opt: b => {
+        const ok = b.dataset.v === it.expected;
+        record(e, rec, { prompt: it.prompt, expected: it.expected, response: b.dataset.v, options: it.options, correct: ok, skills: it.skills, attempts: 1, ms: Date.now() - t0, skipped: false },
+          () => ok ? cheer(cheerMsg(), go) : (() => {
+            const other = b.dataset.v, w = it.expected;
+            const msg = e.feedback === "magic" ? (isMagic(w) ? `The word was <b>${esc(w)}</b>. It has a magic e!` : `The word was <b>${esc(w)}</b>. No magic e. Short sound.`)
+              : `The word was <b>${esc(w)}</b>.`;
+            screen(e.label, `<div class="emoji">💡</div><p class="fb">${msg}</p>
+              <div class="pair"><button data-act="a">${mark(w)}</button><button data-act="b">${mark(other)}</button></div>
+              <p class="muted">Tap each word to hear the difference.</p>`, `<button class="primary" data-act="next">Next ➜</button>`,
+              { a: () => say(w, 0.75), b: () => say(other, 0.75), next: () => { speechCancel(); go(); } });
+            setTimeout(() => sayList([w, isMagic(w) ? magicTip(w) : "", other].filter(Boolean), 0.8), 300);
+          })());
+      } });
+  setTimeout(() => say(it.prompt, 0.8), 350);
+}
+
+/* ---------- teach: tap the magic e ---------- */
+function renderTeach(e, rec, idx) {
+  const it = e.items[idx]; let taps = 0;
+  const v = (it.long.match(/([aeiou])[^aeiou]e$/) || [])[1];
+  screen(e.label, `${counter(e, idx)}<p class="q" id="tq">This word says <b>${esc(it.short)}</b>.</p>
+    <div class="big" id="tw">${esc(it.short)}</div><button class="spk" data-act="spk">🔊</button><br>
+    <button class="magicbtn" data-act="add" id="add">✨ Add magic e</button><p class="fb" id="tip"></p>`,
+    `<button class="primary" data-act="next" id="nx" disabled>Next ➜</button>`,
+    { spk: () => say(taps ? it.long : it.short, 0.75),
+      add: () => { taps++; $("#tw").innerHTML = mark(it.long); $("#tq").innerHTML = `Now it says <b>${esc(it.long)}</b>!`;
+        $("#tip").textContent = `The e is silent. The ${v} says its name: ${VNAME[v]}.`; $("#add").disabled = true; $("#nx").disabled = false;
+        sayList([it.short, it.long, `The ${v} says its name. ${it.long}.`], 0.75); },
+      next: () => { speechCancel(); record(e, rec, { prompt: it.prompt, expected: it.long, response: it.long, correct: true, practice: true, attempts: 1, ms: Date.now() - t0, skipped: false }); } });
+  setTimeout(() => say("This word says " + it.short + ". Tap the magic e.", 0.8), 350);
+}
+
+/* ---------- read aloud (parent), show how to say it after a mistake ---------- */
+function renderRead(e, rec, idx) {
+  const it = e.items[idx];
+  const finish = ok => {
+    const v = ($("#said") || { value: "" }).value.trim();
+    record(e, rec, { prompt: it.prompt, expected: it.expected, response: ok ? it.expected : (v || null), correct: ok, skills: it.skills, attempts: 1, ms: Date.now() - t0, skipped: false },
+      () => ok ? cheer(cheerMsg(), go) : showMe(e.label, mark(it.prompt), isMagic(it.prompt) ? [it.prompt, magicTip(it.prompt), it.prompt] : [it.prompt, "No magic e. Short sound.", it.prompt],
+        isMagic(it.prompt) ? "Look! A magic e at the end." : "No magic e here. Short sound.", go));
+  };
+  screen(e.label, `${counter(e, idx)}<div class="word">${esc(it.prompt)}</div>`,
+    `<div class="parent"><div class="plabel">👤 PARENT – did she read it?</div>
+      <div class="prow"><button class="pb ok" data-act="ok">✓ Read it</button><button class="pb no" data-act="no">✗ Not yet</button></div>
+      <div class="prow"><input class="said" id="said" placeholder="She said… (optional)" ${INPUT_ATTRS}></div></div>`,
+    { ok: () => finish(true), no: () => finish(false) });
+  hold(1800);
+}
+
+/* ---------- spell with one retry ---------- */
+function renderSpell(e, rec, idx) {
+  const it = e.items[idx], st = { deletes: 0 };
+  const speak = () => sayList([it.prompt, it.sentence, it.prompt], 0.8);
+  let first = null, firstMs = 0;
+  const view = retry => {
+    screen(e.label, `${counter(e, idx)}${retry ? `<p class="fb">Here's how we spell it:</p><div class="big">${mark(it.expected)}</div><p class="q">Now you type it!</p>`
+      : `<p class="q">Listen, then type the word</p><button class="spk" data-act="spk">🔊</button>`}
+      <input class="spin" id="sp" ${INPUT_ATTRS} aria-label="Type the word">`,
+      `<button class="primary" data-act="done" id="doneBtn" disabled>Done ➜</button>`,
+      { spk: speak, done: () => submit(retry) }, true);
+    const inp = $("#sp"); trackEdits(inp, st);
+    inp.addEventListener("input", () => { $("#doneBtn").disabled = !inp.value.trim(); });
+    inp.addEventListener("keydown", ev => { if (ev.key === "Enter") { ev.preventDefault(); submit(retry); } });
+    if (retry) sayList([it.expected, it.expected.split("").join(", "), magicTip(it.expected)], 0.8); else setTimeout(speak, 350);
+  };
+  const submit = retry => {
+    const raw = $("#sp").value.trim(); if (!raw) return;
+    const ok = norm(raw) === norm(it.expected);
+    if (!retry) {
+      first = raw; firstMs = Date.now() - t0;
+      if (ok) return record(e, rec, { prompt: it.prompt, sentence: it.sentence, expected: it.expected, response: raw, correct: true, skills: it.skills, attempts: 1, ms: firstMs, deletes: st.deletes, skipped: false }, () => cheer(cheerMsg(), go));
+      return view(true);
+    }
+    record(e, rec, { prompt: it.prompt, sentence: it.sentence, expected: it.expected, response: first, correct: false, retry_response: raw, retry_correct: ok,
+      used_ck: /ck/.test(first), skills: it.skills, attempts: 2, ms: firstMs + (Date.now() - t0), deletes: st.deletes, skipped: false }, () => cheer(ok ? "⭐ Now you've got it!" : "⭐ Good try!", go));
+  };
+  view(false);
+}
+
+/* ---------- tricky words: look, say, cover, write, check ---------- */
+function renderTricky(e, rec, idx) {
+  const it = e.items[idx], tries = [], tStart = Date.now();
+  const look = () => {
+    screen(e.label, `${counter(e, idx)}<p class="q">Look at the tricky part. Say the word.</p><div class="big">${it.html}</div>
+      <p class="fb">${esc(it.tipShow)}</p><button class="spk" data-act="spk">🔊</button>${tries.length ? `<div class="tries">Go ${tries.length + 1} of 3</div>` : ""}`,
+      `<button class="primary" data-act="cover">🙈 Cover it and write</button>`,
+      { spk: () => sayList([it.w, it.tip], 0.8), cover: () => { speechCancel(); write(); } });
+    setTimeout(() => sayList([it.w, it.tip], 0.8), 300);
+  };
+  const write = () => {
+    screen(e.label, `${counter(e, idx)}<p class="q">Now type the word you saw</p><div class="big" style="opacity:.15">???</div>
+      <input class="spin" id="sp" ${INPUT_ATTRS} aria-label="Type the word">`,
+      `<button class="primary" data-act="done" id="doneBtn" disabled>Check ➜</button>`, { done: check }, true);
+    const inp = $("#sp"); inp.addEventListener("input", () => { $("#doneBtn").disabled = !inp.value.trim(); });
+    inp.addEventListener("keydown", ev => { if (ev.key === "Enter") { ev.preventDefault(); check(); } });
+  };
+  const check = () => {
+    const raw = $("#sp").value.trim(); if (!raw) return;
+    tries.push(raw); const ok = norm(raw) === it.w;
+    const finish = () => record(e, rec, { prompt: it.w, expected: it.w, response: tries[0], responses: tries.slice(), correct: norm(tries[0]) === it.w, correct_final: ok,
+      skills: it.skills, attempts: tries.length, ms: Date.now() - tStart, skipped: false }, () => cheer(ok ? (tries.length === 1 ? "⭐ First go!" : "⭐ You got it!") : "⭐ Good try!", go));
+    if (ok || tries.length >= 3) return finish();
+    screen(e.label, `<div class="emoji">💡</div><p class="fb">Almost! You wrote <b>${esc(raw)}</b>.</p><p class="q">Let's look again.</p><div class="big">${it.html}</div>`,
+      `<button class="primary" data-act="again">Try again ➜</button>`, { again: look });
+    say("Almost! Let's look again. " + it.w, 0.85);
+  };
+  look();
+}
+
+/* ---------- repeated reading: read 1, listen, read 2 ---------- */
+function renderPassage(e, rec) {
+  const p = STORY, words = p.words; let tStart = 0, tick = null, rh = null;
+  const R = { 1: { bad: new Set(), sc: 0, secs: 0 }, 2: { bad: new Set(), sc: 0, secs: 0 } }, beh = new Set();
+  const readView = n => {
+    screen(p.title, `<p class="q">${n === 1 ? "Read the story out loud" : "Now read it again. You know it better now!"}</p><button class="spk" data-act="spk">🔊</button>
+      <div class="passage">${esc(p.text)}</div>`,
+      `<div class="parent"><div class="plabel">👤 PARENT – read ${n} of 2: tap Start when she begins, Stop when she finishes</div>
+        <div class="prow"><button class="pb ok" data-act="tm" id="tbtn">▶ Start timer</button></div><div class="hint" id="tt" style="text-align:center"></div></div>`,
+      { spk: () => say(n === 1 ? "Read the story out loud. Take your time." : "Read it again. You know it better now!"),
+        tm: () => {
+          if (!tStart) { speechCancel(); rh = recStart(); tStart = Date.now(); $("#tbtn").textContent = (rh ? "🎙 " : "") + "■ Stop – she finished"; $("#tbtn").className = "pb no";
+            tick = setInterval(() => { const t = $("#tt"); if (t) t.textContent = Math.round((Date.now() - tStart) / 1000) + " s"; }, 500); }
+          else { R[n].secs = (Date.now() - tStart) / 1000; clearInterval(tick); tStart = 0;
+            if (rh) { const r = rh; rh = null; try { r.mr.stop(); } catch (x) {} r.done.then(b => { if (b && b.size) AUDIO[e.id + "-" + n] = { blob: b, seconds: Math.round(R[n].secs), mime: b.type }; }); }
+            markView(n); }
+        } }, true);
+  };
+  const markView = n => {
+    const o = R[n], cnt = () => `${o.bad.size} word${o.bad.size === 1 ? "" : "s"} marked`;
+    screen("Parent: mark words", `<h1 style="font-size:22px">👤 Read ${n}: tap the words she got wrong</h1>
+      <p class="hint" style="margin-top:0">Tap any word she misread, couldn't read or left out. Don't tap words she fixed herself.</p>
+      <div class="pw">${words.map((w, i) => `<button class="w" data-act="w" data-i="${i}">${esc(w.raw)}</button>`).join("")}</div>
+      <div class="step"><span>Fixed herself:</span><button data-act="m">−</button><b id="sc">0</b><button data-act="pl">+</button></div>
+      ${n === 2 ? `<div class="chips">${BEH.map(x => `<button class="chip" data-act="chip" data-v="${esc(x)}">${esc(x)}</button>`).join("")}</div>` : ""}`,
+      `<div class="hint" id="cnt" style="text-align:center;margin:0 0 6px">${cnt()}</div><button class="primary" data-act="save">${n === 1 ? "Save, then listen ➜" : "Save ➜"}</button>`,
+      { w: b => { const i = +b.dataset.i; o.bad.has(i) ? o.bad.delete(i) : o.bad.add(i); b.classList.toggle("bad"); $("#cnt").textContent = cnt(); },
+        m: () => { o.sc = Math.max(0, o.sc - 1); $("#sc").textContent = o.sc; }, pl: () => { o.sc++; $("#sc").textContent = o.sc; },
+        chip: b => { const v = b.dataset.v; beh.has(v) ? beh.delete(v) : beh.add(v); b.classList.toggle("on"); },
+        save: () => n === 1 ? modelView() : saveAll() }, true);
+  };
+  const modelView = () => {
+    screen(p.title, `<p class="q">Listen and follow with your finger</p>
+      <div class="passage">${p.sents.map((s, i) => `<span id="ps${i}">${esc(s)}</span>`).join(" ")}</div>`,
+      `<div class="prow"><button class="ghost" data-act="play" style="flex:1">🔊 Listen again</button><button class="primary" data-act="next" id="nx" style="flex:1.4" disabled>My turn ➜</button></div>`,
+      { play, next: () => { speechCancel(); readView(2); } }, true);
+    play();
+  };
+  const play = () => {
+    const hl = i => { p.sents.forEach((_, k) => { const el = $("#ps" + k); if (el) el.className = k === i ? "hl" : ""; }); };
+    const ok = sayList(p.sents, 0.8, () => { hl(-1); const b = $("#nx"); if (b) b.disabled = false; }, hl);
+    setTimeout(() => { const b = $("#nx"); if (b) b.disabled = false; }, ok ? 20000 : 0);
+  };
+  const stats = n => { const o = R[n], w = words.length, er = o.bad.size;
+    return { errors: er, words: w, accuracy: Math.round((w - er) / w * 100), seconds: Math.round(o.secs), wcpm: o.secs > 0 ? Math.round((w - er) / (o.secs / 60)) : null,
+      self_corrections: o.sc, misread: Array.from(o.bad).sort((a, b) => a - b).map(i => words[i].prompt) }; };
+  const saveAll = () => {
+    if (lock) return; lock = true;
+    rec.items = words.map((w, i) => ({ prompt: w.prompt, expected: w.prompt, response: R[1].bad.has(i) ? "misread" : w.prompt, correct: !R[1].bad.has(i), attempts: 1, ms: null, skipped: false, skills: ["fl2"] }));
+    rec.read1 = stats(1); rec.read2 = stats(2); rec.behaviours = Array.from(beh);
+    Object.assign(rec, { level: "A", words: words.length, errors: rec.read1.errors, accuracy: rec.read1.accuracy, seconds: rec.read1.seconds, wcpm: rec.read1.wcpm, self_corrections: rec.read1.self_corrections });
+    rec.duration_sec = rec.read1.seconds + rec.read2.seconds;
+    save(); cheer("⭐ Well done!", go);
+  };
+  readView(1);
+}
+
+/* ---------- questions ---------- */
+function renderMCQ(e, rec, idx) {
+  const it = e.items[idx], opts = shuffle(it.options);
+  const speakAll = () => sayList([it.prompt].concat(opts.map(o => o.t)), 0.85);
+  screen(e.label, `${counter(e, idx)}<p class="q">${esc(it.prompt)}</p><button class="spk" data-act="spk">🔊</button>
+    <div class="mcqs">${opts.map((o, i) => `<button class="mcq" data-act="o" data-i="${i}"><span class="em">${o.e || ""}</span><span>${esc(o.t)}</span></button>`).join("")}</div>`, "",
+    { spk: speakAll, o: b => { const o = opts[+b.dataset.i];
+      record(e, rec, { prompt: it.prompt, expected: it.expected, response: o.t, correct: o.t === it.expected, skills: it.skills, kind: it.kind, modality: "reading",
+        attempts: 1, ms: Date.now() - t0, skipped: false }, () => cheer("⭐ Thanks!", go)); } }, true);
+  setTimeout(speakAll, 350);
+}
+
+/* ---------- writing: one sentence with a word bank ---------- */
+function textStats(txt) {
+  const t = String(txt || "").trim(), words = t ? t.split(/\s+/).filter(Boolean) : [];
+  return { chars: t.length, words: words.length, starts_with_capital: /^[A-Z]/.test(t), ends_with_punct: /[.!?]$/.test(t),
+    lowercase_i: words.filter(w => w === "i").length, magic_e_words: words.map(w => w.toLowerCase().replace(/[^a-z]/g, "")).filter(isMagic),
+    joining_words: words.map(w => w.toLowerCase().replace(/[^a-z]/g, "")).filter(w => ["and", "but", "so", "because", "then", "when"].includes(w)) };
+}
+function renderWrite(e, rec, idx) {
+  const it = e.items[idx], d = S.draft[e.id] || (S.draft[e.id] = { text: "", deletes: 0, ms: 0 }), t1 = Date.now(), st = { deletes: 0 };
+  const speakIt = () => sayList([it.prompt, it.picSay], 0.85);
+  const commit = skipped => {
+    const ta = $("#wt"); if (ta) d.text = ta.value;
+    const txt = skipped ? "" : d.text.trim();
+    record(e, rec, { prompt: it.prompt, kind: it.kind, pic: it.pic, response: skipped ? null : txt, correct: null, skills: it.skills, attempts: 1,
+      ms: d.ms + (Date.now() - t1), deletes: d.deletes + st.deletes, stats: textStats(txt), skipped: !!skipped }, () => { delete S.draft[e.id]; save(); cheer("⭐ Great writing!", go); });
+  };
+  screen(e.label, `<div class="pic">${it.pic}</div><p class="q">${esc(it.prompt)}</p><button class="spk" data-act="spk">🔊</button>
+    <div class="bank">${it.bank.map(w => `<button data-act="w" data-w="${w}">${mark(w)}</button>`).join("")}</div>
+    <textarea class="wt" id="wt" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="Type here">${esc(d.text)}</textarea>`,
+    `<button class="primary" data-act="done" id="doneBtn" disabled>Done ➜</button>
+     <div style="text-align:center;margin-top:8px"><button class="ghost" data-act="skip" style="min-height:40px;font-size:14px">👤 Skip this one</button></div>`,
+    { spk: speakIt, w: b => say(b.dataset.w, 0.8), done: () => { if ($("#wt").value.trim()) commit(false); },
+      skip: () => { if (confirm("Skip this one?")) commit(true); } }, true);
+  const ta = $("#wt"); trackEdits(ta, st);
+  const upd = () => { $("#doneBtn").disabled = !ta.value.trim(); };
+  ta.addEventListener("input", () => { d.text = ta.value; upd(); save(); }); upd();
+  if (!d.text) setTimeout(speakIt, 350);
+}
+
+/* ---------- finish ---------- */
+function renderFinishChild(done) {
+  screen("All done", `<div class="emoji">🎉</div><h1>All done, Deniz!</h1><p class="say">You learned magic e today!<br>How did that feel?</p>
+    <div class="emojis"><button data-act="f" data-v="great" aria-label="Great">😀</button><button data-act="f" data-v="ok" aria-label="OK">🙂</button><button data-act="f" data-v="hard" aria-label="Hard">😓</button></div>`,
+    "", { f: b => { S.feeling = b.dataset.v; save(); done(); } });
+}
+const OBS = ["Got magic e by the end", "Still says the short sound (bik for bike)", "Used ck instead of e", "Said the sounds while typing",
+  "Hunted for letters on the keyboard", "Second story read was smoother", "Needed lots of encouragement", "Got tired or distracted", "Proud and engaged"];
+function renderFinishParent() {
+  const res = buildResult(), sm = res.summary;
+  const pc = v => v == null ? "–" : `<span class="${v >= 80 ? "good" : v < 50 ? "low" : ""}">${v}%</span>`;
+  const row = (name, o) => `<tr><td>${esc(name)}</td><td class="n">${o && o.total ? o.correct + "/" + o.total : "–"}</td><td class="n">${pc(o && o.total ? o.pct : null)}</td></tr>`;
+  const rd = sm.story;
+  const rows = [row("Warm-up (short vowels)", sm.warmup), row("Magic e: which word?", sm.hear), row("Magic e: reading", sm.read),
+    row("Magic e: spelling (1st try)", sm.spell), row("Magic e: spelling (after seeing it)", sm.spell_after), row("Tricky words (1st try)", sm.tricky), row("Story questions", sm.comp)].join("");
+  screen("Parent wrap-up", `<h1 style="font-size:24px">Well done! 🎉</h1>
+    ${sm.flags.length ? `<div class="card"><h2>Notes</h2>${sm.flags.map(f => `<p style="font-size:15px;margin:0 0 6px">• ${esc(f)}</p>`).join("")}</div>` : ""}
+    <div class="card"><h2>Scores (first try)</h2><table><tr><th>Part</th><th class="n">Right</th><th class="n">%</th></tr>${rows}</table></div>
+    <div class="card"><h2>Story: read 1 → read 2</h2>${rd ? `<table><tr><th></th><th class="n">Read 1</th><th class="n">Read 2</th></tr>
+      <tr><td>Accuracy</td><td class="n">${rd.read1.accuracy}%</td><td class="n">${rd.read2.accuracy}%</td></tr>
+      <tr><td>Words per minute</td><td class="n">${rd.read1.wcpm ?? "–"}</td><td class="n">${rd.read2.wcpm ?? "–"}</td></tr></table>` : "<p class='muted'>Not read.</p>"}
+      <p class="hint">🎙 ${Object.keys(AUDIO).length ? Object.keys(AUDIO).length + " recording(s) ready to export" : "no recordings"}</p></div>
+    <div class="card"><h2>Her sentence</h2><div style="font-size:17px;background:#faf6ff;border-radius:10px;padding:8px">${sm.writing && sm.writing.text ? esc(sm.writing.text) : "<i>not done</i>"}</div></div>
+    <div class="card"><h2>What did you notice? (tap any)</h2><div class="chips">
+      ${OBS.map(o => `<button class="chip${S.obs.includes(o) ? " on" : ""}" data-act="chip" data-v="${esc(o)}">${esc(o)}</button>`).join("")}</div>
+      <label for="note">Anything else (optional)</label><textarea id="note" ${INPUT_ATTRS}>${esc(S.note || "")}</textarea></div>
+    <p class="muted" style="text-align:center">Tap <b>Export</b> and send the files to this chat.</p>`,
+    `<div class="prow"><button class="ghost" data-act="copy" style="flex:.6">Copy</button><button class="primary" data-act="export" style="flex:1.6">Export results ➜</button></div><div class="hint" id="msg" style="text-align:center"></div>`,
+    { chip: b => { const v = b.dataset.v, i = S.obs.indexOf(v); if (i >= 0) S.obs.splice(i, 1); else S.obs.push(v); b.classList.toggle("on"); save(); },
+      export: () => exportJson(),
+      copy: async () => { S.note = $("#note").value; save(); try { await navigator.clipboard.writeText(JSON.stringify(buildResult(), null, 2)); $("#msg").textContent = "Copied ✓"; } catch (e) { $("#msg").textContent = "Copy not available. Use Export."; } } }, true);
+}
+
+/* ====================================================================
+   RESULT + SUMMARY
+   ==================================================================== */
+const tallyItems = s => { const c = s.reduce((a, i) => a + itemScore(i), 0); return { correct: Math.round(c * 2) / 2, total: s.length, pct: s.length ? Math.round(c / s.length * 100) : null }; };
+const tally = r => r && scored(r) ? tallyItems(shown(r)) : { correct: 0, total: 0, pct: null };
+function computeSummary(steps) {
+  const get = id => steps.find(r => r.id === id);
+  const warmup = tally(get("s4-warm")), hear = tally(get("s4-hear")), read = tally(get("s4-read")), comp = tally(get("s4-comp"));
+  const rr = get("s4-read"); read.misread = rr ? shown(rr).filter(i => !i.correct).map(i => i.prompt + (i.response ? " (said " + i.response + ")" : "")) : [];
+  const sp = get("s4-spell"), spI = sp ? shown(sp) : [];
+  const spell = Object.assign(tallyItems(spI), { misspelt: spI.filter(i => !i.correct).map(i => ({ expected: i.expected, response: i.response, retry: i.retry_response, retry_correct: i.retry_correct })) });
+  const spell_after = tallyItems(spI.map(i => ({ correct: i.correct || !!i.retry_correct })));
+  const ck = spI.filter(i => !i.correct && /ck/.test(i.response || "")).length;
+  const tr = get("s4-tricky"), trI = tr ? shown(tr) : [];
+  const tricky = Object.assign(tallyItems(trI), { final_correct: trI.filter(i => i.correct_final).length, tries: trI.map(i => ({ word: i.expected, responses: i.responses })) });
+  const st = get("s4-read-kite");
+  const story = st && st.read1 ? { read1: st.read1, read2: st.read2, behaviours: st.behaviours, gain_wcpm: st.read1.wcpm != null && st.read2.wcpm != null ? st.read2.wcpm - st.read1.wcpm : null } : null;
+  const wr = get("s4-write"), wi = wr && wr.items[0];
+  const writing = wi ? { text: wi.response, stats: wi.stats, ms: wi.ms } : null;
+  const flags = [];
+  if (S.ctx && S.ctx.predictive_off !== "yes") flags.push("Predictive text may have been on: some spellings may not be her own.");
+  if (ck) flags.push("Used ck instead of magic e in " + ck + " spelling" + (ck === 1 ? "" : "s") + " on the first try.");
+  if (spI.length && spell_after.correct > spell.correct) flags.push("Spelling went from " + spell.correct + "/" + spI.length + " to " + spell_after.correct + "/" + spI.length + " after seeing the word.");
+  if (story && story.gain_wcpm != null) flags.push("Story pace " + story.read1.wcpm + " → " + story.read2.wcpm + " words per minute after listening (" + (story.gain_wcpm >= 0 ? "+" : "") + story.gain_wcpm + ").");
+  if (story && story.read1.seconds < 4) flags.push("Story timer looks too short to be real.");
+  if (S.endedEarly) flags.push("Finished early at a break.");
+  const acc = {}, evidence = [];
+  steps.filter(scored).forEach(r => {
+    const per = {};
+    shown(r).forEach(i => (i.skills || r.skills).forEach(k => { const o = per[k] || (per[k] = { c: 0, t: 0 }); o.c += itemScore(i); o.t += 1; }));
+    Object.keys(per).forEach(k => { const a = acc[k] || (acc[k] = { correct: 0, total: 0 }); a.correct += per[k].c; a.total += per[k].t;
+      evidence.push({ skill: k, session: SESSION, step: r.id, correct: Math.round(per[k].c * 2) / 2, total: per[k].t, note: r.notes || "" }); });
+  });
+  const suggested_progress = {};
+  Object.keys(acc).forEach(k => { const p = acc[k].correct / acc[k].total * 100;
+    suggested_progress[k] = { status: p < 50 ? "not_yet" : "learning", likely_secure: p >= 90, correct: Math.round(acc[k].correct * 2) / 2, total: acc[k].total, pct: Math.round(p) }; });
+  return { warmup, hear, read, spell, spell_after, ck_instead_of_e: ck, tricky, story, comp, writing, flags, suggested_progress, evidence,
+    caveat: "Training session: scores are first tries. Retries and practised reads show learning within the session." };
+}
+function buildResult() {
+  S.note = ($("#note") && $("#note").value) || S.note || "";
+  const steps = S.steps.map(r => {
+    const t = tally(r);
+    const o = { id: r.id, skills: r.skills, mode: r.mode, started_at: r.started_at, duration_sec: r.duration_sec || 0, items: r.items,
+      score: scored(r) ? { correct: t.correct, total: t.total } : null, notes: r.notes };
+    if (r.read1) Object.assign(o, { level: r.level, words: r.words, errors: r.errors, accuracy: r.accuracy, seconds: r.seconds, wcpm: r.wcpm, self_corrections: r.self_corrections, read1: r.read1, read2: r.read2, behaviours: r.behaviours });
+    return o;
+  });
+  const fin = now();
+  const res = { schema: "deniz-session/1", session: SESSION, kind: "training", title: "Training 1 – magic e (a_e, i_e)", focus: ["ph4", "sp3", "sp2"],
+    started_at: S.started_at, finished_at: fin, duration_sec: Math.round((Date.parse(fin) - Date.parse(S.started_at || fin)) / 1000),
+    device: navigator.userAgent, parent_context: S.ctx, steps, child_feeling: S.feeling, parent_note: S.note, observations: S.obs, summary: computeSummary(steps) };
+  if (S.endedEarly) res.ended_early = true;
+  res.recordings = Object.keys(AUDIO).map(id => ({ step: id, file: "session-04-" + id.replace("s4-", "") + "." + audioExt(AUDIO[id].mime), seconds: AUDIO[id].seconds, mime: AUDIO[id].mime, bytes: AUDIO[id].blob.size }));
+  return res;
+}
+async function exportJson() {
+  const res = buildResult(); save();
+  const file = new File([JSON.stringify(res, null, 2)], "session-04-result.json", { type: "application/json" });
+  const audio = res.recordings.map(r => new File([AUDIO[r.step].blob], r.file, { type: AUDIO[r.step].mime || "audio/webm" }));
+  const files = [file].concat(audio), msg = $("#msg");
+  try { if (navigator.canShare && navigator.canShare({ files })) { await navigator.share({ files, title: "Deniz – session 4 result" }); S.exported = true; save(); msg.textContent = "Shared ✓" + (audio.length ? " (with " + audio.length + " recordings)" : ""); return; } }
+  catch (e) { if (e && e.name === "AbortError") return; }
+  try {
+    files.forEach((f, i) => setTimeout(() => { const url = URL.createObjectURL(f), a = document.createElement("a"); a.href = url; a.download = f.name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 3000); }, i * 700));
+    S.exported = true; save(); msg.textContent = "Saved to Downloads ✓" + (audio.length ? " (results + " + audio.length + " recordings)" : "");
+  } catch (e) { msg.textContent = "Could not save. Try Copy."; }
+}
+
+/* ====================================================================
+   BOOT
+   ==================================================================== */
+function boot() {
+  if (S.pos > 1 && S.pos < flow.length) {
+    inBoot = true;
+    screen("Parent", `<div class="emoji">💾</div><h1 style="font-size:24px">Session in progress</h1><p class="muted">Your answers are saved. Pick up where you stopped?</p>`,
+      `<button class="primary" data-act="cont">Continue ➜</button>
+       <div style="text-align:center;margin-top:14px"><button class="ghost" data-act="restart" style="min-height:36px;font-size:13px;border:0;background:none;text-decoration:underline">Start over (erases answers)</button></div>`,
+      { cont: async () => { inBoot = false; if (S.ctx && S.ctx.record === "yes") await initMic(); wake(); go(); },
+        restart: () => { if (confirm("Start over? ALL saved answers will be erased.") && confirm("Are you sure? This cannot be undone.")) { inBoot = false; S = fresh(); save(); go(); } } });
+    return;
+  }
+  go();
+}
+if (location.hash === "#test") window.__s4 = { get S() { return S; }, buildResult, flow, STORY };
+boot();
+})();
+</script>
+</body>
+</html>

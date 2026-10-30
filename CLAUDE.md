@@ -144,3 +144,13 @@ Schedule: daily sessions.
 - **‹ Back button** (Session 3 on, every future page): a small button in the header undoes the last answer or goes back one
   screen (restoring typed text). The phone's back gesture does the same instead of leaving the page. "Start over" on the
   resume screen is a small link with a double confirm.
+
+## Training sessions (Session 4 on)
+- `kind: "training"`, plus `focus` (skill IDs). After a mistake the page shows the answer and she tries again.
+  `correct` is always her FIRST try (used for status); retries are kept as `retry_response` / `retry_correct` (spelling)
+  or `responses` / `correct_final` (tricky words). Teaching steps use `mode: "teach"` and are not scored.
+- Repeated reading: one passage step with `read1` (cold, scored: items = read 1) and `read2` (after the phone reads it),
+  each with errors, accuracy, seconds, wcpm, misread. Recordings `session-NN-read-<key>-1/2.webm`.
+- Typing screens: the Done button sits right under the text box, and the bottom bar hides while the keyboard is open
+  (it covered the box on the phone in Session 3).
+- About 20–25 minutes per training session (31–33 minutes tired her).

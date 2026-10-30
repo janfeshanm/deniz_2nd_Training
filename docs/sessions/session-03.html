@@ -113,6 +113,8 @@ td.n,th.n{text-align:right;white-space:nowrap}
 .toprow{display:flex;align-items:center;gap:8px;min-height:44px}
 #back{min-width:72px;min-height:40px;padding:0 10px;border-radius:12px;border:2px solid var(--line);background:rgba(255,255,255,.85);font-size:15px;font-weight:600;color:var(--muted)}
 #back[hidden]{display:none}
+body.kb #bottom{display:none}
+.inl{margin-top:12px}
 .pic{font-size:72px;letter-spacing:12px;margin:4px 0 8px}
 </style>
 </head>
@@ -286,8 +288,20 @@ function screen(label, main, bottom, acts, topAlign) {
   $("#back").hidden = inBoot || S.pos <= 0;
   const m = $("#main"); m.innerHTML = main; m.className = topAlign ? "top" : "";
   const b = $("#bottom"); b.innerHTML = bottom || ""; b.style.display = bottom ? "" : "none";
+  // typing screens: put Done right under the text box, so the keyboard can't cover it
+  const inp = m.querySelector("#sp, #wt"), dn = b.querySelector("#doneBtn");
+  if (inp && dn) { dn.classList.add("inl"); const after = inp.nextElementSibling && inp.nextElementSibling.id === "wc" ? inp.nextElementSibling : inp; after.insertAdjacentElement("afterend", dn); if (!b.children.length) b.style.display = "none"; }
   window.scrollTo(0, 0);
 }
+// keyboard open: hide the bottom bar and keep the text box in view
+document.addEventListener("focusin", ev => {
+  const t = ev.target; if (!t.matches || !t.matches("#main input, #main textarea")) return;
+  document.body.classList.add("kb");
+  setTimeout(() => { try { t.scrollIntoView({ block: "center", behavior: "smooth" }); } catch (e) {} }, 350);
+});
+document.addEventListener("focusout", () => setTimeout(() => {
+  const a = document.activeElement; if (!(a && a.matches && a.matches("#main input, #main textarea"))) document.body.classList.remove("kb");
+}, 120));
 function hold(ms) {
   const bs = Array.from(document.querySelectorAll("#bottom .pb")); if (!bs.length) return;
   bs.forEach(b => b.disabled = true);
