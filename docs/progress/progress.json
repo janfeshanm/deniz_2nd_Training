@@ -2,7 +2,7 @@
   "schema": "deniz-progress/1",
   "child": "Deniz",
   "year": 2,
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "status_scale": [
     "not_checked",
     "not_yet",
@@ -17,7 +17,8 @@
   },
   "sessions_completed": [
     1,
-    2
+    2,
+    3
   ],
   "history": [
     {
@@ -35,6 +36,14 @@
       "duration_min": 17,
       "feeling": "great",
       "summary": "Understands everything she reads and hears (10/10). Reads early Year 1 text at 94%, Year 1 text 79% (too hard), slow (13–25 words/min). Misreads magic e, blends and tricky words in sentences."
+    },
+    {
+      "session": 3,
+      "title": "Baseline 3 – spelling and writing",
+      "date": "2026-10-30",
+      "duration_min": 31,
+      "feeling": "great",
+      "summary": "Spelling 8/18, by sound: uses ck instead of magic e (bick, meack, lick), short u as o (dock), tricky words wrong (sad, wid, wos). Magic e read 1/6. Writes full sentences with capital and full stop, but very slowly on the keyboard; recount was one sentence."
     }
   ],
   "skills": {
@@ -123,6 +132,18 @@
           "correct": 0,
           "total": 4,
           "note": "In story B misread made, wave, came, came (magic-e words in sentences)."
+        },
+        {
+          "session": 3,
+          "correct": 4,
+          "total": 6,
+          "note": "Hear a word, tap the spelling: missed kite (chose kit), tube (chose tub)"
+        },
+        {
+          "session": 3,
+          "correct": 1,
+          "total": 6,
+          "note": "Read magic-e words: only home; bike, make, cube, rope, game not read"
         }
       ]
     },
@@ -325,6 +346,12 @@
           "correct": 38,
           "total": 48,
           "note": "Story B (Year 1 text): 79% accurate, too hard (frustration). Missed swam, made, wave, came x2, filled, with, water, little, crab; 8 of the 10 errors were in the second half. Story C (Year 2 text) not attempted."
+        },
+        {
+          "session": 2,
+          "correct": null,
+          "total": null,
+          "note": "Audio check (speech-to-text, rough): story B may have more errors than marked: hole heard as 'hawk' and 'home', made as 'met/much', long struggles on 'a wave came' (~10 s) and 'crab came out of the' (~25 s). Story A: possibly 'sit' for sits and 'prone' for pond. Repeats words (went went, then then then)."
         }
       ]
     },
@@ -351,6 +378,12 @@
           "correct": 0,
           "total": 12,
           "note": "No self-corrections recorded on 12 errors (confirm: the parent may not have marked them)."
+        },
+        {
+          "session": 2,
+          "correct": null,
+          "total": null,
+          "note": "Audio suggests at least one self-correction (crab: 'crap… Crab'), though none were marked. Status kept not_yet."
         }
       ]
     },
@@ -533,8 +566,15 @@
     "wr1": {
       "area": "writing",
       "name": "Recount",
-      "status": "not_checked",
-      "evidence": []
+      "status": "not_yet",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "Recount was one sentence: who she played with and where ('... and me we paly in the school'). No sequence of events."
+        }
+      ]
     },
     "wr2": {
       "area": "writing",
@@ -557,8 +597,15 @@
     "wr5": {
       "area": "writing",
       "name": "Plans before writing",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "Said her story out loud before typing."
+        }
+      ]
     },
     "wr6": {
       "area": "writing",
@@ -582,14 +629,28 @@
     "wr8": {
       "area": "writing",
       "name": "Complete simple sentences",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "All 4 texts are complete sentences: 'The dog wos playing wid the bull in the tree.'"
+        }
+      ]
     },
     "wr9": {
       "area": "writing",
       "name": "Compound sentences",
-      "status": "not_checked",
-      "evidence": []
+      "status": "not_yet",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "Uses 'and' only inside a list; no joined sentences."
+        }
+      ]
     },
     "wr10": {
       "area": "writing",
@@ -606,8 +667,15 @@
     "wr12": {
       "area": "writing",
       "name": "Noun groups",
-      "status": "not_checked",
-      "evidence": []
+      "status": "not_yet",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "No describing words in her own sentences yet (the ball, the tree)."
+        }
+      ]
     },
     "wr13": {
       "area": "writing",
@@ -618,20 +686,41 @@
     "wr14": {
       "area": "writing",
       "name": "Adding detail",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "Picture sentence answers who, what and where."
+        }
+      ]
     },
     "wr15": {
       "area": "writing",
       "name": "Articles, pronouns, tense",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "'[names] and me we paly': doubled subject (me we), and present 'play' for past. 'wos playing' right tense."
+        }
+      ]
     },
     "wr16": {
       "area": "writing",
       "name": "Capital letters and full stops",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "Capital at start and full stop at end in all 4 texts."
+        }
+      ]
     },
     "wr17": {
       "area": "writing",
@@ -642,8 +731,15 @@
     "wr18": {
       "area": "writing",
       "name": "Commas in lists",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "Used commas in a list of names on her own."
+        }
+      ]
     },
     "wr19": {
       "area": "writing",
@@ -660,8 +756,15 @@
     "wr21": {
       "area": "writing",
       "name": "Re-reads and edits",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "Read her story back and fixed one word (chs → school)."
+        }
+      ]
     },
     "wr22": {
       "area": "writing",
@@ -679,6 +782,12 @@
           "correct": 2,
           "total": 3,
           "note": "Typed: pig, ship right; jump→jomp"
+        },
+        {
+          "session": 3,
+          "correct": 5,
+          "total": 6,
+          "note": "Warm-up cat, sun, dog right (bed skipped); frog, shop right; crab→krab, with→wid are sound-right. Writes short u as o: duck→dock (and jump→jomp in S1)."
         }
       ]
     },
@@ -692,6 +801,12 @@
           "correct": 0,
           "total": 3,
           "note": "Typed: said→sad, because→becu, little→litl"
+        },
+        {
+          "session": 3,
+          "correct": 1,
+          "total": 7,
+          "note": "they right; said→sad (again), because→bcuse, with→wid; in sentences like→lick, friend→frens, was→wos"
         }
       ]
     },
@@ -705,6 +820,12 @@
           "correct": 1,
           "total": 3,
           "note": "Typed: ship right; rain→ren, cake→ceck. Spells by sound, not by pattern."
+        },
+        {
+          "session": 3,
+          "correct": 3,
+          "total": 6,
+          "note": "home, tree, play right; make→meack, bike→bick, boat→bot. Uses ck for long-vowel words (also like→lick, park→porck): doesn't know magic e for spelling yet."
         }
       ]
     },
@@ -718,6 +839,12 @@
           "correct": 0,
           "total": 1,
           "note": "Typed: little→litl"
+        },
+        {
+          "session": 3,
+          "correct": 1,
+          "total": 3,
+          "note": "duck→dock (ck right, vowel wrong); bell→bel; little→litl in S1"
         }
       ]
     },
@@ -743,8 +870,15 @@
     "sp7": {
       "area": "spelling",
       "name": "Plurals",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": 1,
+          "total": 1,
+          "note": "dogs"
+        }
+      ]
     },
     "sp8": {
       "area": "spelling",
@@ -756,6 +890,12 @@
           "correct": 0,
           "total": 1,
           "note": "Typed: kicked→kic"
+        },
+        {
+          "session": 3,
+          "correct": 1,
+          "total": 2,
+          "note": "playing right; jumped→jumot (and kicked→kic in S1)"
         }
       ]
     },
@@ -822,8 +962,15 @@
     "hw4": {
       "area": "handwriting",
       "name": "Spacing",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "Spaces between words fine; missed spaces around commas in a list."
+        }
+      ]
     },
     "hw5": {
       "area": "handwriting",
@@ -834,8 +981,15 @@
     "hw6": {
       "area": "handwriting",
       "name": "Keyboard basics",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": 3,
+          "total": 4,
+          "note": "Typed all tasks; parent saw her hunt for letters. Very slow: 109–169 s per dictated sentence, 5.6 min for a 9-word recount."
+        }
+      ]
     },
     "vo1": {
       "area": "vocab",
@@ -938,8 +1092,15 @@
     "ol3": {
       "area": "oral",
       "name": "Says sentences before writing",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "Said her story out loud before typing."
+        }
+      ]
     },
     "ol4": {
       "area": "oral",

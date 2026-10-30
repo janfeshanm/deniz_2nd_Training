@@ -1,0 +1,1190 @@
+{
+  "schema": "deniz-session/1",
+  "session": 3,
+  "kind": "assessment",
+  "title": "Baseline 3 – spelling and writing",
+  "started_at": "2026-10-30T09:39:35.533Z",
+  "finished_at": "2026-10-30T10:10:32.725Z",
+  "duration_sec": 1857,
+  "device": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
+  "parent_context": {
+    "energy": "fresh",
+    "predictive_off": "yes"
+  },
+  "steps": [
+    {
+      "id": "s3-warm",
+      "skills": [
+        "sp1",
+        "hw6"
+      ],
+      "mode": "auto",
+      "started_at": "2026-10-30T09:40:04.009Z",
+      "duration_sec": 71,
+      "items": [
+        {
+          "prompt": "cat",
+          "sentence": "The cat is on the mat.",
+          "expected": "cat",
+          "response": "cat",
+          "correct": true,
+          "skills": [
+            "sp1",
+            "hw6"
+          ],
+          "group": "warm",
+          "attempts": 1,
+          "ms": 12694,
+          "first_key_ms": 6862,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "sun",
+          "sentence": "The sun is hot.",
+          "expected": "sun",
+          "response": "sun",
+          "correct": true,
+          "skills": [
+            "sp1",
+            "hw6"
+          ],
+          "group": "warm",
+          "attempts": 1,
+          "ms": 14523,
+          "first_key_ms": 3658,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "bed",
+          "sentence": "I go to bed.",
+          "expected": "bed",
+          "response": null,
+          "correct": false,
+          "skills": [
+            "sp1",
+            "hw6"
+          ],
+          "group": "warm",
+          "attempts": 1,
+          "ms": 19075,
+          "first_key_ms": 11294,
+          "deletes": 0,
+          "skipped": true
+        },
+        {
+          "prompt": "dog",
+          "sentence": "My dog can run.",
+          "expected": "dog",
+          "response": "dog",
+          "correct": true,
+          "skills": [
+            "sp1",
+            "hw6"
+          ],
+          "group": "warm",
+          "attempts": 1,
+          "ms": 24937,
+          "first_key_ms": 21170,
+          "deletes": 0,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 3,
+        "total": 4
+      },
+      "notes": "Warm-up: easy short-vowel words typed from dictation."
+    },
+    {
+      "id": "s3-hear",
+      "skills": [
+        "ph4",
+        "sp3"
+      ],
+      "mode": "auto",
+      "started_at": "2026-10-30T09:41:25.899Z",
+      "duration_sec": 42,
+      "items": [
+        {
+          "prompt": "cape",
+          "expected": "cape",
+          "response": "cape",
+          "options": [
+            "cape",
+            "cap"
+          ],
+          "correct": true,
+          "skills": [
+            "ph4",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 17291,
+          "skipped": false
+        },
+        {
+          "prompt": "kite",
+          "expected": "kite",
+          "response": "kit",
+          "options": [
+            "kite",
+            "kit"
+          ],
+          "correct": false,
+          "skills": [
+            "ph4",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 8919,
+          "skipped": false
+        },
+        {
+          "prompt": "hope",
+          "expected": "hope",
+          "response": "hope",
+          "options": [
+            "hope",
+            "hop"
+          ],
+          "correct": true,
+          "skills": [
+            "ph4",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 2607,
+          "skipped": false
+        },
+        {
+          "prompt": "tube",
+          "expected": "tube",
+          "response": "tub",
+          "options": [
+            "tube",
+            "tub"
+          ],
+          "correct": false,
+          "skills": [
+            "ph4",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 5852,
+          "skipped": false
+        },
+        {
+          "prompt": "note",
+          "expected": "note",
+          "response": "note",
+          "options": [
+            "note",
+            "not"
+          ],
+          "correct": true,
+          "skills": [
+            "ph4",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 3237,
+          "skipped": false
+        },
+        {
+          "prompt": "pin",
+          "expected": "pin",
+          "response": "pin",
+          "options": [
+            "pin",
+            "pine"
+          ],
+          "correct": true,
+          "skills": [
+            "ph4",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 4016,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 4,
+        "total": 6
+      },
+      "notes": "Hear a word, choose between the magic-e and short-vowel spelling (cape / cap). Auto-scored."
+    },
+    {
+      "id": "s3-magic",
+      "skills": [
+        "ph4"
+      ],
+      "mode": "parent",
+      "started_at": "2026-10-30T09:42:13.101Z",
+      "duration_sec": 48,
+      "items": [
+        {
+          "prompt": "bike",
+          "expected": "bike",
+          "response": null,
+          "correct": false,
+          "skills": [
+            "ph4"
+          ],
+          "attempts": 1,
+          "ms": 9390,
+          "skipped": false
+        },
+        {
+          "prompt": "home",
+          "expected": "home",
+          "response": "home",
+          "correct": true,
+          "skills": [
+            "ph4"
+          ],
+          "attempts": 1,
+          "ms": 4447,
+          "skipped": false
+        },
+        {
+          "prompt": "make",
+          "expected": "make",
+          "response": null,
+          "correct": false,
+          "skills": [
+            "ph4"
+          ],
+          "attempts": 1,
+          "ms": 6793,
+          "skipped": false
+        },
+        {
+          "prompt": "cube",
+          "expected": "cube",
+          "response": null,
+          "correct": false,
+          "skills": [
+            "ph4"
+          ],
+          "attempts": 1,
+          "ms": 7730,
+          "skipped": false
+        },
+        {
+          "prompt": "rope",
+          "expected": "rope",
+          "response": null,
+          "correct": false,
+          "skills": [
+            "ph4"
+          ],
+          "attempts": 1,
+          "ms": 11596,
+          "skipped": false
+        },
+        {
+          "prompt": "game",
+          "expected": "game",
+          "response": null,
+          "correct": false,
+          "skills": [
+            "ph4"
+          ],
+          "attempts": 1,
+          "ms": 8477,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 1,
+        "total": 6
+      },
+      "notes": "Magic-e words read aloud (re-check, new words)."
+    },
+    {
+      "id": "s3-spell",
+      "skills": [
+        "sp1",
+        "sp2",
+        "sp4",
+        "sp3",
+        "sp7",
+        "sp8"
+      ],
+      "mode": "auto",
+      "started_at": "2026-10-30T09:43:45.125Z",
+      "duration_sec": 508,
+      "items": [
+        {
+          "prompt": "frog",
+          "sentence": "The frog can jump.",
+          "expected": "frog",
+          "response": "frog",
+          "correct": true,
+          "skills": [
+            "sp1"
+          ],
+          "group": "Blends",
+          "attempts": 1,
+          "ms": 12280,
+          "first_key_ms": 7459,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "crab",
+          "sentence": "A crab is on the sand.",
+          "expected": "crab",
+          "response": "krab",
+          "correct": false,
+          "skills": [
+            "sp1"
+          ],
+          "group": "Blends",
+          "attempts": 1,
+          "ms": 36596,
+          "first_key_ms": 8174,
+          "deletes": 2,
+          "skipped": false
+        },
+        {
+          "prompt": "shop",
+          "sentence": "We went to the shop.",
+          "expected": "shop",
+          "response": "shop",
+          "correct": true,
+          "skills": [
+            "sp1"
+          ],
+          "group": "Digraphs",
+          "attempts": 1,
+          "ms": 19515,
+          "first_key_ms": 9190,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "with",
+          "sentence": "Come with me.",
+          "expected": "with",
+          "response": "wid",
+          "correct": false,
+          "skills": [
+            "sp1",
+            "sp2"
+          ],
+          "group": "Digraphs",
+          "attempts": 1,
+          "ms": 36370,
+          "first_key_ms": 10191,
+          "deletes": 2,
+          "skipped": false
+        },
+        {
+          "prompt": "duck",
+          "sentence": "The duck can swim.",
+          "expected": "duck",
+          "response": "dock",
+          "correct": false,
+          "skills": [
+            "sp4"
+          ],
+          "group": "Double letters and ck",
+          "attempts": 1,
+          "ms": 24067,
+          "first_key_ms": 12429,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "bell",
+          "sentence": "Ring the bell.",
+          "expected": "bell",
+          "response": "bel",
+          "correct": false,
+          "skills": [
+            "sp4"
+          ],
+          "group": "Double letters and ck",
+          "attempts": 1,
+          "ms": 14232,
+          "first_key_ms": 5028,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "make",
+          "sentence": "Let's make a cake.",
+          "expected": "make",
+          "response": "meack",
+          "correct": false,
+          "skills": [
+            "sp3"
+          ],
+          "group": "Magic e",
+          "attempts": 1,
+          "ms": 23622,
+          "first_key_ms": 6283,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "bike",
+          "sentence": "I ride my bike.",
+          "expected": "bike",
+          "response": "bick",
+          "correct": false,
+          "skills": [
+            "sp3"
+          ],
+          "group": "Magic e",
+          "attempts": 1,
+          "ms": 17731,
+          "first_key_ms": 7400,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "home",
+          "sentence": "It is time to go home.",
+          "expected": "home",
+          "response": "home",
+          "correct": true,
+          "skills": [
+            "sp3"
+          ],
+          "group": "Magic e",
+          "attempts": 1,
+          "ms": 14698,
+          "first_key_ms": 7800,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "tree",
+          "sentence": "The bird is in the tree.",
+          "expected": "tree",
+          "response": "tree",
+          "correct": true,
+          "skills": [
+            "sp3"
+          ],
+          "group": "Vowel teams",
+          "attempts": 1,
+          "ms": 15276,
+          "first_key_ms": 5612,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "boat",
+          "sentence": "The boat is on the sea.",
+          "expected": "boat",
+          "response": "bot",
+          "correct": false,
+          "skills": [
+            "sp3"
+          ],
+          "group": "Vowel teams",
+          "attempts": 1,
+          "ms": 11595,
+          "first_key_ms": 5990,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "play",
+          "sentence": "Can you play with me?",
+          "expected": "play",
+          "response": "play",
+          "correct": true,
+          "skills": [
+            "sp3"
+          ],
+          "group": "Vowel teams",
+          "attempts": 1,
+          "ms": 16661,
+          "first_key_ms": 8297,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "dogs",
+          "sentence": "Two dogs ran in the park.",
+          "expected": "dogs",
+          "response": "dogs",
+          "correct": true,
+          "skills": [
+            "sp7"
+          ],
+          "group": "Endings",
+          "attempts": 1,
+          "ms": 45920,
+          "first_key_ms": 14242,
+          "deletes": 2,
+          "skipped": false
+        },
+        {
+          "prompt": "jumped",
+          "sentence": "The cat jumped up.",
+          "expected": "jumped",
+          "response": "jumot",
+          "correct": false,
+          "skills": [
+            "sp8"
+          ],
+          "group": "Endings",
+          "attempts": 1,
+          "ms": 33212,
+          "first_key_ms": 7139,
+          "deletes": 1,
+          "skipped": false
+        },
+        {
+          "prompt": "playing",
+          "sentence": "We are playing a game.",
+          "expected": "playing",
+          "response": "playing",
+          "correct": true,
+          "skills": [
+            "sp8"
+          ],
+          "group": "Endings",
+          "attempts": 1,
+          "ms": 30789,
+          "first_key_ms": 14208,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "said",
+          "sentence": "Mum said yes.",
+          "expected": "said",
+          "response": "sad",
+          "correct": false,
+          "skills": [
+            "sp2"
+          ],
+          "group": "Tricky words",
+          "attempts": 1,
+          "ms": 40405,
+          "first_key_ms": 7301,
+          "deletes": 2,
+          "skipped": false
+        },
+        {
+          "prompt": "they",
+          "sentence": "They are my friends.",
+          "expected": "they",
+          "response": "they",
+          "correct": true,
+          "skills": [
+            "sp2"
+          ],
+          "group": "Tricky words",
+          "attempts": 1,
+          "ms": 20603,
+          "first_key_ms": 5717,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "because",
+          "sentence": "I am happy because it is sunny.",
+          "expected": "because",
+          "response": "bcuse",
+          "correct": false,
+          "skills": [
+            "sp2"
+          ],
+          "group": "Tricky words",
+          "attempts": 1,
+          "ms": 94591,
+          "first_key_ms": 6698,
+          "deletes": 9,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 8,
+        "total": 18
+      },
+      "notes": "Dictated words typed on the phone keyboard. Auto-scored exact match; review the raw responses."
+    },
+    {
+      "id": "s3-dict",
+      "skills": [
+        "wr8",
+        "wr16",
+        "sp2",
+        "hw4"
+      ],
+      "mode": "writing",
+      "started_at": "2026-10-30T09:52:38.586Z",
+      "duration_sec": 278,
+      "items": [
+        {
+          "prompt": "The dog ran to the park.",
+          "kind": "dictation",
+          "expected": "The dog ran to the park.",
+          "response": "The dog rand to the porck.",
+          "correct": false,
+          "skills": [
+            "wr8",
+            "wr16",
+            "sp2",
+            "hw4"
+          ],
+          "attempts": 1,
+          "ms": 169095,
+          "deletes": 6,
+          "stats": {
+            "chars": 26,
+            "words": 6,
+            "sentences_by_punct": 1,
+            "starts_with_capital": true,
+            "ends_with_punct": true,
+            "sentences_starting_capital": 1,
+            "sentence_parts": 1,
+            "lowercase_i": 0,
+            "joining_words": [],
+            "double_spaces": 0,
+            "missing_spaces": 0,
+            "words_expected": 6,
+            "words_right": 4,
+            "misspelled": [
+              "ran",
+              "park"
+            ],
+            "exact": false
+          },
+          "skipped": false,
+          "score": 0.67
+        },
+        {
+          "prompt": "I like to play with my friend.",
+          "kind": "dictation",
+          "expected": "I like to play with my friend.",
+          "response": "I lick to play wid my frens.",
+          "correct": false,
+          "skills": [
+            "wr8",
+            "wr16",
+            "sp2",
+            "hw4"
+          ],
+          "attempts": 1,
+          "ms": 108600,
+          "deletes": 0,
+          "stats": {
+            "chars": 28,
+            "words": 7,
+            "sentences_by_punct": 1,
+            "starts_with_capital": true,
+            "ends_with_punct": true,
+            "sentences_starting_capital": 1,
+            "sentence_parts": 1,
+            "lowercase_i": 0,
+            "joining_words": [],
+            "double_spaces": 0,
+            "missing_spaces": 0,
+            "words_expected": 7,
+            "words_right": 4,
+            "misspelled": [
+              "like",
+              "with",
+              "friend"
+            ],
+            "exact": false
+          },
+          "skipped": false,
+          "score": 0.57
+        }
+      ],
+      "score": null,
+      "notes": "Dictated sentences, typed. Checks spelling in sentences, capital letter, full stop, spaces."
+    },
+    {
+      "id": "s3-pic",
+      "skills": [
+        "wr8",
+        "wr12",
+        "wr14",
+        "wr16"
+      ],
+      "mode": "writing",
+      "started_at": "2026-10-30T09:57:13.140Z",
+      "duration_sec": 250,
+      "items": [
+        {
+          "prompt": "Look at the picture. Write a sentence about it. Who is it? What are they doing? Where?",
+          "kind": "picture",
+          "expected": null,
+          "response": "The dog wos playing wid the bull in the tree.",
+          "correct": null,
+          "skills": [
+            "wr8",
+            "wr12",
+            "wr14",
+            "wr16"
+          ],
+          "attempts": 1,
+          "ms": 250175,
+          "deletes": 9,
+          "stats": {
+            "chars": 45,
+            "words": 10,
+            "sentences_by_punct": 1,
+            "starts_with_capital": true,
+            "ends_with_punct": true,
+            "sentences_starting_capital": 1,
+            "sentence_parts": 1,
+            "lowercase_i": 0,
+            "joining_words": [],
+            "double_spaces": 0,
+            "missing_spaces": 0
+          },
+          "skipped": false,
+          "pic": "🐶 ⚽ 🌳"
+        }
+      ],
+      "score": null,
+      "notes": "Free sentence about a picture (🐶 ⚽ 🌳)."
+    },
+    {
+      "id": "s3-recount",
+      "skills": [
+        "wr1",
+        "wr5",
+        "wr6",
+        "wr8",
+        "wr9",
+        "wr15",
+        "wr16",
+        "wr21",
+        "ol3"
+      ],
+      "mode": "writing",
+      "started_at": "2026-10-30T10:01:39.292Z",
+      "duration_sec": 335,
+      "items": [
+        {
+          "prompt": "Write about something fun you did. It can be on the weekend or after school.",
+          "kind": "recount",
+          "expected": null,
+          "response": "[friend] ,[friend],[friend],[friend] and me we paly in the school.",
+          "correct": null,
+          "skills": [
+            "wr1",
+            "wr5",
+            "wr6",
+            "wr8",
+            "wr9",
+            "wr15",
+            "wr16",
+            "wr21",
+            "ol3"
+          ],
+          "attempts": 1,
+          "ms": 335021,
+          "deletes": 12,
+          "stats": {
+            "chars": 51,
+            "words": 9,
+            "sentences_by_punct": 1,
+            "starts_with_capital": true,
+            "ends_with_punct": true,
+            "sentences_starting_capital": 1,
+            "sentence_parts": 1,
+            "lowercase_i": 0,
+            "joining_words": [
+              "and"
+            ],
+            "double_spaces": 0,
+            "missing_spaces": 1
+          },
+          "skipped": false,
+          "planned_aloud": true,
+          "used_starter": false,
+          "edited_after_reading": true,
+          "first_text": "[friend] ,[friend],[friend],[friend] and me we paly in the chs"
+        }
+      ],
+      "score": null,
+      "notes": "Short recount: says ideas aloud first, types, then reads it back and can fix it."
+    }
+  ],
+  "child_feeling": "great",
+  "parent_note": "",
+  "observations": [
+    "Hunted for letters on the keyboard"
+  ],
+  "summary": {
+    "warmup": {
+      "correct": 3,
+      "total": 4,
+      "pct": 75
+    },
+    "magic_hear": {
+      "correct": 4,
+      "total": 6,
+      "pct": 67
+    },
+    "magic_read": {
+      "correct": 1,
+      "total": 6,
+      "pct": 17,
+      "stopped_early": false,
+      "misread": [
+        "bike",
+        "make",
+        "cube",
+        "rope",
+        "game"
+      ]
+    },
+    "spelling": {
+      "correct": 8,
+      "total": 18,
+      "pct": 44,
+      "misspelt": [
+        {
+          "expected": "crab",
+          "response": "krab"
+        },
+        {
+          "expected": "with",
+          "response": "wid"
+        },
+        {
+          "expected": "duck",
+          "response": "dock"
+        },
+        {
+          "expected": "bell",
+          "response": "bel"
+        },
+        {
+          "expected": "make",
+          "response": "meack"
+        },
+        {
+          "expected": "bike",
+          "response": "bick"
+        },
+        {
+          "expected": "boat",
+          "response": "bot"
+        },
+        {
+          "expected": "jumped",
+          "response": "jumot"
+        },
+        {
+          "expected": "said",
+          "response": "sad"
+        },
+        {
+          "expected": "because",
+          "response": "bcuse"
+        }
+      ]
+    },
+    "spelling_groups": [
+      {
+        "label": "Blends",
+        "correct": 1,
+        "total": 2,
+        "pct": 50
+      },
+      {
+        "label": "Digraphs",
+        "correct": 1,
+        "total": 2,
+        "pct": 50
+      },
+      {
+        "label": "Double letters and ck",
+        "correct": 0,
+        "total": 2,
+        "pct": 0
+      },
+      {
+        "label": "Magic e",
+        "correct": 1,
+        "total": 3,
+        "pct": 33
+      },
+      {
+        "label": "Vowel teams",
+        "correct": 2,
+        "total": 3,
+        "pct": 67
+      },
+      {
+        "label": "Endings",
+        "correct": 2,
+        "total": 3,
+        "pct": 67
+      },
+      {
+        "label": "Tricky words",
+        "correct": 1,
+        "total": 3,
+        "pct": 33
+      }
+    ],
+    "writing": [
+      {
+        "label": "Sentence 1 (dictated)",
+        "kind": "dictation",
+        "text": "The dog rand to the porck.",
+        "stats": {
+          "chars": 26,
+          "words": 6,
+          "sentences_by_punct": 1,
+          "starts_with_capital": true,
+          "ends_with_punct": true,
+          "sentences_starting_capital": 1,
+          "sentence_parts": 1,
+          "lowercase_i": 0,
+          "joining_words": [],
+          "double_spaces": 0,
+          "missing_spaces": 0,
+          "words_expected": 6,
+          "words_right": 4,
+          "misspelled": [
+            "ran",
+            "park"
+          ],
+          "exact": false
+        },
+        "quick": "4/6 words right (ran, park) · 6 words · capital ✓ · full stop ✓ · 169 s"
+      },
+      {
+        "label": "Sentence 2 (dictated)",
+        "kind": "dictation",
+        "text": "I lick to play wid my frens.",
+        "stats": {
+          "chars": 28,
+          "words": 7,
+          "sentences_by_punct": 1,
+          "starts_with_capital": true,
+          "ends_with_punct": true,
+          "sentences_starting_capital": 1,
+          "sentence_parts": 1,
+          "lowercase_i": 0,
+          "joining_words": [],
+          "double_spaces": 0,
+          "missing_spaces": 0,
+          "words_expected": 7,
+          "words_right": 4,
+          "misspelled": [
+            "like",
+            "with",
+            "friend"
+          ],
+          "exact": false
+        },
+        "quick": "4/7 words right (like, with, friend) · 7 words · capital ✓ · full stop ✓ · 109 s"
+      },
+      {
+        "label": "Picture sentence",
+        "kind": "picture",
+        "text": "The dog wos playing wid the bull in the tree.",
+        "stats": {
+          "chars": 45,
+          "words": 10,
+          "sentences_by_punct": 1,
+          "starts_with_capital": true,
+          "ends_with_punct": true,
+          "sentences_starting_capital": 1,
+          "sentence_parts": 1,
+          "lowercase_i": 0,
+          "joining_words": [],
+          "double_spaces": 0,
+          "missing_spaces": 0
+        },
+        "quick": "10 words · capital ✓ · full stop ✓ · 250 s"
+      },
+      {
+        "label": "My story",
+        "kind": "recount",
+        "text": "[friend] ,[friend],[friend],[friend] and me we paly in the school.",
+        "stats": {
+          "chars": 51,
+          "words": 9,
+          "sentences_by_punct": 1,
+          "starts_with_capital": true,
+          "ends_with_punct": true,
+          "sentences_starting_capital": 1,
+          "sentence_parts": 1,
+          "lowercase_i": 0,
+          "joining_words": [
+            "and"
+          ],
+          "double_spaces": 0,
+          "missing_spaces": 1
+        },
+        "quick": "9 words · capital ✓ · full stop ✓ · joins with: and · planned aloud · fixed it after reading · 335 s"
+      }
+    ],
+    "flags": [
+      "Hears the magic-e difference (67%) better than she reads it (17%)."
+    ],
+    "suggested_progress": {
+      "sp1": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 5,
+        "total": 8,
+        "pct": 63
+      },
+      "hw6": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 3,
+        "total": 4,
+        "pct": 75
+      },
+      "ph4": {
+        "status": "not_yet",
+        "likely_secure": false,
+        "correct": 5,
+        "total": 12,
+        "pct": 42
+      },
+      "sp3": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 7,
+        "total": 12,
+        "pct": 58
+      },
+      "sp2": {
+        "status": "not_yet",
+        "likely_secure": false,
+        "correct": 1,
+        "total": 4,
+        "pct": 25
+      },
+      "sp4": {
+        "status": "not_yet",
+        "likely_secure": false,
+        "correct": 0,
+        "total": 2,
+        "pct": 0
+      },
+      "sp7": {
+        "status": "learning",
+        "likely_secure": true,
+        "correct": 1,
+        "total": 1,
+        "pct": 100
+      },
+      "sp8": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 1,
+        "total": 2,
+        "pct": 50
+      }
+    },
+    "evidence": [
+      {
+        "skill": "sp1",
+        "session": 3,
+        "step": "s3-warm",
+        "correct": 3,
+        "total": 4,
+        "note": "Warm-up: easy short-vowel words typed from dictation."
+      },
+      {
+        "skill": "hw6",
+        "session": 3,
+        "step": "s3-warm",
+        "correct": 3,
+        "total": 4,
+        "note": "Warm-up: easy short-vowel words typed from dictation."
+      },
+      {
+        "skill": "ph4",
+        "session": 3,
+        "step": "s3-hear",
+        "correct": 4,
+        "total": 6,
+        "note": "Hear a word, choose between the magic-e and short-vowel spelling (cape / cap). Auto-scored."
+      },
+      {
+        "skill": "sp3",
+        "session": 3,
+        "step": "s3-hear",
+        "correct": 4,
+        "total": 6,
+        "note": "Hear a word, choose between the magic-e and short-vowel spelling (cape / cap). Auto-scored."
+      },
+      {
+        "skill": "ph4",
+        "session": 3,
+        "step": "s3-magic",
+        "correct": 1,
+        "total": 6,
+        "note": "Magic-e words read aloud (re-check, new words)."
+      },
+      {
+        "skill": "sp1",
+        "session": 3,
+        "step": "s3-spell",
+        "correct": 2,
+        "total": 4,
+        "note": "Dictated words typed on the phone keyboard. Auto-scored exact match; review the raw responses."
+      },
+      {
+        "skill": "sp2",
+        "session": 3,
+        "step": "s3-spell",
+        "correct": 1,
+        "total": 4,
+        "note": "Dictated words typed on the phone keyboard. Auto-scored exact match; review the raw responses."
+      },
+      {
+        "skill": "sp4",
+        "session": 3,
+        "step": "s3-spell",
+        "correct": 0,
+        "total": 2,
+        "note": "Dictated words typed on the phone keyboard. Auto-scored exact match; review the raw responses."
+      },
+      {
+        "skill": "sp3",
+        "session": 3,
+        "step": "s3-spell",
+        "correct": 3,
+        "total": 6,
+        "note": "Dictated words typed on the phone keyboard. Auto-scored exact match; review the raw responses."
+      },
+      {
+        "skill": "sp7",
+        "session": 3,
+        "step": "s3-spell",
+        "correct": 1,
+        "total": 1,
+        "note": "Dictated words typed on the phone keyboard. Auto-scored exact match; review the raw responses."
+      },
+      {
+        "skill": "sp8",
+        "session": 3,
+        "step": "s3-spell",
+        "correct": 1,
+        "total": 2,
+        "note": "Dictated words typed on the phone keyboard. Auto-scored exact match; review the raw responses."
+      }
+    ],
+    "not_reached": [],
+    "caveat": "Indicative only. Writing tasks are not auto-scored; Claude reviews the texts. Spelling is exact-match: look at the raw responses."
+  },
+  "redacted": "Other children's names in the recount replaced with [friend] (public repo)."
+}
