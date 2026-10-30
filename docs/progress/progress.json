@@ -2,7 +2,7 @@
   "schema": "deniz-progress/1",
   "child": "Deniz",
   "year": 2,
-  "updated": "2026-10-28",
+  "updated": "2026-10-30",
   "status_scale": [
     "not_checked",
     "not_yet",
@@ -10,47 +10,68 @@
     "secure"
   ],
   "next_session": {
-    "number": 2,
+    "number": 3,
     "kind": "assessment",
-    "title": "Baseline 2 – reading stories",
-    "url": "sessions/session-02.html"
+    "title": "Baseline 3 – spelling and writing",
+    "url": "sessions/session-03.html"
   },
   "sessions_completed": [
-    1
+    1,
+    2
   ],
   "history": [
     {
       "session": 1,
       "title": "Baseline 1 – sounds and words",
       "date": "2026-10-28",
-      "duration_min": 11,
-      "feeling": "ok",
-      "summary": "Simple words fine; gaps in six letter sounds, tricky words and spelling patterns. Vowel patterns onward unverified (taps too fast)."
+      "duration_min": 33,
+      "feeling": "great",
+      "summary": "All letter sounds and short-vowel words, digraphs and blends fine. Gaps: magic e, vowel teams, r-controlled, two-syllable and harder spellings; sight words 27/60 (tier 1 good); spelling 2/10, spells by sound. Got tired by the end."
+    },
+    {
+      "session": 2,
+      "title": "Baseline 2 – reading stories",
+      "date": "2026-10-29",
+      "duration_min": 17,
+      "feeling": "great",
+      "summary": "Understands everything she reads and hears (10/10). Reads early Year 1 text at 94%, Year 1 text 79% (too hard), slow (13–25 words/min). Misreads magic e, blends and tricky words in sentences."
     }
   ],
   "skills": {
     "ph1": {
       "area": "phonics",
       "name": "All single letter sounds, instantly",
-      "status": "learning",
+      "status": "secure",
       "evidence": [
         {
           "session": 1,
-          "correct": 20,
+          "correct": 8,
+          "total": 8,
+          "note": "Hear a word, tap its first letter"
+        },
+        {
+          "session": 1,
+          "correct": 26,
           "total": 26,
-          "note": "Letter sounds. Said the letter NAME instead of the sound for t, g, k, b, h, y."
+          "note": "Letter sounds: all 26 given as sounds"
         },
         {
           "session": 1,
           "correct": 6,
-          "total": 8,
-          "note": "First-sound match (missed can, dog)"
+          "total": 6,
+          "note": "Short-vowel words (mat pig hot bun wet dig)"
         },
         {
-          "session": 1,
-          "correct": 5,
+          "session": 2,
+          "correct": 6,
           "total": 6,
-          "note": "Short-vowel words"
+          "note": "Hear a word, tap first letter (b/d/p/q check), all correct"
+        },
+        {
+          "session": 2,
+          "correct": 9,
+          "total": 9,
+          "note": "Letter-sound re-check t g k b h y d p q: all sounds"
         }
       ]
     },
@@ -61,7 +82,7 @@
       "evidence": [
         {
           "session": 1,
-          "correct": 5,
+          "correct": 6,
           "total": 6,
           "note": "Digraphs sh ch th"
         }
@@ -74,171 +95,290 @@
       "evidence": [
         {
           "session": 1,
-          "correct": 6,
+          "correct": 5,
           "total": 6,
-          "note": "Consonant blends"
+          "note": "Blends in single words: missed nest"
+        },
+        {
+          "session": 2,
+          "correct": 4,
+          "total": 8,
+          "note": "Blends in stories: frog x4 read; swim, splash (story A), swam, crab (story B) misread. She read swim on its own in S1 but not in story A."
         }
       ]
     },
     "ph4": {
       "area": "phonics",
       "name": "Split digraphs (\"magic e\")",
-      "status": "learning",
+      "status": "not_yet",
       "evidence": [
         {
           "session": 1,
-          "correct": 6,
-          "total": 6,
-          "note": "Split digraphs (magic e)"
+          "correct": 1,
+          "total": 4,
+          "note": "Magic e: read cake; time, hope, tune not read. Group stopped."
+        },
+        {
+          "session": 2,
+          "correct": 0,
+          "total": 4,
+          "note": "In story B misread made, wave, came, came (magic-e words in sentences)."
         }
       ]
     },
     "ph5": {
       "area": "phonics",
       "name": "Long vowel teams",
-      "status": "not_checked",
+      "status": "not_yet",
       "evidence": [
         {
           "session": 1,
-          "correct": null,
-          "total": null,
-          "note": "unverified: parent taps were too fast (median ~0.2 s). Re-check in Session 2."
+          "correct": 3,
+          "total": 6,
+          "note": "Vowel teams: feet, play, team read; rain, boat, snow not"
+        },
+        {
+          "session": 2,
+          "correct": 0,
+          "total": 3,
+          "note": "Vowel teams re-check, parent-scored at 6-9 s per word: mail, coat, seed not read. Group stopped. She did read beach, day, sea inside story B, so she may know some vowel-team words by sight or from context, not the pattern."
         }
       ]
     },
     "ph6": {
       "area": "phonics",
       "name": "R-controlled vowels",
-      "status": "not_checked",
+      "status": "not_yet",
       "evidence": [
         {
           "session": 1,
-          "correct": null,
-          "total": null,
-          "note": "unverified: parent taps were too fast (median ~0.2 s). Re-check in Session 2."
+          "correct": 2,
+          "total": 6,
+          "note": "R-controlled: car, girl read; fork, turn, shark, storm not"
+        },
+        {
+          "session": 2,
+          "correct": 0,
+          "total": 3,
+          "note": "R-controlled vowels re-check, parent-scored at 6-9 s per word: farm, horn, fern not read. Group stopped."
         }
       ]
     },
     "ph7": {
       "area": "phonics",
       "name": "Diphthongs",
-      "status": "not_checked",
+      "status": "learning",
       "evidence": [
         {
           "session": 1,
+          "correct": 3,
+          "total": 6,
+          "note": "Diphthongs: boy, cow, house read; out, coin, down not"
+        },
+        {
+          "session": 2,
           "correct": null,
           "total": null,
-          "note": "unverified: parent taps were too fast (median ~0.2 s). Re-check in Session 2."
+          "note": "Not reached in S2 (the page skipped later groups after two stopped)."
         }
       ]
     },
     "ph8": {
       "area": "phonics",
       "name": "Trigraphs and quadgraphs",
-      "status": "not_checked",
+      "status": "not_yet",
       "evidence": [
         {
           "session": 1,
+          "correct": 0,
+          "total": 6,
+          "note": "Trigraphs: light, high, catch, bridge, eight, fudge not read (skips count as wrong)"
+        },
+        {
+          "session": 2,
           "correct": null,
           "total": null,
-          "note": "unverified: parent taps were too fast (median ~0.2 s). Re-check in Session 2."
+          "note": "Not reached in S2 (the page skipped later groups after two stopped)."
         }
       ]
     },
     "ph9": {
       "area": "phonics",
       "name": "Less common spellings",
-      "status": "not_checked",
+      "status": "not_yet",
       "evidence": [
         {
           "session": 1,
+          "correct": 0,
+          "total": 6,
+          "note": "Less common spellings: knee, write, phone, wrap, climb, ghost not read (skips count as wrong)"
+        },
+        {
+          "session": 2,
           "correct": null,
           "total": null,
-          "note": "unverified: parent taps were too fast (median ~0.2 s). Re-check in Session 2."
+          "note": "Not reached in S2 (the page skipped later groups after two stopped)."
         }
       ]
     },
     "ph10": {
       "area": "phonics",
       "name": "Two-syllable words",
-      "status": "not_checked",
+      "status": "not_yet",
       "evidence": [
         {
           "session": 1,
+          "correct": 0,
+          "total": 4,
+          "note": "Two-syllable: rabbit, sunset, window, picnic not read. Group stopped."
+        },
+        {
+          "session": 2,
           "correct": null,
           "total": null,
-          "note": "unverified: parent taps were too fast (median ~0.2 s). Re-check in Session 2."
+          "note": "Not reached in S2 (the page skipped later groups after two stopped)."
         }
       ]
     },
     "ph11": {
       "area": "phonics",
       "name": "Base words with endings",
-      "status": "not_checked",
+      "status": "learning",
       "evidence": [
         {
           "session": 1,
+          "correct": 4,
+          "total": 6,
+          "note": "Endings: jumped, hopping, played, boxes read; smallest, carried not"
+        },
+        {
+          "session": 2,
           "correct": null,
           "total": null,
-          "note": "unverified: parent taps were too fast (median ~0.2 s). Re-check in Session 2."
+          "note": "Not reached in S2 (the page skipped later groups after two stopped)."
         }
       ]
     },
     "ph12": {
       "area": "phonics",
       "name": "Reads made-up words",
-      "status": "not_checked",
+      "status": "learning",
       "evidence": [
         {
           "session": 1,
+          "correct": 5,
+          "total": 10,
+          "note": "Made-up words: sib, vop, chim, dack, perd read; blen, fape, loat, shub, trin not"
+        },
+        {
+          "session": 2,
           "correct": null,
           "total": null,
-          "note": "unverified: parent taps were too fast (median ~0.2 s). Re-check in Session 2."
+          "note": "Not reached in S2 (the page skipped later groups after two stopped)."
         }
       ]
     },
     "fl1": {
       "area": "fluency",
       "name": "Instant high-frequency words",
-      "status": "learning",
+      "status": "not_yet",
       "evidence": [
         {
           "session": 1,
-          "correct": 56,
-          "total": 60,
-          "note": "Sight words, 3 tiers. Tier 3 17/20 but only 60% quick. Missed put, together, another, once."
+          "correct": 17,
+          "total": 20,
+          "note": "Tier 1: missed said, are, for; the rest quick"
+        },
+        {
+          "session": 1,
+          "correct": 10,
+          "total": 20,
+          "note": "Tier 2: missed when, what, there, would, could, friend, again, going, want, put; slow on come, little, people"
+        },
+        {
+          "session": 1,
+          "correct": 0,
+          "total": 20,
+          "note": "Tier 3 (thought, through, enough, always ... early): none read"
+        },
+        {
+          "session": 2,
+          "correct": null,
+          "total": null,
+          "note": "In story B misread with, little, water (high-frequency words in a sentence)."
         }
       ]
     },
     "fl2": {
       "area": "fluency",
       "name": "Accurate on unseen text",
-      "status": "not_checked",
-      "evidence": []
+      "status": "not_yet",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": 30,
+          "total": 32,
+          "note": "Story A (early Year 1 text): 94% accurate, instructional level. Missed swim, splash."
+        },
+        {
+          "session": 2,
+          "correct": 38,
+          "total": 48,
+          "note": "Story B (Year 1 text): 79% accurate, too hard (frustration). Missed swam, made, wave, came x2, filled, with, water, little, crab; 8 of the 10 errors were in the second half. Story C (Year 2 text) not attempted."
+        }
+      ]
     },
     "fl3": {
       "area": "fluency",
       "name": "Comfortable pace",
-      "status": "not_checked",
-      "evidence": []
+      "status": "not_yet",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": null,
+          "total": null,
+          "note": "Pace 25 words correct/min on story A and 13 on story B: well below a comfortable Year 2 pace."
+        }
+      ]
     },
     "fl4": {
       "area": "fluency",
       "name": "Self-corrects",
-      "status": "not_checked",
-      "evidence": []
+      "status": "not_yet",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": 0,
+          "total": 12,
+          "note": "No self-corrections recorded on 12 errors (confirm: the parent may not have marked them)."
+        }
+      ]
     },
     "fl5": {
       "area": "fluency",
       "name": "Reads in phrases",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": null,
+          "total": null,
+          "note": "Story B: parent ticked both 'reads word by word' and 'reads in phrases'; also points with a finger and needed a long time on some words."
+        }
+      ]
     },
     "fl6": {
       "area": "fluency",
       "name": "Uses punctuation",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": null,
+          "total": null,
+          "note": "Story B: parent saw her pause at full stops."
+        }
+      ]
     },
     "fl7": {
       "area": "fluency",
@@ -250,7 +390,15 @@
       "area": "comp",
       "name": "Works out unknown words",
       "status": "not_checked",
-      "evidence": []
+      "evidence": [
+        {
+          "session": 2,
+          "correct": 1,
+          "total": 1,
+          "note": "Listening story: knew 'thrilled'. Listening only, so status unchanged.",
+          "modality": "listening"
+        }
+      ]
     },
     "co2": {
       "area": "comp",
@@ -273,20 +421,78 @@
     "co5": {
       "area": "comp",
       "name": "Retells in order",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": 1,
+          "total": 1,
+          "note": "Story A: what the frog did last",
+          "modality": "reading"
+        },
+        {
+          "session": 2,
+          "correct": 1,
+          "total": 1,
+          "note": "Listening story: what happened next",
+          "modality": "listening"
+        },
+        {
+          "session": 2,
+          "correct": 2,
+          "total": 3,
+          "note": "Put events in order: pictures and Ben sentences right; bath sentences out of order"
+        }
+      ]
     },
     "co6": {
       "area": "comp",
       "name": "Literal questions",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": 2,
+          "total": 2,
+          "note": "Story A literal questions (read herself)",
+          "modality": "reading"
+        },
+        {
+          "session": 2,
+          "correct": 2,
+          "total": 2,
+          "note": "Story B literal questions (read herself)",
+          "modality": "reading"
+        },
+        {
+          "session": 2,
+          "correct": 1,
+          "total": 1,
+          "note": "Listening story",
+          "modality": "listening"
+        }
+      ]
     },
     "co7": {
       "area": "comp",
       "name": "Inference",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": 1,
+          "total": 1,
+          "note": "Story B: why they swam (to cool down)",
+          "modality": "reading"
+        },
+        {
+          "session": 2,
+          "correct": 1,
+          "total": 1,
+          "note": "Listening story: why water the seeds",
+          "modality": "listening"
+        }
+      ]
     },
     "co8": {
       "area": "comp",
@@ -357,8 +563,15 @@
     "wr6": {
       "area": "writing",
       "name": "Sequences ideas",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": 2,
+          "total": 3,
+          "note": "Put sentences in order (2 of 3 sets right)"
+        }
+      ]
     },
     "wr7": {
       "area": "writing",
@@ -463,22 +676,22 @@
       "evidence": [
         {
           "session": 1,
-          "correct": 3,
+          "correct": 2,
           "total": 3,
-          "note": "Typed spelling. pig, ship, jump correct"
+          "note": "Typed: pig, ship right; jump→jomp"
         }
       ]
     },
     "sp2": {
       "area": "spelling",
       "name": "High-frequency words",
-      "status": "learning",
+      "status": "not_yet",
       "evidence": [
         {
           "session": 1,
-          "correct": 2,
+          "correct": 0,
           "total": 3,
-          "note": "said, little correct; because wrong"
+          "note": "Typed: said→sad, because→becu, little→litl"
         }
       ]
     },
@@ -491,20 +704,20 @@
           "session": 1,
           "correct": 1,
           "total": 3,
-          "note": "ship correct; rain→then, cake→kake wrong. Spells by sound, not by pattern."
+          "note": "Typed: ship right; rain→ren, cake→ceck. Spells by sound, not by pattern."
         }
       ]
     },
     "sp4": {
       "area": "spelling",
       "name": "Double letters and ck",
-      "status": "learning",
+      "status": "not_yet",
       "evidence": [
         {
           "session": 1,
-          "correct": 1,
+          "correct": 0,
           "total": 1,
-          "note": "little correct"
+          "note": "Typed: little→litl"
         }
       ]
     },
@@ -517,7 +730,7 @@
           "session": 1,
           "correct": 0,
           "total": 1,
-          "note": "catch→cach"
+          "note": "Typed: catch→cach"
         }
       ]
     },
@@ -542,7 +755,7 @@
           "session": 1,
           "correct": 0,
           "total": 1,
-          "note": "kicked→kik"
+          "note": "Typed: kicked→kic"
         }
       ]
     },
@@ -633,7 +846,7 @@
           "session": 1,
           "correct": 3,
           "total": 3,
-          "note": "Parent-rated knows meaning (quick answers, confirm later)"
+          "note": "Parent-rated: knows hungry, tired, freezing"
         }
       ]
     },
@@ -646,7 +859,7 @@
           "session": 1,
           "correct": 5,
           "total": 5,
-          "note": "Parent-rated knows meaning (quick answers, confirm later)"
+          "note": "Parent-rated: knows whisper, enormous, curious, gentle, borrow"
         }
       ]
     },

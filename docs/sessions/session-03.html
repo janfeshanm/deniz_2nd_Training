@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="theme-color" content="#fff4e0">
+<title>Session 3 – Spelling and writing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#fff4e0;--bg2:#ffe1ec;--ink:#2b2340;--muted:#7a6f8a;--btn:#ff7a45;--btn2:#ff5a7a;--ok:#2fb36d;--line:#e6dcef}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%}
+body{font-family:Lexend,system-ui,sans-serif;color:var(--ink);font-size:18px;line-height:1.35;
+  background:linear-gradient(170deg,var(--bg1),var(--bg2)) fixed}
+#app{display:flex;flex-direction:column;min-height:100dvh}
+#top{padding:max(10px,env(safe-area-inset-top)) 16px 6px}
+#blk{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;min-height:17px}
+#bar{height:8px;background:rgba(0,0,0,.08);border-radius:8px;margin-top:6px;overflow:hidden}
+#barfill{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--btn),var(--btn2));transition:width .3s}
+#main{flex:1;padding:8px 16px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+#main.top{justify-content:flex-start}
+#bottom{position:sticky;bottom:0;padding:10px 16px max(14px,env(safe-area-inset-bottom));background:rgba(255,255,255,.78);
+  backdrop-filter:blur(6px);border-top:1px solid var(--line)}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+h1{font-size:28px;margin:0 0 10px;font-weight:800}
+p{margin:0 0 12px}
+.muted{color:var(--muted);font-size:16px}
+.count{font-size:15px;color:var(--muted);margin-bottom:10px}
+.emoji{font-size:64px;margin-bottom:6px}
+.primary{width:100%;min-height:56px;border-radius:16px;color:#fff;font-weight:800;font-size:22px;
+  background:linear-gradient(135deg,var(--btn),var(--btn2));box-shadow:0 6px 16px rgba(255,90,122,.3)}
+.primary:active{transform:scale(.98)}
+.primary:disabled{opacity:.45}
+.ghost{min-height:48px;padding:0 16px;border-radius:14px;border:2px solid var(--line);background:#fff;font-weight:600;font-size:16px;color:var(--muted)}
+.word{font-size:52px;font-weight:800;letter-spacing:.02em;margin:10px 0}
+.spk{min-width:72px;min-height:72px;border-radius:50%;font-size:34px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.12);margin:6px 0 14px}
+.spk:active{transform:scale(.94)}
+.opts{display:flex;gap:12px;width:100%;justify-content:center;margin-top:8px}
+.opt{flex:1;max-width:110px;min-height:96px;border-radius:20px;background:#fff;font-size:52px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.opt:active{background:#ffe9d9}
+.q{font-size:22px;font-weight:600;margin:0 0 6px}
+.say{font-size:20px;font-weight:600}
+.toast{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:800;
+  background:rgba(255,244,224,.92);z-index:5;animation:pop .5s ease}
+@keyframes pop{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:none}}
+/* parent panel */
+.parent{border:2px dashed #b9a8d6;border-radius:16px;padding:10px;background:#fff}
+.plabel{font-size:12px;font-weight:700;color:#6b5a8a;margin-bottom:8px;text-align:left;letter-spacing:.05em}
+.prow{display:flex;gap:8px}
+.pb{flex:1;min-height:56px;border-radius:14px;font-size:20px;font-weight:800;color:#fff}
+.pb.ok{background:var(--ok)}.pb.no{background:#d9822b}
+.pb:disabled{opacity:.3}
+.hold{height:5px;border-radius:5px;background:#eee;margin:0 0 8px;overflow:hidden}
+.hold i{display:block;height:100%;width:0;background:var(--ok);animation:fill linear forwards}
+@keyframes fill{to{width:100%}}
+.said{flex:1;min-width:0;min-height:44px;border:2px solid var(--line);border-radius:12px;padding:0 10px;font:inherit;font-size:16px;margin-top:8px}
+.undo{min-width:52px;min-height:44px;margin-top:8px;border-radius:12px;border:2px solid var(--line);background:#fff;font-size:20px}
+.hint{font-size:14px;color:var(--muted);margin:8px 0 0;text-align:left}
+.card{background:#fff;border-radius:18px;padding:14px 16px;text-align:left;width:100%;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.card h2{font-size:17px;margin:0 0 8px}
+.card ul{margin:0;padding-left:20px;font-size:16px}
+.card li{margin-bottom:6px}
+label{display:block;font-size:15px;font-weight:600;margin:10px 0 4px;text-align:left}
+select,textarea{width:100%;min-height:48px;border:2px solid var(--line);border-radius:12px;padding:8px 10px;font:inherit;font-size:17px;background:#fff;color:var(--ink)}
+textarea{min-height:90px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:6px 14px;border-radius:22px;border:2px solid var(--line);background:#fff;font-size:15px}
+.chip.on{background:#ffe1ec;border-color:var(--btn2);font-weight:600}
+.emojis{display:flex;gap:14px;justify-content:center;margin-top:10px}
+.emojis button{font-size:56px;min-width:88px;min-height:88px;border-radius:24px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;margin:6px 0 4px}
+.tile{aspect-ratio:1;min-height:72px;border-radius:14px;background:#fff;border:2px solid var(--line);font-size:44px;font-weight:800;position:relative}
+.tile.s1{background:#c9f0d9;border-color:var(--ok)}
+.tile.s2{background:#ffe3a8;border-color:#e0a21a}
+.tile.s2::after{content:"name";position:absolute;bottom:2px;left:0;right:0;font-size:11px;font-weight:600;color:#8a5f00}
+table{border-collapse:collapse;width:100%;font-size:14px}
+td,th{padding:4px 6px;border-bottom:1px solid var(--line);text-align:left}
+td.n,th.n{text-align:right;white-space:nowrap}
+.low{color:#c0561b;font-weight:700}.good{color:#1f8f55;font-weight:700}
+/* passages */
+.passage{font-size:26px;line-height:1.75;font-weight:600;text-align:left;background:#fff;border-radius:18px;padding:16px;width:100%;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.pw{display:flex;flex-wrap:wrap;gap:6px;text-align:left;width:100%}
+.w{min-height:44px;padding:4px 10px;border-radius:10px;border:2px solid var(--line);background:#fff;font-size:18px}
+.w.bad{background:#ffd9b8;border-color:#e0822b;font-weight:700}
+.step{display:flex;align-items:center;gap:10px;margin:10px 0}
+.step button{min-width:48px;min-height:48px;border-radius:12px;border:2px solid var(--line);background:#fff;font-size:22px;font-weight:800}
+/* multiple choice */
+.mcqs{display:flex;flex-direction:column;gap:10px;width:100%;margin-top:6px}
+.mcq{display:flex;align-items:center;gap:12px;min-height:68px;padding:8px 14px;border-radius:18px;background:#fff;
+  box-shadow:0 4px 12px rgba(0,0,0,.1);font-size:21px;font-weight:600;text-align:left}
+.mcq:active{background:#ffe9d9}
+.mcq .em{font-size:34px}
+.peek{background:#fff;border-radius:14px;padding:12px;margin-top:10px;font-size:18px;text-align:left;width:100%}
+.peek[hidden]{display:none}
+/* sequencing */
+.slots{display:flex;flex-direction:column;gap:8px;width:100%;margin:8px 0}
+.slot{min-height:60px;border:2px dashed var(--line);border-radius:14px;padding:8px 12px;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.6);font-size:19px;text-align:left}
+.slot b{font-size:22px;color:var(--btn2)}
+.slot.big{font-size:34px}
+.crow{display:flex;gap:8px;width:100%;margin-bottom:8px}
+.crow .cd{flex:1;min-height:60px;border-radius:14px;background:#fff;box-shadow:0 3px 10px rgba(0,0,0,.1);font-size:19px;font-weight:600;padding:8px 12px;text-align:left}
+.crow .cd.big{font-size:40px;text-align:center}
+.crow .cs{min-width:52px;border-radius:14px;background:#fff;border:2px solid var(--line);font-size:22px}
+.crow.used{opacity:.3;pointer-events:none}
+@media (prefers-reduced-motion:reduce){.toast{animation:none}}
+/* session 3: typing */
+.optw{font-size:36px;max-width:150px}
+.spin{width:100%;max-width:340px;min-height:64px;border:3px solid var(--line);border-radius:16px;padding:0 14px;font:inherit;font-size:34px;font-weight:600;text-align:center;background:#fff;color:var(--ink);margin:4px 0 6px}
+.spin:focus,.wt:focus{outline:none;border-color:var(--btn)}
+.wt{width:100%;min-height:150px;border:3px solid var(--line);border-radius:16px;padding:12px;font:inherit;font-size:22px;line-height:1.5;background:#fff;color:var(--ink);resize:vertical}
+.toprow{display:flex;align-items:center;gap:8px;min-height:44px}
+#back{min-width:72px;min-height:40px;padding:0 10px;border-radius:12px;border:2px solid var(--line);background:rgba(255,255,255,.85);font-size:15px;font-weight:600;color:var(--muted)}
+#back[hidden]{display:none}
+.pic{font-size:72px;letter-spacing:12px;margin:4px 0 8px}
+</style>
+</head>
+<body>
+<div id="app">
+  <header id="top"><div class="toprow"><button id="back" type="button" hidden aria-label="Go back">‹ Back</button><div id="blk"></div></div><div id="bar"><i id="barfill"></i></div></header>
+  <main id="main"></main>
+  <footer id="bottom"></footer>
+</div>
+
+<script>
+(() => {
+"use strict";
+
+/* ====================================================================
+   Session 3 – Baseline: spelling and writing  (schema deniz-session/1)
+   Same engine as Session 2: parent buttons wait before they can be tapped,
+   skipped / "don't know" items count as wrong. No early-stop cascades:
+   every group stands on its own.
+   ==================================================================== */
+const KEY = "deniz-s03-v1";
+const SESSION = 3;
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const now = () => new Date().toISOString();
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const median = a => { if (!a.length) return null; const s = a.slice().sort((x, y) => x - y), m = Math.floor(s.length / 2); return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
+const norm = s => String(s || "").trim().toLowerCase().replace(/[.!?,]+$/, "").replace(/\s+/g, " ");
+
+/* ---------- speech (en-AU preferred) ---------- */
+let voice = null;
+function pickVoice() {
+  try { const vs = speechSynthesis.getVoices();
+    voice = vs.find(v => /^en[-_]AU/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang)) || null; } catch (e) {}
+}
+try { speechSynthesis.onvoiceschanged = pickVoice; pickVoice(); } catch (e) {}
+function utter(text, rate) {
+  const u = new SpeechSynthesisUtterance(text);
+  if (voice) u.voice = voice;
+  u.lang = (voice && voice.lang) || "en-AU";
+  u.rate = rate || 0.85;
+  return u;
+}
+function say(text, rate) { try { if (!window.speechSynthesis) return; speechSynthesis.cancel(); speechSynthesis.speak(utter(text, rate)); } catch (e) {} }
+function sayList(arr, rate, onend) {
+  try {
+    if (!window.speechSynthesis) return false;
+    speechSynthesis.cancel();
+    arr.forEach((t, i) => { const u = utter(t, rate); if (onend && i === arr.length - 1) u.onend = onend; speechSynthesis.speak(u); });
+    return true;
+  } catch (e) { return false; }
+}
+function speechCancel() { try { speechSynthesis.cancel(); } catch (e) {} }
+
+/* ---------- wake lock ---------- */
+let wl = null;
+async function wake() { try { if ("wakeLock" in navigator) wl = await navigator.wakeLock.request("screen"); } catch (e) {} }
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible" && S.started_at && !S.exported) wake();
+});
+
+/* ---------- state (autosaved) ---------- */
+const fresh = () => ({ v: 1, pos: 0, steps: [], ctx: {}, started_at: null, feeling: null, obs: [], note: "", exported: false, endedEarly: false, draft: {} });
+function load() { try { const s = JSON.parse(localStorage.getItem(KEY)); return s && s.v === 1 ? s : null; } catch (e) { return null; } }
+function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+let S = load() || fresh();
+
+/* ====================================================================
+   CONTENT
+   ==================================================================== */
+// Warm-up: easy short-vowel words she should be able to spell (confidence + keyboard check)
+const WARM = [
+  ["cat", "The cat is on the mat."], ["sun", "The sun is hot."], ["bed", "I go to bed."], ["dog", "My dog can run."]
+].map(a => ({ prompt: a[0], sentence: a[1], expected: a[0], skills: ["sp1", "hw6"], group: "warm" }));
+
+// Magic e, part 1: hear a word, tap the spelling (no reading aloud needed)
+const HEAR = [["cape","cap"],["kite","kit"],["hope","hop"],["tube","tub"],["note","not"],["pin","pine"]]
+  .map(a => ({ prompt: a[0], expected: a[0], options: [a[0], a[1]], skills: ["ph4", "sp3"] }));
+
+// Magic e, part 2: read words aloud (parent-scored)
+const MAGIC = ["bike", "home", "make", "cube", "rope", "game"].map(w => ({ prompt: w, expected: w, skills: ["ph4"] }));
+
+// Dictated spelling: [word, sentence, skills, group]
+const SPELL = [
+  ["frog",    "The frog can jump.",            ["sp1"],        "Blends"],
+  ["crab",    "A crab is on the sand.",        ["sp1"],        "Blends"],
+  ["shop",    "We went to the shop.",          ["sp1"],        "Digraphs"],
+  ["with",    "Come with me.",                 ["sp1", "sp2"], "Digraphs"],
+  ["duck",    "The duck can swim.",            ["sp4"],        "Double letters and ck"],
+  ["bell",    "Ring the bell.",                ["sp4"],        "Double letters and ck"],
+  ["make",    "Let's make a cake.",            ["sp3"],        "Magic e"],
+  ["bike",    "I ride my bike.",               ["sp3"],        "Magic e"],
+  ["home",    "It is time to go home.",        ["sp3"],        "Magic e"],
+  ["tree",    "The bird is in the tree.",      ["sp3"],        "Vowel teams"],
+  ["boat",    "The boat is on the sea.",       ["sp3"],        "Vowel teams"],
+  ["play",    "Can you play with me?",         ["sp3"],        "Vowel teams"],
+  ["dogs",    "Two dogs ran in the park.",     ["sp7"],        "Endings"],
+  ["jumped",  "The cat jumped up.",            ["sp8"],        "Endings"],
+  ["playing", "We are playing a game.",        ["sp8"],        "Endings"],
+  ["said",    "Mum said yes.",                 ["sp2"],        "Tricky words"],
+  ["they",    "They are my friends.",          ["sp2"],        "Tricky words"],
+  ["because", "I am happy because it is sunny.", ["sp2"],      "Tricky words"]
+].map(a => ({ prompt: a[0], sentence: a[1], expected: a[0], skills: a[2], group: a[3] }));
+const GROUP_ORDER = ["Blends", "Digraphs", "Double letters and ck", "Magic e", "Vowel teams", "Endings", "Tricky words"];
+
+// Writing tasks
+const DICT = [
+  { prompt: "The dog ran to the park.", expected: "The dog ran to the park." },
+  { prompt: "I like to play with my friend.", expected: "I like to play with my friend." }
+].map(d => Object.assign(d, { kind: "dictation", skills: ["wr8", "wr16", "sp2", "hw4"] }));
+const PIC = { kind: "picture", pic: "🐶 ⚽ 🌳", picSay: "A dog, a ball and a tree.",
+  prompt: "Look at the picture. Write a sentence about it. Who is it? What are they doing? Where?", skills: ["wr8", "wr12", "wr14", "wr16"] };
+const RECOUNT = { kind: "recount", prompt: "Write about something fun you did. It can be on the weekend or after school.",
+  plan: "First, tell Mum or Dad what you will write. What did you do first? What happened next? How did it end?",
+  starters: ["On the weekend I", "First,", "Then", "At the end"],
+  skills: ["wr1", "wr5", "wr6", "wr8", "wr9", "wr15", "wr16", "wr21", "ol3"] };
+
+/* ====================================================================
+   FLOW
+   ==================================================================== */
+const flow = [];
+const scr = (id, label, w, render) => flow.push({ kind: "screen", id, label, w, render });
+const stp = o => flow.push(Object.assign({ kind: "step" }, o));
+
+scr("setup", "Parent setup", 0, renderSetup);
+scr("intro", "Welcome", 4, renderIntro);
+scr("introWarm", "Warm-up", 4, d => blockIntro(d, "⌨️", "Type the word", "Listen to the word, then type it. Tap the speaker to hear it again.",
+      "Parent: no help with spelling. You can help her find a key if she can't find it. Her own spelling is what we need."));
+stp({ id: "s3-warm", label: "Warm-up", skills: ["sp1", "hw6"], mode: "auto", type: "spell", w: 40, items: WARM, count: true,
+      note: "Warm-up: easy short-vowel words typed from dictation." });
+scr("introHear", "Magic e", 4, d => blockIntro(d, "🪄", "Magic e", "Listen to the word. Tap the word you heard.",
+      "Parent: just let her choose. The phone says the word."));
+stp({ id: "s3-hear", label: "Which word?", skills: ["ph4", "sp3"], mode: "auto", type: "pick", w: 30, items: HEAR, count: true,
+      note: "Hear a word, choose between the magic-e and short-vowel spelling (cape / cap). Auto-scored." });
+scr("introMagic", "Magic e", 4, d => blockIntro(d, "📖", "Read the words", "Read each word out loud.",
+      "Parent: the ✓ / ✗ buttons wake up after about 2 seconds. If she says the short sound (bik for bike), tap Couldn't read and type what she said."));
+stp({ id: "s3-magic", label: "Reading magic e", skills: ["ph4"], mode: "parent", type: "read", w: 30, items: MAGIC, rule: "group",
+      note: "Magic-e words read aloud (re-check, new words)." });
+scr("introSpell", "Spelling", 4, d => blockIntro(d, "✏️", "Spelling", "Listen to the word, then type it. Do your best. It's okay to make mistakes!",
+      "Parent: 18 words. No help with spelling. If she is stuck for a long time, tap “Skip (she's stuck)”. That counts as not spelled."));
+stp({ id: "s3-spell", label: "Spelling", skills: Array.from(new Set(SPELL.flatMap(s => s.skills))), mode: "auto", type: "spell", w: 180, items: SPELL, count: true,
+      note: "Dictated words typed on the phone keyboard. Auto-scored exact match; review the raw responses." });
+scr("break1", "Break", 10, renderBreak);
+scr("introDict", "Sentences", 4, d => blockIntro(d, "📝", "Write a sentence", "Listen to the sentence, then type it. Remember the capital letter and full stop!",
+      "Parent: you can replay it as often as she likes. Tap “Say it slowly” to hear it word by word."));
+stp({ id: "s3-dict", label: "Sentences", skills: ["wr8", "wr16", "sp2", "hw4"], mode: "writing", type: "write", w: 70, items: DICT, count: true,
+      note: "Dictated sentences, typed. Checks spelling in sentences, capital letter, full stop, spaces." });
+stp({ id: "s3-pic", label: "Picture", skills: PIC.skills, mode: "writing", type: "write", w: 60, items: [PIC],
+      note: "Free sentence about a picture (🐶 ⚽ 🌳)." });
+scr("break2", "Break", 10, renderBreak);
+stp({ id: "s3-recount", label: "My story", skills: RECOUNT.skills, mode: "writing", type: "write", w: 150, items: [RECOUNT],
+      note: "Short recount: says ideas aloud first, types, then reads it back and can fix it." });
+scr("finishChild", "All done", 0, renderFinishChild);
+scr("finishParent", "Parent wrap-up", 0, renderFinishParent);
+
+const TOTAL_W = flow.reduce((a, e) => a + (e.w || 0), 0);
+
+/* ====================================================================
+   ENGINE
+   ==================================================================== */
+let H = {}, lock = false, t0 = 0;
+document.addEventListener("click", ev => {
+  const b = ev.target.closest("[data-act]");
+  if (!b || b.disabled) return;
+  const f = H[b.dataset.act];
+  if (f) f(b, ev);
+});
+function screen(label, main, bottom, acts, topAlign) {
+  H = acts || {}; lock = false; t0 = Date.now();
+  $("#blk").textContent = label || "";
+  $("#back").hidden = inBoot || S.pos <= 0;
+  const m = $("#main"); m.innerHTML = main; m.className = topAlign ? "top" : "";
+  const b = $("#bottom"); b.innerHTML = bottom || ""; b.style.display = bottom ? "" : "none";
+  window.scrollTo(0, 0);
+}
+function hold(ms) {
+  const bs = Array.from(document.querySelectorAll("#bottom .pb")); if (!bs.length) return;
+  bs.forEach(b => b.disabled = true);
+  const bar = document.createElement("div"); bar.className = "hold"; bar.innerHTML = `<i style="animation-duration:${ms}ms"></i>`;
+  const p = $("#bottom .parent"); if (p) p.insertBefore(bar, p.children[1] || null);
+  const my = H;
+  setTimeout(() => { if (H !== my) return; bs.forEach(b => b.disabled = false); bar.remove(); }, ms);
+}
+function updateBar(frac) {
+  let done = 0;
+  for (let i = 0; i < S.pos && i < flow.length; i++) done += flow[i].w || 0;
+  const e = flow[S.pos];
+  if (e) done += (e.w || 0) * (frac || 0);
+  $("#barfill").style.width = Math.min(100, Math.round(done / TOTAL_W * 100)) + "%";
+}
+function stepRec(e) {
+  let r = S.steps.find(x => x.id === e.id);
+  if (!r) { r = { id: e.id, skills: e.skills, mode: e.mode, label: e.label, started_at: now(), duration_sec: 0, items: [], notes: e.note || "" }; S.steps.push(r); }
+  return r;
+}
+const shown = r => r.items.filter(i => !i.notShown);
+const scored = r => r.mode !== "writing";
+const itemScore = i => i.score != null ? i.score : (i.correct ? 1 : 0);
+const isStep = e => e && e.kind === "step";
+const recOf = id => S.steps.find(r => r.id === id);
+
+function fillNotShown(e, rec, why) {
+  for (let i = rec.items.length; i < e.items.length; i++) {
+    const it = e.items[i];
+    rec.items.push({ prompt: it.prompt, expected: it.expected, response: null, correct: false, attempts: 0, ms: 0, skipped: true, notShown: true });
+  }
+  rec.stopped_early = why;
+}
+// Only rule: a single group stops after 3 shown with 0 correct. Nothing else is skipped because of it.
+function applyRule(e, rec) {
+  const s = shown(rec), c = s.filter(i => i.correct).length;
+  if (rec.items.length >= e.items.length) return;
+  if (e.rule === "group" && s.length >= 3 && c === 0) fillNotShown(e, rec, "group too hard (0 of first " + s.length + " correct)");
+}
+
+function go() {
+  if (S.pos >= flow.length) return;
+  const e = flow[S.pos];
+  if (e.kind === "screen") { updateBar(0); e.render(() => { S.pos++; save(); go(); }); return; }
+  const rec = stepRec(e);
+  if (rec.items.length >= e.items.length) { S.pos++; save(); return go(); }
+  updateBar(rec.items.length / e.items.length);
+  const idx = rec.items.length;
+  ({ pick: renderPick, read: renderRead, spell: renderSpell, write: renderWrite })[e.type](e, rec, idx);
+}
+function record(e, rec, item, after) {
+  if (lock) return; lock = true;
+  rec.items.push(item);
+  applyRule(e, rec);
+  rec.duration_sec = Math.round(rec.items.reduce((a, i) => a + (i.ms || 0), 0) / 1000);
+  save();
+  after ? after() : go();
+}
+function cheer(msg, then) {
+  const d = document.createElement("div"); d.className = "toast"; d.textContent = msg; document.body.appendChild(d);
+  setTimeout(() => { d.remove(); then(); }, 650);
+}
+const counter = (e, idx) => e.count ? `<div class="count">${idx + 1} of ${e.items.length}</div>` : "";
+const CHEERS = ["⭐ Nice!", "⭐ Great!", "⭐ Thanks!", "⭐ Keep going!"];
+const cheerMsg = () => CHEERS[Math.floor(Math.random() * CHEERS.length)];
+
+/* ---------- undo (read steps only) ---------- */
+function canUndo() {
+  const e = flow[S.pos]; if (!isStep(e) || e.type !== "read") return false;
+  const r = recOf(e.id); return !!(r && r.items.some(i => !i.notShown));
+}
+function undo() {
+  const e = flow[S.pos]; const r = recOf(e.id); if (!r) return;
+  while (r.items.length && r.items[r.items.length - 1].notShown) r.items.pop();
+  r.items.pop(); delete r.stopped_early; save(); go();
+}
+const undoBtn = () => canUndo() ? `<button class="undo" data-act="undo" aria-label="Undo last">↩</button>` : "";
+
+/* ---------- ‹ Back: undo the last answer / go back one screen ---------- */
+let inBoot = false;
+function popItem(e, r) {
+  while (r.items.length && r.items[r.items.length - 1].notShown) r.items.pop();
+  delete r.stopped_early;
+  if (!r.items.length) return false;
+  const it = r.items.pop();
+  if (e.type === "write") S.draft[e.id + ":" + r.items.length] = { text: it.response || "", deletes: it.deletes || 0, helped: !!it.used_starter,
+    planned_aloud: it.planned_aloud == null ? null : it.planned_aloud, edited: !!it.edited_after_reading, first_text: it.first_text == null ? null : it.first_text,
+    ms: it.ms || 0, stage: "type" };
+  return true;
+}
+function goBack() {
+  if (lock || inBoot || S.pos <= 0) return;
+  speechCancel();
+  const e = flow[S.pos];
+  if (isStep(e)) {
+    const r = stepRec(e);
+    if (e.type === "write") {
+      const d = S.draft[e.id + ":" + r.items.length], it = e.items[r.items.length];
+      if (d) { const ta = $("#wt"); if (ta) d.text = ta.value; }
+      if (d && d.stage === "check") { d.stage = "type"; save(); return go(); }
+      if (d && it && it.kind === "recount" && (d.stage || "plan") === "type") { d.stage = "plan"; save(); return go(); }
+    }
+    if (popItem(e, r)) { save(); return go(); }
+  }
+  let p = S.pos - 1;
+  while (p > 0 && isStep(flow[p])) { const r = recOf(flow[p].id); if (r && popItem(flow[p], r)) break; p--; }
+  S.pos = Math.max(0, p); save(); go();
+}
+document.addEventListener("click", ev => { if (ev.target.closest("#back")) goBack(); });
+// phone back gesture / button: go back one step instead of leaving the page
+try { history.pushState({ s3: 1 }, ""); } catch (e) {}
+window.addEventListener("popstate", () => { try { history.pushState({ s3: 1 }, ""); } catch (e) {} goBack(); });
+
+/* ---------- typing helpers ---------- */
+const INPUT_ATTRS = `autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" inputmode="text" enterkeyhint="done"`;
+// counts how often she deleted while typing (rough sign of self-checking)
+function trackEdits(el, stats) {
+  el.addEventListener("beforeinput", ev => { if (/^delete/.test(ev.inputType || "")) stats.deletes++; if (!stats.first) stats.first = Date.now(); });
+  el.addEventListener("input", () => { if (!stats.first) stats.first = Date.now(); });
+}
+
+/* ====================================================================
+   SCREENS
+   ==================================================================== */
+function sel(id, label, opts, val) {
+  return `<label for="${id}">${label}</label><select id="${id}">${opts.map(o => `<option value="${esc(o[0])}"${o[0] === val ? " selected" : ""}>${esc(o[1])}</option>`).join("")}</select>`;
+}
+function renderSetup(done) {
+  const c = S.ctx || {};
+  screen("Parent setup", `
+    <h1 style="font-size:24px">Session 3 · Spelling and writing</h1>
+    <p class="muted" style="margin-bottom:10px">About 25 minutes. Progress saves automatically. Stop at a break if she is tired.</p>
+    <div class="card"><h2>Before you start</h2><ul>
+      <li>⌨️ <b>Turn off predictive text and auto-correct</b> on the Samsung Keyboard (Settings → General management → Samsung Keyboard settings → Smart typing). The suggestions would spell words for her.</li>
+      <li>🔊 Volume up, quiet room. The phone says every word and sentence. <button class="ghost" style="min-height:36px;padding:0 10px" data-act="test">Test sound</button></li>
+      <li>👤 Sit beside her. <b>Don't help with spelling.</b> You can help her find a key, a capital letter or the full stop.</li>
+      <li>✍️ For the last task she tells you her story out loud first, then types it.</li>
+      <li>☕ Two short breaks are built in. You can stop at a break and finish early.</li>
+    </ul></div>
+    <div class="card"><h2>Two quick questions</h2>
+      ${sel("c_energy", "How is Deniz right now?", [["","Choose…"],["fresh","Fresh and keen"],["ok","OK"],["tired","A bit tired"]], c.energy)}
+      ${sel("c_pred", "Predictive text and auto-correct turned off?", [["","Choose…"],["yes","Yes, both off"],["no","No / not sure"]], c.predictive_off)}
+    </div>`,
+    `<button class="primary" data-act="go">Hand the phone to Deniz ➜</button>`,
+    {
+      test: () => say("Hello Deniz! Can you hear me?"),
+      go: () => {
+        S.ctx = { energy: $("#c_energy").value || null, predictive_off: $("#c_pred").value || null };
+        if (!S.started_at) S.started_at = now();
+        wake(); save(); done();
+      }
+    }, true);
+}
+function renderIntro(done) {
+  const msg = "Hi Deniz! Today we are going to spell words and write sentences. Do your best. It's okay to make mistakes!";
+  screen("Welcome", `<div class="emoji">👋</div><h1>Hi Deniz!</h1><p class="say">Today we will spell words and write sentences.<br>Do your best. It's okay to make mistakes!</p>
+    <button class="spk" data-act="spk">🔊</button>`,
+    `<button class="primary" data-act="next">Let's go! ➜</button>`,
+    { spk: () => say(msg), next: () => { speechCancel(); done(); } });
+}
+function blockIntro(done, emoji, title, text, parentTip) {
+  screen(title, `<div class="emoji">${emoji}</div><h1>${esc(title)}</h1><p class="say">${esc(text)}</p>
+    <button class="spk" data-act="spk">🔊</button>
+    <div class="parent" style="margin-top:8px"><div class="plabel">👤 PARENT</div><div class="hint" style="margin:0">${esc(parentTip)}</div></div>`,
+    `<button class="primary" data-act="next">Ready ➜</button>`,
+    { spk: () => say(text), next: () => { speechCancel(); done(); } });
+}
+function renderBreak(done) {
+  screen("Break", `<div class="emoji">🌈</div><h1>Brain break!</h1><p class="say">Stand up, stretch, and have a drink of water. 💧</p>
+    <p class="muted">Take a minute or two. Tap when you are ready.</p>`,
+    `<button class="primary" data-act="next">I'm ready ➜</button>
+     <div style="text-align:center;margin-top:8px"><button class="ghost" data-act="stop" style="min-height:40px;font-size:14px">👤 Parent: that's enough for today</button></div>`,
+    { next: done,
+      stop: () => { if (confirm("Finish here? Parts not done will be left out of the results.")) { S.endedEarly = true; S.pos = flow.findIndex(x => x.id === "finishChild"); save(); go(); } } });
+}
+
+/* ---------- hear a word, tap the spelling ---------- */
+function renderPick(e, rec, idx) {
+  const it = e.items[idx], opts = shuffle(it.options);
+  screen(e.label, `${counter(e, idx)}<p class="q">Which word did you hear?</p>
+    <button class="spk" data-act="spk">🔊</button>
+    <div class="opts">${opts.map(o => `<button class="opt optw" data-act="opt" data-v="${o}">${o}</button>`).join("")}</div>`,
+    "", {
+      spk: () => say(it.prompt, 0.8),
+      opt: b => record(e, rec, { prompt: it.prompt, expected: it.expected, response: b.dataset.v, options: it.options,
+        correct: b.dataset.v === it.expected, skills: it.skills, attempts: 1, ms: Date.now() - t0, skipped: false }, () => cheer(cheerMsg(), go))
+    });
+  setTimeout(() => say(it.prompt, 0.8), 350);
+}
+
+/* ---------- parent-scored word reading ---------- */
+function renderRead(e, rec, idx) {
+  const it = e.items[idx];
+  const finish = ok => {
+    const v = ($("#said") || { value: "" }).value.trim();
+    record(e, rec, { prompt: it.prompt, expected: it.expected, response: ok ? it.expected : (v || null), correct: ok, skills: it.skills, attempts: 1, ms: Date.now() - t0, skipped: false });
+  };
+  screen(e.label, `${counter(e, idx)}<div class="word">${esc(it.prompt)}</div>`,
+    `<div class="parent"><div class="plabel">👤 PARENT – did she read it?</div>
+      <div class="prow"><button class="pb ok" data-act="ok">✓ Read it</button><button class="pb no" data-act="no">✗ Couldn't read</button></div>
+      <div class="prow"><input class="said" id="said" placeholder="She said… (optional)" ${INPUT_ATTRS}>${undoBtn()}</div></div>`,
+    { ok: () => finish(true), no: () => finish(false), undo });
+  hold(1800);
+}
+
+/* ---------- dictated spelling (typed) ---------- */
+function renderSpell(e, rec, idx) {
+  const it = e.items[idx], st = { deletes: 0, first: 0 };
+  const speak = () => sayList([it.prompt, it.sentence, it.prompt], 0.8);
+  const finish = skipped => {
+    const raw = skipped ? "" : $("#sp").value;
+    const ok = !skipped && norm(raw) === norm(it.expected);
+    record(e, rec, { prompt: it.prompt, sentence: it.sentence, expected: it.expected, response: skipped ? null : raw.trim(), correct: ok,
+      skills: it.skills, group: it.group, attempts: 1, ms: Date.now() - t0, first_key_ms: st.first ? st.first - t0 : null,
+      deletes: st.deletes, skipped: !!skipped }, () => cheer(cheerMsg(), go));
+  };
+  screen(e.label, `${counter(e, idx)}<p class="q">Listen, then type the word</p>
+    <button class="spk" data-act="spk">🔊</button>
+    <input class="spin" id="sp" ${INPUT_ATTRS} aria-label="Type the word">
+    <div class="hint" style="text-align:center">Tap 🔊 to hear it again.</div>`,
+    `<button class="primary" data-act="done" id="doneBtn" disabled>Done ➜</button>
+     <div style="text-align:center;margin-top:8px"><button class="ghost" data-act="skip" style="min-height:40px;font-size:14px">👤 Skip (she's stuck)</button></div>`,
+    { spk: speak, done: () => { if ($("#sp").value.trim()) finish(false); }, skip: () => finish(true) }, true);
+  const inp = $("#sp"); trackEdits(inp, st);
+  inp.addEventListener("input", () => { $("#doneBtn").disabled = !inp.value.trim(); });
+  inp.addEventListener("keydown", ev => { if (ev.key === "Enter") { ev.preventDefault(); if (inp.value.trim()) finish(false); } });
+  setTimeout(speak, 350);
+}
+
+/* ---------- writing: dictated sentences, picture sentence, recount ---------- */
+function textStats(txt, expected) {
+  const t = String(txt || "").trim();
+  const words = t ? t.split(/\s+/).filter(Boolean) : [];
+  const sentences = t ? t.split(/[.!?]+/).map(x => x.trim()).filter(Boolean) : [];
+  const o = {
+    chars: t.length, words: words.length, sentences_by_punct: (t.match(/[.!?]/g) || []).length,
+    starts_with_capital: /^[A-Z]/.test(t), ends_with_punct: /[.!?]$/.test(t),
+    sentences_starting_capital: sentences.filter(s => /^[A-Z]/.test(s)).length, sentence_parts: sentences.length,
+    lowercase_i: words.filter(w => w === "i" || /^i'/.test(w)).length,
+    joining_words: words.map(w => w.toLowerCase().replace(/[^a-z]/g, "")).filter(w => ["and", "but", "so", "because", "then", "when"].includes(w)),
+    double_spaces: (t.match(/ {2,}/g) || []).length, missing_spaces: words.filter(w => /[a-z][.!?,][A-Za-z]/.test(w)).length
+  };
+  if (expected) {
+    const ew = expected.toLowerCase().replace(/[.!?,]/g, "").split(/\s+/), tw = t.toLowerCase().replace(/[.!?,]/g, "").split(/\s+/).filter(Boolean);
+    // words spelled right, in order (longest common subsequence)
+    const L = Array.from({ length: ew.length + 1 }, () => new Array(tw.length + 1).fill(0));
+    for (let i = 1; i <= ew.length; i++) for (let j = 1; j <= tw.length; j++) L[i][j] = ew[i - 1] === tw[j - 1] ? L[i - 1][j - 1] + 1 : Math.max(L[i - 1][j], L[i][j - 1]);
+    o.words_expected = ew.length; o.words_right = L[ew.length][tw.length];
+    o.misspelled = ew.filter(w => !tw.includes(w));
+    o.exact = t === expected;
+  }
+  return o;
+}
+function renderWrite(e, rec, idx) {
+  const it = e.items[idx];
+  const dk = e.id + ":" + idx;
+  const draft = S.draft[dk] || (S.draft[dk] = { text: "", deletes: 0, helped: false, planned_aloud: null, edited: false, first_text: null, ms: 0 });
+  const t1 = Date.now();
+  const st = { deletes: 0, first: 0 };
+
+  const commit = (skipped) => {
+    const txt = skipped ? "" : (draft.text || "").trim();
+    const stats = textStats(txt, it.expected);
+    const ms = draft.ms;
+    const item = { prompt: it.prompt, kind: it.kind, expected: it.expected || null, response: skipped ? null : txt, correct: it.expected ? !!stats.exact : null,
+      skills: it.skills, attempts: 1, ms, deletes: draft.deletes, stats, skipped: !!skipped };
+    if (it.expected && stats.words_expected) item.score = Math.round(stats.words_right / stats.words_expected * 100) / 100;
+    if (it.kind === "recount") Object.assign(item, { planned_aloud: draft.planned_aloud, used_starter: draft.helped, edited_after_reading: draft.edited, first_text: draft.first_text });
+    if (it.kind === "picture") item.pic = it.pic;
+    delete S.draft[dk];
+    record(e, rec, item, () => cheer("⭐ Great writing!", go));
+  };
+  const keep = () => { const ta = $("#wt"); if (ta) draft.text = ta.value; draft.deletes += st.deletes; st.deletes = 0; draft.ms += Date.now() - t1; save(); };
+
+  // stage: plan (recount only) -> type -> read back (recount only)
+  const stage = draft.stage || (it.kind === "recount" ? "plan" : "type");
+
+  if (stage === "plan") {
+    const msg = it.prompt + " " + it.plan;
+    screen(e.label, `<div class="emoji">🗣️</div><h1>My story</h1><p class="say">${esc(it.prompt)}</p><p class="say" style="font-size:18px">${esc(it.plan)}</p>
+      <button class="spk" data-act="spk">🔊</button>`,
+      `<div class="parent"><div class="plabel">👤 PARENT – did she say her story out loud first?</div>
+        <div class="prow"><button class="pb ok" data-act="y">✓ Yes, she told me</button><button class="pb no" data-act="n">Not really</button></div></div>`,
+      { spk: () => say(msg), y: () => { draft.planned_aloud = true; draft.stage = "type"; save(); go(); },
+        n: () => { draft.planned_aloud = false; draft.stage = "type"; save(); go(); } }, true);
+    hold(4000);
+    setTimeout(() => say(msg), 350);
+    return;
+  }
+  if (stage === "check") {
+    screen(e.label, `<div class="emoji">👀</div><p class="q">Read your story to Mum or Dad.</p><p class="say" style="font-size:18px">Does it make sense? Do you want to fix anything?</p>
+      <button class="spk" data-act="spk">🔊</button>
+      <div class="passage" style="font-size:22px;white-space:pre-wrap">${esc(draft.text)}</div>`,
+      `<div class="prow"><button class="ghost" data-act="fix" style="flex:1">✏️ Fix it</button><button class="primary" data-act="fin" style="flex:1.4">It's finished ➜</button></div>`,
+      { spk: () => say("Read your story to Mum or Dad. Does it make sense? Do you want to fix anything?"),
+        fix: () => { draft.edited = true; draft.stage = "type"; save(); go(); },
+        fin: () => { keep(); commit(false); } }, true);
+    return;
+  }
+
+  // typing screen
+  let head = "";
+  if (it.kind === "dictation") head = `${counter(e, idx)}<p class="q">Listen, then type the sentence</p>
+      <div class="prow" style="justify-content:center;align-items:center"><button class="spk" data-act="spk">🔊</button><button class="ghost" data-act="slow">🐢 Say it slowly</button></div>`;
+  else if (it.kind === "picture") head = `<div class="pic">${it.pic}</div><p class="q">${esc(it.prompt)}</p><button class="spk" data-act="spk">🔊</button>`;
+  else head = `<p class="q">${esc(it.prompt)}</p><button class="spk" data-act="spk">🔊</button>
+      <button class="ghost" data-act="help" id="helpBtn" style="margin-bottom:8px">💡 Need an idea to start?</button><div class="hint" id="starters" ${draft.helped ? "" : "hidden"} style="text-align:center">${it.starters.map(esc).join(" · ")}</div>`;
+  const speakIt = () => it.kind === "dictation" ? say(it.prompt, 0.8) : it.kind === "picture" ? sayList([it.prompt, it.picSay], 0.85) : say(it.prompt);
+  screen(e.label, `${head}<textarea class="wt" id="wt" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="Type here">${esc(draft.text)}</textarea>
+      <div class="hint" id="wc" style="text-align:center"></div>`,
+    `<button class="primary" data-act="done" id="doneBtn" disabled>Done ➜</button>
+     <div style="text-align:center;margin-top:8px"><button class="ghost" data-act="skip" style="min-height:40px;font-size:14px">👤 Skip this one</button></div>`,
+    {
+      spk: speakIt,
+      slow: () => sayList(it.prompt.replace(/[.!?]/g, "").split(" "), 0.7),
+      help: () => { draft.helped = true; const s = $("#starters"); if (s) s.hidden = false; save(); },
+      done: () => {
+        keep(); if (!draft.text.trim()) return;
+        if (it.kind === "recount") { if (draft.first_text == null) draft.first_text = draft.text.trim(); draft.stage = "check"; save(); go(); }
+        else commit(false);
+      },
+      skip: () => { if (confirm("Skip this one? It will count as not done.")) { keep(); commit(true); } }
+    }, true);
+  const ta = $("#wt"); trackEdits(ta, st);
+  const upd = () => { const n = ta.value.trim() ? ta.value.trim().split(/\s+/).length : 0; $("#wc").textContent = n ? n + " word" + (n === 1 ? "" : "s") : ""; $("#doneBtn").disabled = !ta.value.trim(); };
+  ta.addEventListener("input", () => { draft.text = ta.value; upd(); save(); });
+  upd();
+  if (!draft.text) setTimeout(speakIt, 350);
+}
+
+/* ---------- finish ---------- */
+function renderFinishChild(done) {
+  screen("All done", `<div class="emoji">🎉</div><h1>All done, Deniz!</h1><p class="say">You worked so hard.<br>How did that feel?</p>
+    <div class="emojis"><button data-act="f" data-v="great" aria-label="Great">😀</button><button data-act="f" data-v="ok" aria-label="OK">🙂</button><button data-act="f" data-v="hard" aria-label="Hard">😓</button></div>`,
+    "", { f: b => { S.feeling = b.dataset.v; save(); done(); } });
+}
+const OBS = ["Said the sounds while typing", "Asked how to spell words", "Hunted for letters on the keyboard", "Typed easily",
+  "Keyboard suggested or changed words", "Said her sentences before typing", "Re-read her writing", "Forgot capitals or full stops",
+  "Needed lots of encouragement", "Got tired or distracted", "Seemed worried about getting it wrong", "Proud and engaged"];
+function renderFinishParent() {
+  const res = buildResult(), sm = res.summary;
+  const pc = v => v == null ? "–" : `<span class="${v >= 80 ? "good" : v < 50 ? "low" : ""}">${v}%</span>`;
+  const row = (name, o) => `<tr><td>${esc(name)}</td><td class="n">${o && o.total ? o.correct + "/" + o.total : "–"}</td><td class="n">${pc(o && o.total ? o.pct : null)}</td></tr>`;
+  const rows = [row("Warm-up words", sm.warmup), row("Magic e: which word?", sm.magic_hear), row("Magic e: reading" + (sm.magic_read.stopped_early ? " (stopped)" : ""), sm.magic_read)]
+    .concat(sm.spelling_groups.map(g => row("Spelling – " + g.label, g))).concat([row("Spelling – all 18", sm.spelling)]).join("");
+  const wr = sm.writing.map(w => `<div style="margin-bottom:10px"><b style="font-size:14px">${esc(w.label)}</b>
+      <div style="font-size:17px;white-space:pre-wrap;background:#faf6ff;border-radius:10px;padding:8px;margin-top:4px">${w.text ? esc(w.text) : "<i>not done</i>"}</div>
+      <div class="hint" style="margin-top:4px">${esc(w.quick)}</div></div>`).join("");
+  screen("Parent wrap-up", `
+    <h1 style="font-size:24px">Well done! 🎉</h1>
+    ${sm.flags.length ? `<div class="card"><h2>Notes</h2>${sm.flags.map(f => `<p style="font-size:15px;margin:0 0 6px">• ${esc(f)}</p>`).join("")}</div>` : ""}
+    <div class="card"><h2>Scores</h2><table><tr><th>Part</th><th class="n">Right</th><th class="n">%</th></tr>${rows}</table></div>
+    <div class="card"><h2>Her writing</h2>${wr}</div>
+    <div class="card"><h2>What did you notice? (tap any)</h2><div class="chips">
+      ${OBS.map(o => `<button class="chip${S.obs.includes(o) ? " on" : ""}" data-act="chip" data-v="${esc(o)}">${esc(o)}</button>`).join("")}</div>
+      <label for="note">Anything else (optional)</label>
+      <textarea id="note" ${INPUT_ATTRS}>${esc(S.note || "")}</textarea></div>
+    <p class="muted" style="text-align:center">Tap <b>Export</b> and send the file to this chat.</p>`,
+    `<div class="prow"><button class="ghost" data-act="copy" style="flex:.6">Copy</button><button class="primary" data-act="export" style="flex:1.6">Export results ➜</button></div><div class="hint" id="msg" style="text-align:center"></div>`,
+    {
+      chip: b => { const v = b.dataset.v, i = S.obs.indexOf(v); if (i >= 0) S.obs.splice(i, 1); else S.obs.push(v); b.classList.toggle("on"); save(); },
+      export: () => exportJson(),
+      copy: async () => { S.note = $("#note").value; save(); const txt = JSON.stringify(buildResult(), null, 2);
+        try { await navigator.clipboard.writeText(txt); $("#msg").textContent = "Copied ✓"; } catch (e) { $("#msg").textContent = "Copy not available. Use Export."; } }
+    }, true);
+}
+
+/* ====================================================================
+   RESULT + SUMMARY
+   ==================================================================== */
+const tallyItems = s => { const c = s.reduce((a, i) => a + itemScore(i), 0); return { correct: Math.round(c * 2) / 2, total: s.length, pct: s.length ? Math.round(c / s.length * 100) : null }; };
+const tally = r => r && scored(r) ? tallyItems(shown(r)) : { correct: 0, total: 0, pct: null };
+
+function computeSummary(steps) {
+  const get = id => steps.find(r => r.id === id);
+  const warmup = tally(get("s3-warm"));
+  const magic_hear = tally(get("s3-hear"));
+  const mr = get("s3-magic");
+  const magic_read = Object.assign(tally(mr), { stopped_early: !!(mr && mr.stopped_early),
+    misread: mr ? shown(mr).filter(i => !i.correct).map(i => i.prompt + (i.response ? " (said " + i.response + ")" : "")) : [] });
+  const sp = get("s3-spell"), spItems = sp ? shown(sp) : [];
+  const spelling = Object.assign(tallyItems(spItems), { misspelt: spItems.filter(i => !i.correct).map(i => ({ expected: i.expected, response: i.response })) });
+  const spelling_groups = GROUP_ORDER.map(g => Object.assign({ label: g }, tallyItems(spItems.filter(i => i.group === g)))).filter(g => g.total);
+  const wItems = [];
+  ["s3-dict", "s3-pic", "s3-recount"].forEach(id => { const r = get(id); if (r) shown(r).forEach((i, k) => wItems.push({ id, k, i })); });
+  const writing = wItems.map(({ id, k, i }) => {
+    const s = i.stats || {}, label = id === "s3-dict" ? "Sentence " + (k + 1) + " (dictated)" : id === "s3-pic" ? "Picture sentence" : "My story";
+    const bits = [];
+    if (i.skipped) bits.push("skipped");
+    else {
+      if (i.expected) bits.push(s.words_right + "/" + s.words_expected + " words right" + (s.misspelled && s.misspelled.length ? " (" + s.misspelled.join(", ") + ")" : ""));
+      bits.push(s.words + " words");
+      bits.push(s.starts_with_capital ? "capital ✓" : "no capital");
+      bits.push(s.ends_with_punct ? "full stop ✓" : "no full stop");
+      if (s.lowercase_i) bits.push("small i ×" + s.lowercase_i);
+      if (s.joining_words && s.joining_words.length) bits.push("joins with: " + Array.from(new Set(s.joining_words)).join(", "));
+      if (i.kind === "recount") { bits.push(i.planned_aloud ? "planned aloud" : "didn't plan aloud"); if (i.used_starter) bits.push("used a starter idea"); if (i.edited_after_reading) bits.push("fixed it after reading"); }
+      bits.push(Math.round((i.ms || 0) / 1000) + " s");
+    }
+    return { label, kind: i.kind, text: i.response, stats: s, quick: bits.join(" · ") };
+  });
+  // flags
+  const flags = [];
+  if (S.ctx && S.ctx.predictive_off !== "yes") flags.push("Predictive text / auto-correct may have been on: some spellings may not be her own.");
+  if (S.obs.includes("Keyboard suggested or changed words")) flags.push("Parent saw the keyboard suggest or change words.");
+  if (magic_hear.total && magic_read.total && magic_hear.pct - magic_read.pct >= 30) flags.push("Hears the magic-e difference (" + magic_hear.pct + "%) better than she reads it (" + magic_read.pct + "%).");
+  if (warmup.total && warmup.pct < 75) flags.push("Warm-up words were hard. Check the keyboard and sound before trusting the spelling scores.");
+  const fastSpell = spItems.filter(i => !i.skipped && i.ms < 2500).length;
+  if (fastSpell >= 4) flags.push(fastSpell + " spellings were typed in under 2.5 s. Check the keyboard wasn't filling words in.");
+  if (S.endedEarly) flags.push("Finished early at a break. Later parts were not done.");
+  // suggested progress (scored steps only; writing is reviewed by hand)
+  const acc = {}, evidence = [];
+  steps.filter(scored).forEach(r => {
+    const per = {};
+    shown(r).forEach(i => (i.skills || r.skills).forEach(k => { const o = per[k] || (per[k] = { c: 0, t: 0 }); o.c += itemScore(i); o.t += 1; }));
+    Object.keys(per).forEach(k => {
+      const a = acc[k] || (acc[k] = { correct: 0, total: 0 }); a.correct += per[k].c; a.total += per[k].t;
+      evidence.push({ skill: k, session: SESSION, step: r.id, correct: Math.round(per[k].c * 2) / 2, total: per[k].t, note: r.notes || "" });
+    });
+  });
+  const suggested_progress = {};
+  Object.keys(acc).forEach(k => { const p = acc[k].correct / acc[k].total * 100;
+    suggested_progress[k] = { status: p < 50 ? "not_yet" : "learning", likely_secure: p >= 90, correct: Math.round(acc[k].correct * 2) / 2, total: acc[k].total, pct: Math.round(p) }; });
+  const not_reached = steps.filter(r => r.stopped_early).map(r => ({ step: r.id, skills: r.skills, why: r.stopped_early }));
+  return { warmup, magic_hear, magic_read, spelling, spelling_groups, writing, flags, suggested_progress, evidence, not_reached,
+    caveat: "Indicative only. Writing tasks are not auto-scored; Claude reviews the texts. Spelling is exact-match: look at the raw responses." };
+}
+function buildResult() {
+  S.note = ($("#note") && $("#note").value) || S.note || "";
+  const steps = S.steps.map(r => {
+    const t = tally(r);
+    const o = { id: r.id, skills: r.skills, mode: r.mode, started_at: r.started_at, duration_sec: r.duration_sec || 0, items: r.items,
+      score: scored(r) ? { correct: t.correct, total: t.total } : null, notes: r.notes };
+    if (r.stopped_early) o.stopped_early = r.stopped_early;
+    return o;
+  });
+  const fin = now();
+  const res = { schema: "deniz-session/1", session: SESSION, kind: "assessment", title: "Baseline 3 – spelling and writing",
+    started_at: S.started_at, finished_at: fin, duration_sec: Math.round((Date.parse(fin) - Date.parse(S.started_at || fin)) / 1000),
+    device: navigator.userAgent, parent_context: S.ctx, steps, child_feeling: S.feeling, parent_note: S.note,
+    observations: S.obs, summary: computeSummary(steps) };
+  if (S.endedEarly) res.ended_early = true;
+  return res;
+}
+async function exportJson() {
+  const res = buildResult(); save();
+  const text = JSON.stringify(res, null, 2);
+  const file = new File([text], "session-03-result.json", { type: "application/json" });
+  const msg = $("#msg");
+  try {
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({ files: [file], title: "Deniz – session 3 result" });
+      S.exported = true; save(); msg.textContent = "Shared ✓"; return;
+    }
+  } catch (e) { if (e && e.name === "AbortError") return; }
+  try {
+    const url = URL.createObjectURL(file), a = document.createElement("a");
+    a.href = url; a.download = file.name; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 3000);
+    S.exported = true; save(); msg.textContent = "Saved to Downloads ✓";
+  } catch (e) { msg.textContent = "Could not save. Try Copy."; }
+}
+
+/* ====================================================================
+   BOOT
+   ==================================================================== */
+function boot() {
+  if (S.pos > 1 && S.pos < flow.length) {
+    inBoot = true;
+    screen("Parent", `<div class="emoji">💾</div><h1 style="font-size:24px">Session in progress</h1>
+      <p class="muted">Your answers are saved. Pick up where you stopped?</p>`,
+      `<button class="primary" data-act="cont">Continue ➜</button>
+       <div style="text-align:center;margin-top:14px"><button class="ghost" data-act="restart" style="min-height:36px;font-size:13px;border:0;background:none;text-decoration:underline">Start over (erases answers)</button></div>`,
+      { cont: () => { inBoot = false; wake(); go(); },
+        restart: () => { if (confirm("Start over? ALL saved answers will be erased.") && confirm("Are you sure? This cannot be undone.")) { inBoot = false; S = fresh(); save(); go(); } } });
+    return;
+  }
+  go();
+}
+// test hook (only when opened with #test): exposes state for automated checks
+if (location.hash === "#test") window.__s3 = { get S() { return S; }, buildResult, flow };
+boot();
+})();
+</script>
+</body>
+</html>

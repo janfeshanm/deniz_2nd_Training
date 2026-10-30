@@ -131,3 +131,16 @@ Schedule: daily sessions.
   next to the result JSON (`session-NN-<step>.webm`). Audio is never committed: the repo is public. Keep it in
   `data/audio/` (git-ignored). Do not put the EAL/D report or other school documents in the repo; only extracted
   levels go in `progress.json` (`school_context`).
+
+## Session 3 additions
+- No early-stop cascades: a group may stop on its own (0 of first 3 correct), but it never causes later groups to be skipped.
+  (Session 2 skipped every later phonics group after two stopped groups; avoid that.)
+- Spelling items carry `sentence`, `group`, `first_key_ms` and `deletes` (delete key presses while typing).
+- Writing steps use `mode: "writing"` and have `score: null` at step level (not auto-scored; Claude reviews the text).
+  Writing items carry `kind` (`dictation | picture | recount`), `stats` (word count, capitals, full stops, lowercase "i",
+  joining words; for dictation also `words_right`, `words_expected`, `misspelled`, `exact`) and, for dictation, `score`
+  (fraction of words right). The recount also has `planned_aloud`, `used_starter`, `edited_after_reading`, `first_text`.
+- `parent_context.predictive_off`: if not "yes", treat typed spellings with caution.
+- **‹ Back button** (Session 3 on, every future page): a small button in the header undoes the last answer or goes back one
+  screen (restoring typed text). The phone's back gesture does the same instead of leaving the page. "Start over" on the
+  resume screen is a small link with a double confirm.

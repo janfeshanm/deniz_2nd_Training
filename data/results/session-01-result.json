@@ -1,0 +1,2767 @@
+{
+  "schema": "deniz-session/1",
+  "session": 1,
+  "kind": "assessment",
+  "title": "Baseline 1 – sounds and words",
+  "started_at": "2026-10-28T07:42:13.501Z",
+  "finished_at": "2026-10-28T08:15:31.127Z",
+  "duration_sec": 1998,
+  "device": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
+  "parent_context": {
+    "home_reading": "rarely",
+    "first_language_reading": "no",
+    "vision_hearing": "none",
+    "teacher_info": "EAL/D  result is available, ask me to provide pdf when you want evaluate"
+  },
+  "steps": [
+    {
+      "id": "s1-warmup",
+      "skills": [
+        "ph1"
+      ],
+      "mode": "auto",
+      "started_at": "2026-10-28T07:42:31.312Z",
+      "duration_sec": 37,
+      "items": [
+        {
+          "prompt": "sun",
+          "expected": "s",
+          "response": "s",
+          "options": [
+            "s",
+            "p",
+            "l"
+          ],
+          "correct": true,
+          "attempts": 1,
+          "ms": 5836,
+          "skipped": false
+        },
+        {
+          "prompt": "map",
+          "expected": "m",
+          "response": "m",
+          "options": [
+            "m",
+            "t",
+            "g"
+          ],
+          "correct": true,
+          "attempts": 1,
+          "ms": 11254,
+          "skipped": false
+        },
+        {
+          "prompt": "top",
+          "expected": "t",
+          "response": "t",
+          "options": [
+            "t",
+            "n",
+            "b"
+          ],
+          "correct": true,
+          "attempts": 1,
+          "ms": 1809,
+          "skipped": false
+        },
+        {
+          "prompt": "hat",
+          "expected": "h",
+          "response": "h",
+          "options": [
+            "h",
+            "d",
+            "k"
+          ],
+          "correct": true,
+          "attempts": 1,
+          "ms": 2714,
+          "skipped": false
+        },
+        {
+          "prompt": "net",
+          "expected": "n",
+          "response": "n",
+          "options": [
+            "n",
+            "r",
+            "f"
+          ],
+          "correct": true,
+          "attempts": 1,
+          "ms": 2788,
+          "skipped": false
+        },
+        {
+          "prompt": "pig",
+          "expected": "p",
+          "response": "p",
+          "options": [
+            "p",
+            "s",
+            "w"
+          ],
+          "correct": true,
+          "attempts": 1,
+          "ms": 6162,
+          "skipped": false
+        },
+        {
+          "prompt": "can",
+          "expected": "c",
+          "response": "c",
+          "options": [
+            "c",
+            "m",
+            "j"
+          ],
+          "correct": true,
+          "attempts": 1,
+          "ms": 2381,
+          "skipped": false
+        },
+        {
+          "prompt": "dog",
+          "expected": "d",
+          "response": "d",
+          "options": [
+            "d",
+            "h",
+            "y"
+          ],
+          "correct": true,
+          "attempts": 1,
+          "ms": 3868,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 8,
+        "total": 8
+      },
+      "notes": "Hear a word, tap its first letter (auto-scored). Evidence of initial-sound + letter link."
+    },
+    {
+      "id": "s1-letters",
+      "skills": [
+        "ph1"
+      ],
+      "mode": "parent",
+      "started_at": "2026-10-28T07:43:20.596Z",
+      "duration_sec": 63,
+      "items": [
+        {
+          "prompt": "s",
+          "expected": "sound of s",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "a",
+          "expected": "sound of a",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "t",
+          "expected": "sound of t",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "p",
+          "expected": "sound of p",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "i",
+          "expected": "sound of i",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "n",
+          "expected": "sound of n",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "m",
+          "expected": "sound of m",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "d",
+          "expected": "sound of d",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "g",
+          "expected": "sound of g",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "o",
+          "expected": "sound of o",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "c",
+          "expected": "sound of c",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "k",
+          "expected": "sound of k",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "e",
+          "expected": "sound of e",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "u",
+          "expected": "sound of u",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "b",
+          "expected": "sound of b",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "h",
+          "expected": "sound of h",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "f",
+          "expected": "sound of f",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "r",
+          "expected": "sound of r",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "l",
+          "expected": "sound of l",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "j",
+          "expected": "sound of j",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "w",
+          "expected": "sound of w",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "v",
+          "expected": "sound of v",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "y",
+          "expected": "sound of y",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "z",
+          "expected": "sound of z",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "x",
+          "expected": "sound of x",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        },
+        {
+          "prompt": "q",
+          "expected": "sound of q",
+          "response": "sound",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 26,
+        "total": 26
+      },
+      "notes": "Parent-scored grid. response: sound | name (said letter name only) | none."
+    },
+    {
+      "id": "s1-cvc",
+      "skills": [
+        "ph1"
+      ],
+      "mode": "parent",
+      "started_at": "2026-10-28T07:44:59.911Z",
+      "duration_sec": 22,
+      "items": [
+        {
+          "prompt": "mat",
+          "expected": "mat",
+          "response": "mat",
+          "correct": true,
+          "attempts": 1,
+          "ms": 2292,
+          "skipped": false
+        },
+        {
+          "prompt": "pig",
+          "expected": "pig",
+          "response": "pig",
+          "correct": true,
+          "attempts": 1,
+          "ms": 2454,
+          "skipped": false
+        },
+        {
+          "prompt": "hot",
+          "expected": "hot",
+          "response": "hot",
+          "correct": true,
+          "attempts": 1,
+          "ms": 2269,
+          "skipped": false
+        },
+        {
+          "prompt": "bun",
+          "expected": "bun",
+          "response": "bun",
+          "correct": true,
+          "attempts": 1,
+          "ms": 6707,
+          "skipped": false
+        },
+        {
+          "prompt": "wet",
+          "expected": "wet",
+          "response": "wet",
+          "correct": true,
+          "attempts": 1,
+          "ms": 3339,
+          "skipped": false
+        },
+        {
+          "prompt": "dig",
+          "expected": "dig",
+          "response": "dig",
+          "correct": true,
+          "attempts": 1,
+          "ms": 5371,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 6,
+        "total": 6
+      },
+      "notes": "Short vowel words"
+    },
+    {
+      "id": "s1-digraphs",
+      "skills": [
+        "ph2"
+      ],
+      "mode": "parent",
+      "started_at": "2026-10-28T07:45:22.348Z",
+      "duration_sec": 30,
+      "items": [
+        {
+          "prompt": "ship",
+          "expected": "ship",
+          "response": "ship",
+          "correct": true,
+          "attempts": 1,
+          "ms": 5853,
+          "skipped": false
+        },
+        {
+          "prompt": "chat",
+          "expected": "chat",
+          "response": "chat",
+          "correct": true,
+          "attempts": 1,
+          "ms": 4767,
+          "skipped": false
+        },
+        {
+          "prompt": "thin",
+          "expected": "thin",
+          "response": "thin",
+          "correct": true,
+          "attempts": 1,
+          "ms": 4545,
+          "skipped": false
+        },
+        {
+          "prompt": "shop",
+          "expected": "shop",
+          "response": "shop",
+          "correct": true,
+          "attempts": 1,
+          "ms": 2793,
+          "skipped": false
+        },
+        {
+          "prompt": "much",
+          "expected": "much",
+          "response": "much",
+          "correct": true,
+          "attempts": 1,
+          "ms": 4030,
+          "skipped": false
+        },
+        {
+          "prompt": "wish",
+          "expected": "wish",
+          "response": "wish",
+          "correct": true,
+          "attempts": 1,
+          "ms": 7812,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 6,
+        "total": 6
+      },
+      "notes": "Digraphs sh ch th"
+    },
+    {
+      "id": "s1-blends",
+      "skills": [
+        "ph3"
+      ],
+      "mode": "parent",
+      "started_at": "2026-10-28T07:45:52.150Z",
+      "duration_sec": 48,
+      "items": [
+        {
+          "prompt": "frog",
+          "expected": "frog",
+          "response": "frog",
+          "correct": true,
+          "attempts": 1,
+          "ms": 5444,
+          "skipped": false
+        },
+        {
+          "prompt": "stop",
+          "expected": "stop",
+          "response": "stop",
+          "correct": true,
+          "attempts": 1,
+          "ms": 7314,
+          "skipped": false
+        },
+        {
+          "prompt": "jump",
+          "expected": "jump",
+          "response": "jump",
+          "correct": true,
+          "attempts": 1,
+          "ms": 7682,
+          "skipped": false
+        },
+        {
+          "prompt": "nest",
+          "expected": "nest",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 8351,
+          "skipped": false
+        },
+        {
+          "prompt": "clap",
+          "expected": "clap",
+          "response": "clap",
+          "correct": true,
+          "attempts": 1,
+          "ms": 12795,
+          "skipped": false
+        },
+        {
+          "prompt": "swim",
+          "expected": "swim",
+          "response": "swim",
+          "correct": true,
+          "attempts": 1,
+          "ms": 6750,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 5,
+        "total": 6
+      },
+      "notes": "Consonant blends"
+    },
+    {
+      "id": "s1-split",
+      "skills": [
+        "ph4"
+      ],
+      "mode": "parent",
+      "started_at": "2026-10-28T07:46:40.487Z",
+      "duration_sec": 33,
+      "items": [
+        {
+          "prompt": "cake",
+          "expected": "cake",
+          "response": "cake",
+          "correct": true,
+          "attempts": 1,
+          "ms": 12784,
+          "skipped": false
+        },
+        {
+          "prompt": "time",
+          "expected": "time",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 5096,
+          "skipped": false
+        },
+        {
+          "prompt": "hope",
+          "expected": "hope",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 6729,
+          "skipped": false
+        },
+        {
+          "prompt": "tune",
+          "expected": "tune",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 8615,
+          "skipped": false
+        },
+        {
+          "prompt": "kite",
+          "expected": "kite",
+          "response": null,
+          "correct": false,
+          "attempts": 0,
+          "ms": 0,
+          "skipped": true,
+          "notShown": true
+        },
+        {
+          "prompt": "bone",
+          "expected": "bone",
+          "response": null,
+          "correct": false,
+          "attempts": 0,
+          "ms": 0,
+          "skipped": true,
+          "notShown": true
+        }
+      ],
+      "score": {
+        "correct": 1,
+        "total": 4
+      },
+      "notes": "Split digraphs (magic e)",
+      "stopped_early": "group too hard (<=1 of first 4 correct)"
+    },
+    {
+      "id": "s1-teams",
+      "skills": [
+        "ph5"
+      ],
+      "mode": "parent",
+      "started_at": "2026-10-28T07:47:13.717Z",
+      "duration_sec": 54,
+      "items": [
+        {
+          "prompt": "rain",
+          "expected": "rain",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 8870,
+          "skipped": false
+        },
+        {
+          "prompt": "feet",
+          "expected": "feet",
+          "response": "feet",
+          "correct": true,
+          "attempts": 1,
+          "ms": 11785,
+          "skipped": false
+        },
+        {
+          "prompt": "boat",
+          "expected": "boat",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 12153,
+          "skipped": false
+        },
+        {
+          "prompt": "play",
+          "expected": "play",
+          "response": "play",
+          "correct": true,
+          "attempts": 1,
+          "ms": 2187,
+          "skipped": false
+        },
+        {
+          "prompt": "team",
+          "expected": "team",
+          "response": "team",
+          "correct": true,
+          "attempts": 1,
+          "ms": 7064,
+          "skipped": false
+        },
+        {
+          "prompt": "snow",
+          "expected": "snow",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 11759,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 3,
+        "total": 6
+      },
+      "notes": "Long vowel teams"
+    },
+    {
+      "id": "s1-rcontrol",
+      "skills": [
+        "ph6"
+      ],
+      "mode": "parent",
+      "started_at": "2026-10-28T07:48:07.540Z",
+      "duration_sec": 42,
+      "items": [
+        {
+          "prompt": "car",
+          "expected": "car",
+          "response": "car",
+          "correct": true,
+          "attempts": 1,
+          "ms": 5545,
+          "skipped": false
+        },
+        {
+          "prompt": "fork",
+          "expected": "fork",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 9716,
+          "skipped": false
+        },
+        {
+          "prompt": "girl",
+          "expected": "girl",
+          "response": "girl",
+          "correct": true,
+          "attempts": 1,
+          "ms": 3376,
+          "skipped": false
+        },
+        {
+          "prompt": "turn",
+          "expected": "turn",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 6552,
+          "skipped": false
+        },
+        {
+          "prompt": "shark",
+          "expected": "shark",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 7779,
+          "skipped": false
+        },
+        {
+          "prompt": "storm",
+          "expected": "storm",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 9092,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 2,
+        "total": 6
+      },
+      "notes": "R-controlled vowels"
+    },
+    {
+      "id": "s1-diphthongs",
+      "skills": [
+        "ph7"
+      ],
+      "mode": "parent",
+      "started_at": "2026-10-28T07:48:49.607Z",
+      "duration_sec": 71,
+      "items": [
+        {
+          "prompt": "out",
+          "expected": "out",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 11676,
+          "skipped": false
+        },
+        {
+          "prompt": "boy",
+          "expected": "boy",
+          "response": "boy",
+          "correct": true,
+          "attempts": 1,
+          "ms": 2097,
+          "skipped": false
+        },
+        {
+          "prompt": "cow",
+          "expected": "cow",
+          "response": "cow",
+          "correct": true,
+          "attempts": 1,
+          "ms": 12810,
+          "skipped": false
+        },
+        {
+          "prompt": "coin",
+          "expected": "coin",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 16094,
+          "skipped": false
+        },
+        {
+          "prompt": "house",
+          "expected": "house",
+          "response": "house",
+          "correct": true,
+          "attempts": 1,
+          "ms": 13865,
+          "skipped": false
+        },
+        {
+          "prompt": "down",
+          "expected": "down",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 14641,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 3,
+        "total": 6
+      },
+      "notes": "Diphthongs"
+    },
+    {
+      "id": "s1-twosyl",
+      "skills": [
+        "ph10"
+      ],
+      "mode": "parent",
+      "started_at": "2026-10-28T07:50:00.794Z",
+      "duration_sec": 73,
+      "items": [
+        {
+          "prompt": "rabbit",
+          "expected": "rabbit",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 29897,
+          "skipped": false
+        },
+        {
+          "prompt": "sunset",
+          "expected": "sunset",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 14221,
+          "skipped": false
+        },
+        {
+          "prompt": "window",
+          "expected": "window",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 10022,
+          "skipped": false
+        },
+        {
+          "prompt": "picnic",
+          "expected": "picnic",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 19288,
+          "skipped": false
+        },
+        {
+          "prompt": "garden",
+          "expected": "garden",
+          "response": null,
+          "correct": false,
+          "attempts": 0,
+          "ms": 0,
+          "skipped": true,
+          "notShown": true
+        },
+        {
+          "prompt": "pencil",
+          "expected": "pencil",
+          "response": null,
+          "correct": false,
+          "attempts": 0,
+          "ms": 0,
+          "skipped": true,
+          "notShown": true
+        }
+      ],
+      "score": {
+        "correct": 0,
+        "total": 4
+      },
+      "notes": "Two-syllable words",
+      "stopped_early": "group too hard (<=1 of first 4 correct)"
+    },
+    {
+      "id": "s1-endings",
+      "skills": [
+        "ph11"
+      ],
+      "mode": "parent",
+      "started_at": "2026-10-28T07:51:14.225Z",
+      "duration_sec": 70,
+      "items": [
+        {
+          "prompt": "jumped",
+          "expected": "jumped",
+          "response": "jumped",
+          "correct": true,
+          "attempts": 1,
+          "ms": 10555,
+          "skipped": false
+        },
+        {
+          "prompt": "hopping",
+          "expected": "hopping",
+          "response": "hopping",
+          "correct": true,
+          "attempts": 1,
+          "ms": 15397,
+          "skipped": false
+        },
+        {
+          "prompt": "played",
+          "expected": "played",
+          "response": "played",
+          "correct": true,
+          "attempts": 1,
+          "ms": 5270,
+          "skipped": false
+        },
+        {
+          "prompt": "boxes",
+          "expected": "boxes",
+          "response": "boxes",
+          "correct": true,
+          "attempts": 1,
+          "ms": 5482,
+          "skipped": false
+        },
+        {
+          "prompt": "smallest",
+          "expected": "smallest",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 12651,
+          "skipped": false
+        },
+        {
+          "prompt": "carried",
+          "expected": "carried",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 20451,
+          "skipped": true
+        }
+      ],
+      "score": {
+        "correct": 4,
+        "total": 5
+      },
+      "notes": "Words with endings"
+    },
+    {
+      "id": "s1-trigraphs",
+      "skills": [
+        "ph8"
+      ],
+      "mode": "parent",
+      "started_at": "2026-10-28T07:52:24.036Z",
+      "duration_sec": 69,
+      "items": [
+        {
+          "prompt": "light",
+          "expected": "light",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 12377,
+          "skipped": false
+        },
+        {
+          "prompt": "high",
+          "expected": "high",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 10617,
+          "skipped": true
+        },
+        {
+          "prompt": "catch",
+          "expected": "catch",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 8796,
+          "skipped": false
+        },
+        {
+          "prompt": "bridge",
+          "expected": "bridge",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 17277,
+          "skipped": false
+        },
+        {
+          "prompt": "eight",
+          "expected": "eight",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 11604,
+          "skipped": true
+        },
+        {
+          "prompt": "fudge",
+          "expected": "fudge",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 8473,
+          "skipped": true
+        }
+      ],
+      "score": {
+        "correct": 0,
+        "total": 3
+      },
+      "notes": "Trigraphs / quadgraphs"
+    },
+    {
+      "id": "s1-uncommon",
+      "skills": [
+        "ph9"
+      ],
+      "mode": "parent",
+      "started_at": "2026-10-28T07:53:33.183Z",
+      "duration_sec": 93,
+      "items": [
+        {
+          "prompt": "knee",
+          "expected": "knee",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 14552,
+          "skipped": true
+        },
+        {
+          "prompt": "write",
+          "expected": "write",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 18220,
+          "skipped": true
+        },
+        {
+          "prompt": "phone",
+          "expected": "phone",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 17161,
+          "skipped": false
+        },
+        {
+          "prompt": "wrap",
+          "expected": "wrap",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 9190,
+          "skipped": false
+        },
+        {
+          "prompt": "climb",
+          "expected": "climb",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 7306,
+          "skipped": true
+        },
+        {
+          "prompt": "ghost",
+          "expected": "ghost",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 26971,
+          "skipped": true
+        }
+      ],
+      "score": {
+        "correct": 0,
+        "total": 2
+      },
+      "notes": "Less common spellings"
+    },
+    {
+      "id": "s1-pseudo",
+      "skills": [
+        "ph12"
+      ],
+      "mode": "parent",
+      "started_at": "2026-10-28T07:56:05.014Z",
+      "duration_sec": 123,
+      "items": [
+        {
+          "prompt": "sib",
+          "expected": "sib",
+          "response": "sib",
+          "correct": true,
+          "attempts": 1,
+          "ms": 13069,
+          "skipped": false
+        },
+        {
+          "prompt": "vop",
+          "expected": "vop",
+          "response": "vop",
+          "correct": true,
+          "attempts": 1,
+          "ms": 10656,
+          "skipped": false
+        },
+        {
+          "prompt": "chim",
+          "expected": "chim",
+          "response": "chim",
+          "correct": true,
+          "attempts": 1,
+          "ms": 221,
+          "skipped": false
+        },
+        {
+          "prompt": "blen",
+          "expected": "blen",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 21079,
+          "skipped": true
+        },
+        {
+          "prompt": "dack",
+          "expected": "dack",
+          "response": "dack",
+          "correct": true,
+          "attempts": 1,
+          "ms": 6109,
+          "skipped": false
+        },
+        {
+          "prompt": "fape",
+          "expected": "fape",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 13607,
+          "skipped": false
+        },
+        {
+          "prompt": "loat",
+          "expected": "loat",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 15585,
+          "skipped": false
+        },
+        {
+          "prompt": "perd",
+          "expected": "perd",
+          "response": "perd",
+          "correct": true,
+          "attempts": 1,
+          "ms": 11582,
+          "skipped": false
+        },
+        {
+          "prompt": "shub",
+          "expected": "shub",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 10288,
+          "skipped": false
+        },
+        {
+          "prompt": "trin",
+          "expected": "trin",
+          "response": null,
+          "correct": false,
+          "attempts": 1,
+          "ms": 21080,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 5,
+        "total": 9
+      },
+      "notes": "Nonsense words: pure decoding, no memory or guessing."
+    },
+    {
+      "id": "s1-hf-t1",
+      "skills": [
+        "fl1"
+      ],
+      "mode": "parent",
+      "started_at": "2026-10-28T07:59:28.741Z",
+      "duration_sec": 65,
+      "items": [
+        {
+          "prompt": "the",
+          "expected": "the",
+          "response": "the",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 2766,
+          "skipped": false
+        },
+        {
+          "prompt": "and",
+          "expected": "and",
+          "response": "and",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 2000,
+          "skipped": false
+        },
+        {
+          "prompt": "said",
+          "expected": "said",
+          "response": null,
+          "correct": false,
+          "quality": "wrong",
+          "attempts": 1,
+          "ms": 6217,
+          "skipped": false
+        },
+        {
+          "prompt": "you",
+          "expected": "you",
+          "response": "you",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 6207,
+          "skipped": false
+        },
+        {
+          "prompt": "was",
+          "expected": "was",
+          "response": "was",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 4072,
+          "skipped": false
+        },
+        {
+          "prompt": "they",
+          "expected": "they",
+          "response": "they",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 2130,
+          "skipped": false
+        },
+        {
+          "prompt": "are",
+          "expected": "are",
+          "response": null,
+          "correct": false,
+          "quality": null,
+          "attempts": 1,
+          "ms": 6117,
+          "skipped": true
+        },
+        {
+          "prompt": "have",
+          "expected": "have",
+          "response": "have",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 4620,
+          "skipped": false
+        },
+        {
+          "prompt": "one",
+          "expected": "one",
+          "response": "one",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 2104,
+          "skipped": false
+        },
+        {
+          "prompt": "we",
+          "expected": "we",
+          "response": "we",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 2412,
+          "skipped": false
+        },
+        {
+          "prompt": "my",
+          "expected": "my",
+          "response": "my",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 1935,
+          "skipped": false
+        },
+        {
+          "prompt": "like",
+          "expected": "like",
+          "response": "like",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 1900,
+          "skipped": false
+        },
+        {
+          "prompt": "go",
+          "expected": "go",
+          "response": "go",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 1680,
+          "skipped": false
+        },
+        {
+          "prompt": "she",
+          "expected": "she",
+          "response": "she",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 1600,
+          "skipped": false
+        },
+        {
+          "prompt": "for",
+          "expected": "for",
+          "response": null,
+          "correct": false,
+          "quality": null,
+          "attempts": 1,
+          "ms": 5439,
+          "skipped": true
+        },
+        {
+          "prompt": "of",
+          "expected": "of",
+          "response": "of",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 2313,
+          "skipped": false
+        },
+        {
+          "prompt": "his",
+          "expected": "his",
+          "response": "his",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 2902,
+          "skipped": false
+        },
+        {
+          "prompt": "no",
+          "expected": "no",
+          "response": "no",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 1879,
+          "skipped": false
+        },
+        {
+          "prompt": "do",
+          "expected": "do",
+          "response": "do",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 2990,
+          "skipped": false
+        },
+        {
+          "prompt": "so",
+          "expected": "so",
+          "response": "so",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 3988,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 17,
+        "total": 18
+      },
+      "notes": "Sight words 1"
+    },
+    {
+      "id": "s1-hf-t2",
+      "skills": [
+        "fl1"
+      ],
+      "mode": "parent",
+      "started_at": "2026-10-28T08:00:34.032Z",
+      "duration_sec": 172,
+      "items": [
+        {
+          "prompt": "when",
+          "expected": "when",
+          "response": null,
+          "correct": false,
+          "quality": "wrong",
+          "attempts": 1,
+          "ms": 10620,
+          "skipped": false
+        },
+        {
+          "prompt": "what",
+          "expected": "what",
+          "response": null,
+          "correct": false,
+          "quality": "wrong",
+          "attempts": 1,
+          "ms": 12097,
+          "skipped": false
+        },
+        {
+          "prompt": "where",
+          "expected": "where",
+          "response": "where",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 6249,
+          "skipped": false
+        },
+        {
+          "prompt": "there",
+          "expected": "there",
+          "response": null,
+          "correct": false,
+          "quality": null,
+          "attempts": 1,
+          "ms": 16094,
+          "skipped": true
+        },
+        {
+          "prompt": "their",
+          "expected": "their",
+          "response": "their",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 5937,
+          "skipped": false
+        },
+        {
+          "prompt": "were",
+          "expected": "were",
+          "response": "were",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 5365,
+          "skipped": false
+        },
+        {
+          "prompt": "some",
+          "expected": "some",
+          "response": "some",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 4544,
+          "skipped": false
+        },
+        {
+          "prompt": "come",
+          "expected": "come",
+          "response": "come",
+          "correct": true,
+          "quality": "slow",
+          "attempts": 1,
+          "ms": 10392,
+          "skipped": false
+        },
+        {
+          "prompt": "little",
+          "expected": "little",
+          "response": "little",
+          "correct": true,
+          "quality": "slow",
+          "attempts": 1,
+          "ms": 10158,
+          "skipped": false
+        },
+        {
+          "prompt": "people",
+          "expected": "people",
+          "response": "people",
+          "correct": true,
+          "quality": "slow",
+          "attempts": 1,
+          "ms": 8488,
+          "skipped": false
+        },
+        {
+          "prompt": "would",
+          "expected": "would",
+          "response": null,
+          "correct": false,
+          "quality": "wrong",
+          "attempts": 1,
+          "ms": 7994,
+          "skipped": false
+        },
+        {
+          "prompt": "could",
+          "expected": "could",
+          "response": null,
+          "correct": false,
+          "quality": "wrong",
+          "attempts": 1,
+          "ms": 8479,
+          "skipped": false
+        },
+        {
+          "prompt": "friend",
+          "expected": "friend",
+          "response": null,
+          "correct": false,
+          "quality": null,
+          "attempts": 1,
+          "ms": 8833,
+          "skipped": true
+        },
+        {
+          "prompt": "again",
+          "expected": "again",
+          "response": null,
+          "correct": false,
+          "quality": null,
+          "attempts": 1,
+          "ms": 9507,
+          "skipped": true
+        },
+        {
+          "prompt": "because",
+          "expected": "because",
+          "response": "because",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 3251,
+          "skipped": false
+        },
+        {
+          "prompt": "which",
+          "expected": "which",
+          "response": "which",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 13136,
+          "skipped": false
+        },
+        {
+          "prompt": "going",
+          "expected": "going",
+          "response": null,
+          "correct": false,
+          "quality": "wrong",
+          "attempts": 1,
+          "ms": 9103,
+          "skipped": false
+        },
+        {
+          "prompt": "want",
+          "expected": "want",
+          "response": null,
+          "correct": false,
+          "quality": "wrong",
+          "attempts": 1,
+          "ms": 13297,
+          "skipped": false
+        },
+        {
+          "prompt": "put",
+          "expected": "put",
+          "response": null,
+          "correct": false,
+          "quality": "wrong",
+          "attempts": 1,
+          "ms": 6262,
+          "skipped": false
+        },
+        {
+          "prompt": "school",
+          "expected": "school",
+          "response": "school",
+          "correct": true,
+          "quality": "quick",
+          "attempts": 1,
+          "ms": 2165,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 10,
+        "total": 17
+      },
+      "notes": "Sight words 2"
+    },
+    {
+      "id": "s1-hf-t3",
+      "skills": [
+        "fl1"
+      ],
+      "mode": "parent",
+      "started_at": "2026-10-28T08:03:26.023Z",
+      "duration_sec": 200,
+      "items": [
+        {
+          "prompt": "thought",
+          "expected": "thought",
+          "response": null,
+          "correct": false,
+          "quality": null,
+          "attempts": 1,
+          "ms": 4525,
+          "skipped": true
+        },
+        {
+          "prompt": "through",
+          "expected": "through",
+          "response": null,
+          "correct": false,
+          "quality": null,
+          "attempts": 1,
+          "ms": 9733,
+          "skipped": true
+        },
+        {
+          "prompt": "enough",
+          "expected": "enough",
+          "response": null,
+          "correct": false,
+          "quality": "wrong",
+          "attempts": 1,
+          "ms": 10422,
+          "skipped": false
+        },
+        {
+          "prompt": "always",
+          "expected": "always",
+          "response": null,
+          "correct": false,
+          "quality": "wrong",
+          "attempts": 1,
+          "ms": 14249,
+          "skipped": false
+        },
+        {
+          "prompt": "together",
+          "expected": "together",
+          "response": null,
+          "correct": false,
+          "quality": null,
+          "attempts": 1,
+          "ms": 3188,
+          "skipped": true
+        },
+        {
+          "prompt": "another",
+          "expected": "another",
+          "response": null,
+          "correct": false,
+          "quality": null,
+          "attempts": 1,
+          "ms": 6162,
+          "skipped": true
+        },
+        {
+          "prompt": "different",
+          "expected": "different",
+          "response": null,
+          "correct": false,
+          "quality": "wrong",
+          "attempts": 1,
+          "ms": 6856,
+          "skipped": false
+        },
+        {
+          "prompt": "every",
+          "expected": "every",
+          "response": null,
+          "correct": false,
+          "quality": null,
+          "attempts": 1,
+          "ms": 7744,
+          "skipped": true
+        },
+        {
+          "prompt": "beautiful",
+          "expected": "beautiful",
+          "response": null,
+          "correct": false,
+          "quality": null,
+          "attempts": 1,
+          "ms": 18107,
+          "skipped": true
+        },
+        {
+          "prompt": "answer",
+          "expected": "answer",
+          "response": null,
+          "correct": false,
+          "quality": null,
+          "attempts": 1,
+          "ms": 23897,
+          "skipped": true
+        },
+        {
+          "prompt": "mother",
+          "expected": "mother",
+          "response": null,
+          "correct": false,
+          "quality": "wrong",
+          "attempts": 1,
+          "ms": 11321,
+          "skipped": false
+        },
+        {
+          "prompt": "laugh",
+          "expected": "laugh",
+          "response": null,
+          "correct": false,
+          "quality": "wrong",
+          "attempts": 1,
+          "ms": 9647,
+          "skipped": false
+        },
+        {
+          "prompt": "whole",
+          "expected": "whole",
+          "response": null,
+          "correct": false,
+          "quality": null,
+          "attempts": 1,
+          "ms": 4769,
+          "skipped": true
+        },
+        {
+          "prompt": "once",
+          "expected": "once",
+          "response": null,
+          "correct": false,
+          "quality": "wrong",
+          "attempts": 1,
+          "ms": 10075,
+          "skipped": false
+        },
+        {
+          "prompt": "great",
+          "expected": "great",
+          "response": null,
+          "correct": false,
+          "quality": null,
+          "attempts": 1,
+          "ms": 16968,
+          "skipped": true
+        },
+        {
+          "prompt": "world",
+          "expected": "world",
+          "response": null,
+          "correct": false,
+          "quality": null,
+          "attempts": 1,
+          "ms": 12593,
+          "skipped": true
+        },
+        {
+          "prompt": "sometimes",
+          "expected": "sometimes",
+          "response": null,
+          "correct": false,
+          "quality": null,
+          "attempts": 1,
+          "ms": 6965,
+          "skipped": true
+        },
+        {
+          "prompt": "children",
+          "expected": "children",
+          "response": null,
+          "correct": false,
+          "quality": "wrong",
+          "attempts": 1,
+          "ms": 8961,
+          "skipped": false
+        },
+        {
+          "prompt": "important",
+          "expected": "important",
+          "response": null,
+          "correct": false,
+          "quality": null,
+          "attempts": 1,
+          "ms": 5498,
+          "skipped": true
+        },
+        {
+          "prompt": "early",
+          "expected": "early",
+          "response": null,
+          "correct": false,
+          "quality": null,
+          "attempts": 1,
+          "ms": 8639,
+          "skipped": true
+        }
+      ],
+      "score": {
+        "correct": 0,
+        "total": 7
+      },
+      "notes": "Sight words 3"
+    },
+    {
+      "id": "s1-meaning",
+      "skills": [
+        "vo1",
+        "vo2"
+      ],
+      "mode": "parent",
+      "started_at": "2026-10-28T08:08:56.914Z",
+      "duration_sec": 71,
+      "items": [
+        {
+          "prompt": "hungry",
+          "expected": "knows meaning",
+          "response": "yes",
+          "correct": true,
+          "score": 1,
+          "skills": [
+            "vo1"
+          ],
+          "attempts": 1,
+          "ms": 10139,
+          "skipped": false
+        },
+        {
+          "prompt": "tired",
+          "expected": "knows meaning",
+          "response": "yes",
+          "correct": true,
+          "score": 1,
+          "skills": [
+            "vo1"
+          ],
+          "attempts": 1,
+          "ms": 12803,
+          "skipped": false
+        },
+        {
+          "prompt": "freezing",
+          "expected": "knows meaning",
+          "response": "yes",
+          "correct": true,
+          "score": 1,
+          "skills": [
+            "vo1"
+          ],
+          "attempts": 1,
+          "ms": 20408,
+          "skipped": false
+        },
+        {
+          "prompt": "whisper",
+          "expected": "knows meaning",
+          "response": "yes",
+          "correct": true,
+          "score": 1,
+          "skills": [
+            "vo2"
+          ],
+          "attempts": 1,
+          "ms": 8128,
+          "skipped": false
+        },
+        {
+          "prompt": "enormous",
+          "expected": "knows meaning",
+          "response": "yes",
+          "correct": true,
+          "score": 1,
+          "skills": [
+            "vo2"
+          ],
+          "attempts": 1,
+          "ms": 3739,
+          "skipped": false
+        },
+        {
+          "prompt": "curious",
+          "expected": "knows meaning",
+          "response": "yes",
+          "correct": true,
+          "score": 1,
+          "skills": [
+            "vo2"
+          ],
+          "attempts": 1,
+          "ms": 4662,
+          "skipped": false
+        },
+        {
+          "prompt": "gentle",
+          "expected": "knows meaning",
+          "response": "yes",
+          "correct": true,
+          "score": 1,
+          "skills": [
+            "vo2"
+          ],
+          "attempts": 1,
+          "ms": 3921,
+          "skipped": false
+        },
+        {
+          "prompt": "borrow",
+          "expected": "knows meaning",
+          "response": "yes",
+          "correct": true,
+          "score": 1,
+          "skills": [
+            "vo2"
+          ],
+          "attempts": 1,
+          "ms": 6750,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 8,
+        "total": 8
+      },
+      "notes": "Spoken word; parent judges whether Deniz knows the meaning."
+    },
+    {
+      "id": "s1-spelling",
+      "skills": [
+        "sp1",
+        "sp2",
+        "sp3",
+        "sp4",
+        "sp5",
+        "sp8",
+        "hw6"
+      ],
+      "mode": "auto",
+      "started_at": "2026-10-28T08:10:22.460Z",
+      "duration_sec": 219,
+      "items": [
+        {
+          "prompt": "pig",
+          "sentence": "The pig is in the mud.",
+          "expected": "pig",
+          "response": "pig",
+          "correct": true,
+          "skills": [
+            "sp1"
+          ],
+          "attempts": 1,
+          "ms": 19775,
+          "skipped": false
+        },
+        {
+          "prompt": "ship",
+          "sentence": "The ship is big.",
+          "expected": "ship",
+          "response": "ship",
+          "correct": true,
+          "skills": [
+            "sp1",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 20243,
+          "skipped": false
+        },
+        {
+          "prompt": "jump",
+          "sentence": "I can jump high.",
+          "expected": "jump",
+          "response": "jomp",
+          "correct": false,
+          "skills": [
+            "sp1"
+          ],
+          "attempts": 1,
+          "ms": 13228,
+          "skipped": false
+        },
+        {
+          "prompt": "rain",
+          "sentence": "I like the rain.",
+          "expected": "rain",
+          "response": "ren",
+          "correct": false,
+          "skills": [
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 14026,
+          "skipped": false
+        },
+        {
+          "prompt": "cake",
+          "sentence": "We ate the cake.",
+          "expected": "cake",
+          "response": "ceck",
+          "correct": false,
+          "skills": [
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 33353,
+          "skipped": false
+        },
+        {
+          "prompt": "said",
+          "sentence": "She said hello.",
+          "expected": "said",
+          "response": "sad",
+          "correct": false,
+          "skills": [
+            "sp2"
+          ],
+          "attempts": 1,
+          "ms": 28542,
+          "skipped": false
+        },
+        {
+          "prompt": "because",
+          "sentence": "I am happy because it is sunny.",
+          "expected": "because",
+          "response": "becu",
+          "correct": false,
+          "skills": [
+            "sp2"
+          ],
+          "attempts": 1,
+          "ms": 37474,
+          "skipped": false
+        },
+        {
+          "prompt": "little",
+          "sentence": "A little dog ran by.",
+          "expected": "little",
+          "response": "litl",
+          "correct": false,
+          "skills": [
+            "sp2",
+            "sp4"
+          ],
+          "attempts": 1,
+          "ms": 20665,
+          "skipped": false
+        },
+        {
+          "prompt": "kicked",
+          "sentence": "He kicked the ball.",
+          "expected": "kicked",
+          "response": "kic",
+          "correct": false,
+          "skills": [
+            "sp8"
+          ],
+          "attempts": 1,
+          "ms": 18693,
+          "skipped": false
+        },
+        {
+          "prompt": "catch",
+          "sentence": "Let us catch the bus.",
+          "expected": "catch",
+          "response": "cach",
+          "correct": false,
+          "skills": [
+            "sp5"
+          ],
+          "attempts": 1,
+          "ms": 13477,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 2,
+        "total": 10
+      },
+      "notes": "Dictated words typed on the phone keyboard (auto-scored exact match; review the raw responses)."
+    }
+  ],
+  "child_feeling": "great",
+  "parent_note": "",
+  "observations": [
+    "Sounds out letter by letter",
+    "Mixes up b / d / p / q",
+    "Reads smoothly when she knows the word",
+    "Got tired or distracted"
+  ],
+  "summary": {
+    "letters": {
+      "total": 26,
+      "sound": 26,
+      "name_only": 0,
+      "none": 0,
+      "unknown": [],
+      "name_only_letters": []
+    },
+    "phonics_groups": [
+      {
+        "id": "s1-cvc",
+        "label": "Short vowel words",
+        "skills": [
+          "ph1"
+        ],
+        "correct": 6,
+        "total": 6,
+        "pct": 100,
+        "stopped_early": false
+      },
+      {
+        "id": "s1-digraphs",
+        "label": "Digraphs sh ch th",
+        "skills": [
+          "ph2"
+        ],
+        "correct": 6,
+        "total": 6,
+        "pct": 100,
+        "stopped_early": false
+      },
+      {
+        "id": "s1-blends",
+        "label": "Consonant blends",
+        "skills": [
+          "ph3"
+        ],
+        "correct": 5,
+        "total": 6,
+        "pct": 83,
+        "stopped_early": false
+      },
+      {
+        "id": "s1-split",
+        "label": "Split digraphs (magic e)",
+        "skills": [
+          "ph4"
+        ],
+        "correct": 1,
+        "total": 4,
+        "pct": 25,
+        "stopped_early": true
+      },
+      {
+        "id": "s1-teams",
+        "label": "Long vowel teams",
+        "skills": [
+          "ph5"
+        ],
+        "correct": 3,
+        "total": 6,
+        "pct": 50,
+        "stopped_early": false
+      },
+      {
+        "id": "s1-rcontrol",
+        "label": "R-controlled vowels",
+        "skills": [
+          "ph6"
+        ],
+        "correct": 2,
+        "total": 6,
+        "pct": 33,
+        "stopped_early": false
+      },
+      {
+        "id": "s1-diphthongs",
+        "label": "Diphthongs",
+        "skills": [
+          "ph7"
+        ],
+        "correct": 3,
+        "total": 6,
+        "pct": 50,
+        "stopped_early": false
+      },
+      {
+        "id": "s1-twosyl",
+        "label": "Two-syllable words",
+        "skills": [
+          "ph10"
+        ],
+        "correct": 0,
+        "total": 4,
+        "pct": 0,
+        "stopped_early": true
+      },
+      {
+        "id": "s1-endings",
+        "label": "Words with endings",
+        "skills": [
+          "ph11"
+        ],
+        "correct": 4,
+        "total": 5,
+        "pct": 80,
+        "stopped_early": false
+      },
+      {
+        "id": "s1-trigraphs",
+        "label": "Trigraphs / quadgraphs",
+        "skills": [
+          "ph8"
+        ],
+        "correct": 0,
+        "total": 3,
+        "pct": 0,
+        "stopped_early": false
+      },
+      {
+        "id": "s1-uncommon",
+        "label": "Less common spellings",
+        "skills": [
+          "ph9"
+        ],
+        "correct": 0,
+        "total": 2,
+        "pct": 0,
+        "stopped_early": false
+      }
+    ],
+    "pseudo": {
+      "label": "Made-up words",
+      "skills": [
+        "ph12"
+      ],
+      "correct": 5,
+      "total": 9,
+      "pct": 56
+    },
+    "hf_tiers": [
+      {
+        "id": "s1-hf-t1",
+        "label": "Sight words 1",
+        "correct": 17,
+        "total": 18,
+        "pct": 94,
+        "stopped_early": false,
+        "quick_pct": 94
+      },
+      {
+        "id": "s1-hf-t2",
+        "label": "Sight words 2",
+        "correct": 10,
+        "total": 17,
+        "pct": 59,
+        "stopped_early": false,
+        "quick_pct": 41
+      },
+      {
+        "id": "s1-hf-t3",
+        "label": "Sight words 3",
+        "correct": 0,
+        "total": 7,
+        "pct": 0,
+        "stopped_early": false,
+        "quick_pct": 0
+      }
+    ],
+    "meaning": {
+      "correct": 8,
+      "total": 8,
+      "pct": 100
+    },
+    "spelling": {
+      "correct": 2,
+      "total": 10,
+      "pct": 20
+    },
+    "decoding_stage": 2,
+    "decoding_label": "Mid Year 1 phonics",
+    "next_phonics_to_teach": [
+      "Split digraphs (magic e)",
+      "Long vowel teams"
+    ],
+    "hf_label": "Year 1 sight words",
+    "indicative_level": "Mid Year 1 phonics (lower of phonics and sight-word results)",
+    "flags": [],
+    "suggested_progress": {
+      "ph1": {
+        "status": "learning",
+        "likely_secure": true,
+        "correct": 40,
+        "total": 40,
+        "pct": 100
+      },
+      "ph2": {
+        "status": "learning",
+        "likely_secure": true,
+        "correct": 6,
+        "total": 6,
+        "pct": 100
+      },
+      "ph3": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 5,
+        "total": 6,
+        "pct": 83
+      },
+      "ph4": {
+        "status": "not_yet",
+        "likely_secure": false,
+        "correct": 1,
+        "total": 4,
+        "pct": 25
+      },
+      "ph5": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 3,
+        "total": 6,
+        "pct": 50
+      },
+      "ph6": {
+        "status": "not_yet",
+        "likely_secure": false,
+        "correct": 2,
+        "total": 6,
+        "pct": 33
+      },
+      "ph7": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 3,
+        "total": 6,
+        "pct": 50
+      },
+      "ph10": {
+        "status": "not_yet",
+        "likely_secure": false,
+        "correct": 0,
+        "total": 4,
+        "pct": 0
+      },
+      "ph11": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 4,
+        "total": 5,
+        "pct": 80
+      },
+      "ph8": {
+        "status": "not_yet",
+        "likely_secure": false,
+        "correct": 0,
+        "total": 3,
+        "pct": 0
+      },
+      "ph9": {
+        "status": "not_yet",
+        "likely_secure": false,
+        "correct": 0,
+        "total": 2,
+        "pct": 0
+      },
+      "ph12": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 5,
+        "total": 9,
+        "pct": 56
+      },
+      "fl1": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 27,
+        "total": 42,
+        "pct": 64
+      },
+      "vo1": {
+        "status": "learning",
+        "likely_secure": true,
+        "correct": 3,
+        "total": 3,
+        "pct": 100
+      },
+      "vo2": {
+        "status": "learning",
+        "likely_secure": true,
+        "correct": 5,
+        "total": 5,
+        "pct": 100
+      },
+      "sp1": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 2,
+        "total": 3,
+        "pct": 67
+      },
+      "sp3": {
+        "status": "not_yet",
+        "likely_secure": false,
+        "correct": 1,
+        "total": 3,
+        "pct": 33
+      },
+      "sp2": {
+        "status": "not_yet",
+        "likely_secure": false,
+        "correct": 0,
+        "total": 3,
+        "pct": 0
+      },
+      "sp4": {
+        "status": "not_yet",
+        "likely_secure": false,
+        "correct": 0,
+        "total": 1,
+        "pct": 0
+      },
+      "sp8": {
+        "status": "not_yet",
+        "likely_secure": false,
+        "correct": 0,
+        "total": 1,
+        "pct": 0
+      },
+      "sp5": {
+        "status": "not_yet",
+        "likely_secure": false,
+        "correct": 0,
+        "total": 1,
+        "pct": 0
+      }
+    },
+    "evidence": [
+      {
+        "skill": "ph1",
+        "session": 1,
+        "step": "s1-warmup",
+        "correct": 8,
+        "total": 8,
+        "note": "Hear a word, tap its first letter (auto-scored). Evidence of initial-sound + letter link."
+      },
+      {
+        "skill": "ph1",
+        "session": 1,
+        "step": "s1-letters",
+        "correct": 26,
+        "total": 26,
+        "note": "Parent-scored grid. response: sound | name (said letter name only) | none."
+      },
+      {
+        "skill": "ph1",
+        "session": 1,
+        "step": "s1-cvc",
+        "correct": 6,
+        "total": 6,
+        "note": "Short vowel words"
+      },
+      {
+        "skill": "ph2",
+        "session": 1,
+        "step": "s1-digraphs",
+        "correct": 6,
+        "total": 6,
+        "note": "Digraphs sh ch th"
+      },
+      {
+        "skill": "ph3",
+        "session": 1,
+        "step": "s1-blends",
+        "correct": 5,
+        "total": 6,
+        "note": "Consonant blends"
+      },
+      {
+        "skill": "ph4",
+        "session": 1,
+        "step": "s1-split",
+        "correct": 1,
+        "total": 4,
+        "note": "Split digraphs (magic e)"
+      },
+      {
+        "skill": "ph5",
+        "session": 1,
+        "step": "s1-teams",
+        "correct": 3,
+        "total": 6,
+        "note": "Long vowel teams"
+      },
+      {
+        "skill": "ph6",
+        "session": 1,
+        "step": "s1-rcontrol",
+        "correct": 2,
+        "total": 6,
+        "note": "R-controlled vowels"
+      },
+      {
+        "skill": "ph7",
+        "session": 1,
+        "step": "s1-diphthongs",
+        "correct": 3,
+        "total": 6,
+        "note": "Diphthongs"
+      },
+      {
+        "skill": "ph10",
+        "session": 1,
+        "step": "s1-twosyl",
+        "correct": 0,
+        "total": 4,
+        "note": "Two-syllable words"
+      },
+      {
+        "skill": "ph11",
+        "session": 1,
+        "step": "s1-endings",
+        "correct": 4,
+        "total": 5,
+        "note": "Words with endings"
+      },
+      {
+        "skill": "ph8",
+        "session": 1,
+        "step": "s1-trigraphs",
+        "correct": 0,
+        "total": 3,
+        "note": "Trigraphs / quadgraphs"
+      },
+      {
+        "skill": "ph9",
+        "session": 1,
+        "step": "s1-uncommon",
+        "correct": 0,
+        "total": 2,
+        "note": "Less common spellings"
+      },
+      {
+        "skill": "ph12",
+        "session": 1,
+        "step": "s1-pseudo",
+        "correct": 5,
+        "total": 9,
+        "note": "Nonsense words: pure decoding, no memory or guessing."
+      },
+      {
+        "skill": "fl1",
+        "session": 1,
+        "step": "s1-hf-t1",
+        "correct": 17,
+        "total": 18,
+        "note": "Sight words 1"
+      },
+      {
+        "skill": "fl1",
+        "session": 1,
+        "step": "s1-hf-t2",
+        "correct": 10,
+        "total": 17,
+        "note": "Sight words 2"
+      },
+      {
+        "skill": "fl1",
+        "session": 1,
+        "step": "s1-hf-t3",
+        "correct": 0,
+        "total": 7,
+        "note": "Sight words 3"
+      },
+      {
+        "skill": "vo1",
+        "session": 1,
+        "step": "s1-meaning",
+        "correct": 3,
+        "total": 3,
+        "note": "Spoken word; parent judges whether Deniz knows the meaning."
+      },
+      {
+        "skill": "vo2",
+        "session": 1,
+        "step": "s1-meaning",
+        "correct": 5,
+        "total": 5,
+        "note": "Spoken word; parent judges whether Deniz knows the meaning."
+      },
+      {
+        "skill": "sp1",
+        "session": 1,
+        "step": "s1-spelling",
+        "correct": 2,
+        "total": 3,
+        "note": "Dictated words typed on the phone keyboard (auto-scored exact match; review the raw responses)."
+      },
+      {
+        "skill": "sp3",
+        "session": 1,
+        "step": "s1-spelling",
+        "correct": 1,
+        "total": 3,
+        "note": "Dictated words typed on the phone keyboard (auto-scored exact match; review the raw responses)."
+      },
+      {
+        "skill": "sp2",
+        "session": 1,
+        "step": "s1-spelling",
+        "correct": 0,
+        "total": 3,
+        "note": "Dictated words typed on the phone keyboard (auto-scored exact match; review the raw responses)."
+      },
+      {
+        "skill": "sp4",
+        "session": 1,
+        "step": "s1-spelling",
+        "correct": 0,
+        "total": 1,
+        "note": "Dictated words typed on the phone keyboard (auto-scored exact match; review the raw responses)."
+      },
+      {
+        "skill": "sp8",
+        "session": 1,
+        "step": "s1-spelling",
+        "correct": 0,
+        "total": 1,
+        "note": "Dictated words typed on the phone keyboard (auto-scored exact match; review the raw responses)."
+      },
+      {
+        "skill": "sp5",
+        "session": 1,
+        "step": "s1-spelling",
+        "correct": 0,
+        "total": 1,
+        "note": "Dictated words typed on the phone keyboard (auto-scored exact match; review the raw responses)."
+      }
+    ],
+    "not_reached": [
+      {
+        "step": "s1-split",
+        "skills": [
+          "ph4"
+        ],
+        "why": "group too hard (<=1 of first 4 correct)"
+      },
+      {
+        "step": "s1-twosyl",
+        "skills": [
+          "ph10"
+        ],
+        "why": "group too hard (<=1 of first 4 correct)"
+      }
+    ],
+    "caveat": "Indicative only. Based on one short session; not an official reading level. Session 2 adds connected text and comprehension."
+  }
+}
