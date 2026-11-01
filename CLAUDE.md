@@ -154,3 +154,7 @@ Schedule: daily sessions.
 - Typing screens: the Done button sits right under the text box, and the bottom bar hides while the keyboard is open
   (it covered the box on the phone in Session 3).
 - About 20–25 minutes per training session (31–33 minutes tired her).
+- Session 5 adds: a 1-minute **keyboard game** (`type: "keys"`, one text box kept open; items carry `ms` to the right key and
+  `attempts`; track the median over sessions for hw6), a **cold check** of the previous session's pattern before any re-teaching
+  (`sN-cold-read` / `sN-cold-spell`, the retention evidence), tap-the-spelling **review** of earlier tricky words (no typing), and
+  **word-tile sentence building** (`type: "build"`) to practise "and" without typing. Writing steps can prefill a sentence start.
