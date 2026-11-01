@@ -158,3 +158,7 @@ Schedule: daily sessions.
   `attempts`; track the median over sessions for hw6), a **cold check** of the previous session's pattern before any re-teaching
   (`sN-cold-read` / `sN-cold-spell`, the retention evidence), tap-the-spelling **review** of earlier tricky words (no typing), and
   **word-tile sentence building** (`type: "build"`) to practise "and" without typing. Writing steps can prefill a sentence start.
+- Session 6 adds **phrase reading** (a `read` step with `phrase: true`; ✓ = read as one smooth chunk; evidence for fl5) and a
+  rule screen (ai in the middle, ay at the end). Feedback hints follow the pattern taught (magic e, ai/ay, phrase).
+  Recordings live only in memory: if the page reloads they are lost, and the wrap-up and `summary.flags` now say so.
+- Each training session opens with a **cold check** of the previous session's pattern and tricky words (no reminder first).

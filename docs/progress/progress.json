@@ -10,16 +10,17 @@
     "secure"
   ],
   "next_session": {
-    "number": 5,
+    "number": 6,
     "kind": "training",
-    "title": "Training 2 – magic e (o_e, u_e) + want / what / are",
-    "url": "sessions/session-05.html"
+    "title": "Training 3 – ai / ay + when / there / put + smooth phrases",
+    "url": "sessions/session-06.html"
   },
   "sessions_completed": [
     1,
     2,
     3,
-    4
+    4,
+    5
   ],
   "history": [
     {
@@ -53,6 +54,14 @@
       "duration_min": 36,
       "feeling": "great",
       "summary": "Magic e clicked: 8/8 hearing, 8/8 reading, 5/5 spelling right after teaching (no ck). said/was/with right first go. Story 95% cold, pace 32 → 39 wcpm. One sentence took 9 minutes to type. Check she remembers next session."
+    },
+    {
+      "session": 5,
+      "title": "Training 2 – magic e (o_e, u_e) + want / what / are",
+      "date": "2026-11-01",
+      "duration_min": 26,
+      "feeling": "great",
+      "summary": "Remembered magic e cold (4/4 read, 2/2 spell). o_e/u_e 17/17. said/was/with kept; want/what/are 3/3. Story 92% but slow (21 wcpm), 'back' and 'was' still misread. Sentence with 'and' in 3 min. Keyboard ~2 s per letter."
     }
   ],
   "skills": {
@@ -128,7 +137,7 @@
     "ph4": {
       "area": "phonics",
       "name": "Split digraphs (\"magic e\")",
-      "status": "learning",
+      "status": "secure",
       "evidence": [
         {
           "session": 1,
@@ -165,6 +174,24 @@
           "correct": 8,
           "total": 8,
           "note": "Read 8 words aloud: all 6 magic-e words and both short ones (right after teaching)"
+        },
+        {
+          "session": 5,
+          "correct": 4,
+          "total": 4,
+          "note": "COLD check (no reminder, new words): gate, hide, wipe, bake. Remembered from S4."
+        },
+        {
+          "session": 5,
+          "correct": 6,
+          "total": 6,
+          "note": "o_e/u_e: hear and choose"
+        },
+        {
+          "session": 5,
+          "correct": 6,
+          "total": 6,
+          "note": "o_e/u_e: read rope, bone, cute, tube + hop, cut Status secure: 90%+ in two sessions, including a cold check."
         }
       ]
     },
@@ -323,7 +350,7 @@
     "fl1": {
       "area": "fluency",
       "name": "Instant high-frequency words",
-      "status": "not_yet",
+      "status": "learning",
       "evidence": [
         {
           "session": 1,
@@ -354,6 +381,12 @@
           "correct": null,
           "total": null,
           "note": "said, was, with taught. In the story she twice read 'was' as 'has' and left out 'back'."
+        },
+        {
+          "session": 5,
+          "correct": null,
+          "total": null,
+          "note": "Tricky words taught so far: said, was, with, want, what, are. In the story she misread was (again) and have (read 2)."
         }
       ]
     },
@@ -385,6 +418,12 @@
           "correct": 42,
           "total": 44,
           "note": "Jake's kite (early Year 1, 44 words), cold read: 95%. Misread Jake (once), fine (said 'fun')."
+        },
+        {
+          "session": 5,
+          "correct": 45,
+          "total": 49,
+          "note": "Duke and the bone (49 words), cold: 92%. Misread hid, was, glad, back. Read 2: 94% (Duke, have, back). 'back' misread in S4 and S5."
         }
       ]
     },
@@ -404,6 +443,12 @@
           "correct": null,
           "total": null,
           "note": "Story pace 32 wcpm cold, 39 wcpm after hearing it (S2 cold level A: 25). Long pause on 'wind'."
+        },
+        {
+          "session": 5,
+          "correct": null,
+          "total": null,
+          "note": "Pace 21 wcpm cold, 20 after listening (no gain; S4 was 32 → 39). Reads word by word."
         }
       ]
     },
@@ -429,6 +474,12 @@
           "correct": null,
           "total": null,
           "note": "Audio: corrected herself twice (said Jack → Jake; I love → like), not marked by parent."
+        },
+        {
+          "session": 5,
+          "correct": 2,
+          "total": null,
+          "note": "Read 2: 2 self-corrections marked by parent."
         }
       ]
     },
@@ -455,6 +506,12 @@
           "correct": null,
           "total": null,
           "note": "Story B: parent saw her pause at full stops."
+        },
+        {
+          "session": 5,
+          "correct": null,
+          "total": null,
+          "note": "Pauses at full stops (parent)."
         }
       ]
     },
@@ -554,6 +611,12 @@
           "correct": 2,
           "total": 2,
           "note": "Kite story questions"
+        },
+        {
+          "session": 5,
+          "correct": 2,
+          "total": 2,
+          "note": "Duke story questions"
         }
       ]
     },
@@ -575,6 +638,12 @@
           "total": 1,
           "note": "Listening story: why water the seeds",
           "modality": "listening"
+        },
+        {
+          "session": 5,
+          "correct": 1,
+          "total": 1,
+          "note": "How did Duke feel at the end? Glad"
         }
       ]
     },
@@ -693,13 +762,19 @@
           "correct": null,
           "total": null,
           "note": "'Jake has a red kite,he is playing with the kite in the lake.' Two clauses joined with a comma; 9 minutes to type 13 words using the word bank."
+        },
+        {
+          "session": 5,
+          "correct": 2,
+          "total": 2,
+          "note": "Tile sentences in the right order"
         }
       ]
     },
     "wr9": {
       "area": "writing",
       "name": "Compound sentences",
-      "status": "not_yet",
+      "status": "learning",
       "evidence": [
         {
           "session": 3,
@@ -712,6 +787,18 @@
           "correct": null,
           "total": null,
           "note": "Joined two ideas with a comma instead of 'and'."
+        },
+        {
+          "session": 5,
+          "correct": 2,
+          "total": 2,
+          "note": "Built 2 'and' sentences from tiles"
+        },
+        {
+          "session": 5,
+          "correct": null,
+          "total": null,
+          "note": "Own sentence: 'I like to play a game and ride bike.' Joined with and; left out 'my'. 3 minutes (S4 sentence took 9)."
         }
       ]
     },
@@ -794,6 +881,12 @@
           "correct": null,
           "total": null,
           "note": "Capital and full stop; no space after comma."
+        },
+        {
+          "session": 5,
+          "correct": null,
+          "total": null,
+          "note": "Capital and full stop."
         }
       ]
     },
@@ -894,6 +987,18 @@
           "correct": 3,
           "total": 3,
           "note": "said, was, with: look-cover-write, right first go (taught just before)"
+        },
+        {
+          "session": 5,
+          "correct": 3,
+          "total": 3,
+          "note": "said/was/with tap-the-spelling review (retained from S4)"
+        },
+        {
+          "session": 5,
+          "correct": 3,
+          "total": 3,
+          "note": "want, what, are: look-cover-write, right first go"
         }
       ]
     },
@@ -919,6 +1024,18 @@
           "correct": 5,
           "total": 5,
           "note": "Spelled cake, bike, like, time, made on the first try (no ck), right after teaching"
+        },
+        {
+          "session": 5,
+          "correct": 2,
+          "total": 2,
+          "note": "COLD spelling: name, five (no reminder)"
+        },
+        {
+          "session": 5,
+          "correct": 5,
+          "total": 5,
+          "note": "Spelled rope, bone, note, cube, cute first try"
         }
       ]
     },
@@ -1087,6 +1204,12 @@
           "correct": null,
           "total": null,
           "note": "Very slow typing: one sentence took 9 minutes (15 deletions)."
+        },
+        {
+          "session": 5,
+          "correct": 8,
+          "total": 8,
+          "note": "Keyboard game: all first key right; median 2.0 s per letter (slowest s 4.3, d 3.7, b 2.5). Baseline for tracking."
         }
       ]
     },
