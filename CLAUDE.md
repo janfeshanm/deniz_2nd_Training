@@ -162,3 +162,6 @@ Schedule: daily sessions.
   rule screen (ai in the middle, ay at the end). Feedback hints follow the pattern taught (magic e, ai/ay, phrase).
   Recordings live only in memory: if the page reloads they are lost, and the wrap-up and `summary.flags` now say so.
 - Each training session opens with a **cold check** of the previous session's pattern and tricky words (no reminder first).
+- **Curriculum page** (`docs/curriculum/year2-reading-writing.html`) reads every skill's status and evidence from
+  `docs/progress/progress.json` (no manual or localStorage statuses). Keeping progress.json up to date after each session
+  is enough; the skill IDs in the page and in progress.json must stay identical (91 skills).
