@@ -165,3 +165,5 @@ Schedule: daily sessions.
 - **Curriculum page** (`docs/curriculum/year2-reading-writing.html`) reads every skill's status and evidence from
   `docs/progress/progress.json` (no manual or localStorage statuses). Keeping progress.json up to date after each session
   is enough; the skill IDs in the page and in progress.json must stay identical (91 skills).
+- Session 7 adds a **long-or-short check** (`sN-check`: mixed pairs like fun/fine; `summary.check.short_wrong` = short words
+  given a long sound) and a data-driven rule screen (`RULE`). Tricky words now come in families (could / would / should).
