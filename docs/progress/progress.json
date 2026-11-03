@@ -2,7 +2,7 @@
   "schema": "deniz-progress/1",
   "child": "Deniz",
   "year": 2,
-  "updated": "2026-11-01",
+  "updated": "2026-11-03",
   "status_scale": [
     "not_checked",
     "not_yet",
@@ -20,7 +20,8 @@
     2,
     3,
     4,
-    5
+    5,
+    6
   ],
   "history": [
     {
@@ -62,6 +63,14 @@
       "duration_min": 26,
       "feeling": "great",
       "summary": "Remembered magic e cold (4/4 read, 2/2 spell). o_e/u_e 17/17. said/was/with kept; want/what/are 3/3. Story 92% but slow (21 wcpm), 'back' and 'was' still misread. Sentence with 'and' in 3 min. Keyboard ~2 s per letter."
+    },
+    {
+      "session": 6,
+      "title": "Training 3 – ai / ay + when / there / put + smooth phrases",
+      "date": "2026-11-01 to 11-03",
+      "duration_min": 22,
+      "feeling": "great",
+      "summary": "Remembered o_e/u_e and want/what/are cold. ai/ay 17/17 (hear, read, spell). when/there/put 3/3. Phrases 4/6 smooth. Story 94% at 24 wcpm, 35 after listening. Now sometimes uses the long sound for short words (fun → fine). Done in two sittings."
     }
   ],
   "skills": {
@@ -192,13 +201,19 @@
           "correct": 6,
           "total": 6,
           "note": "o_e/u_e: read rope, bone, cute, tube + hop, cut Status secure: 90%+ in two sessions, including a cold check."
+        },
+        {
+          "session": 6,
+          "correct": 4,
+          "total": 4,
+          "note": "COLD check o_e/u_e (no reminder): hole, joke, nose, tune. In the story she read 'fun' as 'fine' both times (over-using the long sound)."
         }
       ]
     },
     "ph5": {
       "area": "phonics",
       "name": "Long vowel teams",
-      "status": "not_yet",
+      "status": "learning",
       "evidence": [
         {
           "session": 1,
@@ -211,6 +226,18 @@
           "correct": 0,
           "total": 3,
           "note": "Vowel teams re-check, parent-scored at 6-9 s per word: mail, coat, seed not read. Group stopped. She did read beach, day, sea inside story B, so she may know some vowel-team words by sight or from context, not the pattern."
+        },
+        {
+          "session": 6,
+          "correct": 6,
+          "total": 6,
+          "note": "ai/ay: hear and choose (right after teaching)"
+        },
+        {
+          "session": 6,
+          "correct": 6,
+          "total": 6,
+          "note": "ai/ay: read rain, play, tail, day, wait + ran"
         }
       ]
     },
@@ -387,6 +414,12 @@
           "correct": null,
           "total": null,
           "note": "Tricky words taught so far: said, was, with, want, what, are. In the story she misread was (again) and have (read 2)."
+        },
+        {
+          "session": 6,
+          "correct": null,
+          "total": null,
+          "note": "In the story: misread 'put' (read 1) and 'what' (read 2; audio suggests 'wait' on read 1 too) although she spells both. Tricky words are known in isolation but not yet automatic in text."
         }
       ]
     },
@@ -424,6 +457,12 @@
           "correct": 45,
           "total": 49,
           "note": "Duke and the bone (49 words), cold: 92%. Misread hid, was, glad, back. Read 2: 94% (Duke, have, back). 'back' misread in S4 and S5."
+        },
+        {
+          "session": 6,
+          "correct": 47,
+          "total": 50,
+          "note": "The train (50 words), cold: 94%. Misread and, put, Kate. Read 2: 88% (Kate ×3, sat, what, fun). Audio: 'to wait' read as 'two wet', fun → 'fine', bag → 'back'."
         }
       ]
     },
@@ -449,6 +488,12 @@
           "correct": null,
           "total": null,
           "note": "Pace 21 wcpm cold, 20 after listening (no gain; S4 was 32 → 39). Reads word by word."
+        },
+        {
+          "session": 6,
+          "correct": null,
+          "total": null,
+          "note": "Pace 24 wcpm cold → 35 after listening (+11)."
         }
       ]
     },
@@ -493,6 +538,12 @@
           "correct": null,
           "total": null,
           "note": "Story B: parent ticked both 'reads word by word' and 'reads in phrases'; also points with a finger and needed a long time on some words."
+        },
+        {
+          "session": 6,
+          "correct": 4,
+          "total": 6,
+          "note": "Phrases read as one smooth chunk: was at the, got it back, in the rain, want to play. Not smooth: what is it, have a go."
         }
       ]
     },
@@ -617,6 +668,12 @@
           "correct": 2,
           "total": 2,
           "note": "Duke story questions"
+        },
+        {
+          "session": 6,
+          "correct": 3,
+          "total": 3,
+          "note": "Train story questions"
         }
       ]
     },
@@ -768,6 +825,12 @@
           "correct": 2,
           "total": 2,
           "note": "Tile sentences in the right order"
+        },
+        {
+          "session": 6,
+          "correct": 2,
+          "total": 2,
+          "note": "Tile sentences in order"
         }
       ]
     },
@@ -799,6 +862,18 @@
           "correct": null,
           "total": null,
           "note": "Own sentence: 'I like to play a game and ride bike.' Joined with and; left out 'my'. 3 minutes (S4 sentence took 9)."
+        },
+        {
+          "session": 6,
+          "correct": 2,
+          "total": 2,
+          "note": "Built 2 'and' sentences from tiles"
+        },
+        {
+          "session": 6,
+          "correct": null,
+          "total": null,
+          "note": "Own: 'On a wet day I play at home and play game in the rain.' Joined with and; left out 'a' before game. 3 minutes."
         }
       ]
     },
@@ -884,6 +959,12 @@
         },
         {
           "session": 5,
+          "correct": null,
+          "total": null,
+          "note": "Capital and full stop."
+        },
+        {
+          "session": 6,
           "correct": null,
           "total": null,
           "note": "Capital and full stop."
@@ -999,6 +1080,18 @@
           "correct": 3,
           "total": 3,
           "note": "want, what, are: look-cover-write, right first go"
+        },
+        {
+          "session": 6,
+          "correct": 3,
+          "total": 3,
+          "note": "COLD tap-the-spelling: want, what, are (retained from S5)"
+        },
+        {
+          "session": 6,
+          "correct": 3,
+          "total": 3,
+          "note": "when, there, put: look-cover-write, right first go"
         }
       ]
     },
@@ -1036,6 +1129,24 @@
           "correct": 5,
           "total": 5,
           "note": "Spelled rope, bone, note, cube, cute first try"
+        },
+        {
+          "session": 6,
+          "correct": 2,
+          "total": 2,
+          "note": "COLD spelling home, cube"
+        },
+        {
+          "session": 6,
+          "correct": 6,
+          "total": 6,
+          "note": "ai/ay: hear and choose the spelling (rain/rayn, play/plai …)"
+        },
+        {
+          "session": 6,
+          "correct": 5,
+          "total": 5,
+          "note": "Spelled rain, day, wait, play, train first try (train: 47 s, 7 deletions)"
         }
       ]
     },
@@ -1210,6 +1321,12 @@
           "correct": 8,
           "total": 8,
           "note": "Keyboard game: all first key right; median 2.0 s per letter (slowest s 4.3, d 3.7, b 2.5). Baseline for tracking."
+        },
+        {
+          "session": 6,
+          "correct": 8,
+          "total": 8,
+          "note": "Keyboard game: median 1.6 s per letter (S5: 2.0 s)."
         }
       ]
     },
