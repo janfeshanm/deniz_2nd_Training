@@ -2,7 +2,7 @@
   "schema": "deniz-progress/1",
   "child": "Deniz",
   "year": 2,
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "status_scale": [
     "not_checked",
     "not_yet",
@@ -21,7 +21,8 @@
     3,
     4,
     5,
-    6
+    6,
+    7
   ],
   "history": [
     {
@@ -71,6 +72,14 @@
       "duration_min": 22,
       "feeling": "great",
       "summary": "Remembered o_e/u_e and want/what/are cold. ai/ay 17/17 (hear, read, spell). when/there/put 3/3. Phrases 4/6 smooth. Story 94% at 24 wcpm, 35 after listening. Now sometimes uses the long sound for short words (fun → fine). Done in two sittings."
+    },
+    {
+      "session": 7,
+      "title": "Training 4 – ee / ea + long-or-short + could / would / should",
+      "date": "2026-11-04",
+      "duration_min": 33,
+      "feeling": "great",
+      "summary": "Remembered ai/ay and when/there/put cold. Long-or-short 8/8 (fun/fine fixed). Phrases 6/6 smooth. ee/ea read 6/6 but which spelling is still shaky (green/grean, sea/see). could/would/should 2/3 first go. Story 92%, 20 → 33 wcpm; 'all' (ball) is a new gap."
     }
   ],
   "skills": {
@@ -207,6 +216,12 @@
           "correct": 4,
           "total": 4,
           "note": "COLD check o_e/u_e (no reminder): hole, joke, nose, tune. In the story she read 'fun' as 'fine' both times (over-using the long sound)."
+        },
+        {
+          "session": 7,
+          "correct": 8,
+          "total": 8,
+          "note": "Long-or-short check: fun, fine, hope, hop, ran, rain, bake, bag all right. The S6 fun → fine slip is fixed."
         }
       ]
     },
@@ -238,6 +253,30 @@
           "correct": 6,
           "total": 6,
           "note": "ai/ay: read rain, play, tail, day, wait + ran"
+        },
+        {
+          "session": 7,
+          "correct": 4,
+          "total": 4,
+          "note": "COLD check ai/ay (no reminder): rail, say, paint, stay. Retained from S6."
+        },
+        {
+          "session": 7,
+          "correct": 4,
+          "total": 6,
+          "note": "ee/ea: hear and choose. Chose grean for green and leef for leaf: which spelling a word takes still has to be learned word by word."
+        },
+        {
+          "session": 7,
+          "correct": 6,
+          "total": 6,
+          "note": "ee/ea: read tree, seat, feet, eat, green + bed"
+        },
+        {
+          "session": 7,
+          "correct": 8,
+          "total": 8,
+          "note": "Long-or-short check (ai pairs ran/rain included)"
         }
       ]
     },
@@ -420,6 +459,12 @@
           "correct": null,
           "total": null,
           "note": "In the story: misread 'put' (read 1) and 'what' (read 2; audio suggests 'wait' on read 1 too) although she spells both. Tricky words are known in isolation but not yet automatic in text."
+        },
+        {
+          "session": 7,
+          "correct": null,
+          "total": null,
+          "note": "Audio: could → 'can' on read 2; read 'could you' after a long pause on read 1."
         }
       ]
     },
@@ -463,6 +508,12 @@
           "correct": 47,
           "total": 50,
           "note": "The train (50 words), cold: 94%. Misread and, put, Kate. Read 2: 88% (Kate ×3, sat, what, fun). Audio: 'to wait' read as 'two wet', fun → 'fine', bag → 'back'."
+        },
+        {
+          "session": 7,
+          "correct": 46,
+          "total": 50,
+          "note": "At the beach (50 words), cold: 92%. Misread ball, kick, Jean, to. Read 2: 94%. Audio: ball → 'bell' (the 'all' pattern isn't taught yet), kick took about 14 s, Jean → 'Jane'."
         }
       ]
     },
@@ -494,6 +545,12 @@
           "correct": null,
           "total": null,
           "note": "Pace 24 wcpm cold → 35 after listening (+11)."
+        },
+        {
+          "session": 7,
+          "correct": null,
+          "total": null,
+          "note": "Pace 20 wcpm cold → 33 after listening (+13). Cold pace has been flat across S4–S7 (32, 21, 24, 20)."
         }
       ]
     },
@@ -544,6 +601,12 @@
           "correct": 4,
           "total": 6,
           "note": "Phrases read as one smooth chunk: was at the, got it back, in the rain, want to play. Not smooth: what is it, have a go."
+        },
+        {
+          "session": 7,
+          "correct": 6,
+          "total": 6,
+          "note": "All 6 tricky-word phrases smooth (what is it, put it on, have a go, there was a, when can we, could you see). S6: 4/6."
         }
       ]
     },
@@ -674,6 +737,12 @@
           "correct": 3,
           "total": 3,
           "note": "Train story questions"
+        },
+        {
+          "session": 7,
+          "correct": 2,
+          "total": 2,
+          "note": "Beach story literal questions"
         }
       ]
     },
@@ -701,6 +770,12 @@
           "correct": 1,
           "total": 1,
           "note": "How did Duke feel at the end? Glad"
+        },
+        {
+          "session": 7,
+          "correct": 1,
+          "total": 1,
+          "note": "Why did Dad reach up? Right (inference)."
         }
       ]
     },
@@ -794,6 +869,12 @@
           "correct": 2,
           "total": 3,
           "note": "Put sentences in order (2 of 3 sets right)"
+        },
+        {
+          "session": 7,
+          "correct": 2,
+          "total": 2,
+          "note": "Tile sentence with 'First … and then …' in order"
         }
       ]
     },
@@ -828,6 +909,12 @@
         },
         {
           "session": 6,
+          "correct": 2,
+          "total": 2,
+          "note": "Tile sentences in order"
+        },
+        {
+          "session": 7,
           "correct": 2,
           "total": 2,
           "note": "Tile sentences in order"
@@ -874,6 +961,18 @@
           "correct": null,
           "total": null,
           "note": "Own: 'On a wet day I play at home and play game in the rain.' Joined with and; left out 'a' before game. 3 minutes."
+        },
+        {
+          "session": 7,
+          "correct": 2,
+          "total": 2,
+          "note": "Built 'and' / 'and then' sentences from tiles"
+        },
+        {
+          "session": 7,
+          "correct": null,
+          "total": null,
+          "note": "Own: 'At the beach I ate and then I rest.' Used 'and then'. 4 minutes, 19 deletions."
         }
       ]
     },
@@ -937,6 +1036,12 @@
           "correct": null,
           "total": null,
           "note": "'[names] and me we paly': doubled subject (me we), and present 'play' for past. 'wos playing' right tense."
+        },
+        {
+          "session": 7,
+          "correct": null,
+          "total": null,
+          "note": "Mixed tenses in one sentence: 'I ate and then I rest' (rest for rested)."
         }
       ]
     },
@@ -965,6 +1070,12 @@
         },
         {
           "session": 6,
+          "correct": null,
+          "total": null,
+          "note": "Capital and full stop."
+        },
+        {
+          "session": 7,
           "correct": null,
           "total": null,
           "note": "Capital and full stop."
@@ -1092,6 +1203,18 @@
           "correct": 3,
           "total": 3,
           "note": "when, there, put: look-cover-write, right first go"
+        },
+        {
+          "session": 7,
+          "correct": 3,
+          "total": 3,
+          "note": "COLD tap-the-spelling: when, there, put (retained)"
+        },
+        {
+          "session": 7,
+          "correct": 2,
+          "total": 3,
+          "note": "could → 'cuold' then right; would, should first go"
         }
       ]
     },
@@ -1147,6 +1270,24 @@
           "correct": 5,
           "total": 5,
           "note": "Spelled rain, day, wait, play, train first try (train: 47 s, 7 deletions)"
+        },
+        {
+          "session": 7,
+          "correct": 2,
+          "total": 2,
+          "note": "COLD spelling: tail, say"
+        },
+        {
+          "session": 7,
+          "correct": 4,
+          "total": 6,
+          "note": "ee/ea hear-and-choose"
+        },
+        {
+          "session": 7,
+          "correct": 3,
+          "total": 5,
+          "note": "Spelled tree, eat, green; sea → 'see' (the other spelling of the same sound), feet → 'seat' (possibly misheard f as s; f was also her slowest key). Both right on retry."
         }
       ]
     },
@@ -1327,6 +1468,12 @@
           "correct": 8,
           "total": 8,
           "note": "Keyboard game: median 1.6 s per letter (S5: 2.0 s)."
+        },
+        {
+          "session": 7,
+          "correct": 8,
+          "total": 8,
+          "note": "Keyboard game: median 2.1 s (new letters; f took 6.7 s). S5 2.0, S6 1.6."
         }
       ]
     },
