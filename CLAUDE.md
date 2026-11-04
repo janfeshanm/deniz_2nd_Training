@@ -167,3 +167,12 @@ Schedule: daily sessions.
   is enough; the skill IDs in the page and in progress.json must stay identical (91 skills).
 - Session 7 adds a **long-or-short check** (`sN-check`: mixed pairs like fun/fine; `summary.check.short_wrong` = short words
   given a long sound) and a data-driven rule screen (`RULE`). Tricky words now come in families (could / would / should).
+
+## Re-checks (Session 8 on, every 5th session)
+- `kind: "recheck"`, about 20 minutes, **no teaching and no hints**: steps carry `check: true` (no feedback screens, no spelling
+  retry), and the story is read once with no model reading (`single: true`, `read2: null`). Spelling items carry `before`
+  (her attempt at the same word in the baseline) for a direct before/after comparison.
+- **Voice picker** (Session 8 on): the setup screen lists the phone's English voices with an f/s test ("fish, sun, fan, sock,
+  feet, seat"). The choice is saved in localStorage `deniz-voice` and shared by all later pages; `parent_context.voice` records it.
+  Some phone voices make f sound like s (S7: feet typed as "seat"), so treat f/s spelling errors with caution.
+- Keyboard-game letters are said with a word ("f, as in fish"); items carry `as`.
