@@ -176,3 +176,6 @@ Schedule: daily sessions.
   feet, seat"). The choice is saved in localStorage `deniz-voice` and shared by all later pages; `parent_context.voice` records it.
   Some phone voices make f sound like s (S7: feet typed as "seat"), so treat f/s spelling errors with caution.
 - Keyboard-game letters are said with a word ("f, as in fish"); items carry `as`.
+- Session 9 adds a **pattern sort** (`pick` step with `feedback: "pattern"` and `q`: hear a word, tap its vowel pattern; no typing)
+  followed by **mixed no-cue spelling** with retry, and a tricky-word speed round (`read` with `trickyRead: true`). New pages are
+  built from the latest page (S8 onward keeps the voice picker); training pages set `check` off and `single` off.
