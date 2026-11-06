@@ -2,7 +2,7 @@
   "schema": "deniz-progress/1",
   "child": "Deniz",
   "year": 2,
-  "updated": "2026-11-04",
+  "updated": "2026-11-07",
   "status_scale": [
     "not_checked",
     "not_yet",
@@ -22,7 +22,8 @@
     4,
     5,
     6,
-    7
+    7,
+    8
   ],
   "history": [
     {
@@ -80,6 +81,14 @@
       "duration_min": 33,
       "feeling": "great",
       "summary": "Remembered ai/ay and when/there/put cold. Long-or-short 8/8 (fun/fine fixed). Phrases 6/6 smooth. ee/ea read 6/6 but which spelling is still shaky (green/grean, sea/see). could/would/should 2/3 first go. Story 92%, 20 → 33 wcpm; 'all' (ball) is a new gap."
+    },
+    {
+      "session": 8,
+      "title": "Re-check 1 – everything so far",
+      "date": "2026-11-06",
+      "duration_min": 36,
+      "feeling": "great",
+      "summary": "No hints. Reads new magic-e and vowel-team words 12/13 (S1: 1/4). Year 1 story 95% at 21 wcpm (S2: 79% at 13). Free sentence fully correct. But spelling without cues slips back (mack, bic, wid, say: 4/10) and 5 of 12 tricky words aren't instant yet. Reading pace is the main gap."
     }
   ],
   "skills": {
@@ -117,6 +126,12 @@
           "correct": 9,
           "total": 9,
           "note": "Letter-sound re-check t g k b h y d p q: all sounds"
+        },
+        {
+          "session": 8,
+          "correct": 3,
+          "total": 3,
+          "note": "RE-CHECK (no hints): drum, chip, pond"
         }
       ]
     },
@@ -222,6 +237,12 @@
           "correct": 8,
           "total": 8,
           "note": "Long-or-short check: fun, fine, hope, hop, ran, rain, bake, bag all right. The S6 fun → fine slip is fixed."
+        },
+        {
+          "session": 8,
+          "correct": 4,
+          "total": 4,
+          "note": "RE-CHECK (no hints): New magic-e words cape, slide, stone, flute (S1 1/4, S3 1/6)."
         }
       ]
     },
@@ -277,6 +298,12 @@
           "correct": 8,
           "total": 8,
           "note": "Long-or-short check (ai pairs ran/rain included)"
+        },
+        {
+          "session": 8,
+          "correct": 5,
+          "total": 6,
+          "note": "RE-CHECK (no hints): New vowel-team words: snail, tray, sweet, seal, sleep right; chain not read."
         }
       ]
     },
@@ -465,6 +492,12 @@
           "correct": null,
           "total": null,
           "note": "Audio: could → 'can' on read 2; read 'could you' after a long pause on read 1."
+        },
+        {
+          "session": 8,
+          "correct": 7,
+          "total": 12,
+          "note": "RE-CHECK (no hints): Tricky words read straight away: said, was, with, are, when, put, should. Slow or wrong: want, what, there, could, would."
         }
       ]
     },
@@ -514,6 +547,12 @@
           "correct": 46,
           "total": 50,
           "note": "At the beach (50 words), cold: 92%. Misread ball, kick, Jean, to. Read 2: 94%. Audio: ball → 'bell' (the 'all' pattern isn't taught yet), kick took about 14 s, Jean → 'Jane'."
+        },
+        {
+          "session": 8,
+          "correct": 55,
+          "total": 58,
+          "note": "RE-CHECK (no hints): Cold Year 1 (level B) story 'At the park', read once: 95% (S2 Year 1 story: 79%). Misread wanted, saw, threw. Audio suggests saw → 'was' (reversal) and after → 'off'."
         }
       ]
     },
@@ -551,6 +590,12 @@
           "correct": null,
           "total": null,
           "note": "Pace 20 wcpm cold → 33 after listening (+13). Cold pace has been flat across S4–S7 (32, 21, 24, 20)."
+        },
+        {
+          "session": 8,
+          "correct": null,
+          "total": null,
+          "note": "RE-CHECK (no hints): Year 1 story 21 wcpm cold (S2: 13). Still reads word by word; long pauses on some words."
         }
       ]
     },
@@ -582,6 +627,12 @@
           "correct": 2,
           "total": null,
           "note": "Read 2: 2 self-corrections marked by parent."
+        },
+        {
+          "session": 8,
+          "correct": 1,
+          "total": null,
+          "note": "RE-CHECK (no hints): 1 self-correction marked"
         }
       ]
     },
@@ -697,7 +748,7 @@
     "co6": {
       "area": "comp",
       "name": "Literal questions",
-      "status": "learning",
+      "status": "secure",
       "evidence": [
         {
           "session": 2,
@@ -743,6 +794,12 @@
           "correct": 2,
           "total": 2,
           "note": "Beach story literal questions"
+        },
+        {
+          "session": 8,
+          "correct": 2,
+          "total": 2,
+          "note": "RE-CHECK (no hints): Park story literal questions Status secure: literal questions right in every story S2, S4–S8."
         }
       ]
     },
@@ -776,6 +833,12 @@
           "correct": 1,
           "total": 1,
           "note": "Why did Dad reach up? Right (inference)."
+        },
+        {
+          "session": 8,
+          "correct": 1,
+          "total": 1,
+          "note": "RE-CHECK (no hints): Why did the dog run after it? Right."
         }
       ]
     },
@@ -887,7 +950,7 @@
     "wr8": {
       "area": "writing",
       "name": "Complete simple sentences",
-      "status": "learning",
+      "status": "secure",
       "evidence": [
         {
           "session": 3,
@@ -918,6 +981,12 @@
           "correct": 2,
           "total": 2,
           "note": "Tile sentences in order"
+        },
+        {
+          "session": 8,
+          "correct": null,
+          "total": null,
+          "note": "RE-CHECK (no hints): 'The dog had a ball and it got stuck in a tree.' Every word spelled right (S3 picture sentence: 'The dog wos playing wid the bull in the tree.'). Status secure: complete simple sentences in every task S3–S8."
         }
       ]
     },
@@ -973,6 +1042,12 @@
           "correct": null,
           "total": null,
           "note": "Own: 'At the beach I ate and then I rest.' Used 'and then'. 4 minutes, 19 deletions."
+        },
+        {
+          "session": 8,
+          "correct": null,
+          "total": null,
+          "note": "RE-CHECK (no hints): Joined two ideas with 'and' with no prompt or frame."
         }
       ]
     },
@@ -1023,6 +1098,12 @@
           "correct": null,
           "total": null,
           "note": "Picture sentence: who, what, where."
+        },
+        {
+          "session": 8,
+          "correct": null,
+          "total": null,
+          "note": "RE-CHECK (no hints): Says what happens and where; no describing words yet."
         }
       ]
     },
@@ -1042,13 +1123,19 @@
           "correct": null,
           "total": null,
           "note": "Mixed tenses in one sentence: 'I ate and then I rest' (rest for rested)."
+        },
+        {
+          "session": 8,
+          "correct": null,
+          "total": null,
+          "note": "RE-CHECK (no hints): Past tense used consistently (had, got stuck)."
         }
       ]
     },
     "wr16": {
       "area": "writing",
       "name": "Capital letters and full stops",
-      "status": "learning",
+      "status": "secure",
       "evidence": [
         {
           "session": 3,
@@ -1079,6 +1166,12 @@
           "correct": null,
           "total": null,
           "note": "Capital and full stop."
+        },
+        {
+          "session": 8,
+          "correct": null,
+          "total": null,
+          "note": "RE-CHECK (no hints): Capital and full stop again: in every piece of writing since S3. Status secure."
         }
       ]
     },
@@ -1215,6 +1308,12 @@
           "correct": 2,
           "total": 3,
           "note": "could → 'cuold' then right; would, should first go"
+        },
+        {
+          "session": 8,
+          "correct": 0,
+          "total": 3,
+          "note": "RE-CHECK (no hints): said → 'say', with → 'wid' (same as S3), because → 'beuose'. She spelled said/with right in S4–S6 straight after practice, but not in free recall."
         }
       ]
     },
@@ -1288,6 +1387,18 @@
           "correct": 3,
           "total": 5,
           "note": "Spelled tree, eat, green; sea → 'see' (the other spelling of the same sound), feet → 'seat' (possibly misheard f as s; f was also her slowest key). Both right on retry."
+        },
+        {
+          "session": 8,
+          "correct": 5,
+          "total": 6,
+          "note": "RE-CHECK (no hints): Hear and choose: right except leaf (chose leef)"
+        },
+        {
+          "session": 8,
+          "correct": 4,
+          "total": 7,
+          "note": "RE-CHECK (no hints): Spelled home, rain (S1: ren), play, tree. make → 'mack', bike → 'bic' (back to the short-vowel/ck pattern when nothing cues magic e), boat → 'bote' (oa not taught; used magic e logically)."
         }
       ]
     },
@@ -1474,6 +1585,12 @@
           "correct": 8,
           "total": 8,
           "note": "Keyboard game: median 2.1 s (new letters; f took 6.7 s). S5 2.0, S6 1.6."
+        },
+        {
+          "session": 8,
+          "correct": 8,
+          "total": 8,
+          "note": "RE-CHECK (no hints): Keyboard game median 2.3 s per letter (S5 2.0, S6 1.6, S7 2.1): flat. f 6.0 s, w 5.6 s slowest."
         }
       ]
     },
