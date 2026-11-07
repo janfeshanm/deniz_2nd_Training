@@ -182,3 +182,7 @@ Schedule: daily sessions.
 - Session 10 is a **short** session (about 20 min): no keyboard game and no phrases; writing comes early in a two-line
   `First \nThen ` frame (summary counts `lines` and `lines_with_full_stop`); mixed spelling runs with **no pattern sort first**
   to test whether choosing the pattern is becoming automatic; new pattern "all" (ball, tall, small, with bell as a contrast).
+- Session 11 puts the **story first** (Deniz asked for reading first; the cold read is then fresh). The story uses no new
+  pattern. Teach items may carry `html` (custom highlight) so tricky words like there/where aren't shown as magic e;
+  tricky-word families are taught by adding a letter (here→there/where, hen→when, hat→what). "all" and "ar" are logged under
+  ph6 (the /or/ and /ar/ sound families).
