@@ -179,3 +179,6 @@ Schedule: daily sessions.
 - Session 9 adds a **pattern sort** (`pick` step with `feedback: "pattern"` and `q`: hear a word, tap its vowel pattern; no typing)
   followed by **mixed no-cue spelling** with retry, and a tricky-word speed round (`read` with `trickyRead: true`). New pages are
   built from the latest page (S8 onward keeps the voice picker); training pages set `check` off and `single` off.
+- Session 10 is a **short** session (about 20 min): no keyboard game and no phrases; writing comes early in a two-line
+  `First \nThen ` frame (summary counts `lines` and `lines_with_full_stop`); mixed spelling runs with **no pattern sort first**
+  to test whether choosing the pattern is becoming automatic; new pattern "all" (ball, tall, small, with bell as a contrast).
