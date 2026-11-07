@@ -24,7 +24,8 @@
     6,
     7,
     8,
-    9
+    9,
+    10
   ],
   "history": [
     {
@@ -98,6 +99,14 @@
       "duration_min": 34,
       "feeling": "great",
       "summary": "Pattern sort 8/8 and mixed no-cue spelling 6/6 (the re-check gap closed in the session). oa/ow 15/15. Tricky words 10/12 but some slow. Story 96% but 14 wcpm cold. Two-sentence writing came out as one run-on sentence (laik, 'what' for went). 34 minutes: too long again; no recordings (page reloaded)."
+    },
+    {
+      "session": 10,
+      "title": "Training 6 – all + mixed spelling + two sentences",
+      "date": "2026-11-07",
+      "duration_min": 19,
+      "feeling": "great",
+      "summary": "19 minutes (shorter, as planned). oa/ow remembered cold 4/4. Mixed spelling with no sort first 6/6. 'all' 15/15 (hear, read, spell; bell read correctly). Two separate sentences with full stops ('ate a toast'). Story 97%, 22 → 61 wcpm after listening. Tricky words what and there still not instant."
     }
   ],
   "skills": {
@@ -258,7 +267,7 @@
     "ph5": {
       "area": "phonics",
       "name": "Long vowel teams",
-      "status": "learning",
+      "status": "secure",
       "evidence": [
         {
           "session": 1,
@@ -331,13 +340,19 @@
           "correct": 6,
           "total": 6,
           "note": "oa/ow read: boat, snow, road, grow, toast + cot"
+        },
+        {
+          "session": 10,
+          "correct": 4,
+          "total": 4,
+          "note": "COLD (no reminder): read soap, load, blow, show (oa/ow): all correct"
         }
       ]
     },
     "ph6": {
       "area": "phonics",
       "name": "R-controlled vowels",
-      "status": "not_yet",
+      "status": "learning",
       "evidence": [
         {
           "session": 1,
@@ -350,6 +365,18 @@
           "correct": 0,
           "total": 3,
           "note": "R-controlled vowels re-check, parent-scored at 6-9 s per word: farm, horn, fern not read. Group stopped."
+        },
+        {
+          "session": 10,
+          "correct": 6,
+          "total": 6,
+          "note": "NEW: 'all' (a says /or/ before ll): hear and pick 6/6 (ball/bol ...)"
+        },
+        {
+          "session": 10,
+          "correct": 6,
+          "total": 6,
+          "note": "'all' words read aloud: ball, tall, small, wall, fall + bell contrast, all correct. ar/or/er not yet taught"
         }
       ]
     },
@@ -531,13 +558,19 @@
           "correct": 10,
           "total": 12,
           "note": "Tricky-word speed round: all but what and could marked straight away. Times were long for some (want 30 s, there 19 s, with 17 s), so not all are instant yet."
+        },
+        {
+          "session": 10,
+          "correct": 2,
+          "total": 4,
+          "note": "Slow tricky words read straight away: could, want yes (7 s, 14 s); what, there not yet"
         }
       ]
     },
     "fl2": {
       "area": "fluency",
       "name": "Accurate on unseen text",
-      "status": "learning",
+      "status": "secure",
       "evidence": [
         {
           "session": 2,
@@ -592,6 +625,12 @@
           "correct": 44,
           "total": 46,
           "note": "The boat (46 words), cold 96%. Misread out (both reads), began."
+        },
+        {
+          "session": 10,
+          "correct": 33,
+          "total": 34,
+          "note": "Story 'The ball' (34 words), cold read: 97%, 'what' misread (said 'when'), 1 self-correction"
         }
       ]
     },
@@ -641,6 +680,12 @@
           "correct": null,
           "total": null,
           "note": "Cold pace 14 wcpm (slowest so far); 31 after listening. Reads word by word; long pauses."
+        },
+        {
+          "session": 10,
+          "correct": null,
+          "total": null,
+          "note": "Cold 22 wcpm (90 s, 7 s stall before 'What'); 61 wcpm after hearing it read (+39). Parent: reads in phrases"
         }
       ]
     },
@@ -863,6 +908,12 @@
           "correct": 2,
           "total": 2,
           "note": "Boat story literal questions"
+        },
+        {
+          "session": 10,
+          "correct": 2,
+          "total": 2,
+          "note": "The ball: what Ben had, who got the ball back"
         }
       ]
     },
@@ -908,6 +959,12 @@
           "correct": 1,
           "total": 1,
           "note": "Why did they go home? Right."
+        },
+        {
+          "session": 10,
+          "correct": 1,
+          "total": 1,
+          "note": "The ball: how Ben felt (worried)"
         }
       ]
     },
@@ -1013,6 +1070,12 @@
           "correct": null,
           "total": null,
           "note": "Asked for two sentences, First … Then …: wrote one long sentence: 'First they what to the laik and then and dad had to go in row and row.' Took 6.7 minutes at the end of the session."
+        },
+        {
+          "session": 10,
+          "correct": 1,
+          "total": 1,
+          "note": "First/Then frame: two events in order (ate toast, rode bike)"
         }
       ]
     },
@@ -1068,6 +1131,12 @@
           "correct": null,
           "total": null,
           "note": "Run-on sentence; 'what' for went, missing word (Joan/her) before dad."
+        },
+        {
+          "session": 10,
+          "correct": 2,
+          "total": 2,
+          "note": "Two separate complete sentences: 'First she ate a toast . Then she rode her bike.'"
         }
       ]
     },
@@ -1259,6 +1328,12 @@
           "correct": null,
           "total": null,
           "note": "RE-CHECK (no hints): Capital and full stop again: in every piece of writing since S3. Status secure."
+        },
+        {
+          "session": 10,
+          "correct": 2,
+          "total": 2,
+          "note": "Both lines start with a capital and end with a full stop (space before one stop)"
         }
       ]
     },
@@ -1419,7 +1494,7 @@
     "sp3": {
       "area": "spelling",
       "name": "Choosing vowel patterns",
-      "status": "learning",
+      "status": "secure",
       "evidence": [
         {
           "session": 1,
@@ -1522,6 +1597,18 @@
           "correct": null,
           "total": null,
           "note": "In writing: lake → 'laik' (used ai, today's earlier pattern, instead of a_e)."
+        },
+        {
+          "session": 10,
+          "correct": 6,
+          "total": 6,
+          "note": "Mixed spelling with NO pattern sort first: game, time, rope, rain, tree, boat, all first try"
+        },
+        {
+          "session": 10,
+          "correct": 3,
+          "total": 3,
+          "note": "Dictated -all words: ball, tall, call"
         }
       ]
     },
