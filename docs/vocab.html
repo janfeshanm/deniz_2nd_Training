@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fff4e0">
+<title>Word Cards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#fff4e0;--bg2:#ffe1ec;--ink:#2b2340;--btn:#ff7a45;--btn2:#ff5a7a;--muted:#7a6f8a;--card:#fff;--back:#f3efff;--good:#2e9e6a;--hl:#ff5a7a}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%}
+body{min-height:100dvh;background:linear-gradient(170deg,var(--bg1),var(--bg2));color:var(--ink);font-family:Lexend,system-ui,sans-serif;
+  display:flex;flex-direction:column;padding:max(12px,env(safe-area-inset-top)) 16px max(16px,env(safe-area-inset-bottom))}
+header{display:flex;align-items:center;gap:8px}
+.back{flex:none;height:40px;padding:0 12px;border-radius:12px;display:flex;align-items:center;text-decoration:none;color:var(--muted);
+  background:rgba(255,255,255,.6);border:1px solid rgba(0,0,0,.06);font-size:15px;font-weight:600}
+h1{font-size:20px;margin:0;flex:1;text-align:center}
+.count{flex:none;min-width:64px;text-align:right;font-size:14px;color:var(--muted);font-weight:600}
+.tabs{display:flex;gap:6px;justify-content:center;margin:12px 0 4px}
+.tabs button{border:1px solid rgba(0,0,0,.08);background:rgba(255,255,255,.6);color:var(--muted);border-radius:999px;padding:8px 14px;font:600 14px Lexend,system-ui,sans-serif}
+.tabs button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.bar{height:6px;border-radius:3px;background:rgba(0,0,0,.07);overflow:hidden;margin:8px 0 0}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--btn),var(--btn2));width:0;transition:width .3s}
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:14px 0;min-height:0}
+.scene{width:min(100%,420px);height:min(56dvh,440px);perspective:1200px}
+.card{position:relative;width:100%;height:100%;transition:transform .55s cubic-bezier(.3,.7,.3,1);transform-style:preserve-3d;cursor:pointer}
+.card.flip{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;border-radius:28px;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;padding:24px 22px;text-align:center;box-shadow:0 16px 36px rgba(255,90,122,.18),0 2px 0 rgba(0,0,0,.04)}
+.front{background:var(--card)}
+.backf{background:var(--back);transform:rotateY(180deg)}
+.word{font-size:clamp(40px,13vw,64px);font-weight:800;letter-spacing:.01em;word-break:break-word}
+.tap{position:absolute;bottom:18px;font-size:14px;color:var(--muted)}
+.lbl{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 6px}
+.small{font-size:22px;font-weight:800;margin:0 0 14px;color:var(--btn2)}
+.mean{font-size:clamp(20px,6vw,26px);font-weight:600;margin:0 0 22px;line-height:1.3}
+.ex{font-size:clamp(18px,5.4vw,23px);line-height:1.4;margin:0;font-weight:400}
+.ex b{color:var(--hl);font-weight:800}
+.spk{width:52px;height:52px;border-radius:50%;border:none;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.1);font-size:22px;margin-top:16px;flex:none}
+.backf .spk{background:#fff}
+.star{position:absolute;top:16px;right:18px;font-size:13px;font-weight:600;color:var(--good)}
+.nav{display:flex;gap:10px;align-items:center}
+.nav button{font:700 17px Lexend,system-ui,sans-serif;border:none;border-radius:18px;height:56px}
+.arrow{width:56px;flex:none;background:rgba(255,255,255,.75);color:var(--ink);font-size:24px!important}
+.again{flex:1;background:#fff;color:var(--ink);border:2px solid rgba(0,0,0,.08)!important}
+.know{flex:1;background:linear-gradient(90deg,var(--btn),var(--btn2));color:#fff}
+.tools{display:flex;justify-content:center;gap:16px;margin-top:12px}
+.tools button{background:none;border:none;color:var(--muted);font:600 14px Lexend,system-ui,sans-serif;padding:6px}
+.empty{font-size:20px;text-align:center;color:var(--muted);line-height:1.5}
+button:disabled{opacity:.4}
+@media (prefers-reduced-motion:reduce){.card{transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="index.html">‹ Home</a>
+  <h1>📖 Word cards</h1>
+  <span class="count" id="count"></span>
+</header>
+<div class="tabs" role="tablist">
+  <button data-f="all" class="on">All</button><button data-f="learn">Still learning</button><button data-f="know">I know</button>
+</div>
+<div class="bar"><i id="bar"></i></div>
+<main id="main"></main>
+<div class="nav" id="nav">
+  <button class="arrow" id="prev" aria-label="Previous word">‹</button>
+  <button class="again" id="again">🔁 Again</button>
+  <button class="know" id="know">✓ I know it</button>
+  <button class="arrow" id="next" aria-label="Next word">›</button>
+</div>
+<div class="tools"><button id="shuffle">🔀 Mix up</button><button id="order">🔤 A to Z</button><button id="reset">Start over</button></div>
+
+<script>
+// Words come from voc.md (the table: Word | Meaning | Example). This copy is used if the file can't be loaded.
+const FALLBACK = [["about", "on the subject of", "We talked about birds."], ["above", "higher than", "The bird flew above us."], ["across", "from one side to another", "We walked across the road."], ["action", "something you do", "Running is an action."], ["afraid", "feeling scared", "I was afraid of the storm."], ["after", "later than", "We played after lunch."], ["again", "one more time", "Please read it again."], ["always", "every time", "I always brush my teeth."], ["animal", "a living creature", "The dog is an animal."], ["answer", "a reply", "I know the answer."], ["arrive", "to get somewhere", "We arrive at school early."], ["beautiful", "very pretty", "The flower is beautiful."], ["because", "for that reason", "I wore a coat because it was cold."], ["before", "earlier than", "Wash your hands before eating."], ["begin", "to start", "Let's begin the game."], ["below", "lower than", "The fish swam below the boat."], ["between", "in the middle of two things", "The ball is between the cones."], ["borrow", "take and return later", "I borrow books from the library."], ["brave", "showing courage", "The brave firefighter helped people."], ["build", "to make something", "We build with blocks."], ["busy", "having a lot to do", "Mum is busy today."], ["change", "make different", "The leaves change colour."], ["climb", "go up", "I can climb the ladder."], ["clever", "good at thinking", "She is a clever student."], ["collect", "bring together", "I collect shells."], ["common", "happening often", "Colds are common in winter."], ["compare", "look for differences and similarities", "Compare the two pictures."], ["complete", "finished", "My homework is complete."], ["country", "land where people live", "Australia is a country."], ["course", "the way something moves", "The river changed course."], ["decide", "choose", "I decide to draw."], ["different", "not the same", "The twins wear different hats."], ["discover", "find something new", "We discover insects in the garden."], ["early", "before expected time", "We arrived early."], ["Earth", "the planet we live on", "Earth goes around the Sun."], ["enough", "as much as needed", "We have enough food."], ["enter", "go into", "Enter the classroom quietly."], ["equal", "the same amount", "Both teams have equal points."], ["example", "something that shows an idea", "This is an example."], ["excited", "very happy and eager", "I am excited for the trip."], ["explain", "tell how or why", "Can you explain the rule?"], ["family", "people related to you", "My family eats dinner together."], ["favourite", "liked the most", "Blue is my favourite colour."], ["field", "open land", "The sheep are in the field."], ["follow", "go after", "Follow the teacher."], ["forward", "toward the front", "Take one step forward."], ["friendly", "kind to others", "Our neighbour is friendly."], ["giant", "very large", "We saw a giant pumpkin."], ["group", "people together", "Work in a group."], ["guess", "answer without knowing for sure", "I will guess the number."], ["habit", "something done often", "Reading is a good habit."], ["healthy", "good for your body", "Fruit is healthy."], ["history", "things that happened in the past", "We learned local history."], ["honest", "truthful", "Be honest with your teacher."], ["idea", "a thought or plan", "I have an idea."], ["important", "very useful or needed", "Water is important."], ["include", "have as part of something", "The list includes apples."], ["jump", "push off the ground", "The frog can jump."], ["knowledge", "things you know", "Reading builds knowledge."], ["language", "words used to speak", "English is a language."], ["learn", "gain knowledge", "We learn every day."], ["library", "place with books", "We visited the library."], ["listen", "pay attention to sound", "Listen carefully."], ["measure", "find out size or length", "Measure the desk."], ["minute", "a short unit of time", "Wait one minute."], ["mountain", "very high land", "We climbed a mountain."], ["nature", "plants and animals", "We enjoy nature."], ["notice", "see something", "Did you notice the bird?"], ["number", "a counting symbol", "Seven is a number."], ["obey", "follow rules", "We obey school rules."], ["opinion", "what someone thinks", "That is my opinion."], ["organise", "put in order", "Organise your pencils."], ["paragraph", "a group of sentences", "Write one paragraph."], ["patient", "able to wait calmly", "Be patient in the queue."], ["planet", "a large object in space", "Mars is a planet."], ["possible", "able to happen", "It is possible to win."], ["practice", "do again to improve", "Practice your spelling."], ["predict", "make a good guess", "Predict what happens next."], ["problem", "something difficult to solve", "We solved the problem."], ["protect", "keep safe", "Trees protect animals."], ["question", "something you ask", "I have a question."], ["quiet", "making little noise", "Please be quiet."], ["remember", "keep in your mind", "Remember your hat."], ["respect", "treat well", "Respect other people."], ["result", "what happens in the end", "The result was good."], ["science", "learning about the world", "Science is interesting."], ["search", "try to find", "Search for the missing sock."], ["sentence", "words that make a complete thought", "Write a sentence."], ["special", "different in a good way", "Today is special."], ["strong", "having power", "The ant is strong."], ["suddenly", "quickly and unexpectedly", "It suddenly started raining."], ["survive", "stay alive", "Plants survive with water."], ["symbol", "a sign that means something", "A heart is a symbol of love."], ["teacher", "a person who helps students learn", "Our teacher reads stories."], ["travel", "go from one place to another", "We travel by car."], ["unique", "one of a kind", "Every fingerprint is unique."], ["value", "how important something is", "Kindness has value."], ["village", "a small town", "They live in a village."], ["weather", "what the sky is like", "The weather is sunny."], ["wonder", "think about with interest", "I wonder why birds sing."], ["world", "Earth and all people and places", "We live in the world."]];
+const KEY = "deniz-voc-v1";
+let WORDS = FALLBACK.map(a => ({ w: a[0], m: a[1], e: a[2] }));
+let st = { known: {}, filter: "all", order: null, pos: 0 };
+try { const s = JSON.parse(localStorage.getItem(KEY) || "null"); if (s) st = Object.assign(st, s); } catch (e) {}
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) {} };
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// Speech: same voice choice as the sessions (localStorage deniz-voice), else an English voice
+let VOICE = null;
+function pickVoice() {
+  const vs = speechSynthesis.getVoices(); let want = null;
+  try { want = localStorage.getItem("deniz-voice"); } catch (e) {}
+  VOICE = vs.find(v => v.name === want) || vs.find(v => /en-AU/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang)) || null;
+}
+if ("speechSynthesis" in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+function say(list) {
+  if (!("speechSynthesis" in window)) return;
+  speechSynthesis.cancel();
+  (Array.isArray(list) ? list : [list]).forEach(t => { const u = new SpeechSynthesisUtterance(t); u.rate = 0.8; u.lang = "en-AU"; if (VOICE) u.voice = VOICE; speechSynthesis.speak(u); });
+}
+
+// Highlight the word (and simple forms of it) in the example
+function mark(ex, w) {
+  const stem = w.toLowerCase().replace(/e$/, "");
+  return esc(ex).replace(new RegExp("\\b(" + stem.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\w*)", "i"), "<b>$1</b>");
+}
+function list() {
+  const ids = st.order && st.order.length === WORDS.length ? st.order : WORDS.map((_, i) => i);
+  return ids.filter(i => st.filter === "all" || (st.filter === "know") === !!st.known[WORDS[i].w]);
+}
+let flipped = false;
+function render() {
+  const L = list(); const known = WORDS.filter(x => st.known[x.w]).length;
+  $("#bar").style.width = (known / WORDS.length * 100) + "%";
+  document.querySelectorAll(".tabs button").forEach(b => b.classList.toggle("on", b.dataset.f === st.filter));
+  if (!L.length) {
+    $("#main").innerHTML = `<p class="empty">${st.filter === "learn" ? "🎉 You know all the words!" : "No words here yet.<br>Tap <b>✓ I know it</b> on a card."}</p>`;
+    $("#count").textContent = known + " / " + WORDS.length + " ✓"; ["#prev", "#next", "#again", "#know"].forEach(s => $(s).disabled = true); return;
+  }
+  if (st.pos >= L.length) st.pos = L.length - 1; if (st.pos < 0) st.pos = 0;
+  const x = WORDS[L[st.pos]]; flipped = false;
+  $("#count").textContent = (st.pos + 1) + " / " + L.length;
+  $("#main").innerHTML = `<div class="scene"><div class="card" id="card" role="button" tabindex="0" aria-label="Card: ${esc(x.w)}. Tap to turn over.">
+    <div class="face front">${st.known[x.w] ? '<span class="star">✓ I know</span>' : ""}<div class="word">${esc(x.w)}</div>
+      <button class="spk" data-say="w" aria-label="Say the word">🔊</button><span class="tap">Tap the card to see what it means</span></div>
+    <div class="face backf"><p class="small">${esc(x.w)}</p><p class="lbl">It means</p><p class="mean">${esc(x.m)}</p>
+      <p class="lbl">Example</p><p class="ex">${mark(x.e, x.w)}</p><button class="spk" data-say="b" aria-label="Read it to me">🔊</button></div></div></div>`;
+  $("#prev").disabled = st.pos === 0; $("#next").disabled = st.pos === L.length - 1; $("#again").disabled = $("#know").disabled = false;
+  $("#know").textContent = st.known[x.w] ? "✓ Known" : "✓ I know it";
+  const card = $("#card");
+  const flip = () => { flipped = !flipped; card.classList.toggle("flip", flipped); if (flipped) say([x.m, x.e]); };
+  card.addEventListener("click", ev => { const b = ev.target.closest("[data-say]"); if (b) { ev.stopPropagation(); say(b.dataset.say === "w" ? x.w : [x.w, "It means: " + x.m, x.e]); return; } flip(); });
+  card.addEventListener("keydown", ev => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); flip(); } });
+  // swipe left / right
+  let sx = null; card.addEventListener("touchstart", ev => { sx = ev.touches[0].clientX; }, { passive: true });
+  card.addEventListener("touchend", ev => { if (sx == null) return; const dx = ev.changedTouches[0].clientX - sx; sx = null;
+    if (Math.abs(dx) > 60) { ev.preventDefault(); move(dx < 0 ? 1 : -1); } });
+  save();
+}
+function cur() { const L = list(); return L.length ? WORDS[L[st.pos]] : null; }
+function move(d) { const L = list(); const p = st.pos + d; if (p < 0 || p >= L.length) return; st.pos = p; speechSynthesis && speechSynthesis.cancel(); render(); }
+$("#prev").onclick = () => move(-1);
+$("#next").onclick = () => move(1);
+$("#know").onclick = () => { const x = cur(); if (!x) return; const L = list(); st.known[x.w] = true;
+  if (st.filter === "learn") { save(); render(); } else if (st.pos < L.length - 1) move(1); else render(); };
+$("#again").onclick = () => { const x = cur(); if (!x) return; delete st.known[x.w];
+  if (st.filter === "know") { save(); render(); } else if (st.pos < list().length - 1) move(1); else render(); };
+document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => { st.filter = b.dataset.f; st.pos = 0; render(); });
+$("#shuffle").onclick = () => { const a = WORDS.map((_, i) => i); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } st.order = a; st.pos = 0; render(); };
+$("#order").onclick = () => { st.order = null; st.pos = 0; render(); };
+$("#reset").onclick = () => { if (confirm("Start over? This clears the ✓ marks.")) { st.known = {}; st.pos = 0; render(); } };
+document.addEventListener("keydown", ev => { if (ev.target.closest && ev.target.closest("button")) return; if (ev.key === "ArrowRight") move(1); if (ev.key === "ArrowLeft") move(-1); });
+
+// Load the latest list from voc.md; keep the fallback if that fails (e.g. opened as a file)
+fetch("voc.md", { cache: "no-store" }).then(r => r.ok ? r.text() : Promise.reject()).then(t => {
+  const rows = t.split(/\r?\n/).map(l => l.match(/^\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|\s*$/)).filter(m => m && m[1] !== "Word" && !/^-+$/.test(m[1]));
+  if (rows.length < 5) return;
+  const w = rows.map(m => ({ w: m[1], m: m[2], e: m[3] }));
+  if (st.order && st.order.length !== w.length) st.order = null;
+  WORDS = w; render();
+}).catch(() => {});
+render();
+</script>
+</body>
+</html>

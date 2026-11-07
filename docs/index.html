@@ -31,6 +31,9 @@ a.start .n{font-size:17px;font-weight:600;opacity:.9;margin-top:4px}
 a.parent{position:absolute;top:max(12px,env(safe-area-inset-top));right:12px;width:44px;height:44px;border-radius:12px;
   display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:20px;background:rgba(255,255,255,.6);
   color:var(--muted);border:1px solid rgba(0,0,0,.06)}
+.words{margin-top:34px;display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;text-decoration:none;
+  color:var(--ink);background:rgba(255,255,255,.75);border:1px solid rgba(0,0,0,.06);font-size:18px;font-weight:600;box-shadow:0 6px 16px rgba(255,90,122,.15)}
+.words:active{transform:scale(.96)}
 </style>
 </head>
 <body>
@@ -49,6 +52,8 @@ a.parent{position:absolute;top:max(12px,env(safe-area-inset-top));right:12px;wid
   <span class="label">Start</span>
   <span class="n" id="n">Session 11</span>
 </a>
+
+<a class="words" href="vocab.html">📖 Word cards</a>
 
 <script>
 // The next session comes from progress/progress.json; the href above is the fallback.

@@ -186,3 +186,6 @@ Schedule: daily sessions.
   pattern. Teach items may carry `html` (custom highlight) so tricky words like there/where aren't shown as magic e;
   tricky-word families are taught by adding a letter (here→there/where, hen→when, hat→what). "all" and "ar" are logged under
   ph6 (the /or/ and /ar/ sound families).
+- `docs/vocab.html`: flip cards for the Year 2 word list. It reads `docs/voc.md` (table: Word | Meaning | Example) at load time,
+  with an embedded copy as a fallback (re-embed after editing voc.md if the page is opened as a file). Ticks are kept in
+  localStorage `deniz-voc-v1` (this phone only, not sent in results). Linked from the home page as "📖 Word cards".
