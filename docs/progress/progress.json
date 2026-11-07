@@ -23,7 +23,8 @@
     5,
     6,
     7,
-    8
+    8,
+    9
   ],
   "history": [
     {
@@ -89,6 +90,14 @@
       "duration_min": 36,
       "feeling": "great",
       "summary": "No hints. Reads new magic-e and vowel-team words 12/13 (S1: 1/4). Year 1 story 95% at 21 wcpm (S2: 79% at 13). Free sentence fully correct. But spelling without cues slips back (mack, bic, wid, say: 4/10) and 5 of 12 tricky words aren't instant yet. Reading pace is the main gap."
+    },
+    {
+      "session": 9,
+      "title": "Training 5 – choose the pattern + oa / ow + fast tricky words",
+      "date": "2026-11-07",
+      "duration_min": 34,
+      "feeling": "great",
+      "summary": "Pattern sort 8/8 and mixed no-cue spelling 6/6 (the re-check gap closed in the session). oa/ow 15/15. Tricky words 10/12 but some slow. Story 96% but 14 wcpm cold. Two-sentence writing came out as one run-on sentence (laik, 'what' for went). 34 minutes: too long again; no recordings (page reloaded)."
     }
   ],
   "skills": {
@@ -304,6 +313,24 @@
           "correct": 5,
           "total": 6,
           "note": "RE-CHECK (no hints): New vowel-team words: snail, tray, sweet, seal, sleep right; chain not read."
+        },
+        {
+          "session": 9,
+          "correct": 3,
+          "total": 4,
+          "note": "COLD ee/ea: seed, heat, week; bean not read"
+        },
+        {
+          "session": 9,
+          "correct": 6,
+          "total": 6,
+          "note": "oa/ow hear and choose"
+        },
+        {
+          "session": 9,
+          "correct": 6,
+          "total": 6,
+          "note": "oa/ow read: boat, snow, road, grow, toast + cot"
         }
       ]
     },
@@ -498,6 +525,12 @@
           "correct": 7,
           "total": 12,
           "note": "RE-CHECK (no hints): Tricky words read straight away: said, was, with, are, when, put, should. Slow or wrong: want, what, there, could, would."
+        },
+        {
+          "session": 9,
+          "correct": 10,
+          "total": 12,
+          "note": "Tricky-word speed round: all but what and could marked straight away. Times were long for some (want 30 s, there 19 s, with 17 s), so not all are instant yet."
         }
       ]
     },
@@ -553,6 +586,12 @@
           "correct": 55,
           "total": 58,
           "note": "RE-CHECK (no hints): Cold Year 1 (level B) story 'At the park', read once: 95% (S2 Year 1 story: 79%). Misread wanted, saw, threw. Audio suggests saw → 'was' (reversal) and after → 'off'."
+        },
+        {
+          "session": 9,
+          "correct": 44,
+          "total": 46,
+          "note": "The boat (46 words), cold 96%. Misread out (both reads), began."
         }
       ]
     },
@@ -596,6 +635,12 @@
           "correct": null,
           "total": null,
           "note": "RE-CHECK (no hints): Year 1 story 21 wcpm cold (S2: 13). Still reads word by word; long pauses on some words."
+        },
+        {
+          "session": 9,
+          "correct": null,
+          "total": null,
+          "note": "Cold pace 14 wcpm (slowest so far); 31 after listening. Reads word by word; long pauses."
         }
       ]
     },
@@ -633,6 +678,12 @@
           "correct": 1,
           "total": null,
           "note": "RE-CHECK (no hints): 1 self-correction marked"
+        },
+        {
+          "session": 9,
+          "correct": 2,
+          "total": null,
+          "note": "Self-corrections: 1 on read 1, 2 on read 2"
         }
       ]
     },
@@ -658,6 +709,12 @@
           "correct": 6,
           "total": 6,
           "note": "All 6 tricky-word phrases smooth (what is it, put it on, have a go, there was a, when can we, could you see). S6: 4/6."
+        },
+        {
+          "session": 9,
+          "correct": 3,
+          "total": 4,
+          "note": "Phrases: want to go, what is it, would you like smooth; 'over there' not"
         }
       ]
     },
@@ -800,6 +857,12 @@
           "correct": 2,
           "total": 2,
           "note": "RE-CHECK (no hints): Park story literal questions Status secure: literal questions right in every story S2, S4–S8."
+        },
+        {
+          "session": 9,
+          "correct": 2,
+          "total": 2,
+          "note": "Boat story literal questions"
         }
       ]
     },
@@ -839,6 +902,12 @@
           "correct": 1,
           "total": 1,
           "note": "RE-CHECK (no hints): Why did the dog run after it? Right."
+        },
+        {
+          "session": 9,
+          "correct": 1,
+          "total": 1,
+          "note": "Why did they go home? Right."
         }
       ]
     },
@@ -938,6 +1007,12 @@
           "correct": 2,
           "total": 2,
           "note": "Tile sentence with 'First … and then …' in order"
+        },
+        {
+          "session": 9,
+          "correct": null,
+          "total": null,
+          "note": "Asked for two sentences, First … Then …: wrote one long sentence: 'First they what to the laik and then and dad had to go in row and row.' Took 6.7 minutes at the end of the session."
         }
       ]
     },
@@ -987,6 +1062,12 @@
           "correct": null,
           "total": null,
           "note": "RE-CHECK (no hints): 'The dog had a ball and it got stuck in a tree.' Every word spelled right (S3 picture sentence: 'The dog wos playing wid the bull in the tree.'). Status secure: complete simple sentences in every task S3–S8."
+        },
+        {
+          "session": 9,
+          "correct": null,
+          "total": null,
+          "note": "Run-on sentence; 'what' for went, missing word (Joan/her) before dad."
         }
       ]
     },
@@ -1048,6 +1129,12 @@
           "correct": null,
           "total": null,
           "note": "RE-CHECK (no hints): Joined two ideas with 'and' with no prompt or frame."
+        },
+        {
+          "session": 9,
+          "correct": null,
+          "total": null,
+          "note": "Joined with 'and then', 'and' (overused)."
         }
       ]
     },
@@ -1314,6 +1401,18 @@
           "correct": 0,
           "total": 3,
           "note": "RE-CHECK (no hints): said → 'say', with → 'wid' (same as S3), because → 'beuose'. She spelled said/with right in S4–S6 straight after practice, but not in free recall."
+        },
+        {
+          "session": 9,
+          "correct": 3,
+          "total": 3,
+          "note": "COLD tap-the-spelling: could, would, should (retained)"
+        },
+        {
+          "session": 9,
+          "correct": null,
+          "total": null,
+          "note": "In writing: 'what' typed for 'went'. A taught tricky word turning up in place of a similar-looking word."
         }
       ]
     },
@@ -1399,6 +1498,30 @@
           "correct": 4,
           "total": 7,
           "note": "RE-CHECK (no hints): Spelled home, rain (S1: ren), play, tree. make → 'mack', bike → 'bic' (back to the short-vowel/ck pattern when nothing cues magic e), boat → 'bote' (oa not taught; used magic e logically)."
+        },
+        {
+          "session": 9,
+          "correct": 8,
+          "total": 8,
+          "note": "Pattern sort: heard make, rain, day, bike, feet, home, sea, cute and tapped the right pattern for each"
+        },
+        {
+          "session": 9,
+          "correct": 6,
+          "total": 6,
+          "note": "MIXED no-cue spelling, first try: make, bike, rain, day, home, feet (S8 re-check: mack, bic). Straight after the pattern sort, so check again at the next re-check."
+        },
+        {
+          "session": 9,
+          "correct": 3,
+          "total": 3,
+          "note": "Spelled boat, snow, coat first try"
+        },
+        {
+          "session": 9,
+          "correct": null,
+          "total": null,
+          "note": "In writing: lake → 'laik' (used ai, today's earlier pattern, instead of a_e)."
         }
       ]
     },
@@ -1591,6 +1714,12 @@
           "correct": 8,
           "total": 8,
           "note": "RE-CHECK (no hints): Keyboard game median 2.3 s per letter (S5 2.0, S6 1.6, S7 2.1): flat. f 6.0 s, w 5.6 s slowest."
+        },
+        {
+          "session": 9,
+          "correct": 8,
+          "total": 8,
+          "note": "Keyboard median 2.8 s per letter (S5 2.0, S6 1.6, S7 2.1, S8 2.3); p took 5.9 s. Not getting faster."
         }
       ]
     },
