@@ -10,10 +10,10 @@
     "secure"
   ],
   "next_session": {
-    "number": 12,
-    "kind": "training",
-    "title": "Training 8 – reading first + or + which oh",
-    "url": "sessions/session-12.html"
+    "number": 13,
+    "kind": "recheck",
+    "title": "Re-check 2 – everything so far (compare with Session 8)",
+    "url": "sessions/session-13.html"
   },
   "sessions_completed": [
     1,

@@ -192,6 +192,9 @@ Schedule: daily sessions.
   `attempt_history`, recordings named `…-take<N>-<read>.webm`. After export a "Clear this session from the phone" button
   asks for confirmation, then removes the localStorage key and that session's recordings. When evaluating, judge from
   attempt_history: a story with more than one take is not a cold read.
+- From Session 13 the top bar has a **⏸ Pause** button. While paused, `Date.now()` stands still (it is wrapped), so every
+  item time, the story timer and writing time leave the pause out; running recordings are paused and resumed too.
+  Pauses are logged in `attempt_history.pauses` and the result has `paused_sec` / `active_sec`.
 - `docs/vocab.html`: flip cards for the Year 2 word list. It reads `docs/voc.md` (table: Word | Meaning | Example) at load time,
   with an embedded copy as a fallback (re-embed after editing voc.md if the page is opened as a file). Ticks are kept in
   localStorage `deniz-voc-v1` (this phone only, not sent in results). Linked from the home page as "📖 Word cards".
