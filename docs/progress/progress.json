@@ -2,7 +2,7 @@
   "schema": "deniz-progress/1",
   "child": "Deniz",
   "year": 2,
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "status_scale": [
     "not_checked",
     "not_yet",
@@ -25,7 +25,8 @@
     7,
     8,
     9,
-    10
+    10,
+    11
   ],
   "history": [
     {
@@ -107,6 +108,14 @@
       "duration_min": 19,
       "feeling": "great",
       "summary": "19 minutes (shorter, as planned). oa/ow remembered cold 4/4. Mixed spelling with no sort first 6/6. 'all' 15/15 (hear, read, spell; bell read correctly). Two separate sentences with full stops ('ate a toast'). Story 97%, 22 → 61 wcpm after listening. Tricky words what and there still not instant."
+    },
+    {
+      "session": 11,
+      "title": "Training 7 – reading first + ar + tricky-word families",
+      "date": "2026-11-08",
+      "duration_min": 38,
+      "feeling": "great",
+      "summary": "Reading first (her request): cold story 100% at 56 wcpm (S10: 22), 71 after listening. Mixed spelling with no warm-up dropped to 3/6 (seat 'sit', kite 'kiat', coat 'cote'); sp3 back to learning. New ar 15/15. Three sentences with full stops. Tricky words in isolation 3/6 (when, what, here not yet) but read in the story. Recordings lost (page reloaded). About 38 min elapsed with long pauses; about 20 min of activity."
     }
   ],
   "skills": {
@@ -377,6 +386,18 @@
           "correct": 6,
           "total": 6,
           "note": "'all' words read aloud: ball, tall, small, wall, fall + bell contrast, all correct. ar/or/er not yet taught"
+        },
+        {
+          "session": 11,
+          "correct": 6,
+          "total": 6,
+          "note": "NEW: ar, hear and pick (car/cah, park/pak ...)"
+        },
+        {
+          "session": 11,
+          "correct": 6,
+          "total": 6,
+          "note": "ar words read aloud: car, park, star, farm, dark + cat contrast, all correct"
         }
       ]
     },
@@ -564,6 +585,12 @@
           "correct": 2,
           "total": 4,
           "note": "Slow tricky words read straight away: could, want yes (7 s, 14 s); what, there not yet"
+        },
+        {
+          "session": 11,
+          "correct": 3,
+          "total": 6,
+          "note": "Straight after word-family teaching: there, where, could yes; when, what, here not yet. In the story she read what, there, where correctly"
         }
       ]
     },
@@ -631,13 +658,19 @@
           "correct": 33,
           "total": 34,
           "note": "Story 'The ball' (34 words), cold read: 97%, 'what' misread (said 'when'), 1 self-correction"
+        },
+        {
+          "session": 11,
+          "correct": 39,
+          "total": 39,
+          "note": "Story 'At the lake' (39 words) read FIRST, cold: 100%, 1 self-correction"
         }
       ]
     },
     "fl3": {
       "area": "fluency",
       "name": "Comfortable pace",
-      "status": "not_yet",
+      "status": "learning",
       "evidence": [
         {
           "session": 2,
@@ -686,6 +719,12 @@
           "correct": null,
           "total": null,
           "note": "Cold 22 wcpm (90 s, 7 s stall before 'What'); 61 wcpm after hearing it read (+39). Parent: reads in phrases"
+        },
+        {
+          "session": 11,
+          "correct": null,
+          "total": null,
+          "note": "Story read first (fresh): cold 56 wcpm (S10: 22), 71 after hearing it. Parent: reads in phrases. Easy decodable text, known patterns only"
         }
       ]
     },
@@ -914,6 +953,12 @@
           "correct": 2,
           "total": 2,
           "note": "The ball: what Ben had, who got the ball back"
+        },
+        {
+          "session": 11,
+          "correct": 2,
+          "total": 2,
+          "note": "At the lake: where they went, what was by the tree"
         }
       ]
     },
@@ -965,6 +1010,12 @@
           "correct": 1,
           "total": 1,
           "note": "The ball: how Ben felt (worried)"
+        },
+        {
+          "session": 11,
+          "correct": 1,
+          "total": 1,
+          "note": "At the lake: how Mia felt (excited)"
         }
       ]
     },
@@ -1076,6 +1127,12 @@
           "correct": 1,
           "total": 1,
           "note": "First/Then frame: two events in order (ate toast, rode bike)"
+        },
+        {
+          "session": 11,
+          "correct": 1,
+          "total": 1,
+          "note": "First / Then / At the end: three events in order (car, park, ice cream)"
         }
       ]
     },
@@ -1137,6 +1194,12 @@
           "correct": 2,
           "total": 2,
           "note": "Two separate complete sentences: 'First she ate a toast . Then she rode her bike.'"
+        },
+        {
+          "session": 11,
+          "correct": 3,
+          "total": 3,
+          "note": "Three separate complete sentences; 'went in to the car' (into)"
         }
       ]
     },
@@ -1334,6 +1397,12 @@
           "correct": 2,
           "total": 2,
           "note": "Both lines start with a capital and end with a full stop (space before one stop)"
+        },
+        {
+          "session": 11,
+          "correct": 3,
+          "total": 3,
+          "note": "All three lines start with a capital and end with a full stop"
         }
       ]
     },
@@ -1494,7 +1563,7 @@
     "sp3": {
       "area": "spelling",
       "name": "Choosing vowel patterns",
-      "status": "secure",
+      "status": "learning",
       "evidence": [
         {
           "session": 1,
@@ -1609,6 +1678,18 @@
           "correct": 3,
           "total": 3,
           "note": "Dictated -all words: ball, tall, call"
+        },
+        {
+          "session": 11,
+          "correct": 3,
+          "total": 6,
+          "note": "Mixed spelling, no warm-up (2nd time): small, snow, play right; seat → 'sit', kite → 'kiat', coat → 'cote'. All right on retry"
+        },
+        {
+          "session": 11,
+          "correct": 9,
+          "total": 9,
+          "note": "ar: hear and pick 6/6, dictated car, park, star 3/3"
         }
       ]
     },
