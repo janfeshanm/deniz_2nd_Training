@@ -10,10 +10,10 @@
     "secure"
   ],
   "next_session": {
-    "number": 13,
-    "kind": "recheck",
-    "title": "Re-check 2 – everything so far (compare with Session 8)",
-    "url": "sessions/session-13.html"
+    "number": 14,
+    "kind": "y1check",
+    "title": "Year 1 check – phonics screening style, common words, Year 1 spelling",
+    "url": "sessions/session-14.html"
   },
   "sessions_completed": [
     1,
@@ -27,7 +27,8 @@
     9,
     10,
     11,
-    12
+    12,
+    13
   ],
   "history": [
     {
@@ -125,6 +126,14 @@
       "duration_min": 31,
       "feeling": "great",
       "summary": "True cold story read (1 take): 95%, 20 wcpm; 50 after listening; 'here' read as 'there'. New or 15/15. Which-oh sort 6/6 then road, bone, grow 3/3. ee vs short i by ear 4/6 (seat, feet heard as short). Tricky words in phrases 6/6. Three sentences ('they play', 'ti'). Writing time includes a pause for phone charging. One comprehension answer changed after Back (first try wrong)."
+    },
+    {
+      "session": 13,
+      "title": "Re-check 2 – everything so far (compare with Session 8)",
+      "date": "2026-11-08",
+      "duration_min": 33,
+      "feeling": "great",
+      "summary": "Re-check vs S8: spelling of the same 10 words 9/10 (S8 4/10); tricky words same 12: 10/12 (S8 7/12); new words 11/14 (S8 12/13); ee vs short i 6/6. Cold story DOWN: 91%, 13 wcpm (S8 95%, 21): longer story, two untaught sounds (new, high), and short-vowel blend words (hill → 'hall', strong, stick, spot) missed. Free writing: one long sentence without the frame."
     }
   ],
   "skills": {
@@ -168,6 +177,12 @@
           "correct": 3,
           "total": 3,
           "note": "RE-CHECK (no hints): drum, chip, pond"
+        },
+        {
+          "session": 13,
+          "correct": 1,
+          "total": 1,
+          "note": "Re-check 2: chin read correctly"
         }
       ]
     },
@@ -200,6 +215,12 @@
           "correct": 4,
           "total": 8,
           "note": "Blends in stories: frog x4 read; swim, splash (story A), swam, crab (story B) misread. She read swim on its own in S1 but not in story A."
+        },
+        {
+          "session": 13,
+          "correct": 0,
+          "total": 4,
+          "note": "Short-vowel words with blends / double letters missed: spot (word list), stick, strong, hill ('hall') in the story. Possible spill-over from all/ar/or"
         }
       ]
     },
@@ -279,6 +300,12 @@
           "correct": 4,
           "total": 4,
           "note": "RE-CHECK (no hints): New magic-e words cape, slide, stone, flute (S1 1/4, S3 1/6)."
+        },
+        {
+          "session": 13,
+          "correct": 3,
+          "total": 3,
+          "note": "Re-check 2 new words: grape, smile, globe (no hints)"
         }
       ]
     },
@@ -370,6 +397,18 @@
           "correct": 4,
           "total": 6,
           "note": "Hear long ee vs short i: seat → picked 'sit', feet → 'fit'; sit, ship, sheep, fit right (the last ones quickly)"
+        },
+        {
+          "session": 13,
+          "correct": 5,
+          "total": 6,
+          "note": "Re-check 2 new words: stay, sheet, beach, toad, crow right; paint not read"
+        },
+        {
+          "session": 13,
+          "correct": 6,
+          "total": 6,
+          "note": "Re-check 2: long ee vs short i by ear 6/6 (S12: 4/6)"
         }
       ]
     },
@@ -425,6 +464,12 @@
           "correct": 6,
           "total": 6,
           "note": "or words read aloud: fork, corn, short, storm + cot and car contrasts, all correct"
+        },
+        {
+          "session": 13,
+          "correct": 2,
+          "total": 3,
+          "note": "Re-check 2 new words: stall, torch right; shark not read"
         }
       ]
     },
@@ -624,6 +669,12 @@
           "correct": 6,
           "total": 6,
           "note": "Tricky words inside phrases read smoothly (what is it, over here, when can we go, where is it, come here). But in the story 'here' was read as 'there' twice"
+        },
+        {
+          "session": 13,
+          "correct": 11,
+          "total": 14,
+          "note": "Re-check 2 tricky words alone: same 12 as S8 now 10/12 (S8: 7/12); with, want, here not straight away; when 7 s, come 9 s"
         }
       ]
     },
@@ -703,6 +754,12 @@
           "correct": 39,
           "total": 41,
           "note": "Story 'The dark park' (41 words), TRUE cold read (1 take, no reloads): 95%; here → 'there', star misread after a 12 s stall"
+        },
+        {
+          "session": 13,
+          "correct": 51,
+          "total": 56,
+          "note": "RE-CHECK 2 cold story 'The red kite' (56 words, level B), read once: 91% (S8 95%). Misread new (ew, not taught), hill ('hall'), high (igh, not taught), strong, stick"
         }
       ]
     },
@@ -770,6 +827,12 @@
           "correct": null,
           "total": null,
           "note": "True cold read 20 wcpm (118 s); 50 wcpm after hearing it. Confirms first-read pace 14-24 (S11's 56 was a practised read)"
+        },
+        {
+          "session": 13,
+          "correct": null,
+          "total": null,
+          "note": "RE-CHECK 2: 13 wcpm (231 s), word by word with 10-18 s gaps (S8: 21, S12: 20). Longer story, two untaught sounds"
         }
       ]
     },
@@ -1016,6 +1079,12 @@
           "correct": 1,
           "total": 2,
           "note": "Dark park: 'Where did they go?' first answer 'The beach', changed to 'The park' after Back (first try counted); car question right"
+        },
+        {
+          "session": 13,
+          "correct": 2,
+          "total": 2,
+          "note": "Re-check 2: kite story literal questions"
         }
       ]
     },
@@ -1079,6 +1148,12 @@
           "correct": 1,
           "total": 1,
           "note": "Dark park: why Gran said 'What a star you are' (Sam found her car)"
+        },
+        {
+          "session": 13,
+          "correct": 1,
+          "total": 1,
+          "note": "Re-check 2: why Ava hugged Dad (he got her kite back)"
         }
       ]
     },
@@ -1202,6 +1277,12 @@
           "correct": 1,
           "total": 1,
           "note": "First / Then / At the end: three events in order (slide, rain, home)"
+        },
+        {
+          "session": 13,
+          "correct": 0,
+          "total": 1,
+          "note": "Without the First/Then frame she wrote one long sentence, not a sequence"
         }
       ]
     },
@@ -1275,6 +1356,12 @@
           "correct": 3,
           "total": 3,
           "note": "Three separate sentences: 'First they play on the slide. Then ti rained. At the end they went home.' (play for played; 'ti' typo for it)"
+        },
+        {
+          "session": 13,
+          "correct": 1,
+          "total": 1,
+          "note": "Re-check 2 free writing (no frame): 'The cat gos in the home in the rain and gets stuck in the ricks.' One complete sentence"
         }
       ]
     },
@@ -1342,6 +1429,12 @@
           "correct": null,
           "total": null,
           "note": "Joined with 'and then', 'and' (overused)."
+        },
+        {
+          "session": 13,
+          "correct": 1,
+          "total": 1,
+          "note": "Joins two ideas with 'and'"
         }
       ]
     },
@@ -1423,6 +1516,12 @@
           "correct": null,
           "total": null,
           "note": "RE-CHECK (no hints): Past tense used consistently (had, got stuck)."
+        },
+        {
+          "session": 13,
+          "correct": 0,
+          "total": 1,
+          "note": "'gos' for goes; 'in the home' for into the house"
         }
       ]
     },
@@ -1484,6 +1583,12 @@
           "correct": 3,
           "total": 3,
           "note": "All three lines with capital and full stop"
+        },
+        {
+          "session": 13,
+          "correct": 1,
+          "total": 1,
+          "note": "Capital and full stop"
         }
       ]
     },
@@ -1638,13 +1743,19 @@
           "correct": null,
           "total": null,
           "note": "In writing: 'what' typed for 'went'. A taught tricky word turning up in place of a similar-looking word."
+        },
+        {
+          "session": 13,
+          "correct": 2,
+          "total": 3,
+          "note": "Re-check 2: said, with right (S8: 'say', 'wid'); because → 'boucse'"
         }
       ]
     },
     "sp3": {
       "area": "spelling",
       "name": "Choosing vowel patterns",
-      "status": "learning",
+      "status": "secure",
       "evidence": [
         {
           "session": 1,
@@ -1789,6 +1900,12 @@
           "correct": 9,
           "total": 9,
           "note": "or: hear and pick 6/6, dictated fork, corn, short 3/3"
+        },
+        {
+          "session": 13,
+          "correct": 9,
+          "total": 10,
+          "note": "Re-check 2 spelling, NO sort and no retry: make, bike, home, rain, play, tree, boat, car, corn right; seat → 'seet' (right sound, other spelling). Same 10 as S8: 9/10 (S8: 4/10)"
         }
       ]
     },
