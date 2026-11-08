@@ -195,6 +195,10 @@ Schedule: daily sessions.
 - From Session 13 the top bar has a **⏸ Pause** button. While paused, `Date.now()` stands still (it is wrapped), so every
   item time, the story timer and writing time leave the pause out; running recordings are paused and resumed too.
   Pauses are logged in `attempt_history.pauses` and the result has `paused_sec` / `active_sec`.
+- Session 14 is a one-off **Year 1 check** (kind `y1check`), done after the Session 13 re-check: 40 words in the style of
+  the NSW Year 1 Phonics Screening Check (20 real, 20 made-up "alien" words; items carry `nonsense` and `gpc`), endings and
+  two-syllable words, 30 Year 1 high-frequency words, Year 1 spelling rules, one written question (wr17, scored by hand).
+  The NSW check's expected level (28/40) is shown for reference only.
 - `docs/vocab.html`: flip cards for the Year 2 word list. It reads `docs/voc.md` (table: Word | Meaning | Example) at load time,
   with an embedded copy as a fallback (re-embed after editing voc.md if the page is opened as a file). Ticks are kept in
   localStorage `deniz-voc-v1` (this phone only, not sent in results). Linked from the home page as "📖 Word cards".
