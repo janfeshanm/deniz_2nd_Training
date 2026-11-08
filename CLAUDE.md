@@ -186,6 +186,12 @@ Schedule: daily sessions.
   pattern. Teach items may carry `html` (custom highlight) so tricky words like there/where aren't shown as magic e;
   tricky-word families are taught by adding a letter (here→there/where, hen→when, hat→what). "all" and "ar" are logged under
   ph6 (the /or/ and /ar/ sound families).
+- From Session 12, pages **keep everything until the parent clears it**: answers in localStorage, recordings in IndexedDB
+  (`deniz-audio`, one entry per take and read). ‹ Back, Start over and reloads never delete: replaced answers go to `S.redo`,
+  every story read to `S.readLog` (take number), page openings to `S.loads`, wiped tries to `S.archive`; all exported as
+  `attempt_history`, recordings named `…-take<N>-<read>.webm`. After export a "Clear this session from the phone" button
+  asks for confirmation, then removes the localStorage key and that session's recordings. When evaluating, judge from
+  attempt_history: a story with more than one take is not a cold read.
 - `docs/vocab.html`: flip cards for the Year 2 word list. It reads `docs/voc.md` (table: Word | Meaning | Example) at load time,
   with an embedded copy as a fallback (re-embed after editing voc.md if the page is opened as a file). Ticks are kept in
   localStorage `deniz-voc-v1` (this phone only, not sent in results). Linked from the home page as "📖 Word cards".

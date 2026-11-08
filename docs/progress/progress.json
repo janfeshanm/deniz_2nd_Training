@@ -10,10 +10,10 @@
     "secure"
   ],
   "next_session": {
-    "number": 11,
+    "number": 12,
     "kind": "training",
-    "title": "Training 7 – reading first + ar + tricky-word families",
-    "url": "sessions/session-11.html"
+    "title": "Training 8 – reading first + or + which oh",
+    "url": "sessions/session-12.html"
   },
   "sessions_completed": [
     1,
@@ -115,7 +115,7 @@
       "date": "2026-11-08",
       "duration_min": 38,
       "feeling": "great",
-      "summary": "Reading first (her request): cold story 100% at 56 wcpm (S10: 22), 71 after listening. Mixed spelling with no warm-up dropped to 3/6 (seat 'sit', kite 'kiat', coat 'cote'); sp3 back to learning. New ar 15/15. Three sentences with full stops. Tricky words in isolation 3/6 (when, what, here not yet) but read in the story. Recordings lost (page reloaded). About 38 min elapsed with long pauses; about 20 min of activity."
+      "summary": "Reading first (her request). Story 100% at 56 wcpm, 71 after listening, but NOT a cold read: parent says she read it several times, with reloads, before the scored read. Mixed spelling with no warm-up dropped to 3/6 (seat 'sit', kite 'kiat', coat 'cote'); sp3 back to learning. New ar 15/15. Three sentences with full stops. Tricky words in isolation 3/6 (when, what, here not yet) but read in the story. Recordings lost (page reloaded). About 38 min elapsed with long pauses; about 20 min of activity."
     }
   ],
   "skills": {
@@ -663,14 +663,14 @@
           "session": 11,
           "correct": 39,
           "total": 39,
-          "note": "Story 'At the lake' (39 words) read FIRST, cold: 100%, 1 self-correction"
+          "note": "UNRELIABLE (parent: she read the story several times and the page was reloaded before the scored read, so not a cold read). Story 'At the lake' (39 words) read FIRST, cold: 100%, 1 self-correction"
         }
       ]
     },
     "fl3": {
       "area": "fluency",
       "name": "Comfortable pace",
-      "status": "learning",
+      "status": "not_yet",
       "evidence": [
         {
           "session": 2,
@@ -724,7 +724,7 @@
           "session": 11,
           "correct": null,
           "total": null,
-          "note": "Story read first (fresh): cold 56 wcpm (S10: 22), 71 after hearing it. Parent: reads in phrases. Easy decodable text, known patterns only"
+          "note": "UNRELIABLE (parent: she read the story several times and the page was reloaded before the scored read, so not a cold read). Story read first (fresh): cold 56 wcpm (S10: 22), 71 after hearing it. Parent: reads in phrases. Easy decodable text, known patterns only"
         }
       ]
     },
