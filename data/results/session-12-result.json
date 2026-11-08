@@ -1,0 +1,1782 @@
+{
+  "schema": "deniz-session/1",
+  "session": 12,
+  "kind": "training",
+  "title": "Training 8 – reading first + or + which oh",
+  "focus": [
+    "fl3",
+    "fl1",
+    "ph6",
+    "sp3",
+    "ph5",
+    "wr6"
+  ],
+  "started_at": "2026-11-08T01:27:31.902Z",
+  "finished_at": "2026-11-08T01:58:45.161Z",
+  "duration_sec": 1873,
+  "device": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
+  "parent_context": {
+    "energy": "fresh",
+    "predictive_off": "yes",
+    "record": "yes",
+    "voice": "English United States (en_US)",
+    "mic_ok": true
+  },
+  "steps": [
+    {
+      "id": "s12-read-park",
+      "skills": [
+        "fl2",
+        "fl3"
+      ],
+      "mode": "parent",
+      "started_at": "2026-11-08T01:27:48.725Z",
+      "duration_sec": 166,
+      "items": [
+        {
+          "prompt": "sam",
+          "expected": "sam",
+          "response": "sam",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "and",
+          "expected": "and",
+          "response": "and",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "gran",
+          "expected": "gran",
+          "response": "gran",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "went",
+          "expected": "went",
+          "response": "went",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "to",
+          "expected": "to",
+          "response": "to",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "the",
+          "expected": "the",
+          "response": "the",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "park",
+          "expected": "park",
+          "response": "park",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "it",
+          "expected": "it",
+          "response": "it",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "was",
+          "expected": "was",
+          "response": "was",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "getting",
+          "expected": "getting",
+          "response": "getting",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "dark",
+          "expected": "dark",
+          "response": "dark",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "where",
+          "expected": "where",
+          "response": "where",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "is",
+          "expected": "is",
+          "response": "is",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "my",
+          "expected": "my",
+          "response": "my",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "car",
+          "expected": "car",
+          "response": "car",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "said",
+          "expected": "said",
+          "response": "said",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "gran",
+          "expected": "gran",
+          "response": "gran",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "it",
+          "expected": "it",
+          "response": "it",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "is",
+          "expected": "is",
+          "response": "is",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "over",
+          "expected": "over",
+          "response": "over",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "here",
+          "expected": "here",
+          "response": "misread",
+          "correct": false,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "said",
+          "expected": "said",
+          "response": "said",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "sam",
+          "expected": "sam",
+          "response": "sam",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "what",
+          "expected": "what",
+          "response": "what",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "a",
+          "expected": "a",
+          "response": "a",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "star",
+          "expected": "star",
+          "response": "misread",
+          "correct": false,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "you",
+          "expected": "you",
+          "response": "you",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "are",
+          "expected": "are",
+          "response": "are",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "said",
+          "expected": "said",
+          "response": "said",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "gran",
+          "expected": "gran",
+          "response": "gran",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "when",
+          "expected": "when",
+          "response": "when",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "can",
+          "expected": "can",
+          "response": "can",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "we",
+          "expected": "we",
+          "response": "we",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "come",
+          "expected": "come",
+          "response": "come",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "back",
+          "expected": "back",
+          "response": "back",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "said",
+          "expected": "said",
+          "response": "said",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "sam",
+          "expected": "sam",
+          "response": "sam",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "next",
+          "expected": "next",
+          "response": "next",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "week",
+          "expected": "week",
+          "response": "week",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "said",
+          "expected": "said",
+          "response": "said",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        },
+        {
+          "prompt": "gran",
+          "expected": "gran",
+          "response": "gran",
+          "correct": true,
+          "attempts": 1,
+          "ms": null,
+          "skipped": false,
+          "skills": [
+            "fl2"
+          ]
+        }
+      ],
+      "score": {
+        "correct": 39,
+        "total": 41
+      },
+      "notes": "Story first. Repeated reading: read 1 (cold, scored), model read by the phone, read 2 (practised). Items are read 1. Every take is logged in attempt_history.",
+      "level": "A",
+      "words": 41,
+      "errors": 2,
+      "accuracy": 95,
+      "seconds": 118,
+      "wcpm": 20,
+      "self_corrections": 1,
+      "read1": {
+        "errors": 2,
+        "words": 41,
+        "accuracy": 95,
+        "seconds": 118,
+        "wcpm": 20,
+        "self_corrections": 1,
+        "misread": [
+          "here",
+          "star"
+        ]
+      },
+      "read2": {
+        "errors": 1,
+        "words": 41,
+        "accuracy": 98,
+        "seconds": 48,
+        "wcpm": 50,
+        "self_corrections": 0,
+        "misread": [
+          "here"
+        ]
+      },
+      "behaviours": [],
+      "take": 1
+    },
+    {
+      "id": "s12-comp",
+      "skills": [
+        "co6",
+        "co7"
+      ],
+      "mode": "auto",
+      "started_at": "2026-11-08T01:33:07.101Z",
+      "duration_sec": 13,
+      "items": [
+        {
+          "prompt": "Where did Sam and Gran go?",
+          "expected": "The park",
+          "response": "The park",
+          "correct": true,
+          "skills": [
+            "co6"
+          ],
+          "kind": "literal",
+          "modality": "reading",
+          "attempts": 1,
+          "ms": 3311,
+          "skipped": false
+        },
+        {
+          "prompt": "What could Gran not find?",
+          "expected": "Her car",
+          "response": "Her car",
+          "correct": true,
+          "skills": [
+            "co6"
+          ],
+          "kind": "literal",
+          "modality": "reading",
+          "attempts": 1,
+          "ms": 3415,
+          "skipped": false
+        },
+        {
+          "prompt": "Why did Gran say “What a star you are”?",
+          "expected": "Sam found her car",
+          "response": "Sam found her car",
+          "correct": true,
+          "skills": [
+            "co7"
+          ],
+          "kind": "inference",
+          "modality": "reading",
+          "attempts": 1,
+          "ms": 6018,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 3,
+        "total": 3
+      },
+      "notes": "Questions about the dark park story."
+    },
+    {
+      "id": "s12-write",
+      "skills": [
+        "wr6",
+        "wr8",
+        "wr16"
+      ],
+      "mode": "writing",
+      "started_at": "2026-11-08T01:33:33.037Z",
+      "duration_sec": 813,
+      "items": [
+        {
+          "prompt": "What happened? Finish all three lines. Put a full stop at the end of each one.",
+          "kind": "finish",
+          "pic": "🛝 ➡️ 🌧️ ➡️ 🏠",
+          "response": "First they play on the slide.\nThen ti rained.\nAt the end they went home.",
+          "correct": null,
+          "skills": [
+            "wr6",
+            "wr8",
+            "wr16"
+          ],
+          "attempts": 1,
+          "ms": 813304,
+          "deletes": 4,
+          "stats": {
+            "chars": 72,
+            "words": 15,
+            "starts_with_capital": true,
+            "ends_with_punct": true,
+            "lowercase_i": 0,
+            "magic_e_words": [
+              "slide",
+              "home"
+            ],
+            "starts_with_given": true,
+            "joining_words": [
+              "then"
+            ],
+            "comma_without_space": 0
+          },
+          "skipped": false
+        }
+      ],
+      "score": null,
+      "notes": "Three sentences in a First … / Then … / At the end … frame."
+    },
+    {
+      "id": "s12-ee-i",
+      "skills": [
+        "ph5",
+        "sp3"
+      ],
+      "mode": "auto",
+      "started_at": "2026-11-08T01:47:14.264Z",
+      "duration_sec": 68,
+      "items": [
+        {
+          "prompt": "seat",
+          "expected": "seat",
+          "response": "sit",
+          "options": [
+            "seat",
+            "sit"
+          ],
+          "correct": false,
+          "skills": [
+            "ph5",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 13656,
+          "skipped": false
+        },
+        {
+          "prompt": "sit",
+          "expected": "sit",
+          "response": "sit",
+          "options": [
+            "sit",
+            "seat"
+          ],
+          "correct": true,
+          "skills": [
+            "ph5",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 16261,
+          "skipped": false
+        },
+        {
+          "prompt": "feet",
+          "expected": "feet",
+          "response": "fit",
+          "options": [
+            "feet",
+            "fit"
+          ],
+          "correct": false,
+          "skills": [
+            "ph5",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 12743,
+          "skipped": false
+        },
+        {
+          "prompt": "ship",
+          "expected": "ship",
+          "response": "ship",
+          "options": [
+            "ship",
+            "sheep"
+          ],
+          "correct": true,
+          "skills": [
+            "ph5",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 20631,
+          "skipped": false
+        },
+        {
+          "prompt": "sheep",
+          "expected": "sheep",
+          "response": "sheep",
+          "options": [
+            "sheep",
+            "ship"
+          ],
+          "correct": true,
+          "skills": [
+            "ph5",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 2134,
+          "skipped": false
+        },
+        {
+          "prompt": "fit",
+          "expected": "fit",
+          "response": "fit",
+          "options": [
+            "fit",
+            "feet"
+          ],
+          "correct": true,
+          "skills": [
+            "ph5",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 2572,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 4,
+        "total": 6
+      },
+      "notes": "Hear a word, tap it: long ee vs short i (seat/sit, feet/fit, sheep/ship). First try scored."
+    },
+    {
+      "id": "s12-oh-sort",
+      "skills": [
+        "sp3"
+      ],
+      "mode": "auto",
+      "started_at": "2026-11-08T01:50:30.203Z",
+      "duration_sec": 69,
+      "items": [
+        {
+          "prompt": "boat",
+          "expected": "oa",
+          "response": "oa",
+          "options": [
+            "oa",
+            "o_e",
+            "ow"
+          ],
+          "correct": true,
+          "skills": [
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 18810,
+          "skipped": false
+        },
+        {
+          "prompt": "home",
+          "expected": "o_e",
+          "response": "o_e",
+          "options": [
+            "o_e",
+            "oa",
+            "ow"
+          ],
+          "correct": true,
+          "skills": [
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 4327,
+          "skipped": false
+        },
+        {
+          "prompt": "snow",
+          "expected": "ow",
+          "response": "ow",
+          "options": [
+            "ow",
+            "oa",
+            "o_e"
+          ],
+          "correct": true,
+          "skills": [
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 2069,
+          "skipped": false
+        },
+        {
+          "prompt": "soap",
+          "expected": "oa",
+          "response": "oa",
+          "options": [
+            "oa",
+            "o_e",
+            "ow"
+          ],
+          "correct": true,
+          "skills": [
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 9070,
+          "skipped": false
+        },
+        {
+          "prompt": "rope",
+          "expected": "o_e",
+          "response": "o_e",
+          "options": [
+            "o_e",
+            "oa",
+            "ow"
+          ],
+          "correct": true,
+          "skills": [
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 8384,
+          "skipped": false
+        },
+        {
+          "prompt": "slow",
+          "expected": "ow",
+          "response": "ow",
+          "options": [
+            "ow",
+            "oa",
+            "o_e"
+          ],
+          "correct": true,
+          "skills": [
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 26818,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 6,
+        "total": 6
+      },
+      "notes": "Pattern sort for the oh sound: oa / o_e / ow. First try scored."
+    },
+    {
+      "id": "s12-oh-spell",
+      "skills": [
+        "sp3"
+      ],
+      "mode": "auto",
+      "started_at": "2026-11-08T01:51:43.602Z",
+      "duration_sec": 101,
+      "items": [
+        {
+          "prompt": "road",
+          "sentence": "We walk on the road.",
+          "expected": "road",
+          "response": "road",
+          "correct": true,
+          "before": null,
+          "skills": [
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 34222,
+          "deletes": 2,
+          "skipped": false
+        },
+        {
+          "prompt": "bone",
+          "sentence": "The dog has a bone.",
+          "expected": "bone",
+          "response": "bone",
+          "correct": true,
+          "before": null,
+          "skills": [
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 13391,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "grow",
+          "sentence": "Plants grow in the sun.",
+          "expected": "grow",
+          "response": "grow",
+          "correct": true,
+          "before": null,
+          "skills": [
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 53130,
+          "deletes": 3,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 3,
+        "total": 3
+      },
+      "notes": "Spell new oh words after the sort (road, bone, grow). First try scored; retry kept separately."
+    },
+    {
+      "id": "s12-phrases",
+      "skills": [
+        "fl5",
+        "fl1"
+      ],
+      "mode": "parent",
+      "started_at": "2026-11-08T01:53:31.200Z",
+      "duration_sec": 53,
+      "items": [
+        {
+          "prompt": "what is it",
+          "expected": "what is it",
+          "response": "what is it",
+          "correct": true,
+          "skills": [
+            "fl5",
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 5999,
+          "skipped": false
+        },
+        {
+          "prompt": "over here",
+          "expected": "over here",
+          "response": "over here",
+          "correct": true,
+          "skills": [
+            "fl5",
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 11218,
+          "skipped": false
+        },
+        {
+          "prompt": "when can we go",
+          "expected": "when can we go",
+          "response": "when can we go",
+          "correct": true,
+          "skills": [
+            "fl5",
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 8850,
+          "skipped": false
+        },
+        {
+          "prompt": "where is it",
+          "expected": "where is it",
+          "response": "where is it",
+          "correct": true,
+          "skills": [
+            "fl5",
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 6816,
+          "skipped": false
+        },
+        {
+          "prompt": "come here",
+          "expected": "come here",
+          "response": "come here",
+          "correct": true,
+          "skills": [
+            "fl5",
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 6662,
+          "skipped": false
+        },
+        {
+          "prompt": "what a big dog",
+          "expected": "what a big dog",
+          "response": "what a big dog",
+          "correct": true,
+          "skills": [
+            "fl5",
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 13441,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 6,
+        "total": 6
+      },
+      "notes": "Tricky words inside short phrases (what, here, when, where, come). ✓ = smooth, tricky word straight away."
+    },
+    {
+      "id": "s12-teach",
+      "skills": [
+        "ph6"
+      ],
+      "mode": "teach",
+      "started_at": "2026-11-08T01:54:35.039Z",
+      "duration_sec": 54,
+      "items": [
+        {
+          "prompt": "or → for",
+          "expected": "for",
+          "response": "for",
+          "correct": true,
+          "practice": true,
+          "attempts": 1,
+          "ms": 11931,
+          "skipped": false
+        },
+        {
+          "prompt": "or → corn",
+          "expected": "corn",
+          "response": "corn",
+          "correct": true,
+          "practice": true,
+          "attempts": 1,
+          "ms": 7548,
+          "skipped": false
+        },
+        {
+          "prompt": "or → fork",
+          "expected": "fork",
+          "response": "fork",
+          "correct": true,
+          "practice": true,
+          "attempts": 1,
+          "ms": 13819,
+          "skipped": false
+        },
+        {
+          "prompt": "or → short",
+          "expected": "short",
+          "response": "short",
+          "correct": true,
+          "practice": true,
+          "attempts": 1,
+          "ms": 20945,
+          "skipped": false
+        }
+      ],
+      "score": null,
+      "notes": "Teaching: or → for, corn, fork, short (not scored)."
+    },
+    {
+      "id": "s12-hear",
+      "skills": [
+        "ph6",
+        "sp3"
+      ],
+      "mode": "auto",
+      "started_at": "2026-11-08T01:55:29.286Z",
+      "duration_sec": 17,
+      "items": [
+        {
+          "prompt": "fork",
+          "expected": "fork",
+          "response": "fork",
+          "options": [
+            "fork",
+            "fok"
+          ],
+          "correct": true,
+          "skills": [
+            "ph6",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 2215,
+          "skipped": false
+        },
+        {
+          "prompt": "corn",
+          "expected": "corn",
+          "response": "corn",
+          "options": [
+            "corn",
+            "con"
+          ],
+          "correct": true,
+          "skills": [
+            "ph6",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 2338,
+          "skipped": false
+        },
+        {
+          "prompt": "short",
+          "expected": "short",
+          "response": "short",
+          "options": [
+            "short",
+            "shot"
+          ],
+          "correct": true,
+          "skills": [
+            "ph6",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 2225,
+          "skipped": false
+        },
+        {
+          "prompt": "sport",
+          "expected": "sport",
+          "response": "sport",
+          "options": [
+            "sport",
+            "spot"
+          ],
+          "correct": true,
+          "skills": [
+            "ph6",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 2588,
+          "skipped": false
+        },
+        {
+          "prompt": "storm",
+          "expected": "storm",
+          "response": "storm",
+          "options": [
+            "storm",
+            "stom"
+          ],
+          "correct": true,
+          "skills": [
+            "ph6",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 4045,
+          "skipped": false
+        },
+        {
+          "prompt": "born",
+          "expected": "born",
+          "response": "born",
+          "options": [
+            "born",
+            "bon"
+          ],
+          "correct": true,
+          "skills": [
+            "ph6",
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 3493,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 6,
+        "total": 6
+      },
+      "notes": "Hear an or word, tap the right spelling. First try scored."
+    },
+    {
+      "id": "s12-read",
+      "skills": [
+        "ph6"
+      ],
+      "mode": "parent",
+      "started_at": "2026-11-08T01:55:50.109Z",
+      "duration_sec": 33,
+      "items": [
+        {
+          "prompt": "fork",
+          "expected": "fork",
+          "response": "fork",
+          "correct": true,
+          "skills": [
+            "ph6"
+          ],
+          "attempts": 1,
+          "ms": 2724,
+          "skipped": false
+        },
+        {
+          "prompt": "corn",
+          "expected": "corn",
+          "response": "corn",
+          "correct": true,
+          "skills": [
+            "ph6"
+          ],
+          "attempts": 1,
+          "ms": 2631,
+          "skipped": false
+        },
+        {
+          "prompt": "cot",
+          "expected": "cot",
+          "response": "cot",
+          "correct": true,
+          "skills": [
+            "ph6"
+          ],
+          "attempts": 1,
+          "ms": 4956,
+          "skipped": false
+        },
+        {
+          "prompt": "short",
+          "expected": "short",
+          "response": "short",
+          "correct": true,
+          "skills": [
+            "ph6"
+          ],
+          "attempts": 1,
+          "ms": 10515,
+          "skipped": false
+        },
+        {
+          "prompt": "car",
+          "expected": "car",
+          "response": "car",
+          "correct": true,
+          "skills": [
+            "ph6"
+          ],
+          "attempts": 1,
+          "ms": 2571,
+          "skipped": false
+        },
+        {
+          "prompt": "storm",
+          "expected": "storm",
+          "response": "storm",
+          "correct": true,
+          "skills": [
+            "ph6"
+          ],
+          "attempts": 1,
+          "ms": 9249,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 6,
+        "total": 6
+      },
+      "notes": "Read or words aloud, with cot (short o) and car (ar from last time) mixed in. Parent-scored, first try."
+    },
+    {
+      "id": "s12-spell",
+      "skills": [
+        "sp3"
+      ],
+      "mode": "auto",
+      "started_at": "2026-11-08T01:56:26.677Z",
+      "duration_sec": 60,
+      "items": [
+        {
+          "prompt": "fork",
+          "sentence": "Eat with a fork.",
+          "expected": "fork",
+          "response": "fork",
+          "correct": true,
+          "before": null,
+          "skills": [
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 16630,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "corn",
+          "sentence": "I like corn.",
+          "expected": "corn",
+          "response": "corn",
+          "correct": true,
+          "before": null,
+          "skills": [
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 11049,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "short",
+          "sentence": "The rope is short.",
+          "expected": "short",
+          "response": "short",
+          "correct": true,
+          "before": null,
+          "skills": [
+            "sp3"
+          ],
+          "attempts": 1,
+          "ms": 32054,
+          "deletes": 0,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 3,
+        "total": 3
+      },
+      "notes": "Dictated or words, typed. First try scored; retry kept separately."
+    }
+  ],
+  "child_feeling": "great",
+  "parent_note": "",
+  "observations": [
+    "Heard seat and sit as different",
+    "Wrote three separate sentences",
+    "Got or by the end",
+    "Read the story in phrases",
+    "Found letters faster on the keyboard",
+    "Proud and engaged"
+  ],
+  "summary": {
+    "story": {
+      "read1": {
+        "errors": 2,
+        "words": 41,
+        "accuracy": 95,
+        "seconds": 118,
+        "wcpm": 20,
+        "self_corrections": 1,
+        "misread": [
+          "here",
+          "star"
+        ]
+      },
+      "read2": {
+        "errors": 1,
+        "words": 41,
+        "accuracy": 98,
+        "seconds": 48,
+        "wcpm": 50,
+        "self_corrections": 0,
+        "misread": [
+          "here"
+        ]
+      },
+      "behaviours": [],
+      "take": 1,
+      "takes_started": 1,
+      "reads_logged": 2,
+      "first_ever_read": {
+        "step": "s12-read-park",
+        "take": 1,
+        "n": 1,
+        "at": "2026-11-08T01:31:36.325Z",
+        "errors": 2,
+        "words": 41,
+        "accuracy": 95,
+        "seconds": 118,
+        "wcpm": 20,
+        "self_corrections": 1,
+        "misread": [
+          "here",
+          "star"
+        ]
+      },
+      "gain_wcpm": 30
+    },
+    "comp": {
+      "correct": 3,
+      "total": 3,
+      "pct": 100
+    },
+    "writing": {
+      "text": "First they play on the slide.\nThen ti rained.\nAt the end they went home.",
+      "stats": {
+        "chars": 72,
+        "words": 15,
+        "starts_with_capital": true,
+        "ends_with_punct": true,
+        "lowercase_i": 0,
+        "magic_e_words": [
+          "slide",
+          "home"
+        ],
+        "starts_with_given": true,
+        "joining_words": [
+          "then"
+        ],
+        "comma_without_space": 0
+      },
+      "ms": 813304,
+      "lines": [
+        "First they play on the slide.",
+        "Then ti rained.",
+        "At the end they went home."
+      ],
+      "lines_with_full_stop": 3
+    },
+    "ee_i": {
+      "correct": 4,
+      "total": 6,
+      "pct": 67
+    },
+    "oh_sort": {
+      "correct": 6,
+      "total": 6,
+      "pct": 100
+    },
+    "oh_spell": {
+      "correct": 3,
+      "total": 3,
+      "pct": 100,
+      "misspelt": []
+    },
+    "oh_spell_after": {
+      "correct": 3,
+      "total": 3,
+      "pct": 100
+    },
+    "phrases": {
+      "correct": 6,
+      "total": 6,
+      "pct": 100,
+      "not_yet": []
+    },
+    "hear": {
+      "correct": 6,
+      "total": 6,
+      "pct": 100
+    },
+    "read": {
+      "correct": 6,
+      "total": 6,
+      "pct": 100,
+      "misread": []
+    },
+    "spell": {
+      "correct": 3,
+      "total": 3,
+      "pct": 100,
+      "misspelt": []
+    },
+    "spell_after": {
+      "correct": 3,
+      "total": 3,
+      "pct": 100
+    },
+    "flags": [
+      "Voice used: English United States (en_US).",
+      "Story pace 20 → 50 words per minute after listening (+30).",
+      "1 answer(s) were redone after ‹ Back. Replaced answers: comp Where did Sam and Gran go? (said The beach).",
+      "Writing: 3 line(s), 3 ending with a full stop, 813 s."
+    ],
+    "suggested_progress": {
+      "fl2": {
+        "status": "learning",
+        "likely_secure": true,
+        "correct": 39,
+        "total": 41,
+        "pct": 95
+      },
+      "co6": {
+        "status": "learning",
+        "likely_secure": true,
+        "correct": 2,
+        "total": 2,
+        "pct": 100
+      },
+      "co7": {
+        "status": "learning",
+        "likely_secure": true,
+        "correct": 1,
+        "total": 1,
+        "pct": 100
+      },
+      "ph5": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 4,
+        "total": 6,
+        "pct": 67
+      },
+      "sp3": {
+        "status": "learning",
+        "likely_secure": true,
+        "correct": 22,
+        "total": 24,
+        "pct": 92
+      },
+      "fl5": {
+        "status": "learning",
+        "likely_secure": true,
+        "correct": 6,
+        "total": 6,
+        "pct": 100
+      },
+      "fl1": {
+        "status": "learning",
+        "likely_secure": true,
+        "correct": 6,
+        "total": 6,
+        "pct": 100
+      },
+      "ph6": {
+        "status": "learning",
+        "likely_secure": true,
+        "correct": 12,
+        "total": 12,
+        "pct": 100
+      }
+    },
+    "evidence": [
+      {
+        "skill": "fl2",
+        "session": 12,
+        "step": "s12-read-park",
+        "correct": 39,
+        "total": 41,
+        "note": "Story first. Repeated reading: read 1 (cold, scored), model read by the phone, read 2 (practised). Items are read 1. Every take is logged in attempt_history."
+      },
+      {
+        "skill": "co6",
+        "session": 12,
+        "step": "s12-comp",
+        "correct": 2,
+        "total": 2,
+        "note": "Questions about the dark park story."
+      },
+      {
+        "skill": "co7",
+        "session": 12,
+        "step": "s12-comp",
+        "correct": 1,
+        "total": 1,
+        "note": "Questions about the dark park story."
+      },
+      {
+        "skill": "ph5",
+        "session": 12,
+        "step": "s12-ee-i",
+        "correct": 4,
+        "total": 6,
+        "note": "Hear a word, tap it: long ee vs short i (seat/sit, feet/fit, sheep/ship). First try scored."
+      },
+      {
+        "skill": "sp3",
+        "session": 12,
+        "step": "s12-ee-i",
+        "correct": 4,
+        "total": 6,
+        "note": "Hear a word, tap it: long ee vs short i (seat/sit, feet/fit, sheep/ship). First try scored."
+      },
+      {
+        "skill": "sp3",
+        "session": 12,
+        "step": "s12-oh-sort",
+        "correct": 6,
+        "total": 6,
+        "note": "Pattern sort for the oh sound: oa / o_e / ow. First try scored."
+      },
+      {
+        "skill": "sp3",
+        "session": 12,
+        "step": "s12-oh-spell",
+        "correct": 3,
+        "total": 3,
+        "note": "Spell new oh words after the sort (road, bone, grow). First try scored; retry kept separately."
+      },
+      {
+        "skill": "fl5",
+        "session": 12,
+        "step": "s12-phrases",
+        "correct": 6,
+        "total": 6,
+        "note": "Tricky words inside short phrases (what, here, when, where, come). ✓ = smooth, tricky word straight away."
+      },
+      {
+        "skill": "fl1",
+        "session": 12,
+        "step": "s12-phrases",
+        "correct": 6,
+        "total": 6,
+        "note": "Tricky words inside short phrases (what, here, when, where, come). ✓ = smooth, tricky word straight away."
+      },
+      {
+        "skill": "ph6",
+        "session": 12,
+        "step": "s12-hear",
+        "correct": 6,
+        "total": 6,
+        "note": "Hear an or word, tap the right spelling. First try scored."
+      },
+      {
+        "skill": "sp3",
+        "session": 12,
+        "step": "s12-hear",
+        "correct": 6,
+        "total": 6,
+        "note": "Hear an or word, tap the right spelling. First try scored."
+      },
+      {
+        "skill": "ph6",
+        "session": 12,
+        "step": "s12-read",
+        "correct": 6,
+        "total": 6,
+        "note": "Read or words aloud, with cot (short o) and car (ar from last time) mixed in. Parent-scored, first try."
+      },
+      {
+        "skill": "sp3",
+        "session": 12,
+        "step": "s12-spell",
+        "correct": 3,
+        "total": 3,
+        "note": "Dictated or words, typed. First try scored; retry kept separately."
+      }
+    ],
+    "caveat": "Training session: scores are the answers standing at the end; anything replaced after Back, every story take and page reloads are in attempt_history. Judge with that in mind."
+  },
+  "recordings": [
+    {
+      "step": "s12-read-park",
+      "take": 1,
+      "read": 1,
+      "scored": true,
+      "at": "2026-11-08T01:30:28.080Z",
+      "file": "session-12-read-park-take1-1.webm",
+      "seconds": 118,
+      "mime": "audio/webm;codecs=opus",
+      "bytes": 978793
+    },
+    {
+      "step": "s12-read-park",
+      "take": 1,
+      "read": 2,
+      "scored": true,
+      "at": "2026-11-08T01:32:55.103Z",
+      "file": "session-12-read-park-take1-2.webm",
+      "seconds": 48,
+      "mime": "audio/webm;codecs=opus",
+      "bytes": 481194
+    }
+  ],
+  "attempt_history": {
+    "page_loads": [],
+    "redone_after_back": [
+      {
+        "step": "s12-comp",
+        "at": "2026-11-08T01:33:13.671Z",
+        "why": "back",
+        "item": {
+          "prompt": "Where did Sam and Gran go?",
+          "expected": "The park",
+          "response": "The beach",
+          "correct": false,
+          "skills": [
+            "co6"
+          ],
+          "kind": "literal",
+          "modality": "reading",
+          "attempts": 1,
+          "ms": 5031,
+          "skipped": false
+        }
+      }
+    ],
+    "story_reads": [
+      {
+        "step": "s12-read-park",
+        "take": 1,
+        "n": 1,
+        "at": "2026-11-08T01:31:36.325Z",
+        "errors": 2,
+        "words": 41,
+        "accuracy": 95,
+        "seconds": 118,
+        "wcpm": 20,
+        "self_corrections": 1,
+        "misread": [
+          "here",
+          "star"
+        ]
+      },
+      {
+        "step": "s12-read-park",
+        "take": 1,
+        "n": 2,
+        "at": "2026-11-08T01:33:06.447Z",
+        "errors": 1,
+        "words": 41,
+        "accuracy": 98,
+        "seconds": 48,
+        "wcpm": 50,
+        "self_corrections": 0,
+        "misread": [
+          "here"
+        ]
+      }
+    ],
+    "story_takes": {
+      "s12-read-park": 1
+    },
+    "earlier_tries_before_start_over": []
+  }
+}

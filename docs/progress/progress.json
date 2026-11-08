@@ -26,7 +26,8 @@
     8,
     9,
     10,
-    11
+    11,
+    12
   ],
   "history": [
     {
@@ -116,6 +117,14 @@
       "duration_min": 38,
       "feeling": "great",
       "summary": "Reading first (her request). Story 100% at 56 wcpm, 71 after listening, but NOT a cold read: parent says she read it several times, with reloads, before the scored read. Mixed spelling with no warm-up dropped to 3/6 (seat 'sit', kite 'kiat', coat 'cote'); sp3 back to learning. New ar 15/15. Three sentences with full stops. Tricky words in isolation 3/6 (when, what, here not yet) but read in the story. Recordings lost (page reloaded). About 38 min elapsed with long pauses; about 20 min of activity."
+    },
+    {
+      "session": 12,
+      "title": "Training 8 – reading first + or + which oh",
+      "date": "2026-11-08",
+      "duration_min": 31,
+      "feeling": "great",
+      "summary": "True cold story read (1 take): 95%, 20 wcpm; 50 after listening; 'here' read as 'there'. New or 15/15. Which-oh sort 6/6 then road, bone, grow 3/3. ee vs short i by ear 4/6 (seat, feet heard as short). Tricky words in phrases 6/6. Three sentences ('they play', 'ti'). Writing time includes a pause for phone charging. One comprehension answer changed after Back (first try wrong)."
     }
   ],
   "skills": {
@@ -355,6 +364,12 @@
           "correct": 4,
           "total": 4,
           "note": "COLD (no reminder): read soap, load, blow, show (oa/ow): all correct"
+        },
+        {
+          "session": 12,
+          "correct": 4,
+          "total": 6,
+          "note": "Hear long ee vs short i: seat → picked 'sit', feet → 'fit'; sit, ship, sheep, fit right (the last ones quickly)"
         }
       ]
     },
@@ -398,6 +413,18 @@
           "correct": 6,
           "total": 6,
           "note": "ar words read aloud: car, park, star, farm, dark + cat contrast, all correct"
+        },
+        {
+          "session": 12,
+          "correct": 6,
+          "total": 6,
+          "note": "NEW: or, hear and pick (fork/fok, corn/con ...)"
+        },
+        {
+          "session": 12,
+          "correct": 6,
+          "total": 6,
+          "note": "or words read aloud: fork, corn, short, storm + cot and car contrasts, all correct"
         }
       ]
     },
@@ -591,6 +618,12 @@
           "correct": 3,
           "total": 6,
           "note": "Straight after word-family teaching: there, where, could yes; when, what, here not yet. In the story she read what, there, where correctly"
+        },
+        {
+          "session": 12,
+          "correct": 6,
+          "total": 6,
+          "note": "Tricky words inside phrases read smoothly (what is it, over here, when can we go, where is it, come here). But in the story 'here' was read as 'there' twice"
         }
       ]
     },
@@ -664,6 +697,12 @@
           "correct": 39,
           "total": 39,
           "note": "UNRELIABLE (parent: she read the story several times and the page was reloaded before the scored read, so not a cold read). Story 'At the lake' (39 words) read FIRST, cold: 100%, 1 self-correction"
+        },
+        {
+          "session": 12,
+          "correct": 39,
+          "total": 41,
+          "note": "Story 'The dark park' (41 words), TRUE cold read (1 take, no reloads): 95%; here → 'there', star misread after a 12 s stall"
         }
       ]
     },
@@ -725,6 +764,12 @@
           "correct": null,
           "total": null,
           "note": "UNRELIABLE (parent: she read the story several times and the page was reloaded before the scored read, so not a cold read). Story read first (fresh): cold 56 wcpm (S10: 22), 71 after hearing it. Parent: reads in phrases. Easy decodable text, known patterns only"
+        },
+        {
+          "session": 12,
+          "correct": null,
+          "total": null,
+          "note": "True cold read 20 wcpm (118 s); 50 wcpm after hearing it. Confirms first-read pace 14-24 (S11's 56 was a practised read)"
         }
       ]
     },
@@ -799,6 +844,12 @@
           "correct": 3,
           "total": 4,
           "note": "Phrases: want to go, what is it, would you like smooth; 'over there' not"
+        },
+        {
+          "session": 12,
+          "correct": 6,
+          "total": 6,
+          "note": "Short phrases read smoothly"
         }
       ]
     },
@@ -959,6 +1010,12 @@
           "correct": 2,
           "total": 2,
           "note": "At the lake: where they went, what was by the tree"
+        },
+        {
+          "session": 12,
+          "correct": 1,
+          "total": 2,
+          "note": "Dark park: 'Where did they go?' first answer 'The beach', changed to 'The park' after Back (first try counted); car question right"
         }
       ]
     },
@@ -1016,6 +1073,12 @@
           "correct": 1,
           "total": 1,
           "note": "At the lake: how Mia felt (excited)"
+        },
+        {
+          "session": 12,
+          "correct": 1,
+          "total": 1,
+          "note": "Dark park: why Gran said 'What a star you are' (Sam found her car)"
         }
       ]
     },
@@ -1133,6 +1196,12 @@
           "correct": 1,
           "total": 1,
           "note": "First / Then / At the end: three events in order (car, park, ice cream)"
+        },
+        {
+          "session": 12,
+          "correct": 1,
+          "total": 1,
+          "note": "First / Then / At the end: three events in order (slide, rain, home)"
         }
       ]
     },
@@ -1200,6 +1269,12 @@
           "correct": 3,
           "total": 3,
           "note": "Three separate complete sentences; 'went in to the car' (into)"
+        },
+        {
+          "session": 12,
+          "correct": 3,
+          "total": 3,
+          "note": "Three separate sentences: 'First they play on the slide. Then ti rained. At the end they went home.' (play for played; 'ti' typo for it)"
         }
       ]
     },
@@ -1403,6 +1478,12 @@
           "correct": 3,
           "total": 3,
           "note": "All three lines start with a capital and end with a full stop"
+        },
+        {
+          "session": 12,
+          "correct": 3,
+          "total": 3,
+          "note": "All three lines with capital and full stop"
         }
       ]
     },
@@ -1690,6 +1771,24 @@
           "correct": 9,
           "total": 9,
           "note": "ar: hear and pick 6/6, dictated car, park, star 3/3"
+        },
+        {
+          "session": 12,
+          "correct": 6,
+          "total": 6,
+          "note": "Which oh? sort: boat, soap (oa), home, rope (o_e), snow, slow (ow)"
+        },
+        {
+          "session": 12,
+          "correct": 3,
+          "total": 3,
+          "note": "Spell new oh words right after the sort: road, bone, grow"
+        },
+        {
+          "session": 12,
+          "correct": 9,
+          "total": 9,
+          "note": "or: hear and pick 6/6, dictated fork, corn, short 3/3"
         }
       ]
     },
