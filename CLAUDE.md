@@ -199,6 +199,10 @@ Schedule: daily sessions.
   the NSW Year 1 Phonics Screening Check (20 real, 20 made-up "alien" words; items carry `nonsense` and `gpc`), endings and
   two-syllable words, 30 Year 1 high-frequency words, Year 1 spelling rules, one written question (wr17, scored by hand).
   The NSW check's expected level (28/40) is shown for reference only.
+- Session 15 (training) is built from the Session 14 page, so training pages keep the pause button, alien-word support
+  in `read` steps (items with `alien` show 👽 to her and the pronunciation to the parent) and keep-everything storage.
+  Adds "igh" to the pattern highlights, `ed: true` on a read step (feedback: cover the e d), and a writing frame that fades
+  (only "First " given). Short-vowel pairs (hot/hut, hill/hall) are logged under ph1, short-vowel blend words under ph3.
 - `docs/vocab.html`: flip cards for the Year 2 word list. It reads `docs/voc.md` (table: Word | Meaning | Example) at load time,
   with an embedded copy as a fallback (re-embed after editing voc.md if the page is opened as a file). Ticks are kept in
   localStorage `deniz-voc-v1` (this phone only, not sent in results). Linked from the home page as "📖 Word cards".
