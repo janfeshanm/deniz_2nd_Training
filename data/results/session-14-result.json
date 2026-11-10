@@ -1,0 +1,1890 @@
+{
+  "schema": "deniz-session/1",
+  "session": 14,
+  "kind": "y1check",
+  "title": "Year 1 check – phonics screening style, common words, Year 1 spelling",
+  "focus": [
+    "ph2",
+    "ph3",
+    "ph7",
+    "ph8",
+    "ph10",
+    "ph11",
+    "ph12",
+    "fl1",
+    "sp4",
+    "sp7",
+    "sp8",
+    "wr17"
+  ],
+  "started_at": "2026-11-10T09:27:55.775Z",
+  "finished_at": "2026-11-10T09:59:14.504Z",
+  "duration_sec": 1879,
+  "device": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
+  "parent_context": {
+    "energy": "fresh",
+    "predictive_off": "yes",
+    "record": "yes",
+    "voice": "English United States (en_US)",
+    "mic_ok": true
+  },
+  "steps": [
+    {
+      "id": "s14-psc1",
+      "skills": [
+        "ph2",
+        "ph3",
+        "ph12"
+      ],
+      "mode": "parent",
+      "started_at": "2026-11-10T09:28:13.630Z",
+      "duration_sec": 262,
+      "items": [
+        {
+          "prompt": "ship",
+          "expected": "ship",
+          "response": "ship",
+          "correct": true,
+          "nonsense": false,
+          "gpc": "sh",
+          "skills": [
+            "ph2"
+          ],
+          "attempts": 1,
+          "ms": 2905,
+          "skipped": false
+        },
+        {
+          "prompt": "vap",
+          "expected": "vap",
+          "response": "vap",
+          "correct": true,
+          "nonsense": true,
+          "gpc": "CVC",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 5916,
+          "skipped": false
+        },
+        {
+          "prompt": "chop",
+          "expected": "chop",
+          "response": "chop",
+          "correct": true,
+          "nonsense": false,
+          "gpc": "ch",
+          "skills": [
+            "ph2"
+          ],
+          "attempts": 1,
+          "ms": 4776,
+          "skipped": false
+        },
+        {
+          "prompt": "jex",
+          "expected": "jex",
+          "response": "jex",
+          "correct": true,
+          "nonsense": true,
+          "gpc": "CVC",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 6383,
+          "skipped": false
+        },
+        {
+          "prompt": "thin",
+          "expected": "thin",
+          "response": "thin",
+          "correct": true,
+          "nonsense": false,
+          "gpc": "th",
+          "skills": [
+            "ph2"
+          ],
+          "attempts": 1,
+          "ms": 5146,
+          "skipped": false
+        },
+        {
+          "prompt": "chab",
+          "expected": "chab",
+          "response": "chab",
+          "correct": true,
+          "nonsense": true,
+          "gpc": "ch",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 5862,
+          "skipped": false
+        },
+        {
+          "prompt": "ring",
+          "expected": "ring",
+          "response": "ring",
+          "correct": true,
+          "nonsense": false,
+          "gpc": "ng",
+          "skills": [
+            "ph2"
+          ],
+          "attempts": 1,
+          "ms": 5085,
+          "skipped": false
+        },
+        {
+          "prompt": "thog",
+          "expected": "thog",
+          "response": "thog",
+          "correct": true,
+          "nonsense": true,
+          "gpc": "th",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 6848,
+          "skipped": false
+        },
+        {
+          "prompt": "duck",
+          "expected": "duck",
+          "response": "duck",
+          "correct": true,
+          "nonsense": false,
+          "gpc": "ck",
+          "skills": [
+            "ph2"
+          ],
+          "attempts": 1,
+          "ms": 14777,
+          "skipped": false
+        },
+        {
+          "prompt": "shup",
+          "expected": "shup",
+          "response": "shup",
+          "correct": true,
+          "nonsense": true,
+          "gpc": "sh",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 5648,
+          "skipped": false
+        },
+        {
+          "prompt": "quiz",
+          "expected": "quiz",
+          "response": "quiz",
+          "correct": true,
+          "nonsense": false,
+          "gpc": "qu",
+          "skills": [
+            "ph2"
+          ],
+          "attempts": 1,
+          "ms": 15642,
+          "skipped": false
+        },
+        {
+          "prompt": "meck",
+          "expected": "meck",
+          "response": "meck",
+          "correct": true,
+          "nonsense": true,
+          "gpc": "ck",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 5607,
+          "skipped": false
+        },
+        {
+          "prompt": "frog",
+          "expected": "frog",
+          "response": "frog",
+          "correct": true,
+          "nonsense": false,
+          "gpc": "blend",
+          "skills": [
+            "ph3"
+          ],
+          "attempts": 1,
+          "ms": 4689,
+          "skipped": false
+        },
+        {
+          "prompt": "blim",
+          "expected": "blim",
+          "response": "blim",
+          "correct": true,
+          "nonsense": true,
+          "gpc": "blend",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 15999,
+          "skipped": false
+        },
+        {
+          "prompt": "hand",
+          "expected": "hand",
+          "response": "hand",
+          "correct": true,
+          "nonsense": false,
+          "gpc": "blend",
+          "skills": [
+            "ph3"
+          ],
+          "attempts": 1,
+          "ms": 5543,
+          "skipped": false
+        },
+        {
+          "prompt": "grest",
+          "expected": "grest",
+          "response": null,
+          "correct": false,
+          "nonsense": true,
+          "gpc": "blend",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 16158,
+          "skipped": false
+        },
+        {
+          "prompt": "milk",
+          "expected": "milk",
+          "response": "milk",
+          "correct": true,
+          "nonsense": false,
+          "gpc": "blend",
+          "skills": [
+            "ph3"
+          ],
+          "attempts": 1,
+          "ms": 12480,
+          "skipped": false
+        },
+        {
+          "prompt": "stont",
+          "expected": "stont",
+          "response": "stont",
+          "correct": true,
+          "nonsense": true,
+          "gpc": "blend",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 17254,
+          "skipped": false
+        },
+        {
+          "prompt": "step",
+          "expected": "step",
+          "response": null,
+          "correct": false,
+          "nonsense": false,
+          "gpc": "blend",
+          "skills": [
+            "ph3"
+          ],
+          "attempts": 1,
+          "ms": 76242,
+          "skipped": false
+        },
+        {
+          "prompt": "plin",
+          "expected": "plin",
+          "response": "plin",
+          "correct": true,
+          "nonsense": true,
+          "gpc": "blend",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 28565,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 18,
+        "total": 20
+      },
+      "notes": "Year 1 check, section 1 (20 words: 10 real, 10 made-up): consonant digraphs sh ch th ng ck qu, blends. No hints."
+    },
+    {
+      "id": "s14-psc2",
+      "skills": [
+        "ph5",
+        "ph6",
+        "ph7",
+        "ph8",
+        "ph12"
+      ],
+      "mode": "parent",
+      "started_at": "2026-11-10T09:32:55.173Z",
+      "duration_sec": 304,
+      "items": [
+        {
+          "prompt": "coin",
+          "expected": "coin",
+          "response": null,
+          "correct": false,
+          "nonsense": false,
+          "gpc": "oi",
+          "skills": [
+            "ph7"
+          ],
+          "attempts": 1,
+          "ms": 36193,
+          "skipped": false
+        },
+        {
+          "prompt": "noil",
+          "expected": "noil",
+          "response": "noil",
+          "correct": true,
+          "nonsense": true,
+          "gpc": "oi",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 19890,
+          "skipped": false
+        },
+        {
+          "prompt": "toy",
+          "expected": "toy",
+          "response": "toy",
+          "correct": true,
+          "nonsense": false,
+          "gpc": "oy",
+          "skills": [
+            "ph7"
+          ],
+          "attempts": 1,
+          "ms": 4299,
+          "skipped": false
+        },
+        {
+          "prompt": "voy",
+          "expected": "voy",
+          "response": "voy",
+          "correct": true,
+          "nonsense": true,
+          "gpc": "oy",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 2796,
+          "skipped": false
+        },
+        {
+          "prompt": "loud",
+          "expected": "loud",
+          "response": null,
+          "correct": false,
+          "nonsense": false,
+          "gpc": "ou",
+          "skills": [
+            "ph7"
+          ],
+          "attempts": 1,
+          "ms": 16974,
+          "skipped": false
+        },
+        {
+          "prompt": "zout",
+          "expected": "zout",
+          "response": null,
+          "correct": false,
+          "nonsense": true,
+          "gpc": "ou",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 12217,
+          "skipped": false
+        },
+        {
+          "prompt": "cow",
+          "expected": "cow",
+          "response": "cow",
+          "correct": true,
+          "nonsense": false,
+          "gpc": "ow",
+          "skills": [
+            "ph7"
+          ],
+          "attempts": 1,
+          "ms": 5211,
+          "skipped": false
+        },
+        {
+          "prompt": "lirt",
+          "expected": "lirt",
+          "response": null,
+          "correct": false,
+          "nonsense": true,
+          "gpc": "ir",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 27889,
+          "skipped": false
+        },
+        {
+          "prompt": "bird",
+          "expected": "bird",
+          "response": "bird",
+          "correct": true,
+          "nonsense": false,
+          "gpc": "ir",
+          "skills": [
+            "ph6"
+          ],
+          "attempts": 1,
+          "ms": 2588,
+          "skipped": false
+        },
+        {
+          "prompt": "murn",
+          "expected": "murn",
+          "response": null,
+          "correct": false,
+          "nonsense": true,
+          "gpc": "ur",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 7127,
+          "skipped": false
+        },
+        {
+          "prompt": "hurt",
+          "expected": "hurt",
+          "response": null,
+          "correct": false,
+          "nonsense": false,
+          "gpc": "ur",
+          "skills": [
+            "ph6"
+          ],
+          "attempts": 1,
+          "ms": 14631,
+          "skipped": false
+        },
+        {
+          "prompt": "glew",
+          "expected": "glew",
+          "response": null,
+          "correct": false,
+          "nonsense": true,
+          "gpc": "ew",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 19030,
+          "skipped": false
+        },
+        {
+          "prompt": "fern",
+          "expected": "fern",
+          "response": "fern",
+          "correct": true,
+          "nonsense": false,
+          "gpc": "er",
+          "skills": [
+            "ph6"
+          ],
+          "attempts": 1,
+          "ms": 6378,
+          "skipped": false
+        },
+        {
+          "prompt": "prue",
+          "expected": "prue",
+          "response": null,
+          "correct": false,
+          "nonsense": true,
+          "gpc": "ue",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 19933,
+          "skipped": false
+        },
+        {
+          "prompt": "chew",
+          "expected": "chew",
+          "response": null,
+          "correct": false,
+          "nonsense": false,
+          "gpc": "ew",
+          "skills": [
+            "ph5"
+          ],
+          "attempts": 1,
+          "ms": 7433,
+          "skipped": false
+        },
+        {
+          "prompt": "zight",
+          "expected": "zight",
+          "response": null,
+          "correct": false,
+          "nonsense": true,
+          "gpc": "igh",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 9977,
+          "skipped": false
+        },
+        {
+          "prompt": "blue",
+          "expected": "blue",
+          "response": null,
+          "correct": false,
+          "nonsense": false,
+          "gpc": "ue",
+          "skills": [
+            "ph5"
+          ],
+          "attempts": 1,
+          "ms": 11341,
+          "skipped": false
+        },
+        {
+          "prompt": "jarn",
+          "expected": "jarn",
+          "response": null,
+          "correct": false,
+          "nonsense": true,
+          "gpc": "ar",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 16044,
+          "skipped": false
+        },
+        {
+          "prompt": "night",
+          "expected": "night",
+          "response": null,
+          "correct": false,
+          "nonsense": false,
+          "gpc": "igh",
+          "skills": [
+            "ph8"
+          ],
+          "attempts": 1,
+          "ms": 37686,
+          "skipped": false
+        },
+        {
+          "prompt": "torb",
+          "expected": "torb",
+          "response": null,
+          "correct": false,
+          "nonsense": true,
+          "gpc": "or",
+          "skills": [
+            "ph12"
+          ],
+          "attempts": 1,
+          "ms": 26523,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 6,
+        "total": 20
+      },
+      "notes": "Year 1 check, section 2 (20 words: 10 real, 10 made-up): oi oy ou ow ir ur er ew ue igh (some not taught yet). No hints."
+    },
+    {
+      "id": "s14-ends",
+      "skills": [
+        "ph10",
+        "ph11"
+      ],
+      "mode": "parent",
+      "started_at": "2026-11-10T09:38:12.382Z",
+      "duration_sec": 109,
+      "items": [
+        {
+          "prompt": "jumping",
+          "expected": "jumping",
+          "response": "jumping",
+          "correct": true,
+          "nonsense": false,
+          "gpc": "-ing",
+          "skills": [
+            "ph11"
+          ],
+          "attempts": 1,
+          "ms": 12895,
+          "skipped": false
+        },
+        {
+          "prompt": "wanted",
+          "expected": "wanted",
+          "response": null,
+          "correct": false,
+          "nonsense": false,
+          "gpc": "-ed",
+          "skills": [
+            "ph11"
+          ],
+          "attempts": 1,
+          "ms": 12665,
+          "skipped": false
+        },
+        {
+          "prompt": "boxes",
+          "expected": "boxes",
+          "response": "boxes",
+          "correct": true,
+          "nonsense": false,
+          "gpc": "-es",
+          "skills": [
+            "ph11"
+          ],
+          "attempts": 1,
+          "ms": 11931,
+          "skipped": false
+        },
+        {
+          "prompt": "rabbit",
+          "expected": "rabbit",
+          "response": "rabbit",
+          "correct": true,
+          "nonsense": false,
+          "gpc": "2 syllables",
+          "skills": [
+            "ph10"
+          ],
+          "attempts": 1,
+          "ms": 29078,
+          "skipped": false
+        },
+        {
+          "prompt": "picnic",
+          "expected": "picnic",
+          "response": null,
+          "correct": false,
+          "nonsense": false,
+          "gpc": "2 syllables",
+          "skills": [
+            "ph10"
+          ],
+          "attempts": 1,
+          "ms": 15046,
+          "skipped": false
+        },
+        {
+          "prompt": "sunset",
+          "expected": "sunset",
+          "response": "sunset",
+          "correct": true,
+          "nonsense": false,
+          "gpc": "2 syllables",
+          "skills": [
+            "ph10"
+          ],
+          "attempts": 1,
+          "ms": 27162,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 4,
+        "total": 6
+      },
+      "notes": "Endings (-ing, -ed, -es) and two-syllable words (rabbit, picnic, sunset). No hints."
+    },
+    {
+      "id": "s14-hfw",
+      "skills": [
+        "fl1"
+      ],
+      "mode": "parent",
+      "started_at": "2026-11-10T09:48:22.951Z",
+      "duration_sec": 165,
+      "items": [
+        {
+          "prompt": "he",
+          "expected": "he",
+          "response": "he",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 2262,
+          "skipped": false
+        },
+        {
+          "prompt": "she",
+          "expected": "she",
+          "response": "she",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 2209,
+          "skipped": false
+        },
+        {
+          "prompt": "we",
+          "expected": "we",
+          "response": "we",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 2225,
+          "skipped": false
+        },
+        {
+          "prompt": "me",
+          "expected": "me",
+          "response": "me",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 2466,
+          "skipped": false
+        },
+        {
+          "prompt": "be",
+          "expected": "be",
+          "response": "be",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 2280,
+          "skipped": false
+        },
+        {
+          "prompt": "my",
+          "expected": "my",
+          "response": "my",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 2332,
+          "skipped": false
+        },
+        {
+          "prompt": "by",
+          "expected": "by",
+          "response": null,
+          "correct": false,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 3911,
+          "skipped": false
+        },
+        {
+          "prompt": "no",
+          "expected": "no",
+          "response": "no",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 2415,
+          "skipped": false
+        },
+        {
+          "prompt": "go",
+          "expected": "go",
+          "response": "go",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 2301,
+          "skipped": false
+        },
+        {
+          "prompt": "so",
+          "expected": "so",
+          "response": "so",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 2380,
+          "skipped": false
+        },
+        {
+          "prompt": "do",
+          "expected": "do",
+          "response": "do",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 2225,
+          "skipped": false
+        },
+        {
+          "prompt": "to",
+          "expected": "to",
+          "response": "to",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 2251,
+          "skipped": false
+        },
+        {
+          "prompt": "you",
+          "expected": "you",
+          "response": "you",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 2210,
+          "skipped": false
+        },
+        {
+          "prompt": "your",
+          "expected": "your",
+          "response": "your",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 2252,
+          "skipped": false
+        },
+        {
+          "prompt": "they",
+          "expected": "they",
+          "response": "they",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 2327,
+          "skipped": false
+        },
+        {
+          "prompt": "have",
+          "expected": "have",
+          "response": null,
+          "correct": false,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 7656,
+          "skipped": false
+        },
+        {
+          "prompt": "like",
+          "expected": "like",
+          "response": "like",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 4995,
+          "skipped": false
+        },
+        {
+          "prompt": "some",
+          "expected": "some",
+          "response": "some",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 7908,
+          "skipped": false
+        },
+        {
+          "prompt": "one",
+          "expected": "one",
+          "response": "one",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 2298,
+          "skipped": false
+        },
+        {
+          "prompt": "once",
+          "expected": "once",
+          "response": null,
+          "correct": false,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 19319,
+          "skipped": false
+        },
+        {
+          "prompt": "little",
+          "expected": "little",
+          "response": null,
+          "correct": false,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 13554,
+          "skipped": false
+        },
+        {
+          "prompt": "were",
+          "expected": "were",
+          "response": null,
+          "correct": false,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 7823,
+          "skipped": false
+        },
+        {
+          "prompt": "where",
+          "expected": "where",
+          "response": "where",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 5197,
+          "skipped": false
+        },
+        {
+          "prompt": "who",
+          "expected": "who",
+          "response": "who",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 2349,
+          "skipped": false
+        },
+        {
+          "prompt": "why",
+          "expected": "why",
+          "response": "why",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 5043,
+          "skipped": false
+        },
+        {
+          "prompt": "again",
+          "expected": "again",
+          "response": null,
+          "correct": false,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 14076,
+          "skipped": false
+        },
+        {
+          "prompt": "friend",
+          "expected": "friend",
+          "response": null,
+          "correct": false,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 15671,
+          "skipped": false
+        },
+        {
+          "prompt": "school",
+          "expected": "school",
+          "response": "school",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 2535,
+          "skipped": false
+        },
+        {
+          "prompt": "house",
+          "expected": "house",
+          "response": "house",
+          "correct": true,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 3817,
+          "skipped": false
+        },
+        {
+          "prompt": "people",
+          "expected": "people",
+          "response": null,
+          "correct": false,
+          "nonsense": false,
+          "gpc": null,
+          "skills": [
+            "fl1"
+          ],
+          "attempts": 1,
+          "ms": 16450,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 22,
+        "total": 30
+      },
+      "notes": "30 Year 1 high-frequency words not tested before, read straight away. No hints."
+    },
+    {
+      "id": "s14-spell",
+      "skills": [
+        "sp4",
+        "sp1",
+        "sp7",
+        "sp8"
+      ],
+      "mode": "auto",
+      "started_at": "2026-11-10T09:51:39.665Z",
+      "duration_sec": 258,
+      "items": [
+        {
+          "prompt": "duck",
+          "sentence": "The duck can swim.",
+          "expected": "duck",
+          "response": "duck",
+          "correct": true,
+          "before": null,
+          "skills": [
+            "sp4"
+          ],
+          "attempts": 1,
+          "ms": 7091,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "back",
+          "sentence": "Come back soon.",
+          "expected": "back",
+          "response": "back",
+          "correct": true,
+          "before": null,
+          "skills": [
+            "sp4"
+          ],
+          "attempts": 1,
+          "ms": 16206,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "off",
+          "sentence": "Turn the light off.",
+          "expected": "off",
+          "response": "off",
+          "correct": true,
+          "before": null,
+          "skills": [
+            "sp4"
+          ],
+          "attempts": 1,
+          "ms": 11415,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "bell",
+          "sentence": "Ring the bell.",
+          "expected": "bell",
+          "response": "bell",
+          "correct": true,
+          "before": null,
+          "skills": [
+            "sp4"
+          ],
+          "attempts": 1,
+          "ms": 12077,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "kiss",
+          "sentence": "A kiss for Mum.",
+          "expected": "kiss",
+          "response": "kiss",
+          "correct": true,
+          "before": null,
+          "skills": [
+            "sp4"
+          ],
+          "attempts": 1,
+          "ms": 31940,
+          "deletes": 1,
+          "skipped": false
+        },
+        {
+          "prompt": "shop",
+          "sentence": "We went to the shop.",
+          "expected": "shop",
+          "response": "shop",
+          "correct": true,
+          "before": null,
+          "skills": [
+            "sp1"
+          ],
+          "attempts": 1,
+          "ms": 23346,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "chin",
+          "sentence": "Touch your chin.",
+          "expected": "chin",
+          "response": "chin",
+          "correct": true,
+          "before": null,
+          "skills": [
+            "sp1"
+          ],
+          "attempts": 1,
+          "ms": 24785,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "then",
+          "sentence": "Then we went home.",
+          "expected": "then",
+          "response": "then",
+          "correct": true,
+          "before": null,
+          "skills": [
+            "sp1"
+          ],
+          "attempts": 1,
+          "ms": 14839,
+          "deletes": 1,
+          "skipped": false
+        },
+        {
+          "prompt": "cats",
+          "sentence": "I have two cats.",
+          "expected": "cats",
+          "response": "cats",
+          "correct": true,
+          "before": null,
+          "skills": [
+            "sp7"
+          ],
+          "attempts": 1,
+          "ms": 31646,
+          "deletes": 1,
+          "skipped": false
+        },
+        {
+          "prompt": "boxes",
+          "sentence": "The boxes are big.",
+          "expected": "boxes",
+          "response": "buxes",
+          "correct": false,
+          "before": null,
+          "skills": [
+            "sp7"
+          ],
+          "attempts": 1,
+          "ms": 29488,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "jumping",
+          "sentence": "The frog is jumping.",
+          "expected": "jumping",
+          "response": "joping",
+          "correct": false,
+          "before": null,
+          "skills": [
+            "sp8"
+          ],
+          "attempts": 1,
+          "ms": 19975,
+          "deletes": 0,
+          "skipped": false
+        },
+        {
+          "prompt": "jumped",
+          "sentence": "The frog jumped.",
+          "expected": "jumped",
+          "response": "juped",
+          "correct": false,
+          "before": null,
+          "skills": [
+            "sp8"
+          ],
+          "attempts": 1,
+          "ms": 35531,
+          "deletes": 0,
+          "skipped": false
+        }
+      ],
+      "score": {
+        "correct": 9,
+        "total": 12
+      },
+      "notes": "Year 1 spelling rules, no retry: ck (duck, back), ff/ll/ss (off, bell, kiss), sh/ch/th, plurals (cats, boxes), -ing, -ed."
+    },
+    {
+      "id": "s14-write",
+      "skills": [
+        "wr17",
+        "wr8"
+      ],
+      "mode": "writing",
+      "started_at": "2026-11-10T09:56:40.543Z",
+      "duration_sec": 143,
+      "items": [
+        {
+          "prompt": "Write a question you could ask the dog. Remember the question mark at the end!",
+          "kind": "picture",
+          "pic": "👧 ❓ 🐶",
+          "response": "what is your name?",
+          "correct": null,
+          "skills": [
+            "wr17",
+            "wr8"
+          ],
+          "attempts": 1,
+          "ms": 142792,
+          "deletes": 4,
+          "stats": {
+            "chars": 18,
+            "words": 4,
+            "starts_with_capital": false,
+            "ends_with_punct": true,
+            "lowercase_i": 0,
+            "magic_e_words": [
+              "name"
+            ],
+            "starts_with_given": true,
+            "joining_words": [],
+            "comma_without_space": 0
+          },
+          "skipped": false
+        }
+      ],
+      "score": null,
+      "notes": "One written question: capital letter and question mark (wr17)."
+    }
+  ],
+  "child_feeling": "great",
+  "parent_note": "",
+  "observations": [],
+  "summary": {
+    "psc1": {
+      "correct": 18,
+      "total": 20,
+      "pct": 90
+    },
+    "psc2": {
+      "correct": 6,
+      "total": 20,
+      "pct": 30
+    },
+    "psc": {
+      "correct": 24,
+      "total": 40,
+      "pct": 60,
+      "not_read": [
+        "grest 👽",
+        "step",
+        "coin",
+        "loud",
+        "zout 👽",
+        "lirt 👽",
+        "murn 👽",
+        "hurt",
+        "glew 👽",
+        "prue 👽",
+        "chew",
+        "zight 👽",
+        "blue",
+        "jarn 👽",
+        "night",
+        "torb 👽"
+      ]
+    },
+    "psc_real": {
+      "correct": 13,
+      "total": 20,
+      "pct": 65
+    },
+    "psc_alien": {
+      "correct": 11,
+      "total": 20,
+      "pct": 55
+    },
+    "by_sound": {
+      "sh": {
+        "correct": 2,
+        "total": 2
+      },
+      "CVC": {
+        "correct": 2,
+        "total": 2
+      },
+      "ch": {
+        "correct": 2,
+        "total": 2
+      },
+      "th": {
+        "correct": 2,
+        "total": 2
+      },
+      "ng": {
+        "correct": 1,
+        "total": 1
+      },
+      "ck": {
+        "correct": 2,
+        "total": 2
+      },
+      "qu": {
+        "correct": 1,
+        "total": 1
+      },
+      "blend": {
+        "correct": 6,
+        "total": 8
+      },
+      "oi": {
+        "correct": 1,
+        "total": 2
+      },
+      "oy": {
+        "correct": 2,
+        "total": 2
+      },
+      "ou": {
+        "correct": 0,
+        "total": 2
+      },
+      "ow": {
+        "correct": 1,
+        "total": 1
+      },
+      "ir": {
+        "correct": 1,
+        "total": 2
+      },
+      "ur": {
+        "correct": 0,
+        "total": 2
+      },
+      "ew": {
+        "correct": 0,
+        "total": 2
+      },
+      "er": {
+        "correct": 1,
+        "total": 1
+      },
+      "ue": {
+        "correct": 0,
+        "total": 2
+      },
+      "igh": {
+        "correct": 0,
+        "total": 2
+      },
+      "ar": {
+        "correct": 0,
+        "total": 1
+      },
+      "or": {
+        "correct": 0,
+        "total": 1
+      },
+      "-ing": {
+        "correct": 1,
+        "total": 1
+      },
+      "-ed": {
+        "correct": 0,
+        "total": 1
+      },
+      "-es": {
+        "correct": 1,
+        "total": 1
+      },
+      "2 syllables": {
+        "correct": 2,
+        "total": 3
+      }
+    },
+    "ends": {
+      "correct": 4,
+      "total": 6,
+      "pct": 67,
+      "not_read": [
+        "wanted",
+        "picnic"
+      ]
+    },
+    "hfw": {
+      "correct": 22,
+      "total": 30,
+      "pct": 73,
+      "not_yet": [
+        "by",
+        "have",
+        "once",
+        "little",
+        "were",
+        "again",
+        "friend",
+        "people"
+      ],
+      "slow": [
+        "some 8s",
+        "where 5s",
+        "why 5s"
+      ]
+    },
+    "spell": {
+      "correct": 9,
+      "total": 12,
+      "pct": 75,
+      "misspelt": [
+        {
+          "expected": "boxes",
+          "response": "buxes",
+          "rule": "sp7"
+        },
+        {
+          "expected": "jumping",
+          "response": "joping",
+          "rule": "sp8"
+        },
+        {
+          "expected": "jumped",
+          "response": "juped",
+          "rule": "sp8"
+        }
+      ]
+    },
+    "writing": {
+      "text": "what is your name?",
+      "stats": {
+        "chars": 18,
+        "words": 4,
+        "starts_with_capital": false,
+        "ends_with_punct": true,
+        "lowercase_i": 0,
+        "magic_e_words": [
+          "name"
+        ],
+        "starts_with_given": true,
+        "joining_words": [],
+        "comma_without_space": 0
+      },
+      "ms": 142792,
+      "has_question_mark": true,
+      "ends_with_question_mark": true,
+      "starts_with_capital": false
+    },
+    "flags": [
+      "Voice used: English United States (en_US).",
+      "40-word check: 24/40 (real 13/20, alien 11/20). For reference only: the NSW Year 1 check expects about 28/40 by the end of Year 1.",
+      "Not read: grest 👽, step, coin, loud, zout 👽, lirt 👽, murn 👽, hurt, glew 👽, prue 👽, chew, zight 👽, blue, jarn 👽, night, torb 👽.",
+      "Quick words straight away: 22/30. Not yet: by, have, once, little, were, again, friend, people.",
+      "Year 1 spelling: 9/12. boxes → buxes, jumping → joping, jumped → juped.",
+      "Question: ends with a question mark, no capital at the start.",
+      "1 answer(s) were redone after ‹ Back. Replaced answers: spell duck (said dukc)."
+    ],
+    "suggested_progress": {
+      "ph2": {
+        "status": "learning",
+        "likely_secure": true,
+        "correct": 6,
+        "total": 6,
+        "pct": 100
+      },
+      "ph12": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 11,
+        "total": 20,
+        "pct": 55
+      },
+      "ph3": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 3,
+        "total": 4,
+        "pct": 75
+      },
+      "ph7": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 2,
+        "total": 4,
+        "pct": 50
+      },
+      "ph6": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 2,
+        "total": 3,
+        "pct": 67
+      },
+      "ph5": {
+        "status": "not_yet",
+        "likely_secure": false,
+        "correct": 0,
+        "total": 2,
+        "pct": 0
+      },
+      "ph8": {
+        "status": "not_yet",
+        "likely_secure": false,
+        "correct": 0,
+        "total": 1,
+        "pct": 0
+      },
+      "ph11": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 2,
+        "total": 3,
+        "pct": 67
+      },
+      "ph10": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 2,
+        "total": 3,
+        "pct": 67
+      },
+      "fl1": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 22,
+        "total": 30,
+        "pct": 73
+      },
+      "sp4": {
+        "status": "learning",
+        "likely_secure": true,
+        "correct": 5,
+        "total": 5,
+        "pct": 100
+      },
+      "sp1": {
+        "status": "learning",
+        "likely_secure": true,
+        "correct": 3,
+        "total": 3,
+        "pct": 100
+      },
+      "sp7": {
+        "status": "learning",
+        "likely_secure": false,
+        "correct": 1,
+        "total": 2,
+        "pct": 50
+      },
+      "sp8": {
+        "status": "not_yet",
+        "likely_secure": false,
+        "correct": 0,
+        "total": 2,
+        "pct": 0
+      }
+    },
+    "evidence": [
+      {
+        "skill": "ph2",
+        "session": 14,
+        "step": "s14-psc1",
+        "correct": 6,
+        "total": 6,
+        "note": "Year 1 check, section 1 (20 words: 10 real, 10 made-up): consonant digraphs sh ch th ng ck qu, blends. No hints."
+      },
+      {
+        "skill": "ph12",
+        "session": 14,
+        "step": "s14-psc1",
+        "correct": 9,
+        "total": 10,
+        "note": "Year 1 check, section 1 (20 words: 10 real, 10 made-up): consonant digraphs sh ch th ng ck qu, blends. No hints."
+      },
+      {
+        "skill": "ph3",
+        "session": 14,
+        "step": "s14-psc1",
+        "correct": 3,
+        "total": 4,
+        "note": "Year 1 check, section 1 (20 words: 10 real, 10 made-up): consonant digraphs sh ch th ng ck qu, blends. No hints."
+      },
+      {
+        "skill": "ph7",
+        "session": 14,
+        "step": "s14-psc2",
+        "correct": 2,
+        "total": 4,
+        "note": "Year 1 check, section 2 (20 words: 10 real, 10 made-up): oi oy ou ow ir ur er ew ue igh (some not taught yet). No hints."
+      },
+      {
+        "skill": "ph12",
+        "session": 14,
+        "step": "s14-psc2",
+        "correct": 2,
+        "total": 10,
+        "note": "Year 1 check, section 2 (20 words: 10 real, 10 made-up): oi oy ou ow ir ur er ew ue igh (some not taught yet). No hints."
+      },
+      {
+        "skill": "ph6",
+        "session": 14,
+        "step": "s14-psc2",
+        "correct": 2,
+        "total": 3,
+        "note": "Year 1 check, section 2 (20 words: 10 real, 10 made-up): oi oy ou ow ir ur er ew ue igh (some not taught yet). No hints."
+      },
+      {
+        "skill": "ph5",
+        "session": 14,
+        "step": "s14-psc2",
+        "correct": 0,
+        "total": 2,
+        "note": "Year 1 check, section 2 (20 words: 10 real, 10 made-up): oi oy ou ow ir ur er ew ue igh (some not taught yet). No hints."
+      },
+      {
+        "skill": "ph8",
+        "session": 14,
+        "step": "s14-psc2",
+        "correct": 0,
+        "total": 1,
+        "note": "Year 1 check, section 2 (20 words: 10 real, 10 made-up): oi oy ou ow ir ur er ew ue igh (some not taught yet). No hints."
+      },
+      {
+        "skill": "ph11",
+        "session": 14,
+        "step": "s14-ends",
+        "correct": 2,
+        "total": 3,
+        "note": "Endings (-ing, -ed, -es) and two-syllable words (rabbit, picnic, sunset). No hints."
+      },
+      {
+        "skill": "ph10",
+        "session": 14,
+        "step": "s14-ends",
+        "correct": 2,
+        "total": 3,
+        "note": "Endings (-ing, -ed, -es) and two-syllable words (rabbit, picnic, sunset). No hints."
+      },
+      {
+        "skill": "fl1",
+        "session": 14,
+        "step": "s14-hfw",
+        "correct": 22,
+        "total": 30,
+        "note": "30 Year 1 high-frequency words not tested before, read straight away. No hints."
+      },
+      {
+        "skill": "sp4",
+        "session": 14,
+        "step": "s14-spell",
+        "correct": 5,
+        "total": 5,
+        "note": "Year 1 spelling rules, no retry: ck (duck, back), ff/ll/ss (off, bell, kiss), sh/ch/th, plurals (cats, boxes), -ing, -ed."
+      },
+      {
+        "skill": "sp1",
+        "session": 14,
+        "step": "s14-spell",
+        "correct": 3,
+        "total": 3,
+        "note": "Year 1 spelling rules, no retry: ck (duck, back), ff/ll/ss (off, bell, kiss), sh/ch/th, plurals (cats, boxes), -ing, -ed."
+      },
+      {
+        "skill": "sp7",
+        "session": 14,
+        "step": "s14-spell",
+        "correct": 1,
+        "total": 2,
+        "note": "Year 1 spelling rules, no retry: ck (duck, back), ff/ll/ss (off, bell, kiss), sh/ch/th, plurals (cats, boxes), -ing, -ed."
+      },
+      {
+        "skill": "sp8",
+        "session": 14,
+        "step": "s14-spell",
+        "correct": 0,
+        "total": 2,
+        "note": "Year 1 spelling rules, no retry: ck (duck, back), ff/ll/ss (off, bell, kiss), sh/ch/th, plurals (cats, boxes), -ing, -ed."
+      }
+    ],
+    "caveat": "Re-check: no teaching, no hints, no retries. Scores are the answers standing at the end; anything replaced after Back, every story take, pauses and reloads are in attempt_history. Judge with that in mind."
+  },
+  "recordings": [],
+  "paused_sec": 0,
+  "active_sec": 1879,
+  "attempt_history": {
+    "pauses": [],
+    "page_loads": [],
+    "redone_after_back": [
+      {
+        "step": "s14-spell",
+        "at": "2026-11-10T09:52:02.486Z",
+        "why": "back",
+        "item": {
+          "prompt": "duck",
+          "sentence": "The duck can swim.",
+          "expected": "duck",
+          "response": "dukc",
+          "correct": false,
+          "before": null,
+          "skills": [
+            "sp4"
+          ],
+          "attempts": 1,
+          "ms": 19311,
+          "deletes": 0,
+          "skipped": false
+        }
+      }
+    ],
+    "story_reads": [],
+    "story_takes": {},
+    "earlier_tries_before_start_over": []
+  }
+}

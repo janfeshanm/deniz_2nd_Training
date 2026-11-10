@@ -2,7 +2,7 @@
   "schema": "deniz-progress/1",
   "child": "Deniz",
   "year": 2,
-  "updated": "2026-11-08",
+  "updated": "2026-11-10",
   "status_scale": [
     "not_checked",
     "not_yet",
@@ -28,7 +28,8 @@
     10,
     11,
     12,
-    13
+    13,
+    14
   ],
   "history": [
     {
@@ -134,6 +135,14 @@
       "duration_min": 33,
       "feeling": "great",
       "summary": "Re-check vs S8: spelling of the same 10 words 9/10 (S8 4/10); tricky words same 12: 10/12 (S8 7/12); new words 11/14 (S8 12/13); ee vs short i 6/6. Cold story DOWN: 91%, 13 wcpm (S8 95%, 21): longer story, two untaught sounds (new, high), and short-vowel blend words (hill → 'hall', strong, stick, spot) missed. Free writing: one long sentence without the frame."
+    },
+    {
+      "session": 14,
+      "title": "Year 1 check – phonics screening style, common words, Year 1 spelling",
+      "date": "2026-11-10",
+      "duration_min": 31,
+      "feeling": "great",
+      "summary": "40-word Year 1 check 24/40 (reference: 28 expected by end of Year 1). Section 1 (digraphs, blends) 18/20; section 2 (oi oy ou ow ir ur er ew ue igh ar or) 6/20: ou, ur, ew, ue, igh not yet, and ar/or failed in made-up words. Endings: -ing, -es yes, -ed (wanted) no. Common words 22/30. Spelling 9/12 (8/12 first try): ck/ff/ll/ss and digraphs fine; boxes 'buxes', jumping 'joping', jumped 'juped' (short o/u mix-up). Question mark yes, capital no."
     }
   ],
   "skills": {
@@ -189,13 +198,19 @@
     "ph2": {
       "area": "phonics",
       "name": "Consonant digraphs",
-      "status": "learning",
+      "status": "secure",
       "evidence": [
         {
           "session": 1,
           "correct": 6,
           "total": 6,
           "note": "Digraphs sh ch th"
+        },
+        {
+          "session": 14,
+          "correct": 6,
+          "total": 6,
+          "note": "Y1 CHECK: consonant digraphs sh ch th ng ck qu all read (ship, chop, thin, ring, duck, quiz), plus 5/5 in made-up words"
         }
       ]
     },
@@ -221,6 +236,12 @@
           "correct": 0,
           "total": 4,
           "note": "Short-vowel words with blends / double letters missed: spot (word list), stick, strong, hill ('hall') in the story. Possible spill-over from all/ar/or"
+        },
+        {
+          "session": 14,
+          "correct": 3,
+          "total": 4,
+          "note": "Y1 check blends: frog, hand, milk right; step not read (76 s). With S13 (hill, spot, stick, strong) short-vowel blend words are the weak spot"
         }
       ]
     },
@@ -409,6 +430,12 @@
           "correct": 6,
           "total": 6,
           "note": "Re-check 2: long ee vs short i by ear 6/6 (S12: 4/6)"
+        },
+        {
+          "session": 14,
+          "correct": 0,
+          "total": 4,
+          "note": "Y1 check: ew and ue not yet (chew, blue, glew, prue): not taught. Does not change the taught ai/ay/ee/ea/oa/ow"
         }
       ]
     },
@@ -470,6 +497,12 @@
           "correct": 2,
           "total": 3,
           "note": "Re-check 2 new words: stall, torch right; shark not read"
+        },
+        {
+          "session": 14,
+          "correct": 2,
+          "total": 5,
+          "note": "Y1 check: bird, fern right; hurt, lirt, murn not read (ir/ur/er not taught); jarn (ar) and torb (or) made-up words not read"
         }
       ]
     },
@@ -489,6 +522,12 @@
           "correct": null,
           "total": null,
           "note": "Not reached in S2 (the page skipped later groups after two stopped)."
+        },
+        {
+          "session": 14,
+          "correct": 3,
+          "total": 5,
+          "note": "Y1 check: toy, cow, (noil, voy made-up) right; coin, loud, zout not read. oi/oy/ow partly, ou not yet (none taught)"
         }
       ]
     },
@@ -508,6 +547,12 @@
           "correct": null,
           "total": null,
           "note": "Not reached in S2 (the page skipped later groups after two stopped)."
+        },
+        {
+          "session": 14,
+          "correct": 0,
+          "total": 2,
+          "note": "Y1 check: igh not yet (night, zight); also 'high' in the S13 story. Not taught"
         }
       ]
     },
@@ -533,7 +578,7 @@
     "ph10": {
       "area": "phonics",
       "name": "Two-syllable words",
-      "status": "not_yet",
+      "status": "learning",
       "evidence": [
         {
           "session": 1,
@@ -546,6 +591,12 @@
           "correct": null,
           "total": null,
           "note": "Not reached in S2 (the page skipped later groups after two stopped)."
+        },
+        {
+          "session": 14,
+          "correct": 2,
+          "total": 3,
+          "note": "Y1 check two-syllable words: rabbit, sunset right; picnic not read"
         }
       ]
     },
@@ -565,6 +616,12 @@
           "correct": null,
           "total": null,
           "note": "Not reached in S2 (the page skipped later groups after two stopped)."
+        },
+        {
+          "session": 14,
+          "correct": 2,
+          "total": 3,
+          "note": "Y1 check endings: jumping, boxes right; wanted (-ed) not read"
         }
       ]
     },
@@ -584,6 +641,12 @@
           "correct": null,
           "total": null,
           "note": "Not reached in S2 (the page skipped later groups after two stopped)."
+        },
+        {
+          "session": 14,
+          "correct": 11,
+          "total": 20,
+          "note": "Y1 check made-up words: section 1 9/10 (only grest missed); section 2 2/10 (noil, voy right; zout, lirt, murn, glew, prue, zight, jarn, torb not read). ar and or failed in made-up words though she reads real ar/or words"
         }
       ]
     },
@@ -675,6 +738,12 @@
           "correct": 11,
           "total": 14,
           "note": "Re-check 2 tricky words alone: same 12 as S8 now 10/12 (S8: 7/12); with, want, here not straight away; when 7 s, come 9 s"
+        },
+        {
+          "session": 14,
+          "correct": 22,
+          "total": 30,
+          "note": "Y1 check 30 common words: by, have, once, little, were, again, friend, people not straight away; some 8 s"
         }
       ]
     },
@@ -1589,14 +1658,27 @@
           "correct": 1,
           "total": 1,
           "note": "Capital and full stop"
+        },
+        {
+          "session": 14,
+          "correct": 0,
+          "total": 1,
+          "note": "Same question: no capital at the start"
         }
       ]
     },
     "wr17": {
       "area": "writing",
       "name": "Question and exclamation marks",
-      "status": "not_checked",
-      "evidence": []
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 14,
+          "correct": 1,
+          "total": 1,
+          "note": "Y1 check question: 'what is your name?' ends with a question mark"
+        }
+      ]
     },
     "wr18": {
       "area": "writing",
@@ -1664,6 +1746,12 @@
           "correct": 5,
           "total": 5,
           "note": "Hear a short-vowel word, tap its spelling: all right, including cup/bug/mud (u vs o)"
+        },
+        {
+          "session": 14,
+          "correct": 3,
+          "total": 3,
+          "note": "Y1 check: shop, chin, then spelled right (digraphs)"
         }
       ]
     },
@@ -1912,7 +2000,7 @@
     "sp4": {
       "area": "spelling",
       "name": "Double letters and ck",
-      "status": "not_yet",
+      "status": "learning",
       "evidence": [
         {
           "session": 1,
@@ -1925,6 +2013,12 @@
           "correct": 1,
           "total": 3,
           "note": "duck→dock (ck right, vowel wrong); bell→bel; little→litl in S1"
+        },
+        {
+          "session": 14,
+          "correct": 4,
+          "total": 5,
+          "note": "Y1 check spelling: back, off, bell, kiss right; duck first typed 'dukc' (fixed after Back)"
         }
       ]
     },
@@ -1957,6 +2051,12 @@
           "correct": 1,
           "total": 1,
           "note": "dogs"
+        },
+        {
+          "session": 14,
+          "correct": 1,
+          "total": 2,
+          "note": "Y1 check plurals: cats right; boxes → 'buxes' (short o heard as u)"
         }
       ]
     },
@@ -1976,6 +2076,12 @@
           "correct": 1,
           "total": 2,
           "note": "playing right; jumped→jumot (and kicked→kic in S1)"
+        },
+        {
+          "session": 14,
+          "correct": 0,
+          "total": 2,
+          "note": "Y1 check: jumping → 'joping', jumped → 'juped' (short u/o mix-up and missing m before p); -ed added correctly in juped"
         }
       ]
     },
