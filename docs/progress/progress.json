@@ -2,7 +2,7 @@
   "schema": "deniz-progress/1",
   "child": "Deniz",
   "year": 2,
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "status_scale": [
     "not_checked",
     "not_yet",
@@ -10,10 +10,10 @@
     "secure"
   ],
   "next_session": {
-    "number": 16,
+    "number": 17,
     "kind": "training",
-    "title": "Training 10 – ew / ue + cold check igh, -ed",
-    "url": "sessions/session-16.html"
+    "title": "Training 11 – ou + cold check ew/ue, -ted",
+    "url": "sessions/session-17.html"
   },
   "sessions_completed": [
     1,
@@ -30,7 +30,8 @@
     12,
     13,
     14,
-    15
+    15,
+    16
   ],
   "history": [
     {
@@ -152,6 +153,14 @@
       "duration_min": 28,
       "feeling": "great",
       "summary": "Cold story 92%, 24 wcpm (S13: 13) → 28 after listening. Short-vowel blend words she missed in S13-S14 all read (6/6) and spelled (jump, box, step, hut 4/4); by ear 5/6 (bug → bag). New igh 11/11 and -ed: read 5/6 (rained not), spelled jumped, played. Quick words 5/6 (again not; here 14 s). Writing: two sentences with capitals and full stops, but the second described the picture rather than what happened next."
+    },
+    {
+      "session": 16,
+      "title": "Training 10 – ew / ue + cold check igh, -ed",
+      "date": "2026-11-14",
+      "duration_min": 24,
+      "feeling": "great",
+      "summary": "Tired, but felt great. Story first read 93%, 20 wcpm → 45 after listening. Remembered igh a day later (read bright, tight, sight; spelled right) and spelled kicked; -ed: waited and wanted not read (the -ted ending). New ew/ue: read 5/5, spelled new, blue, grew. bug heard as bag again. Writing with the Then button: two sentences in order, but 'kit' for kite, 'gril', 'stick' for stuck. Quick words 4/6 (here, were not)."
     }
   ],
   "skills": {
@@ -213,6 +222,18 @@
           "correct": 1,
           "total": 1,
           "note": "hit (short i) read correctly among igh words"
+        },
+        {
+          "session": 16,
+          "correct": 3,
+          "total": 4,
+          "note": "Short u / a by ear: cup, hat, mud right; bug heard as bag again (same as S15)"
+        },
+        {
+          "session": 16,
+          "correct": 1,
+          "total": 1,
+          "note": "net (short e) read among ew/ue words"
         }
       ]
     },
@@ -463,6 +484,12 @@
           "correct": 0,
           "total": 4,
           "note": "Y1 check: ew and ue not yet (chew, blue, glew, prue): not taught. Does not change the taught ai/ay/ee/ea/oa/ow"
+        },
+        {
+          "session": 16,
+          "correct": 10,
+          "total": 11,
+          "note": "New ew / ue taught: hear 5/6 (grew → 'grue'), read 5/5 (new, blue, flew, glue, grew), right after teaching. Needs a cold check"
         }
       ]
     },
@@ -586,6 +613,12 @@
           "correct": 8,
           "total": 8,
           "note": "igh taught: hear 4/4 (night, light, high, fight), read 4/4 (night, light, high, right), right after teaching. Needs a cold check"
+        },
+        {
+          "session": 16,
+          "correct": 3,
+          "total": 3,
+          "note": "COLD (no reminder, 1 day later): bright, tight, sight read; also zigh. Spelled right cold. Parent: remembered igh without help"
         }
       ]
     },
@@ -661,6 +694,12 @@
           "correct": 5,
           "total": 6,
           "note": "-ed taught (t / d / id): read jumped, wanted, played, kicked, landed; rained not read (ai + ed)"
+        },
+        {
+          "session": 16,
+          "correct": 2,
+          "total": 3,
+          "note": "COLD: rained, hopped read; waited not read (17 s). 'wanted' also misread in both story reads: the /id/ ending (-ted) is the weak spot"
         }
       ]
     },
@@ -692,6 +731,12 @@
           "correct": 3,
           "total": 3,
           "note": "Made-up frup, blat (short vowels) and kight (igh) read"
+        },
+        {
+          "session": 16,
+          "correct": 2,
+          "total": 2,
+          "note": "Made-up zigh (igh) and prue (ue) read"
         }
       ]
     },
@@ -795,6 +840,12 @@
           "correct": 5,
           "total": 6,
           "note": "Quick words: have, were, little, once, here read (have 5 s, were 5 s, here 14 s, so not instant); again not yet"
+        },
+        {
+          "session": 16,
+          "correct": 4,
+          "total": 6,
+          "note": "Quick words: have (3 s), people (3 s) instant; again 11 s, friend 8 s; here, were not read (both read in stories)"
         }
       ]
     },
@@ -886,6 +937,12 @@
           "correct": 36,
           "total": 39,
           "note": "Story 'Jack and the ball' (39 words), TRUE cold read (1 take, no reloads): 92%; misread his, have, back (back also missed in S4, S5)"
+        },
+        {
+          "session": 16,
+          "correct": 37,
+          "total": 40,
+          "note": "Story 'Rex at night' (40 words): 93%; misread bed (once; read right later), wanted, star. Take 1 was a 4 s false start with no read logged, so take 2 read 1 counts as the first read. Parent: energy 'tired'"
         }
       ]
     },
@@ -965,6 +1022,12 @@
           "correct": null,
           "total": null,
           "note": "Cold read 24 wcpm (90 s), 28 after listening (+4 only; S12 gained +30). Audio: one 10.6 s stall near 'have it back'. Read 2 marked 4 errors (pal, tom, jack, have) although read 1 got those names: faster but less careful"
+        },
+        {
+          "session": 16,
+          "correct": null,
+          "total": null,
+          "note": "First read 20 wcpm (113 s, gaps up to 8.7 s, word by word); 45 wcpm after listening (+25, read 2 98%). Cold pace still 20-24"
         }
       ]
     },
@@ -1223,6 +1286,12 @@
           "correct": 2,
           "total": 2,
           "note": "Jack story: who is Jack, where were they"
+        },
+        {
+          "session": 16,
+          "correct": 2,
+          "total": 2,
+          "note": "Rex story: who jumped up, what the light was"
         }
       ]
     },
@@ -1298,6 +1367,12 @@
           "correct": 1,
           "total": 1,
           "note": "Jack story: how Jack felt (happy)"
+        },
+        {
+          "session": 16,
+          "correct": 1,
+          "total": 1,
+          "note": "Rex story: why Mum said get back in bed"
         }
       ]
     },
@@ -1433,6 +1508,12 @@
           "correct": 0,
           "total": 1,
           "note": "Only 'First' given: first sentence fine, but the second ('The tree is red.') describes the picture instead of saying what happened next (dog kicks ball into tree). Not yet a sequence without the Then cue"
+        },
+        {
+          "session": 16,
+          "correct": 1,
+          "total": 1,
+          "note": "With 'First' + the Then button: 'First the gril had a red kit. Then the kit got stick in a tree.' Two events in the right order (S15 second sentence was not a sequence)"
         }
       ]
     },
@@ -1518,6 +1599,12 @@
           "correct": null,
           "total": null,
           "note": "'First the dog had a ball. The tree is red.' Two complete sentences, 4.6 min, 7 deletions"
+        },
+        {
+          "session": 16,
+          "correct": null,
+          "total": null,
+          "note": "Two complete sentences, 15 words, 5.7 min, 6 deletions"
         }
       ]
     },
@@ -1757,6 +1844,12 @@
           "correct": 2,
           "total": 2,
           "note": "Both sentences: capital and full stop (only 'First' given)"
+        },
+        {
+          "session": 16,
+          "correct": 2,
+          "total": 2,
+          "note": "Both sentences: capital and full stop"
         }
       ]
     },
@@ -1851,6 +1944,12 @@
           "correct": 4,
           "total": 4,
           "note": "Short-vowel spelling jump, box, step, hut all first try (S1 jump 'jomp', S14 boxes 'buxes')"
+        },
+        {
+          "session": 16,
+          "correct": null,
+          "total": null,
+          "note": "In free writing: stuck → 'stick' (short u/i)"
         }
       ]
     },
@@ -2099,6 +2198,24 @@
           "correct": 7,
           "total": 7,
           "note": "igh: tap spelling 4/4 (night/nite ...), spell night, light, high 3/3 first try (right after teaching)"
+        },
+        {
+          "session": 16,
+          "correct": null,
+          "total": null,
+          "note": "In free writing: kite → 'kit' (twice; magic e dropped), girl → 'gril'. Patterns are right in dictation but not yet in her own writing"
+        },
+        {
+          "session": 16,
+          "correct": 1,
+          "total": 1,
+          "note": "COLD spelling: right (igh)"
+        },
+        {
+          "session": 16,
+          "correct": 8,
+          "total": 9,
+          "note": "ew/ue: tap spelling 5/6 (grew → grue), spelled new, blue, grew 3/3 (blue took 72 s)"
         }
       ]
     },
@@ -2193,6 +2310,12 @@
           "correct": 2,
           "total": 2,
           "note": "Spelled jumped, played first try right after teaching (S14: 'juped')"
+        },
+        {
+          "session": 16,
+          "correct": 1,
+          "total": 1,
+          "note": "COLD spelling: kicked right first try (S1 'kic')"
         }
       ]
     },

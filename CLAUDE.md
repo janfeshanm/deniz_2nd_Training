@@ -212,3 +212,6 @@ Schedule: daily sessions.
   previous session's patterns (igh, -ed) with short u / a by ear.
 - Speech-to-text needs the whisper model in `data/models/` on the computer (it was missing for S15); without it, the audio
   file gets a pause analysis only (ffmpeg silencedetect).
+- Session 17 (training, last before Re-check 3) is built from the Session 16 page. Adds "ou" (logged under ph7, diphthongs,
+  as in the S14 check) with a rule screen (ou in the middle, ow at the end), a second writing button ➕ At the end (`endBtn`,
+  `used_end_btn`) for three sentences, and the look-cover-write `tricky` step again (here, were; sp2).
