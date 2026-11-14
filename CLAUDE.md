@@ -206,3 +206,9 @@ Schedule: daily sessions.
 - `docs/vocab.html`: flip cards for the Year 2 word list. It reads `docs/voc.md` (table: Word | Meaning | Example) at load time,
   with an embedded copy as a fallback (re-embed after editing voc.md if the page is opened as a file). Ticks are kept in
   localStorage `deniz-voc-v1` (this phone only, not sent in results). Linked from the home page as "📖 Word cards".
+- Session 16 (training) is built from the Session 15 page. Adds "ew" and "ue" to the pattern highlights (`TEAMS` regex,
+  `teamSays`), logged under ph5 (vowel teams, as in the S14 check). The writing frame keeps "First " and adds a ➕ Then button
+  (`thenBtn: true`) that starts the second sentence on a new line; the item records `used_then_btn`. The cold check mixes the
+  previous session's patterns (igh, -ed) with short u / a by ear.
+- Speech-to-text needs the whisper model in `data/models/` on the computer (it was missing for S15); without it, the audio
+  file gets a pause analysis only (ffmpeg silencedetect).

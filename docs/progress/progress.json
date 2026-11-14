@@ -2,7 +2,7 @@
   "schema": "deniz-progress/1",
   "child": "Deniz",
   "year": 2,
-  "updated": "2026-11-10",
+  "updated": "2026-11-14",
   "status_scale": [
     "not_checked",
     "not_yet",
@@ -10,10 +10,10 @@
     "secure"
   ],
   "next_session": {
-    "number": 15,
+    "number": 16,
     "kind": "training",
-    "title": "Training 9 – short vowels + igh + -ed",
-    "url": "sessions/session-15.html"
+    "title": "Training 10 – ew / ue + cold check igh, -ed",
+    "url": "sessions/session-16.html"
   },
   "sessions_completed": [
     1,
@@ -29,7 +29,8 @@
     11,
     12,
     13,
-    14
+    14,
+    15
   ],
   "history": [
     {
@@ -143,6 +144,14 @@
       "duration_min": 31,
       "feeling": "great",
       "summary": "40-word Year 1 check 24/40 (reference: 28 expected by end of Year 1). Section 1 (digraphs, blends) 18/20; section 2 (oi oy ou ow ir ur er ew ue igh ar or) 6/20: ou, ur, ew, ue, igh not yet, and ar/or failed in made-up words. Endings: -ing, -es yes, -ed (wanted) no. Common words 22/30. Spelling 9/12 (8/12 first try): ck/ff/ll/ss and digraphs fine; boxes 'buxes', jumping 'joping', jumped 'juped' (short o/u mix-up). Question mark yes, capital no."
+    },
+    {
+      "session": 15,
+      "title": "Training 9 – short vowels + igh + -ed",
+      "date": "2026-11-14",
+      "duration_min": 28,
+      "feeling": "great",
+      "summary": "Cold story 92%, 24 wcpm (S13: 13) → 28 after listening. Short-vowel blend words she missed in S13-S14 all read (6/6) and spelled (jump, box, step, hut 4/4); by ear 5/6 (bug → bag). New igh 11/11 and -ed: read 5/6 (rained not), spelled jumped, played. Quick words 5/6 (again not; here 14 s). Writing: two sentences with capitals and full stops, but the second described the picture rather than what happened next."
     }
   ],
   "skills": {
@@ -192,6 +201,18 @@
           "correct": 1,
           "total": 1,
           "note": "Re-check 2: chin read correctly"
+        },
+        {
+          "session": 15,
+          "correct": 5,
+          "total": 6,
+          "note": "Short vowels by ear: hot/hut, cup/cap, hill/hall, pan/pin, luck/lock right; bug heard as bag (u/a)"
+        },
+        {
+          "session": 15,
+          "correct": 1,
+          "total": 1,
+          "note": "hit (short i) read correctly among igh words"
         }
       ]
     },
@@ -242,6 +263,12 @@
           "correct": 3,
           "total": 4,
           "note": "Y1 check blends: frog, hand, milk right; step not read (76 s). With S13 (hill, spot, stick, strong) short-vowel blend words are the weak spot"
+        },
+        {
+          "session": 15,
+          "correct": 6,
+          "total": 6,
+          "note": "Short-vowel blend words she missed in S13-S14 all read first try: step, spot, stick, strong, jump, hill. Cold check next session before calling it secure"
         }
       ]
     },
@@ -534,7 +561,7 @@
     "ph8": {
       "area": "phonics",
       "name": "Trigraphs and quadgraphs",
-      "status": "not_yet",
+      "status": "learning",
       "evidence": [
         {
           "session": 1,
@@ -553,6 +580,12 @@
           "correct": 0,
           "total": 2,
           "note": "Y1 check: igh not yet (night, zight); also 'high' in the S13 story. Not taught"
+        },
+        {
+          "session": 15,
+          "correct": 8,
+          "total": 8,
+          "note": "igh taught: hear 4/4 (night, light, high, fight), read 4/4 (night, light, high, right), right after teaching. Needs a cold check"
         }
       ]
     },
@@ -622,6 +655,12 @@
           "correct": 2,
           "total": 3,
           "note": "Y1 check endings: jumping, boxes right; wanted (-ed) not read"
+        },
+        {
+          "session": 15,
+          "correct": 5,
+          "total": 6,
+          "note": "-ed taught (t / d / id): read jumped, wanted, played, kicked, landed; rained not read (ai + ed)"
         }
       ]
     },
@@ -647,6 +686,12 @@
           "correct": 11,
           "total": 20,
           "note": "Y1 check made-up words: section 1 9/10 (only grest missed); section 2 2/10 (noil, voy right; zout, lirt, murn, glew, prue, zight, jarn, torb not read). ar and or failed in made-up words though she reads real ar/or words"
+        },
+        {
+          "session": 15,
+          "correct": 3,
+          "total": 3,
+          "note": "Made-up frup, blat (short vowels) and kight (igh) read"
         }
       ]
     },
@@ -744,6 +789,12 @@
           "correct": 22,
           "total": 30,
           "note": "Y1 check 30 common words: by, have, once, little, were, again, friend, people not straight away; some 8 s"
+        },
+        {
+          "session": 15,
+          "correct": 5,
+          "total": 6,
+          "note": "Quick words: have, were, little, once, here read (have 5 s, were 5 s, here 14 s, so not instant); again not yet"
         }
       ]
     },
@@ -829,6 +880,12 @@
           "correct": 51,
           "total": 56,
           "note": "RE-CHECK 2 cold story 'The red kite' (56 words, level B), read once: 91% (S8 95%). Misread new (ew, not taught), hill ('hall'), high (igh, not taught), strong, stick"
+        },
+        {
+          "session": 15,
+          "correct": 36,
+          "total": 39,
+          "note": "Story 'Jack and the ball' (39 words), TRUE cold read (1 take, no reloads): 92%; misread his, have, back (back also missed in S4, S5)"
         }
       ]
     },
@@ -902,6 +959,12 @@
           "correct": null,
           "total": null,
           "note": "RE-CHECK 2: 13 wcpm (231 s), word by word with 10-18 s gaps (S8: 21, S12: 20). Longer story, two untaught sounds"
+        },
+        {
+          "session": 15,
+          "correct": null,
+          "total": null,
+          "note": "Cold read 24 wcpm (90 s), 28 after listening (+4 only; S12 gained +30). Audio: one 10.6 s stall near 'have it back'. Read 2 marked 4 errors (pal, tom, jack, have) although read 1 got those names: faster but less careful"
         }
       ]
     },
@@ -1154,6 +1217,12 @@
           "correct": 2,
           "total": 2,
           "note": "Re-check 2: kite story literal questions"
+        },
+        {
+          "session": 15,
+          "correct": 2,
+          "total": 2,
+          "note": "Jack story: who is Jack, where were they"
         }
       ]
     },
@@ -1223,6 +1292,12 @@
           "correct": 1,
           "total": 1,
           "note": "Re-check 2: why Ava hugged Dad (he got her kite back)"
+        },
+        {
+          "session": 15,
+          "correct": 1,
+          "total": 1,
+          "note": "Jack story: how Jack felt (happy)"
         }
       ]
     },
@@ -1352,6 +1427,12 @@
           "correct": 0,
           "total": 1,
           "note": "Without the First/Then frame she wrote one long sentence, not a sequence"
+        },
+        {
+          "session": 15,
+          "correct": 0,
+          "total": 1,
+          "note": "Only 'First' given: first sentence fine, but the second ('The tree is red.') describes the picture instead of saying what happened next (dog kicks ball into tree). Not yet a sequence without the Then cue"
         }
       ]
     },
@@ -1431,6 +1512,12 @@
           "correct": 1,
           "total": 1,
           "note": "Re-check 2 free writing (no frame): 'The cat gos in the home in the rain and gets stuck in the ricks.' One complete sentence"
+        },
+        {
+          "session": 15,
+          "correct": null,
+          "total": null,
+          "note": "'First the dog had a ball. The tree is red.' Two complete sentences, 4.6 min, 7 deletions"
         }
       ]
     },
@@ -1664,6 +1751,12 @@
           "correct": 0,
           "total": 1,
           "note": "Same question: no capital at the start"
+        },
+        {
+          "session": 15,
+          "correct": 2,
+          "total": 2,
+          "note": "Both sentences: capital and full stop (only 'First' given)"
         }
       ]
     },
@@ -1752,6 +1845,12 @@
           "correct": 3,
           "total": 3,
           "note": "Y1 check: shop, chin, then spelled right (digraphs)"
+        },
+        {
+          "session": 15,
+          "correct": 4,
+          "total": 4,
+          "note": "Short-vowel spelling jump, box, step, hut all first try (S1 jump 'jomp', S14 boxes 'buxes')"
         }
       ]
     },
@@ -1994,6 +2093,12 @@
           "correct": 9,
           "total": 10,
           "note": "Re-check 2 spelling, NO sort and no retry: make, bike, home, rain, play, tree, boat, car, corn right; seat → 'seet' (right sound, other spelling). Same 10 as S8: 9/10 (S8: 4/10)"
+        },
+        {
+          "session": 15,
+          "correct": 7,
+          "total": 7,
+          "note": "igh: tap spelling 4/4 (night/nite ...), spell night, light, high 3/3 first try (right after teaching)"
         }
       ]
     },
@@ -2063,7 +2168,7 @@
     "sp8": {
       "area": "spelling",
       "name": "-ed and -ing rules",
-      "status": "not_yet",
+      "status": "learning",
       "evidence": [
         {
           "session": 1,
@@ -2082,6 +2187,12 @@
           "correct": 0,
           "total": 2,
           "note": "Y1 check: jumping → 'joping', jumped → 'juped' (short u/o mix-up and missing m before p); -ed added correctly in juped"
+        },
+        {
+          "session": 15,
+          "correct": 2,
+          "total": 2,
+          "note": "Spelled jumped, played first try right after teaching (S14: 'juped')"
         }
       ]
     },

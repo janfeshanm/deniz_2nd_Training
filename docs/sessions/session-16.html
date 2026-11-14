@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="theme-color" content="#fff4e0">
+<title>Session 16 – ew and ue</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#fff4e0;--bg2:#ffe1ec;--ink:#2b2340;--muted:#7a6f8a;--btn:#ff7a45;--btn2:#ff5a7a;--ok:#2fb36d;--line:#e6dcef}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%}
+body{font-family:Lexend,system-ui,sans-serif;color:var(--ink);font-size:18px;line-height:1.35;
+  background:linear-gradient(170deg,var(--bg1),var(--bg2)) fixed}
+#app{display:flex;flex-direction:column;min-height:100dvh}
+#top{padding:max(10px,env(safe-area-inset-top)) 16px 6px}
+#blk{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;min-height:17px}
+#bar{height:8px;background:rgba(0,0,0,.08);border-radius:8px;margin-top:6px;overflow:hidden}
+#barfill{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--btn),var(--btn2));transition:width .3s}
+#main{flex:1;padding:8px 16px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+#main.top{justify-content:flex-start}
+#bottom{position:sticky;bottom:0;padding:10px 16px max(14px,env(safe-area-inset-bottom));background:rgba(255,255,255,.78);
+  backdrop-filter:blur(6px);border-top:1px solid var(--line)}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+h1{font-size:28px;margin:0 0 10px;font-weight:800}
+p{margin:0 0 12px}
+.muted{color:var(--muted);font-size:16px}
+.count{font-size:15px;color:var(--muted);margin-bottom:10px}
+.emoji{font-size:64px;margin-bottom:6px}
+.primary{width:100%;min-height:56px;border-radius:16px;color:#fff;font-weight:800;font-size:22px;
+  background:linear-gradient(135deg,var(--btn),var(--btn2));box-shadow:0 6px 16px rgba(255,90,122,.3)}
+.primary:active{transform:scale(.98)}
+.primary:disabled{opacity:.45}
+.ghost{min-height:48px;padding:0 16px;border-radius:14px;border:2px solid var(--line);background:#fff;font-weight:600;font-size:16px;color:var(--muted)}
+.word{font-size:52px;font-weight:800;letter-spacing:.02em;margin:10px 0}
+.spk{min-width:72px;min-height:72px;border-radius:50%;font-size:34px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.12);margin:6px 0 14px}
+.spk:active{transform:scale(.94)}
+.opts{display:flex;gap:12px;width:100%;justify-content:center;margin-top:8px}
+.opt{flex:1;max-width:110px;min-height:96px;border-radius:20px;background:#fff;font-size:52px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.opt:active{background:#ffe9d9}
+.q{font-size:22px;font-weight:600;margin:0 0 6px}
+.say{font-size:20px;font-weight:600}
+.toast{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:800;
+  background:rgba(255,244,224,.92);z-index:5;animation:pop .5s ease}
+@keyframes pop{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:none}}
+/* parent panel */
+.parent{border:2px dashed #b9a8d6;border-radius:16px;padding:10px;background:#fff}
+.plabel{font-size:12px;font-weight:700;color:#6b5a8a;margin-bottom:8px;text-align:left;letter-spacing:.05em}
+.prow{display:flex;gap:8px}
+.pb{flex:1;min-height:56px;border-radius:14px;font-size:20px;font-weight:800;color:#fff}
+.pb.ok{background:var(--ok)}.pb.no{background:#d9822b}
+.pb:disabled{opacity:.3}
+.hold{height:5px;border-radius:5px;background:#eee;margin:0 0 8px;overflow:hidden}
+.hold i{display:block;height:100%;width:0;background:var(--ok);animation:fill linear forwards}
+@keyframes fill{to{width:100%}}
+.said{flex:1;min-width:0;min-height:44px;border:2px solid var(--line);border-radius:12px;padding:0 10px;font:inherit;font-size:16px;margin-top:8px}
+.undo{min-width:52px;min-height:44px;margin-top:8px;border-radius:12px;border:2px solid var(--line);background:#fff;font-size:20px}
+.hint{font-size:14px;color:var(--muted);margin:8px 0 0;text-align:left}
+.card{background:#fff;border-radius:18px;padding:14px 16px;text-align:left;width:100%;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.card h2{font-size:17px;margin:0 0 8px}
+.card ul{margin:0;padding-left:20px;font-size:16px}
+.card li{margin-bottom:6px}
+label{display:block;font-size:15px;font-weight:600;margin:10px 0 4px;text-align:left}
+select,textarea{width:100%;min-height:48px;border:2px solid var(--line);border-radius:12px;padding:8px 10px;font:inherit;font-size:17px;background:#fff;color:var(--ink)}
+textarea{min-height:90px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:6px 14px;border-radius:22px;border:2px solid var(--line);background:#fff;font-size:15px}
+.chip.on{background:#ffe1ec;border-color:var(--btn2);font-weight:600}
+.emojis{display:flex;gap:14px;justify-content:center;margin-top:10px}
+.emojis button{font-size:56px;min-width:88px;min-height:88px;border-radius:24px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;margin:6px 0 4px}
+.tile{aspect-ratio:1;min-height:72px;border-radius:14px;background:#fff;border:2px solid var(--line);font-size:44px;font-weight:800;position:relative}
+.tile.s1{background:#c9f0d9;border-color:var(--ok)}
+.tile.s2{background:#ffe3a8;border-color:#e0a21a}
+.tile.s2::after{content:"name";position:absolute;bottom:2px;left:0;right:0;font-size:11px;font-weight:600;color:#8a5f00}
+table{border-collapse:collapse;width:100%;font-size:14px}
+td,th{padding:4px 6px;border-bottom:1px solid var(--line);text-align:left}
+td.n,th.n{text-align:right;white-space:nowrap}
+.low{color:#c0561b;font-weight:700}.good{color:#1f8f55;font-weight:700}
+/* passages */
+.passage{font-size:26px;line-height:1.75;font-weight:600;text-align:left;background:#fff;border-radius:18px;padding:16px;width:100%;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.pw{display:flex;flex-wrap:wrap;gap:6px;text-align:left;width:100%}
+.w{min-height:44px;padding:4px 10px;border-radius:10px;border:2px solid var(--line);background:#fff;font-size:18px}
+.w.bad{background:#ffd9b8;border-color:#e0822b;font-weight:700}
+.step{display:flex;align-items:center;gap:10px;margin:10px 0}
+.step button{min-width:48px;min-height:48px;border-radius:12px;border:2px solid var(--line);background:#fff;font-size:22px;font-weight:800}
+/* multiple choice */
+.mcqs{display:flex;flex-direction:column;gap:10px;width:100%;margin-top:6px}
+.mcq{display:flex;align-items:center;gap:12px;min-height:68px;padding:8px 14px;border-radius:18px;background:#fff;
+  box-shadow:0 4px 12px rgba(0,0,0,.1);font-size:21px;font-weight:600;text-align:left}
+.mcq:active{background:#ffe9d9}
+.mcq .em{font-size:34px}
+.peek{background:#fff;border-radius:14px;padding:12px;margin-top:10px;font-size:18px;text-align:left;width:100%}
+.peek[hidden]{display:none}
+/* sequencing */
+.slots{display:flex;flex-direction:column;gap:8px;width:100%;margin:8px 0}
+.slot{min-height:60px;border:2px dashed var(--line);border-radius:14px;padding:8px 12px;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.6);font-size:19px;text-align:left}
+.slot b{font-size:22px;color:var(--btn2)}
+.slot.big{font-size:34px}
+.crow{display:flex;gap:8px;width:100%;margin-bottom:8px}
+.crow .cd{flex:1;min-height:60px;border-radius:14px;background:#fff;box-shadow:0 3px 10px rgba(0,0,0,.1);font-size:19px;font-weight:600;padding:8px 12px;text-align:left}
+.crow .cd.big{font-size:40px;text-align:center}
+.crow .cs{min-width:52px;border-radius:14px;background:#fff;border:2px solid var(--line);font-size:22px}
+.crow.used{opacity:.3;pointer-events:none}
+@media (prefers-reduced-motion:reduce){.toast{animation:none}}
+/* session 3: typing */
+.optw{font-size:36px;max-width:150px}
+.spin{width:100%;max-width:340px;min-height:64px;border:3px solid var(--line);border-radius:16px;padding:0 14px;font:inherit;font-size:34px;font-weight:600;text-align:center;background:#fff;color:var(--ink);margin:4px 0 6px}
+.spin:focus,.wt:focus{outline:none;border-color:var(--btn)}
+.wt{width:100%;min-height:150px;border:3px solid var(--line);border-radius:16px;padding:12px;font:inherit;font-size:22px;line-height:1.5;background:#fff;color:var(--ink);resize:vertical}
+.toprow{display:flex;align-items:center;gap:8px;min-height:44px}
+#back{min-width:72px;min-height:40px;padding:0 10px;border-radius:12px;border:2px solid var(--line);background:rgba(255,255,255,.85);font-size:15px;font-weight:600;color:var(--muted)}
+#back[hidden]{display:none}
+#pause{margin-left:auto;min-width:72px;min-height:40px;padding:0 10px;border-radius:12px;border:2px solid var(--line);background:rgba(255,255,255,.85);font-size:15px;font-weight:600;color:var(--muted)}
+#pause[hidden]{display:none}
+#pauseOv{position:fixed;inset:0;z-index:60;background:rgba(43,35,64,.55);display:flex;align-items:center;justify-content:center;padding:24px}
+#pauseOv[hidden]{display:none}
+#pauseOv .pbox{background:#fff;border-radius:24px;padding:28px 22px;text-align:center;width:min(100%,360px);box-shadow:0 20px 50px rgba(0,0,0,.25)}
+body.kb #bottom{display:none}
+.inl{margin-top:12px}
+.pic{font-size:72px;letter-spacing:12px;margin:4px 0 8px}
+/* session 4: training */
+.m{color:var(--btn2);text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px}
+.big{font-size:64px;font-weight:800;letter-spacing:.04em;margin:8px 0}
+.magicbtn{min-height:64px;padding:0 22px;border-radius:20px;font-size:24px;font-weight:800;color:#fff;background:linear-gradient(135deg,#8a5cf6,#ff5a7a);box-shadow:0 6px 16px rgba(138,92,246,.35);margin:10px 0}
+.pair{display:flex;gap:12px;justify-content:center;margin:10px 0}
+.pair button{min-width:120px;min-height:80px;border-radius:18px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.1);font-size:38px;font-weight:800}
+.fb{font-size:20px;font-weight:600;margin:6px 0 10px}
+.hl{background:#fff1a8;border-radius:6px}
+.bank{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:4px 0 10px}
+.bank button{min-height:44px;padding:4px 14px;border-radius:22px;background:#fff;border:2px solid var(--line);font-size:19px;font-weight:600}
+.tries{font-size:15px;color:var(--muted);margin-top:4px}
+.line{min-height:64px;width:100%;border:2px dashed var(--line);border-radius:14px;padding:8px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;background:rgba(255,255,255,.6);margin:8px 0}
+.line span{font-size:21px;font-weight:600;padding:4px 8px;border-radius:10px;background:#fff}
+.line span.and,.tiles button.and{color:var(--btn2)}
+.tiles{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:6px 0}
+.tiles button{min-height:52px;padding:4px 14px;border-radius:14px;background:#fff;box-shadow:0 3px 10px rgba(0,0,0,.1);font-size:21px;font-weight:600}
+.tiles button.used{opacity:.25;pointer-events:none}
+.keyl{font-size:96px;font-weight:800;line-height:1;margin:6px 0}
+.word.phr{font-size:38px;line-height:1.25}
+.rule{display:flex;flex-direction:column;gap:12px;width:100%;margin:8px 0}
+.rule button{background:#fff;border-radius:18px;box-shadow:0 4px 12px rgba(0,0,0,.1);padding:12px;text-align:center}
+.rule .rw{font-size:52px;font-weight:800}
+.rule .rt{font-size:18px;color:var(--muted);font-weight:600}
+.keymsg{min-height:26px;font-size:18px;font-weight:600;color:var(--muted)}
+</style>
+</head>
+<body>
+<div id="app">
+  <header id="top"><div class="toprow"><button id="back" type="button" hidden aria-label="Go back">‹ Back</button><div id="blk"></div><button id="pause" type="button" hidden aria-label="Pause">⏸ Pause</button></div><div id="bar"><i id="barfill"></i></div></header>
+  <div id="pauseOv" hidden><div class="pbox"><div class="emoji">⏸</div><h1 style="font-size:26px;margin:0 0 6px">Paused</h1>
+    <p class="muted" style="margin:0 0 18px">Take a break. The timers and the recording are stopped until you come back.</p>
+    <button class="primary" id="resume" type="button">▶ Resume</button></div></div>
+  <main id="main"></main>
+  <footer id="bottom"></footer>
+</div>
+
+<script>
+(() => {
+"use strict";
+
+/* ====================================================================
+   Session 16 – Training 10 (about 20-25 min), reading first. From S15: cold check of igh and -ed (rained missed),
+   short u / a by ear (bug → bag), the second sentence must say what happened NEXT (S15: "The tree is red."),
+   new pattern ew / ue (Y1 check: chew, blue, glew, prue not read; "new" misread in the S13 story),
+   and common words not yet instant (again, here, have, were, friend, people). Story read twice.
+   ⏸ Pause button: stops all timers and the recording until Resume; pauses are logged and excluded from timings.
+   Storage: answers in localStorage, recordings in IndexedDB; Back / Start over / reloads keep earlier attempts
+   (exported in attempt_history); data is cleared only after export, with confirmation.
+   schema deniz-session/1, kind "training".
+   Training = feedback is shown after a mistake and she has another go.
+   Scores always use her FIRST try (correct), retries are kept separately.
+   ==================================================================== */
+const KEY = "deniz-s16-v1";
+const SESSION = 16;
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const now = () => new Date().toISOString();
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const norm = s => String(s || "").trim().toLowerCase().replace(/[.!?,]+$/, "").replace(/\s+/g, " ");
+
+/* ---------- speech ---------- */
+let voice = null;
+const VKEY = "deniz-voice";   // shared by all session pages: the parent picks a clear voice once
+const enVoices = () => { try { return speechSynthesis.getVoices().filter(v => /^en/i.test(v.lang)); } catch (e) { return []; } };
+function pickVoice() {
+  try {
+    const vs = enVoices(); let saved = null; try { saved = localStorage.getItem(VKEY); } catch (e) {}
+    voice = (saved && vs.find(v => v.name === saved)) || vs.find(v => /^en[-_]AU/i.test(v.lang)) || vs[0] || null;
+    fillVoices();
+  } catch (e) {}
+}
+function fillVoices() {
+  const sl = document.getElementById("c_voice"); if (!sl) return;
+  const vs = enVoices().sort((a, b) => (/AU/i.test(b.lang) - /AU/i.test(a.lang)) || a.lang.localeCompare(b.lang) || a.name.localeCompare(b.name));
+  sl.innerHTML = vs.length ? vs.map(v => `<option value="${esc(v.name)}"${voice && v.name === voice.name ? " selected" : ""}>${esc(v.name)} (${esc(v.lang)})${v.localService ? "" : " · online"}</option>`).join("")
+    : `<option value="">Default voice</option>`;
+}
+try { speechSynthesis.onvoiceschanged = pickVoice; pickVoice(); } catch (e) {}
+function utter(text, rate) { const u = new SpeechSynthesisUtterance(text); if (voice) u.voice = voice; u.lang = (voice && voice.lang) || "en-AU"; u.rate = rate || 0.85; return u; }
+function say(text, rate) { try { if (!window.speechSynthesis) return; speechSynthesis.cancel(); speechSynthesis.speak(utter(text, rate)); } catch (e) {} }
+function sayList(arr, rate, onend, onstart) {
+  try {
+    if (!window.speechSynthesis) return false;
+    speechSynthesis.cancel();
+    arr.forEach((t, i) => { const u = utter(t, rate); if (onstart) u.onstart = () => onstart(i); if (onend && i === arr.length - 1) u.onend = onend; speechSynthesis.speak(u); });
+    return true;
+  } catch (e) { return false; }
+}
+function speechCancel() { try { speechSynthesis.cancel(); } catch (e) {} }
+
+/* ---------- voice recording (stays on the phone until exported) ---------- */
+let micStream = null;
+const RECS = new Set();   // recorders running now (paused/resumed by ⏸)
+let AUDIO = [];   // every recording of this session: { key, session, step, take, n, blob, mime, seconds, at, stored }
+const ADB = "deniz-audio", AST = "rec";
+function idb() { return new Promise((res, rej) => { try { const r = indexedDB.open(ADB, 1);
+  r.onupgradeneeded = () => r.result.createObjectStore(AST, { keyPath: "key" }); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); } catch (e) { rej(e); } }); }
+async function audioPut(o) {
+  AUDIO.push(o);
+  try { const db = await idb(); await new Promise((res, rej) => { const t = db.transaction(AST, "readwrite"); t.objectStore(AST).put(o); t.oncomplete = res; t.onerror = () => rej(t.error); }); o.stored = true; }
+  catch (e) { o.stored = false; }
+}
+async function audioLoad() {
+  try { const db = await idb(); const all = await new Promise((res, rej) => { const q = db.transaction(AST).objectStore(AST).getAll(); q.onsuccess = () => res(q.result); q.onerror = () => rej(q.error); });
+    AUDIO = all.filter(o => o.session === SESSION).map(o => Object.assign(o, { stored: true })).sort((a, b) => a.at < b.at ? -1 : 1); } catch (e) {}
+}
+async function audioClear() {
+  try { const db = await idb(); await new Promise((res, rej) => { const t = db.transaction(AST, "readwrite"); AUDIO.forEach(o => t.objectStore(AST).delete(o.key)); t.oncomplete = res; t.onerror = () => rej(t.error); }); } catch (e) {}
+  AUDIO = [];
+}
+async function initMic() {
+  try { if (!navigator.mediaDevices || !window.MediaRecorder) return false; micStream = await navigator.mediaDevices.getUserMedia({ audio: true }); return true; }
+  catch (e) { micStream = null; return false; }
+}
+function recStart() {
+  try {
+    if (!micStream) return null;
+    const mt = ["audio/webm;codecs=opus", "audio/webm", "audio/mp4"].find(t => MediaRecorder.isTypeSupported(t)) || "";
+    const mr = new MediaRecorder(micStream, mt ? { mimeType: mt } : undefined), chunks = [];
+    mr.ondataavailable = ev => { if (ev.data && ev.data.size) chunks.push(ev.data); };
+    const done = new Promise(res => { mr.onstop = () => res(new Blob(chunks, { type: mr.mimeType || mt || "audio/webm" })); });
+    RECS.add(mr); mr.addEventListener("stop", () => RECS.delete(mr));
+    mr.start(); return { mr, done };
+  } catch (e) { return null; }
+}
+const audioExt = t => /mp4/.test(t) ? "m4a" : /ogg/.test(t) ? "ogg" : "webm";
+
+/* ---------- wake lock ---------- */
+async function wake() { try { if ("wakeLock" in navigator) await navigator.wakeLock.request("screen"); } catch (e) {} }
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible" && S.started_at && !S.exported) wake(); });
+
+/* ---------- state ---------- */
+// Everything is kept: redo (answers replaced after ‹ Back), readLog (every story read, each take), loads (page openings),
+// archive (earlier tries wiped by Start over). Nothing is removed until the parent exports and confirms "Clear".
+const fresh = () => ({ v: 1, pos: 0, steps: [], ctx: {}, started_at: null, feeling: null, obs: [], note: "", exported: false, endedEarly: false, draft: {},
+  redo: [], readLog: [], takes: {}, loads: [], archive: [], pauses: [] });
+function load() { try { const s = JSON.parse(localStorage.getItem(KEY)); return s && s.v === 1 ? Object.assign(fresh(), s) : null; } catch (e) { return null; } }
+let cleared = false;
+function save() { if (cleared) return; try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+let S = load() || fresh();
+
+/* ====================================================================
+   CONTENT
+   ==================================================================== */
+const VNAME = { a: "ay", e: "ee", i: "eye", o: "oh", u: "you" };
+const isMagic = w => /^[a-z]*[aeiou][^aeiou]e$/.test(w);
+const TEAMS = /(igh|ew|ue|ai|ay|ee|ea|oa|ow|all|ar|or)/;
+// highlight the vowel and the final e in a magic-e word, or the vowel team
+const mark = w => isMagic(w) ? esc(w).replace(/([aeiou])([^aeiou])e$/, '<span class="m">$1</span>$2<span class="m">e</span>')
+  : TEAMS.test(w) ? esc(w).replace(TEAMS, '<span class="m">$1</span>') : esc(w);
+const aiTip = w => /igh/.test(w) ? "i g h says eye, like in night." : /ew/.test(w) ? "e w says oo, like in new." : /ue/.test(w) ? "u e says oo, like in blue."
+  : /ay/.test(w) ? "a y says ay. We use ay at the end of a word." : /ai/.test(w) ? "a i says ay. We use ai in the middle of a word."
+  : /ee/.test(w) ? "e e says ee." : /ea/.test(w) ? "e a says ee."
+  : /oa/.test(w) ? "o a says oh. We use oa in the middle of a word." : /ow$/.test(w) ? "o w says oh. We use ow at the end of a word."
+  : /all/.test(w) ? "a l l says all, like in ball." : /ar/.test(w) ? "a r says ar, like in car." : /or/.test(w) ? "o r says or, like in fork." : "";
+const teamSays = w => /igh/.test(w) ? "eye." : /ew|ue/.test(w) ? "oo." : /all/.test(w) ? "all." : /ar/.test(w) ? "ar." : /or/.test(w) ? "or." : /ai|ay/.test(w) ? "ay." : /oa|ow/.test(w) ? "oh." : "ee.";
+const magicTip = w => { const v = (w.match(/([aeiou])[^aeiou]e$/) || [])[1]; return v ? `The e is silent. It makes the ${v} say its name: ${VNAME[v]}.` : ""; };
+
+// Story first, read twice. No new pattern: igh, -ed (jumped, wanted), short vowels, back, were, have
+const STORY = { key: "night", title: "Rex at night",
+  text: "It was night. Sam and his dog Rex were in bed. Rex jumped up. He wanted to play. “Is that a light?” said Sam. It was a star, up high. “Get back in bed. You have to sleep,” said Mum." };
+STORY.words = STORY.text.split(/\s+/).map(raw => ({ raw, prompt: raw.replace(/[^A-Za-z'’-]/g, "").toLowerCase() }));
+STORY.sents = STORY.text.match(/[^.!?]+[.!?]+[”"]?(\s+said \w+\.)?/g).map(s => s.trim());
+const COMP = [["Who jumped up?", [["Rex, the dog","🐶"],["Sam","👦"],["Mum","👩"]], "co6", "literal"],
+              ["What was the light?", [["A star","⭐"],["A car","🚗"],["The sun","☀️"]], "co6", "literal"],
+              ["Why did Mum say “Get back in bed”?", [["It was time to sleep","😴"],["It was raining","🌧️"],["Rex was lost","🔍"]], "co7", "inference"]]
+  .map(x => ({ prompt: x[0], expected: x[1][0][0], options: x[1].map(o => ({ t: o[0], e: o[1] })), skills: [x[2]], kind: x[3] }));
+// Writing: "First" given, plus a ➕ Then button that starts the next sentence on a new line (S15: 2nd sentence described the picture)
+const WRITE = { kind: "finish", pic: "👧 ➡️ 🪁 ➡️ 🌳", start: "First ", thenBtn: true,
+  prompt: "What happened? Finish the First sentence. Then tap Then and write what happened next. Capital letter at the start!", picSay: "A girl, a kite, a tree.",
+  bank: [], skills: ["wr6", "wr8", "wr16"] };
+const W = a => ({ prompt: a[0], expected: a[0], skills: [a[1]], gpc: a[2], alien: a[3] || null });
+// Cold check, no reminder first: igh and -ed from S15, short u / a by ear
+const COLD_READ = [["bright","ph8","igh"],["tight","ph8","igh"],["sight","ph8","igh"],["zigh","ph12","igh","zigh (rhymes with high)"],["rained","ph11","ed"],["waited","ph11","ed"],["hopped","ph11","ed"]].map(W);
+const COLD_HEAR = [["bug","bag"],["cup","cap"],["hat","hut"],["mud","mad"]]
+  .map(a => ({ prompt: a[0], expected: a[0], options: [a[0], a[1]], skills: ["ph1"] }));
+const COLD_SPELL = [["right","Turn right."],["kicked","He kicked the ball."]].map((a, i) => ({ prompt: a[0], sentence: a[1], expected: a[0], skills: [i ? "sp8" : "sp3"] }));
+// New: ew and ue (both say oo)
+const TEACH = [["ew","new","n"],["ew","grew","g r"],["ew","chew","ch"],["ue","blue","b l"],["ue","glue","g l"],["ue","true","t r"]].map(a => ({ prompt: a[0] + " → " + a[1], short: a[0], long: a[1], btn: "✨ Add " + a[2],
+  tip: a[0].split("").join(" ") + " says oo: " + a[1] + ".", tipSay: a[0].split("").join(" ") + " says oo. " + a[1] + "." }));
+const RULE = { title: "ew or ue?", q: "Both say <b>oo</b>, at the end of a word.", say: "e w and u e both say oo. They come at the end of a word. You need to learn which word uses which.",
+  cards: [{ html: 'n<span class="m">ew</span>', t: "e w: new, grew, chew, flew", speak: ["new", "grew", "chew", "flew"] },
+          { html: 'bl<span class="m">ue</span>', t: "u e: blue, glue, true", speak: ["blue", "glue", "true"] }] };
+const HEAR = [["new","nue"],["blue","blew"],["chew","chue"],["glue","glew"],["grew","grue"],["true","trew"]]
+  .map(a => ({ prompt: a[0], expected: a[0], options: [a[0], a[1]], skills: ["ph5", "sp3"] }));
+const READ = [["new","ph5","ew"],["blue","ph5","ue"],["flew","ph5","ew"],["net","ph1","e"],["glue","ph5","ue"],["grew","ph5","ew"],["prue","ph12","ue","prue (rhymes with blue)"]].map(W);
+const SPELL = [["new","A new bike."],["blue","The sky is blue."],["grew","The plant grew."]]
+  .map(a => ({ prompt: a[0], sentence: a[1], expected: a[0], skills: ["sp3"] }));
+// Common words not yet instant (S14-S15)
+const QUICK = ["again","here","have","were","friend","people"].map(w => ({ prompt: w, expected: w, skills: ["fl1"] }));
+const BEH = ["Reads word by word", "Reads in phrases", "Pauses at full stops", "Sounds words out aloud first", "Guesses from the first letter", "Needed a long time on some words"];
+
+/* ====================================================================
+   FLOW
+   ==================================================================== */
+const flow = [];
+const scr = (id, label, w, render) => flow.push({ kind: "screen", id, label, w, render });
+const stp = o => flow.push(Object.assign({ kind: "step" }, o));
+
+scr("setup", "Parent setup", 0, renderSetup);
+scr("intro", "Welcome", 3, renderIntro);
+scr("introStory", "Story", 3, d => blockIntro(d, "📚", "Story first!", "Read the story. Then listen to me read it. Then read it again, smoothly.",
+      "Parent: please let read 1 be her very first look at the story. Tap Start and Stop both times, then tap the words she got wrong. On read 2, go for careful AND smooth, not fast. Need a break? Tap ⏸ Pause."));
+stp({ id: "s16-read-night", label: "Story", skills: ["fl2", "fl3"], mode: "parent", type: "passage", w: 80, items: STORY.words.map(w => ({ prompt: w.prompt, expected: w.prompt })),
+      note: "Story first. Repeated reading: read 1 (cold, scored), model read by the phone, read 2 (practised). Items are read 1." });
+stp({ id: "s16-comp", label: "Questions", skills: ["co6", "co7"], mode: "auto", type: "mcq", w: 20, items: COMP, count: true, note: "Questions about the Rex story." });
+scr("introWrite", "Writing", 3, d => blockIntro(d, "✍️", "What happened next?", "Finish the First sentence. Then tap Then, and write what happened next.",
+      "Parent: 'First' is given and a ➕ Then button starts the second sentence. The second sentence should say what happened NEXT (last time she wrote 'The tree is red.'). Help with keys, not with spelling."));
+stp({ id: "s16-write", label: "Writing", skills: WRITE.skills, mode: "writing", type: "write", w: 45, items: [WRITE], note: "Two sentences in order: 'First' given, ➕ Then button for the second." });
+scr("break1", "Break", 8, renderBreak);
+scr("introCold", "Remember?", 3, d => blockIntro(d, "🧠", "Do you remember?", "Some words from last time. Read them, listen, then spell two.",
+      "Parent: cold check, no reminder first. igh (bright, tight, sight, alien zigh) and -ed (rained, waited, hopped). Then hear-and-tap short u / a, and spell right, kicked."));
+stp({ id: "s16-cold-read", label: "Reading", skills: ["ph8", "ph11", "ph12"], mode: "parent", type: "read", w: 20, items: COLD_READ, count: true, ed: true,
+      note: "COLD check (no reminder): igh bright, tight, sight + made-up zigh; -ed rained, waited, hopped. Parent-scored, first try." });
+stp({ id: "s16-cold-hear", label: "bug or bag?", skills: ["ph1"], mode: "auto", type: "pick", w: 10, items: COLD_HEAR, count: true,
+      note: "Hear a word, tap it: short u / a pairs (bug/bag, cup/cap, hat/hut, mud/mad). First try scored." });
+stp({ id: "s16-cold-spell", label: "Spelling", skills: ["sp3", "sp8"], mode: "auto", type: "spell", w: 15, items: COLD_SPELL, count: true,
+      note: "COLD spelling: right (igh), kicked (-ed, S1 'kic'). First try scored; retry kept separately." });
+scr("introTeach", "ew ue", 3, d => blockIntro(d, "🦘", "e w and u e say oo", "Today: e w and u e both say oo, like in new and blue!",
+      "Parent: teaching part. Let her tap the button and say each word after the phone."));
+stp({ id: "s16-teach", label: "ew ue", skills: ["ph5"], mode: "teach", type: "teach", w: 15, items: TEACH, count: true, note: "Teaching: ew → new, grew, chew; ue → blue, glue, true (not scored)." });
+scr("rule", "ew or ue?", 3, renderRule);
+stp({ id: "s16-hear", label: "Which word?", skills: ["ph5", "sp3"], mode: "auto", type: "pick", w: 15, items: HEAR, count: true, feedback: "aiay",
+      note: "Hear an ew/ue word, tap the right spelling. First try scored." });
+stp({ id: "s16-read", label: "Reading", skills: ["ph5", "ph1", "ph12"], mode: "parent", type: "read", w: 20, items: READ, count: true,
+      note: "Read ew/ue words, with net (short e) and one made-up word (prue). Parent-scored, first try." });
+stp({ id: "s16-spell", label: "Spelling", skills: ["sp3"], mode: "auto", type: "spell", w: 20, items: SPELL, count: true,
+      note: "Dictated new, blue, grew. First try scored; retry kept separately." });
+stp({ id: "s16-quick", label: "Quick words", skills: ["fl1"], mode: "parent", type: "read", w: 15, items: QUICK, count: true, trickyRead: true,
+      note: "Common words not yet instant (again, here, have, were, friend, people): ✓ = read straight away." });
+scr("finishChild", "All done", 0, renderFinishChild);
+scr("finishParent", "Parent wrap-up", 0, renderFinishParent);
+const TOTAL_W = flow.reduce((a, e) => a + (e.w || 0), 0);
+
+/* ====================================================================
+   ENGINE
+   ==================================================================== */
+let H = {}, lock = false, t0 = 0, inBoot = false;
+/* ---------- ⏸ pause: Date.now() stands still while paused, so every timing on the page leaves the pause out ---------- */
+const realNow = Date.now.bind(Date); let pausedTotal = 0, pausedAt = 0;
+Date.now = () => realNow() - pausedTotal - (pausedAt ? realNow() - pausedAt : 0);
+function pauseOn() {
+  if (pausedAt) return; pausedAt = realNow(); speechCancel();
+  RECS.forEach(m => { try { if (m.state === "recording") m.pause(); } catch (e) {} });
+  $("#pauseOv").hidden = false; S.pauses.push({ step: (flow[S.pos] || {}).id, at: now(), seconds: null }); save();
+}
+function pauseOff() {
+  if (!pausedAt) return; const d = realNow() - pausedAt; pausedTotal += d; pausedAt = 0;
+  RECS.forEach(m => { try { if (m.state === "paused") m.resume(); } catch (e) {} });
+  $("#pauseOv").hidden = true; const p = S.pauses[S.pauses.length - 1]; if (p && p.seconds == null) p.seconds = Math.round(d / 1000); save();
+}
+document.addEventListener("click", ev => {
+  if (ev.target.closest("#resume")) return pauseOff();
+  if (pausedAt) return;
+  if (ev.target.closest("#pause")) return pauseOn();
+  if (ev.target.closest("#back")) return goBack();
+  const b = ev.target.closest("[data-act]"); if (!b || b.disabled) return;
+  const f = H[b.dataset.act]; if (f) f(b, ev);
+});
+function screen(label, main, bottom, acts, topAlign) {
+  H = acts || {}; lock = false; t0 = Date.now();
+  $("#blk").textContent = label || "";
+  $("#back").hidden = inBoot || S.pos <= 0;
+  $("#pause").hidden = inBoot || !S.started_at || S.pos >= flow.length - 2;
+  const m = $("#main"); m.innerHTML = main; m.className = topAlign ? "top" : "";
+  const b = $("#bottom"); b.innerHTML = bottom || ""; b.style.display = bottom ? "" : "none";
+  // typing screens: put Done right under the text box, so the keyboard can't cover it
+  const inp = m.querySelector("#sp, #wt"), dn = b.querySelector("#doneBtn");
+  if (inp && dn) { dn.classList.add("inl"); const after = inp.nextElementSibling && inp.nextElementSibling.id === "wc" ? inp.nextElementSibling : inp; after.insertAdjacentElement("afterend", dn); if (!b.children.length) b.style.display = "none"; }
+  window.scrollTo(0, 0);
+}
+// keyboard open: hide the bottom bar and keep the text box in view
+document.addEventListener("focusin", ev => {
+  const t = ev.target; if (!t.matches || !t.matches("#main input, #main textarea")) return;
+  document.body.classList.add("kb");
+  setTimeout(() => { try { t.scrollIntoView({ block: "center", behavior: "smooth" }); } catch (e) {} }, 350);
+});
+document.addEventListener("focusout", () => setTimeout(() => {
+  const a = document.activeElement; if (!(a && a.matches && a.matches("#main input, #main textarea"))) document.body.classList.remove("kb");
+}, 120));
+function hold(ms) {
+  const bs = Array.from(document.querySelectorAll("#bottom .pb")); if (!bs.length) return;
+  bs.forEach(b => b.disabled = true);
+  const bar = document.createElement("div"); bar.className = "hold"; bar.innerHTML = `<i style="animation-duration:${ms}ms"></i>`;
+  const p = $("#bottom .parent"); if (p) p.insertBefore(bar, p.children[1] || null);
+  const my = H; setTimeout(() => { if (H !== my) return; bs.forEach(b => b.disabled = false); bar.remove(); }, ms);
+}
+function updateBar(frac) {
+  let done = 0; for (let i = 0; i < S.pos && i < flow.length; i++) done += flow[i].w || 0;
+  const e = flow[S.pos]; if (e) done += (e.w || 0) * (frac || 0);
+  $("#barfill").style.width = Math.min(100, Math.round(done / TOTAL_W * 100)) + "%";
+}
+function stepRec(e) {
+  let r = S.steps.find(x => x.id === e.id);
+  if (!r) { r = { id: e.id, skills: e.skills, mode: e.mode, label: e.label, started_at: now(), duration_sec: 0, items: [], notes: e.note || "" }; S.steps.push(r); }
+  return r;
+}
+const shown = r => r.items.filter(i => !i.notShown);
+const scored = r => r.mode === "auto" || r.mode === "parent";
+const itemScore = i => i.score != null ? i.score : (i.correct ? 1 : 0);
+const isStep = e => e && e.kind === "step";
+const recOf = id => S.steps.find(r => r.id === id);
+
+function go() {
+  if (S.pos >= flow.length) return;
+  const e = flow[S.pos];
+  if (e.kind === "screen") { updateBar(0); e.render(() => { S.pos++; save(); go(); }); return; }
+  const rec = stepRec(e);
+  if (rec.items.length >= e.items.length) { S.pos++; save(); return go(); }
+  if (e.type === "passage") { updateBar(0); return renderPassage(e, rec); }
+  updateBar(rec.items.length / e.items.length);
+  ({ keys: renderKeys, build: renderBuild, pick: renderPick, teach: renderTeach, read: renderRead, spell: renderSpell, tricky: renderTricky, mcq: renderMCQ, write: renderWrite })[e.type](e, rec, rec.items.length);
+}
+function record(e, rec, item, after) {
+  if (lock) return; lock = true;
+  rec.items.push(item);
+  rec.duration_sec = Math.round(rec.items.reduce((a, i) => a + (i.ms || 0), 0) / 1000);
+  save(); after ? after() : go();
+}
+function cheer(msg, then) {
+  const d = document.createElement("div"); d.className = "toast"; d.textContent = msg; document.body.appendChild(d);
+  setTimeout(() => { d.remove(); then(); }, 650);
+}
+const counter = (e, idx) => e.count ? `<div class="count">${idx + 1} of ${e.items.length}</div>` : "";
+const CHEERS = ["⭐ Nice!", "⭐ Great!", "⭐ Yes!", "⭐ Super!"];
+const cheerMsg = () => CHEERS[Math.floor(Math.random() * CHEERS.length)];
+const INPUT_ATTRS = `autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" inputmode="text" enterkeyhint="done"`;
+function trackEdits(el, st) { el.addEventListener("beforeinput", ev => { if (/^delete/.test(ev.inputType || "")) st.deletes++; }); }
+
+/* ---------- ‹ Back ---------- */
+function popItem(e, r) {
+  if (e.type === "passage") { const had = r.items.length > 0;
+    if (had) S.redo.push({ step: e.id, at: now(), why: "back", read1: r.read1, read2: r.read2, behaviours: r.behaviours });
+    r.items = []; ["read1", "read2", "level", "words", "errors", "accuracy", "seconds", "wcpm", "self_corrections", "behaviours"].forEach(k => delete r[k]);
+    return had; }   // recordings are kept (each take is saved separately)
+  if (!r.items.length) return false;
+  const it = r.items.pop();
+  S.redo.push({ step: e.id, at: now(), why: "back", item: it });
+  if (e.type === "write") S.draft[e.id] = { text: it.response || "", deletes: it.deletes || 0, ms: it.ms || 0 };
+  return true;
+}
+function goBack() {
+  if (lock || inBoot || S.pos <= 0) return;
+  speechCancel();
+  const e = flow[S.pos];
+  if (isStep(e)) { const r = stepRec(e); if (e.type !== "passage" && popItem(e, r)) { save(); return go(); } }
+  let p = S.pos - 1;
+  while (p > 0 && isStep(flow[p])) { const r = recOf(flow[p].id); if (r && popItem(flow[p], r)) break; p--; }
+  S.pos = Math.max(0, p); save(); go();
+}
+try { history.pushState({ s16: 1 }, ""); } catch (e) {}
+window.addEventListener("popstate", () => { try { history.pushState({ s16: 1 }, ""); } catch (e) {} goBack(); });
+
+/* ====================================================================
+   SCREENS
+   ==================================================================== */
+function sel(id, label, opts, val) {
+  return `<label for="${id}">${label}</label><select id="${id}">${opts.map(o => `<option value="${esc(o[0])}"${o[0] === val ? " selected" : ""}>${esc(o[1])}</option>`).join("")}</select>`;
+}
+function renderSetup(done) {
+  const c = S.ctx || {};
+  setTimeout(() => { fillVoices(); const sl = $("#c_voice"); if (sl) sl.addEventListener("change", () => {
+    const v = enVoices().find(x => x.name === sl.value); if (v) { voice = v; try { localStorage.setItem(VKEY, v.name); } catch (e) {} sayList(["fish", "sun", "feet", "seat"], 0.75); } }); }, 0);
+  screen("Parent setup", `
+    <h1 style="font-size:24px">Session 16 · ew and ue</h1>
+    <p class="muted" style="margin-bottom:10px">About 20–25 minutes, <b>story first</b>. Then two sentences in order, a quick <b>do you remember?</b> (igh, -ed, short u / a) and the new pattern <b>ew / ue</b> (new, blue). Need a break? Tap <b>⏸ Pause</b>.</p>
+    <div class="card"><h2>Before you start</h2><ul>
+      <li>⌨️ Predictive text and auto-correct still off.</li>
+      <li>🔊 Volume up. <button class="ghost" style="min-height:36px;padding:0 10px" data-act="test">Test sound</button></li>
+      <li>👤 Sit beside her. On a first try, let her work it out. After the phone shows the answer, you can help her say it.</li>
+      <li>‹ <b>Back</b> (top left) undoes the last answer if a button was pressed by mistake.</li>
+    </ul></div>
+    <div class="card"><h2>Quick questions</h2>
+      ${sel("c_energy", "How is Deniz right now?", [["","Choose…"],["fresh","Fresh and keen"],["ok","OK"],["tired","A bit tired"]], c.energy)}
+      ${sel("c_pred", "Predictive text and auto-correct turned off?", [["","Choose…"],["yes","Yes, both off"],["no","No / not sure"]], c.predictive_off)}
+      ${sel("c_rec", "Record Deniz's voice while she reads the story?", [["yes","Yes (audio stays on this phone until you export)"],["no","No"]], c.record || "yes")}
+    </div>
+    <div class="card"><h2>🔊 Pick a clear voice (once)</h2>
+      <p class="hint" style="margin-top:0">On some phones the voice makes <b>f</b> sound like <b>s</b>. Try the voices and keep one where <b>fish / sun / feet / seat</b> sound clearly different. Your choice is kept for later sessions.</p>
+      <label for="c_voice">Voice</label><select id="c_voice"></select>
+      <button class="ghost" data-act="vtest" style="margin-top:8px;width:100%">▶ Test: fish, sun, fan, sock, feet, seat</button>
+      <div class="hint">Headphones also help: the phone speaker blurs f and s.</div>
+    </div>`,
+    `<button class="primary" data-act="go">Hand the phone to Deniz ➜</button><div class="hint" id="micmsg" style="text-align:center"></div>`,
+    { test: () => say("Hello Deniz! Can you hear me?"),
+      vtest: () => sayList(["fish", "sun", "fan", "sock", "feet", "seat"], 0.75),
+      go: async () => {
+        S.ctx = { energy: $("#c_energy").value || null, predictive_off: $("#c_pred").value || null, record: $("#c_rec").value, voice: voice ? voice.name + " (" + voice.lang + ")" : null };
+        if (S.ctx.record === "yes") { S.ctx.mic_ok = await initMic(); if (!S.ctx.mic_ok) { const m = $("#micmsg"); if (m) m.textContent = "Microphone not available. Carrying on without recording."; } }
+        if (!S.started_at) S.started_at = now();
+        wake(); save(); done();
+      } }, true);
+}
+function renderIntro(done) {
+  const msg = "Hi Deniz! Story first! Later you will learn a new pattern: e w and u e, like in new and blue!";
+  screen("Welcome", `<div class="emoji">🪄</div><h1>Hi Deniz!</h1><p class="say">Story first! 📖<br>Later: n<b>ew</b> and bl<b>ue</b> 💙</p>
+    <button class="spk" data-act="spk">🔊</button>`, `<button class="primary" data-act="next">Let's go! ➜</button>`,
+    { spk: () => say(msg), next: () => { speechCancel(); done(); } });
+  setTimeout(() => say(msg), 350);
+}
+function blockIntro(done, emoji, title, text, parentTip) {
+  screen(title, `<div class="emoji">${emoji}</div><h1>${esc(title)}</h1><p class="say">${esc(text)}</p><button class="spk" data-act="spk">🔊</button>
+    <div class="parent" style="margin-top:8px"><div class="plabel">👤 PARENT</div><div class="hint" style="margin:0">${esc(parentTip)}</div></div>`,
+    `<button class="primary" data-act="next">Ready ➜</button>`, { spk: () => say(text), next: () => { speechCancel(); done(); } });
+  setTimeout(() => say(text), 350);
+}
+function renderBreak(done) {
+  screen("Break", `<div class="emoji">🌈</div><h1>Brain break!</h1><p class="say">Stand up, stretch, and have a drink of water. 💧</p><p class="muted">Tap when you are ready.</p>`,
+    `<button class="primary" data-act="next">I'm ready ➜</button>
+     <div style="text-align:center;margin-top:8px"><button class="ghost" data-act="stop" style="min-height:40px;font-size:14px">👤 Parent: that's enough for today</button></div>`,
+    { next: done, stop: () => { if (confirm("Finish here? Parts not done will be left out of the results.")) { S.endedEarly = true; S.pos = flow.findIndex(x => x.id === "finishChild"); save(); go(); } } });
+}
+
+/* ---------- show-me screen after a mistake ---------- */
+function showMe(label, html, speakArr, msg, then) {
+  screen(label, `<div class="emoji">💡</div><p class="fb">${msg}</p><div class="big">${html}</div><button class="spk" data-act="spk">🔊</button>
+    <p class="muted">Say it with me!</p>`, `<button class="primary" data-act="next">Next ➜</button>`,
+    { spk: () => sayList(speakArr, 0.8), next: () => { speechCancel(); then(); } });
+  setTimeout(() => sayList(speakArr, 0.8), 300);
+}
+
+/* ---------- hear a word, tap the spelling (feedback after a mistake) ---------- */
+function renderPick(e, rec, idx) {
+  const it = e.items[idx], opts = shuffle(it.options);
+  screen(e.label, `${counter(e, idx)}<p class="q">${e.q || "Which word did you hear?"}</p><button class="spk" data-act="spk">🔊</button>
+    <div class="opts">${opts.map(o => `<button class="opt optw" data-act="opt" data-v="${o}">${o}</button>`).join("")}</div>`, "",
+    { spk: () => say(it.prompt, 0.8),
+      opt: b => {
+        const ok = b.dataset.v === it.expected;
+        record(e, rec, { prompt: it.prompt, expected: it.expected, response: b.dataset.v, options: it.options, correct: ok, skills: it.skills, attempts: 1, ms: Date.now() - t0, skipped: false },
+          () => (ok || e.check) ? cheer(e.check ? "⭐ Thanks!" : cheerMsg(), go) : e.feedback === "pattern" ? showMe(e.label, mark(it.prompt), [it.prompt, magicTip(it.prompt) || aiTip(it.prompt)].filter(Boolean), `<b>${esc(it.prompt)}</b> uses <b>${esc(it.expected)}</b>.`, go) : (() => {
+            const other = b.dataset.v, w = it.expected;
+            const msg = e.feedback === "aiay" ? `The word was <b>${mark(w)}</b>. ${esc(aiTip(w))}` : e.feedback === "magic" ? (isMagic(w) ? `The word was <b>${esc(w)}</b>. It has a magic e!` : `The word was <b>${esc(w)}</b>. No magic e. Short sound.`)
+              : `The word was <b>${esc(w)}</b>.`;
+            screen(e.label, `<div class="emoji">💡</div><p class="fb">${msg}</p>
+              <div class="pair"><button data-act="a">${mark(w)}</button><button data-act="b">${mark(other)}</button></div>
+              <p class="muted">Tap each word to hear the difference.</p>`, `<button class="primary" data-act="next">Next ➜</button>`,
+              { a: () => say(w, 0.75), b: () => say(other, 0.75), next: () => { speechCancel(); go(); } });
+            setTimeout(() => sayList([w, isMagic(w) ? magicTip(w) : aiTip(w), other].filter(Boolean), 0.8), 300);
+          })());
+      } });
+  setTimeout(() => say(it.prompt, 0.8), 350);
+}
+
+/* ---------- teach: tap the magic e ---------- */
+function renderTeach(e, rec, idx) {
+  const it = e.items[idx]; let taps = 0;
+  const v = (it.long.match(/([aeiou])[^aeiou]e$/) || [])[1];
+  screen(e.label, `${counter(e, idx)}<p class="q" id="tq">This word says <b>${esc(it.short)}</b>.</p>
+    <div class="big" id="tw">${esc(it.short)}</div><button class="spk" data-act="spk">🔊</button><br>
+    <button class="magicbtn" data-act="add" id="add">${esc(it.btn || "✨ Add magic e")}</button><p class="fb" id="tip"></p>`,
+    `<button class="primary" data-act="next" id="nx" disabled>Next ➜</button>`,
+    { spk: () => say(taps ? it.long : it.short, 0.75),
+      add: () => { taps++; $("#tw").innerHTML = it.html || mark(it.long); $("#tq").innerHTML = `Now it says <b>${esc(it.long)}</b>!`;
+        $("#tip").textContent = it.tip || `The e is silent. The ${v} says its name: ${VNAME[v]}.`; $("#add").disabled = true; $("#nx").disabled = false;
+        sayList([it.short, it.long, it.tipSay || `The ${v} says its name. ${it.long}.`], 0.75); },
+      next: () => { speechCancel(); record(e, rec, { prompt: it.prompt, expected: it.long, response: it.long, correct: true, practice: true, attempts: 1, ms: Date.now() - t0, skipped: false }); } });
+  setTimeout(() => say("This word says " + it.short + ". Tap the button.", 0.8), 350);
+}
+
+/* ---------- read aloud (parent), show how to say it after a mistake ---------- */
+const readFb = (e, w) => e.phrase ? [[w, "Read it all together, smoothly, like talking.", w], "Read it all together, smoothly, like talking.", `<span style="font-size:40px;letter-spacing:0">${esc(w)}</span>`]
+  : e.trickyRead ? [[w, "This is a tricky word. " + w + ".", w], "A tricky word: look at it and say it with me.", esc(w)]
+  : e.ed && /ed$/.test(w) ? [[w, "Find the ending, e d. " + w + ".", w], "Cover the e d, read the word, then add the ending.", esc(w.slice(0, -2)) + '<span class="m">ed</span>']
+  : isMagic(w) ? [[w, magicTip(w), w], "Look! A magic e at the end.", mark(w)]
+  : TEAMS.test(w) ? [[w, aiTip(w), w], "Look! " + w.match(TEAMS)[0].split("").join(" ") + " says " + teamSays(w), mark(w)]
+  : [[w, "No magic e and no vowel team. Short sound.", w], "No magic e, no team. Short sound!", mark(w)];
+function renderRead(e, rec, idx) {
+  const it = e.items[idx];
+  const finish = ok => {
+    const v = ($("#said") || { value: "" }).value.trim();
+    record(e, rec, { prompt: it.prompt, expected: it.expected, response: ok ? it.expected : (v || null), correct: ok, nonsense: !!it.alien, gpc: it.gpc || null, skills: it.skills, attempts: 1, ms: Date.now() - t0, skipped: false },
+      () => { if (ok || e.check) return cheer(e.check ? "⭐ Thanks!" : cheerMsg(), go); const f = readFb(e, it.prompt); showMe(e.label, f[2], f[0], f[1], go); });
+  };
+  screen(e.label, `${counter(e, idx)}${it.alien ? `<div class="emoji" style="font-size:44px;margin:0">👽</div><p class="muted" style="margin:0 0 4px">alien word</p>` : ""}<div class="word${e.phrase ? " phr" : ""}">${esc(it.prompt)}</div>`,
+    `<div class="parent"><div class="plabel">👤 PARENT – did she read it${e.phrase ? " smoothly, as one chunk" : ""}?${it.alien ? ` Made-up word: say it <b>${esc(it.alien)}</b>.` : ""}</div>
+      <div class="prow"><button class="pb ok" data-act="ok">✓ Read it</button><button class="pb no" data-act="no">✗ Not yet</button></div>
+      <div class="prow"><input class="said" id="said" placeholder="She said… (optional)" ${INPUT_ATTRS}></div></div>`,
+    { ok: () => finish(true), no: () => finish(false) });
+  hold(1800);
+}
+
+/* ---------- spell with one retry ---------- */
+function renderSpell(e, rec, idx) {
+  const it = e.items[idx], st = { deletes: 0 };
+  const speak = () => sayList([it.prompt, it.sentence, it.prompt], 0.8);
+  let first = null, firstMs = 0;
+  const view = retry => {
+    screen(e.label, `${counter(e, idx)}${retry ? `<p class="fb">Here's how we spell it:</p><div class="big">${mark(it.expected)}</div><p class="q">Now you type it!</p>`
+      : `<p class="q">Listen, then type the word</p><button class="spk" data-act="spk">🔊</button>`}
+      <input class="spin" id="sp" ${INPUT_ATTRS} aria-label="Type the word">`,
+      `<button class="primary" data-act="done" id="doneBtn" disabled>Done ➜</button>`,
+      { spk: speak, done: () => submit(retry) }, true);
+    const inp = $("#sp"); trackEdits(inp, st);
+    inp.addEventListener("input", () => { $("#doneBtn").disabled = !inp.value.trim(); });
+    inp.addEventListener("keydown", ev => { if (ev.key === "Enter") { ev.preventDefault(); submit(retry); } });
+    if (retry) sayList([it.expected, it.expected.split("").join(", "), magicTip(it.expected) || aiTip(it.expected)].filter(Boolean), 0.8); else setTimeout(speak, 350);
+  };
+  const submit = retry => {
+    const raw = $("#sp").value.trim(); if (!raw) return;
+    const ok = norm(raw) === norm(it.expected);
+    if (!retry) {
+      first = raw; firstMs = Date.now() - t0;
+      if (ok) return record(e, rec, { prompt: it.prompt, sentence: it.sentence, expected: it.expected, response: raw, correct: true, before: it.before || null, skills: it.skills, attempts: 1, ms: firstMs, deletes: st.deletes, skipped: false }, () => cheer(cheerMsg(), go));
+      if (e.check) return record(e, rec, { prompt: it.prompt, sentence: it.sentence, expected: it.expected, response: raw, correct: false, before: it.before || null,
+        skills: it.skills, attempts: 1, ms: firstMs, deletes: st.deletes, skipped: false }, () => cheer("⭐ Thanks!", go));
+      return view(true);
+    }
+    record(e, rec, { prompt: it.prompt, sentence: it.sentence, expected: it.expected, response: first, correct: false, retry_response: raw, retry_correct: ok,
+      used_ck: /ck/.test(first), skills: it.skills, attempts: 2, ms: firstMs + (Date.now() - t0), deletes: st.deletes, skipped: false }, () => cheer(ok ? "⭐ Now you've got it!" : "⭐ Good try!", go));
+  };
+  view(false);
+}
+
+/* ---------- tricky words: look, say, cover, write, check ---------- */
+function renderTricky(e, rec, idx) {
+  const it = e.items[idx], tries = [], tStart = Date.now();
+  const look = () => {
+    screen(e.label, `${counter(e, idx)}<p class="q">Look at the tricky part. Say the word.</p><div class="big">${it.html}</div>
+      <p class="fb">${esc(it.tipShow)}</p><button class="spk" data-act="spk">🔊</button>${tries.length ? `<div class="tries">Go ${tries.length + 1} of 3</div>` : ""}`,
+      `<button class="primary" data-act="cover">🙈 Cover it and write</button>`,
+      { spk: () => sayList([it.w, it.tip], 0.8), cover: () => { speechCancel(); write(); } });
+    setTimeout(() => sayList([it.w, it.tip], 0.8), 300);
+  };
+  const write = () => {
+    screen(e.label, `${counter(e, idx)}<p class="q">Now type the word you saw</p><div class="big" style="opacity:.15">???</div>
+      <input class="spin" id="sp" ${INPUT_ATTRS} aria-label="Type the word">`,
+      `<button class="primary" data-act="done" id="doneBtn" disabled>Check ➜</button>`, { done: check }, true);
+    const inp = $("#sp"); inp.addEventListener("input", () => { $("#doneBtn").disabled = !inp.value.trim(); });
+    inp.addEventListener("keydown", ev => { if (ev.key === "Enter") { ev.preventDefault(); check(); } });
+  };
+  const check = () => {
+    const raw = $("#sp").value.trim(); if (!raw) return;
+    tries.push(raw); const ok = norm(raw) === it.w;
+    const finish = () => record(e, rec, { prompt: it.w, expected: it.w, response: tries[0], responses: tries.slice(), correct: norm(tries[0]) === it.w, correct_final: ok,
+      skills: it.skills, attempts: tries.length, ms: Date.now() - tStart, skipped: false }, () => cheer(ok ? (tries.length === 1 ? "⭐ First go!" : "⭐ You got it!") : "⭐ Good try!", go));
+    if (ok || tries.length >= 3) return finish();
+    screen(e.label, `<div class="emoji">💡</div><p class="fb">Almost! You wrote <b>${esc(raw)}</b>.</p><p class="q">Let's look again.</p><div class="big">${it.html}</div>`,
+      `<button class="primary" data-act="again">Try again ➜</button>`, { again: look });
+    say("Almost! Let's look again. " + it.w, 0.85);
+  };
+  look();
+}
+
+/* ---------- repeated reading: read 1, listen, read 2 ---------- */
+function renderPassage(e, rec) {
+  const p = e.story || STORY, words = p.words; let tStart = 0, tick = null, rh = null;
+  const R = { 1: { bad: new Set(), sc: 0, secs: 0 }, 2: { bad: new Set(), sc: 0, secs: 0 } }, beh = new Set();
+  let take = S.takes[e.id] || 0;
+  const readView = n => {
+    screen(p.title, `<p class="q">${n === 1 ? "Read the story out loud" : "Now read it again. You know it better now!"}</p><button class="spk" data-act="spk">🔊</button>
+      <div class="passage">${esc(p.text)}</div>`,
+      `<div class="parent"><div class="plabel">👤 PARENT – ${e.single ? "" : "read " + n + " of 2: "}tap Start when she begins, Stop when she finishes</div>
+        <div class="prow"><button class="pb ok" data-act="tm" id="tbtn">▶ Start timer</button></div><div class="hint" id="tt" style="text-align:center"></div></div>`,
+      { spk: () => say(n === 1 ? "Read the story out loud. Take your time." : "Read it again. You know it better now!"),
+        tm: () => {
+          if (!tStart) { speechCancel(); if (n === 1) { take = S.takes[e.id] = (S.takes[e.id] || 0) + 1; save(); } rh = recStart(); tStart = Date.now(); $("#tbtn").textContent = (rh ? "🎙 " : "") + "■ Stop – she finished"; $("#tbtn").className = "pb no";
+            tick = setInterval(() => { const t = $("#tt"); if (t) t.textContent = Math.round((Date.now() - tStart) / 1000) + " s"; }, 500); }
+          else { R[n].secs = (Date.now() - tStart) / 1000; clearInterval(tick); tStart = 0;
+            if (rh) { const r = rh; rh = null; try { r.mr.stop(); } catch (x) {} const secs = Math.round(R[n].secs), tk = take;
+              r.done.then(b => { if (b && b.size) audioPut({ key: SESSION + "-" + e.id + "-t" + tk + "-" + n + "-" + Date.now(), session: SESSION, step: e.id, take: tk, n, blob: b, mime: b.type, seconds: secs, at: now() }); }); }
+            markView(n); }
+        } }, true);
+  };
+  const markView = n => {
+    const o = R[n], cnt = () => `${o.bad.size} word${o.bad.size === 1 ? "" : "s"} marked`;
+    screen("Parent: mark words", `<h1 style="font-size:22px">👤 Read ${n}: tap the words she got wrong</h1>
+      <p class="hint" style="margin-top:0">Tap any word she misread, couldn't read or left out. Don't tap words she fixed herself.</p>
+      <div class="pw">${words.map((w, i) => `<button class="w" data-act="w" data-i="${i}">${esc(w.raw)}</button>`).join("")}</div>
+      <div class="step"><span>Fixed herself:</span><button data-act="m">−</button><b id="sc">0</b><button data-act="pl">+</button></div>
+      ${n === 2 || e.single ? `<div class="chips">${BEH.map(x => `<button class="chip" data-act="chip" data-v="${esc(x)}">${esc(x)}</button>`).join("")}</div>` : ""}`,
+      `<div class="hint" id="cnt" style="text-align:center;margin:0 0 6px">${cnt()}</div><button class="primary" data-act="save">${n === 1 && !e.single ? "Save, then listen ➜" : "Save ➜"}</button>`,
+      { w: b => { const i = +b.dataset.i; o.bad.has(i) ? o.bad.delete(i) : o.bad.add(i); b.classList.toggle("bad"); $("#cnt").textContent = cnt(); },
+        m: () => { o.sc = Math.max(0, o.sc - 1); $("#sc").textContent = o.sc; }, pl: () => { o.sc++; $("#sc").textContent = o.sc; },
+        chip: b => { const v = b.dataset.v; beh.has(v) ? beh.delete(v) : beh.add(v); b.classList.toggle("on"); },
+        save: () => { S.readLog.push(Object.assign({ step: e.id, take, n, at: now() }, stats(n))); save(); n === 1 && !e.single ? modelView() : saveAll(); } }, true);
+  };
+  const modelView = () => {
+    screen(p.title, `<p class="q">Listen and follow with your finger</p>
+      <div class="passage">${p.sents.map((s, i) => `<span id="ps${i}">${esc(s)}</span>`).join(" ")}</div>`,
+      `<div class="prow"><button class="ghost" data-act="play" style="flex:1">🔊 Listen again</button><button class="primary" data-act="next" id="nx" style="flex:1.4" disabled>My turn ➜</button></div>`,
+      { play, next: () => { speechCancel(); readView(2); } }, true);
+    play();
+  };
+  const play = () => {
+    const hl = i => { p.sents.forEach((_, k) => { const el = $("#ps" + k); if (el) el.className = k === i ? "hl" : ""; }); };
+    const ok = sayList(p.sents, 0.8, () => { hl(-1); const b = $("#nx"); if (b) b.disabled = false; }, hl);
+    setTimeout(() => { const b = $("#nx"); if (b) b.disabled = false; }, ok ? 20000 : 0);
+  };
+  const stats = n => { const o = R[n], w = words.length, er = o.bad.size;
+    return { errors: er, words: w, accuracy: Math.round((w - er) / w * 100), seconds: Math.round(o.secs), wcpm: o.secs > 0 ? Math.round((w - er) / (o.secs / 60)) : null,
+      self_corrections: o.sc, misread: Array.from(o.bad).sort((a, b) => a - b).map(i => words[i].prompt) }; };
+  const saveAll = () => {
+    if (lock) return; lock = true;
+    rec.items = words.map((w, i) => ({ prompt: w.prompt, expected: w.prompt, response: R[1].bad.has(i) ? "misread" : w.prompt, correct: !R[1].bad.has(i), attempts: 1, ms: null, skipped: false, skills: ["fl2"] }));
+    rec.read1 = stats(1); rec.read2 = e.single ? null : stats(2); rec.behaviours = Array.from(beh);
+    Object.assign(rec, { level: e.level || "A", words: words.length, errors: rec.read1.errors, accuracy: rec.read1.accuracy, seconds: rec.read1.seconds, wcpm: rec.read1.wcpm, self_corrections: rec.read1.self_corrections });
+    rec.duration_sec = rec.read1.seconds + (rec.read2 ? rec.read2.seconds : 0); rec.take = take;
+    save(); cheer("⭐ Well done!", go);
+  };
+  readView(1);
+}
+
+/* ---------- questions ---------- */
+function renderMCQ(e, rec, idx) {
+  const it = e.items[idx], opts = shuffle(it.options);
+  const speakAll = () => sayList([it.prompt].concat(opts.map(o => o.t)), 0.85);
+  screen(e.label, `${counter(e, idx)}<p class="q">${esc(it.prompt)}</p><button class="spk" data-act="spk">🔊</button>
+    <div class="mcqs">${opts.map((o, i) => `<button class="mcq" data-act="o" data-i="${i}"><span class="em">${o.e || ""}</span><span>${esc(o.t)}</span></button>`).join("")}</div>`, "",
+    { spk: speakAll, o: b => { const o = opts[+b.dataset.i];
+      record(e, rec, { prompt: it.prompt, expected: it.expected, response: o.t, correct: o.t === it.expected, skills: it.skills, kind: it.kind, modality: "reading",
+        attempts: 1, ms: Date.now() - t0, skipped: false }, () => cheer("⭐ Thanks!", go)); } }, true);
+  setTimeout(speakAll, 350);
+}
+
+/* ---------- writing: one sentence with a word bank ---------- */
+function textStats(txt) {
+  const t = String(txt || "").trim(), words = t ? t.split(/\s+/).filter(Boolean) : [];
+  return { chars: t.length, words: words.length, starts_with_capital: /^[A-Z]/.test(t), ends_with_punct: /[.!?]$/.test(t),
+    lowercase_i: words.filter(w => w === "i").length, magic_e_words: t.toLowerCase().split(/[^a-z]+/).filter(isMagic), starts_with_given: true,
+    joining_words: t.toLowerCase().split(/[^a-z]+/).filter(w => ["and", "but", "so", "because", "then", "when"].includes(w)), comma_without_space: (t.match(/,\S/g) || []).length };
+}
+function renderWrite(e, rec, idx) {
+  const it = e.items[idx], d = S.draft[e.id] || (S.draft[e.id] = { text: it.start || "", deletes: 0, ms: 0 }), t1 = Date.now(), st = { deletes: 0 };
+  const speakIt = () => sayList([it.prompt, it.picSay], 0.85);
+  const commit = skipped => {
+    const ta = $("#wt"); if (ta) d.text = ta.value;
+    const txt = skipped ? "" : d.text.trim();
+    record(e, rec, { prompt: it.prompt, kind: it.kind, pic: it.pic, response: skipped ? null : txt, correct: null, skills: it.skills, attempts: 1,
+      ms: d.ms + (Date.now() - t1), deletes: d.deletes + st.deletes, stats: textStats(txt), used_then_btn: !!d.used_then_btn, skipped: !!skipped }, () => { delete S.draft[e.id]; save(); cheer("⭐ Great writing!", go); });
+  };
+  screen(e.label, `<div class="pic">${it.pic}</div><p class="q">${esc(it.prompt)}</p><button class="spk" data-act="spk">🔊</button>
+    <div class="bank">${(it.bank || []).map(w => `<button data-act="w" data-w="${w}">${mark(w)}</button>`).join("")}${it.thenBtn ? `<button data-act="then" style="font-weight:700">➕ Then</button>` : ""}</div>
+    <textarea class="wt" id="wt" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="Type here">${esc(d.text)}</textarea>`,
+    `<button class="primary" data-act="done" id="doneBtn" disabled>Done ➜</button>
+     <div style="text-align:center;margin-top:8px"><button class="ghost" data-act="skip" style="min-height:40px;font-size:14px">👤 Skip this one</button></div>`,
+    { spk: speakIt, w: b => say(b.dataset.w, 0.8),
+      then: () => { const ta = $("#wt"); if (/(^|\n)Then\b/.test(ta.value)) { ta.focus(); return; } ta.value = ta.value.replace(/\s+$/, "") + "\nThen "; d.text = ta.value; d.used_then_btn = true; save(); upd(); say("Then", 0.8); ta.focus(); try { ta.setSelectionRange(ta.value.length, ta.value.length); } catch (x) {} },
+      done: () => { const v = $("#wt").value.trim(); if (v && v !== (it.start || "").trim()) commit(false); },
+      skip: () => { if (confirm("Skip this one?")) commit(true); } }, true);
+  const ta = $("#wt"); trackEdits(ta, st);
+  const upd = () => { $("#doneBtn").disabled = !ta.value.trim() || ta.value.trim() === (it.start || "").trim(); };
+  ta.addEventListener("input", () => { d.text = ta.value; upd(); save(); }); upd();
+  if (!d.text || d.text === it.start) setTimeout(speakIt, 350);
+}
+
+/* ---------- rule: ai in the middle, ay at the end ---------- */
+function renderRule(done) {
+  const R = RULE;
+  screen(R.title, `<p class="q">${R.q}</p>
+    <div class="rule">${R.cards.map((c, k) => `<button data-act="c${k}"><div class="rw">${c.html}</div><div class="rt">${c.t}</div></button>`).join("")}</div><button class="spk" data-act="spk">🔊</button>`,
+    `<button class="primary" data-act="next">Got it ➜</button>`,
+    Object.assign({ spk: () => say(R.say, 0.8), next: () => { speechCancel(); done(); } }, Object.fromEntries(R.cards.map((c, k) => ["c" + k, () => sayList(c.speak, 0.8)]))));
+  setTimeout(() => say(R.say, 0.8), 350);
+}
+
+/* ---------- keyboard game: one text box for all letters, so the keyboard stays open ---------- */
+const keySay = it => "Find " + it.prompt + (it.as ? ", as in " + it.as : "");
+function renderKeys(e, rec, idx) {
+  let i = idx, tries = 0, tL = 0;
+  screen(e.label, `<p class="q">Find the letter on the keyboard!</p><div class="count" id="kc"></div><div class="keyl" id="kl"></div>
+    <button class="spk" data-act="spk">🔊</button><input class="spin" id="sp" ${INPUT_ATTRS} aria-label="Type the letter" placeholder="tap here">
+    <div class="keymsg" id="km">Tap the box to open the keyboard.</div><p class="hint" style="text-align:center">The keyboard shows capital letters. Both are the same key.</p>`, "", { spk: () => say(keySay(e.items[i]), 0.8) }, true);
+  const inp = $("#sp");
+  const show = () => { $("#kc").textContent = (i + 1) + " of " + e.items.length; $("#kl").innerHTML = esc(e.items[i].prompt.toUpperCase() + " " + e.items[i].prompt) + (e.items[i].as ? `<div style="font-size:22px;font-weight:600;color:var(--muted)">as in ${esc(e.items[i].as)}</div>` : ""); tries = 0; tL = Date.now(); say(keySay(e.items[i]), 0.8); updateBar(i / e.items.length); };
+  inp.addEventListener("focus", () => { if (!tL) { $("#km").textContent = ""; tL = Date.now(); } }, { once: true });
+  inp.addEventListener("input", () => {
+    const ch = inp.value.slice(-1).toLowerCase(); inp.value = ""; if (!ch) return;
+    const it = e.items[i]; tries++;
+    if (ch !== it.expected) { $("#km").textContent = "Try again! 🔍"; return; }
+    rec.items.push({ prompt: it.prompt, as: it.as || null, expected: it.expected, response: it.expected, correct: tries === 1, attempts: tries, ms: Date.now() - tL, skills: it.skills, skipped: false });
+    rec.duration_sec = Math.round(rec.items.reduce((a, x) => a + (x.ms || 0), 0) / 1000); save();
+    $("#km").textContent = "⭐"; i++;
+    if (i >= e.items.length) { inp.blur(); return cheer("⭐ Fast fingers!", go); }
+    show();
+  });
+  show(); tL = 0; speechCancel(); setTimeout(() => say(keySay(e.items[i]) + ". Tap the box to open the keyboard.", 0.85), 350);
+}
+
+/* ---------- build a sentence from word tiles ---------- */
+function renderBuild(e, rec, idx) {
+  const it = e.items[idx]; let tiles = shuffle(it.words.map((t, k) => ({ t, k })));
+  let g = 0; while (tiles.every((x, k) => x.k === k) && g++ < 10) tiles = shuffle(tiles);
+  let order = [];
+  const cls = w => /^(and|then)$/i.test(w) ? "and" : "";
+  const view = () => {
+    $("#main").innerHTML = `${counter(e, idx)}<p class="q">Tap the words in order</p><button class="spk" data-act="spk">🔊</button>
+      <div class="line">${order.map(k => `<span class="${cls(tiles[k].t)}">${esc(tiles[k].t)}</span>`).join("")}</div>
+      <div class="tiles">${tiles.map((x, k) => `<button class="${cls(x.t)}${order.includes(k) ? " used" : ""}" data-act="pick" data-k="${k}">${esc(x.t)}</button>`).join("")}</div>
+      <button class="ghost" data-act="reset">↺ Start again</button>`;
+    const nb = $("#nextBtn"); if (nb) nb.disabled = order.length < tiles.length;
+  };
+  screen(e.label, "", `<button class="primary" id="nextBtn" data-act="sub" disabled>Done ➜</button>`, {
+    spk: () => say(it.prompt, 0.8),
+    pick: b => { const k = +b.dataset.k; if (!order.includes(k)) { order.push(k); view(); } },
+    reset: () => { order = []; view(); },
+    sub: () => {
+      if (order.length < tiles.length) return;
+      const resp = order.map(k => tiles[k].t).join(" "), ok = resp === it.expected;
+      record(e, rec, { prompt: it.prompt, expected: it.expected, response: resp, correct: ok, skills: it.skills, attempts: 1, ms: Date.now() - t0, skipped: false },
+        () => ok ? cheer("⭐ Great sentence!", go) : showMe(e.label, `<span style="font-size:26px;line-height:1.5;letter-spacing:0;font-weight:700">${it.words.map(w => `<span class="${cls(w) ? "m" : ""}">${esc(w)}</span>`).join(" ")}</span>`,
+          [it.prompt], "Here's the sentence. <b>and</b> and <b>then</b> join two ideas.", go));
+    }
+  }, true);
+  view();
+  setTimeout(() => say(it.prompt, 0.8), 350);
+}
+
+/* ---------- finish ---------- */
+function renderFinishChild(done) {
+  screen("All done", `<div class="emoji">🎉</div><h1>All done, Deniz!</h1><p class="say">New, blue, grew. Well done!<br>How did that feel?</p>
+    <div class="emojis"><button data-act="f" data-v="great" aria-label="Great">😀</button><button data-act="f" data-v="ok" aria-label="OK">🙂</button><button data-act="f" data-v="hard" aria-label="Hard">😓</button></div>`,
+    "", { f: b => { S.feeling = b.dataset.v; save(); done(); } });
+}
+const OBS = ["Read the story only once before the timer", "Remembered igh without help", "Heard u and a as different", "Read ew / ue words by the end", "Remembered the capital letters", "Second sentence said what happened next", "Read again, here, have straight away", "Read the story in phrases", "Still reads word by word", "Said the sounds while typing", "Found letters faster on the keyboard",
+  "Needed lots of encouragement", "Got tired or distracted", "Proud and engaged"];
+function renderFinishParent() {
+  const res = buildResult(), sm = res.summary;
+  const pc = v => v == null ? "–" : `<span class="${v >= 80 ? "good" : v < 50 ? "low" : ""}">${v}%</span>`;
+  const row = (name, o) => `<tr><td>${esc(name)}</td><td class="n">${o && o.total ? o.correct + "/" + o.total : "–"}</td><td class="n">${pc(o && o.total ? o.pct : null)}</td></tr>`;
+  const rd = sm.story;
+  const rows = [row("Story questions", sm.comp), row("Remember: igh + -ed reading", sm.cold_read), row("bug or bag? (hearing)", sm.cold_hear), row("Remember: spelling (1st try)", sm.cold_spell),
+    row("ew/ue: which spelling?", sm.hear), row("ew/ue: reading", sm.read), row("ew/ue: spelling (1st try)", sm.spell), row("Quick words", sm.quick)].join("");
+  screen("Parent wrap-up", `<h1 style="font-size:24px">Well done! 🎉</h1>
+    ${sm.flags.length ? `<div class="card"><h2>Notes</h2>${sm.flags.map(f => `<p style="font-size:15px;margin:0 0 6px">• ${esc(f)}</p>`).join("")}</div>` : ""}
+    <div class="card"><h2>Scores (first try)</h2><table><tr><th>Part</th><th class="n">Right</th><th class="n">%</th></tr>${rows}</table></div>
+    <div class="card"><h2>Story: read 1 → read 2</h2>${rd && rd.read1 ? `<table><tr><th></th><th class="n">Read 1</th><th class="n">Read 2</th></tr>
+      <tr><td>Accuracy</td><td class="n">${rd.read1.accuracy}%</td><td class="n">${rd.read2 ? rd.read2.accuracy + "%" : "–"}</td></tr>
+      <tr><td>Words per minute</td><td class="n">${rd.read1.wcpm ?? "–"}</td><td class="n">${rd.read2 ? rd.read2.wcpm ?? "–" : "–"}</td></tr></table>` : "<p class='muted'>Not read.</p>"}
+      <p class="hint">🎙 ${AUDIO.length ? AUDIO.length + " recording(s) saved on this phone, ready to export" + (AUDIO.some(o => !o.stored) ? " (some only in memory: don't reload)" : "") : (S.ctx && S.ctx.record === "yes" ? "⚠️ No recordings found." : "no recordings")}</p></div>
+    <div class="card"><h2>Her sentences</h2><div style="font-size:17px;background:#faf6ff;border-radius:10px;padding:8px">${sm.writing && sm.writing.text ? esc(sm.writing.text) : "<i>not done</i>"}</div></div>
+    <div class="card"><h2>What did you notice? (tap any)</h2><div class="chips">
+      ${OBS.map(o => `<button class="chip${S.obs.includes(o) ? " on" : ""}" data-act="chip" data-v="${esc(o)}">${esc(o)}</button>`).join("")}</div>
+      <label for="note">Anything else (optional)</label><textarea id="note" ${INPUT_ATTRS}>${esc(S.note || "")}</textarea></div>
+    <p class="muted" style="text-align:center">Tap <b>Export</b> and send the files to this chat.</p>`,
+    `<div class="prow"><button class="ghost" data-act="copy" style="flex:.6">Copy</button><button class="primary" data-act="export" style="flex:1.6">Export results ➜</button></div><div class="hint" id="msg" style="text-align:center"></div>
+     <div style="text-align:center"><button class="ghost" data-act="clear" id="clr" style="${S.exported ? "" : "display:none;"}min-height:36px;font-size:13px;margin-top:6px">🗑 Clear this session from the phone</button></div>`,
+    { chip: b => { const v = b.dataset.v, i = S.obs.indexOf(v); if (i >= 0) S.obs.splice(i, 1); else S.obs.push(v); b.classList.toggle("on"); save(); },
+      export: () => exportJson(),
+      clear: async () => {
+        if (!confirm("Did the files arrive safely in the chat? Clearing deletes this session's answers and " + AUDIO.length + " recording(s) from this phone.")) return;
+        await audioClear(); cleared = true; try { localStorage.removeItem(KEY); } catch (e) {}
+        screen("Cleared", `<div class="emoji">🧹</div><h1 style="font-size:24px">All cleared</h1><p class="muted">This session's answers and recordings were removed from the phone. You can close this page.</p>`, "", {}); S.pos = 0; setTimeout(() => { const b = $("#back"); if (b) b.hidden = true; }, 0); },
+      copy: async () => { S.note = $("#note").value; save(); try { await navigator.clipboard.writeText(JSON.stringify(buildResult(), null, 2)); $("#msg").textContent = "Copied ✓"; } catch (e) { $("#msg").textContent = "Copy not available. Use Export."; } } }, true);
+}
+
+/* ====================================================================
+   RESULT + SUMMARY
+   ==================================================================== */
+const tallyItems = s => { const c = s.reduce((a, i) => a + itemScore(i), 0); return { correct: Math.round(c * 2) / 2, total: s.length, pct: s.length ? Math.round(c / s.length * 100) : null }; };
+const tally = r => r && scored(r) ? tallyItems(shown(r)) : { correct: 0, total: 0, pct: null };
+function computeSummary(steps) {
+  const get = id => steps.find(r => r.id === id);
+  const misreadOf = r => r ? shown(r).filter(i => !i.correct).map(i => i.prompt + (i.response && i.response !== i.prompt ? " (said " + i.response + ")" : "")) : [];
+  const spellOf = r => { const I = r ? shown(r) : [];
+    return { first: Object.assign(tallyItems(I), { misspelt: I.filter(i => !i.correct).map(i => ({ expected: i.expected, response: i.response, retry: i.retry_response, retry_correct: i.retry_correct })) }),
+             after: tallyItems(I.map(i => ({ correct: i.correct || !!i.retry_correct }))) }; };
+  const st = get("s16-read-night");
+  const reads = S.readLog.filter(x => x.step === "s16-read-night"), firstRead = reads.find(x => x.n === 1) || null;
+  const story = st && st.read1 ? { read1: st.read1, read2: st.read2, behaviours: st.behaviours, take: st.take, takes_started: S.takes["s16-read-night"] || 0, reads_logged: reads.length,
+    first_ever_read: firstRead, gain_wcpm: st.read2 && st.read1.wcpm != null && st.read2.wcpm != null ? st.read2.wcpm - st.read1.wcpm : null } : null;
+  const comp = tally(get("s16-comp"));
+  const cold_read = Object.assign(tally(get("s16-cold-read")), { misread: misreadOf(get("s16-cold-read")) });
+  const cold_hear = Object.assign(tally(get("s16-cold-hear")), { wrong: get("s16-cold-hear") ? shown(get("s16-cold-hear")).filter(i => !i.correct).map(i => i.expected + " → " + i.response) : [] });
+  const cs = spellOf(get("s16-cold-spell")), cold_spell = cs.first, cold_spell_after = cs.after;
+  const hear = tally(get("s16-hear")), read = Object.assign(tally(get("s16-read")), { misread: misreadOf(get("s16-read")) });
+  const sp = spellOf(get("s16-spell")), spell = sp.first, spell_after = sp.after;
+  const qr = get("s16-quick"), qI = qr ? shown(qr) : [];
+  const quick = Object.assign(tallyItems(qI), { not_yet: misreadOf(qr), slow: qI.filter(i => i.correct && i.ms > 5000).map(i => i.prompt + " " + Math.round(i.ms / 1000) + "s") });
+  const wr = get("s16-write"), wi = wr && wr.items[0];
+  const sents = wi && wi.response ? wi.response.split(/(?<=[.!?])\s+|\n+/).map(x => x.trim()).filter(Boolean) : [];
+  const writing = wi ? { text: wi.response, stats: wi.stats, ms: wi.ms, used_then_btn: !!wi.used_then_btn, sentences: sents, with_capital: sents.filter(x => /^[A-Z]/.test(x)).length, with_end_mark: sents.filter(x => /[.!?]$/.test(x)).length } : null;
+  const flags = [];
+  if (S.ctx && S.ctx.predictive_off !== "yes") flags.push("Predictive text may have been on: some spellings may not be her own.");
+  if (S.ctx && S.ctx.voice) flags.push("Voice used: " + S.ctx.voice + ".");
+  if (story && story.takes_started > 1) flags.push("Story was started " + story.takes_started + " times; the scored read is take " + story.take + ", so it is NOT a cold read. First-ever read: " + (firstRead ? firstRead.wcpm + " wcpm, " + firstRead.errors + " errors" : "not saved") + ".");
+  if (story && story.gain_wcpm != null) flags.push("Story pace " + story.read1.wcpm + " → " + story.read2.wcpm + " words per minute after listening (" + (story.gain_wcpm >= 0 ? "+" : "") + story.gain_wcpm + ").");
+  if (story && story.read1.seconds < 4) flags.push("Story timer looks too short to be real.");
+  if (cold_read.misread.length) flags.push("Cold check not yet: " + cold_read.misread.join(", ") + ".");
+  if (cold_hear.wrong.length) flags.push("Short vowels heard wrong: " + cold_hear.wrong.join(", ") + ".");
+  if (writing && writing.text && !writing.used_then_btn) flags.push("Writing: the ➕ Then button was not used.");
+  if (writing && writing.text) flags.push("Writing: " + writing.sentences.length + " sentence(s), " + writing.with_capital + " with a capital, " + writing.with_end_mark + " with an end mark, " + Math.round(writing.ms / 1000) + " s.");
+  const pz = S.pauses.filter(p => typeof p.seconds === "number"), pzs = pz.reduce((a, p) => a + p.seconds, 0);
+  if (S.pauses.length) flags.push("Paused " + S.pauses.length + " time(s), " + (pzs < 90 ? pzs + " s" : Math.round(pzs / 60) + " min") + " in total. Timings leave the pauses out.");
+  if (S.redo.length) flags.push(S.redo.length + " answer(s) were redone after ‹ Back. Replaced answers: " + S.redo.map(x => x.item ? x.step.replace("s16-", "") + " " + x.item.prompt + " (" + (x.item.correct ? "right" : "said " + x.item.response) + ")" : x.step.replace("s16-", "") + " story read").join("; ") + ".");
+  if (S.loads.length) flags.push("Page was reopened or reloaded " + S.loads.length + " time(s) during the session.");
+  if (S.archive.length) flags.push("Start over was used " + S.archive.length + " time(s); the earlier tries are in attempt_history.");
+  if (S.ctx && S.ctx.record === "yes" && story && !AUDIO.length) flags.push("No recordings were saved.");
+  if (S.endedEarly) flags.push("Finished early at a break.");
+  const acc = {}, evidence = [];
+  steps.filter(scored).forEach(r => {
+    const per = {};
+    shown(r).forEach(i => (i.skills || r.skills).forEach(k => { const o = per[k] || (per[k] = { c: 0, t: 0 }); o.c += itemScore(i); o.t += 1; }));
+    Object.keys(per).forEach(k => { const a = acc[k] || (acc[k] = { correct: 0, total: 0 }); a.correct += per[k].c; a.total += per[k].t;
+      evidence.push({ skill: k, session: SESSION, step: r.id, correct: Math.round(per[k].c * 2) / 2, total: per[k].t, note: r.notes || "" }); });
+  });
+  const suggested_progress = {};
+  Object.keys(acc).forEach(k => { const p = acc[k].correct / acc[k].total * 100;
+    suggested_progress[k] = { status: p < 50 ? "not_yet" : "learning", likely_secure: p >= 90, correct: Math.round(acc[k].correct * 2) / 2, total: acc[k].total, pct: Math.round(p) }; });
+  return { story, comp, writing, cold_read, cold_hear, cold_spell, cold_spell_after, hear, read, spell, spell_after, quick, flags, suggested_progress, evidence,
+    caveat: "Training session: scores are first tries. Scores are the answers standing at the end; anything replaced after Back, every story take, pauses and reloads are in attempt_history. Judge with that in mind." };
+}
+function buildResult() {
+  S.note = ($("#note") && $("#note").value) || S.note || "";
+  const steps = S.steps.map(r => {
+    const t = tally(r);
+    const o = { id: r.id, skills: r.skills, mode: r.mode, started_at: r.started_at, duration_sec: r.duration_sec || 0, items: r.items,
+      score: scored(r) ? { correct: t.correct, total: t.total } : null, notes: r.notes };
+    if (r.read1) Object.assign(o, { level: r.level, words: r.words, errors: r.errors, accuracy: r.accuracy, seconds: r.seconds, wcpm: r.wcpm, self_corrections: r.self_corrections, read1: r.read1, read2: r.read2, behaviours: r.behaviours, take: r.take });
+    return o;
+  });
+  const fin = now();
+  const res = { schema: "deniz-session/1", session: SESSION, kind: "training", title: "Training 10 – ew / ue + cold check igh, -ed", focus: ["ph5", "ph8", "ph11", "ph1", "sp3", "sp8", "fl1", "fl3", "wr6"],
+    started_at: S.started_at, finished_at: fin, duration_sec: Math.round((Date.parse(fin) - Date.parse(S.started_at || fin)) / 1000),
+    device: navigator.userAgent, parent_context: S.ctx, steps, child_feeling: S.feeling, parent_note: S.note, observations: S.obs, summary: computeSummary(steps) };
+  if (S.endedEarly) res.ended_early = true;
+  const scoredTake = {}; S.steps.forEach(r => { if (r.take) scoredTake[r.id] = r.take; });
+  res.recordings = AUDIO.map(o => ({ step: o.step, take: o.take, read: o.n, scored: scoredTake[o.step] === o.take, at: o.at,
+    file: "session-16-" + o.step.replace("s16-", "") + "-take" + o.take + "-" + o.n + "." + audioExt(o.mime), seconds: o.seconds, mime: o.mime, bytes: o.blob.size }));
+  const pzs = S.pauses.reduce((a, p) => a + (typeof p.seconds === "number" ? p.seconds : 0), 0);
+  res.paused_sec = pzs; res.active_sec = Math.max(0, res.duration_sec - pzs);
+  res.attempt_history = { pauses: S.pauses, page_loads: S.loads, redone_after_back: S.redo, story_reads: S.readLog, story_takes: S.takes, earlier_tries_before_start_over: S.archive };
+  return res;
+}
+const showClear = () => { const c = $("#clr"); if (c) c.style.display = ""; };
+async function exportJson() {
+  const res = buildResult(); save();
+  const file = new File([JSON.stringify(res, null, 2)], "session-16-result.json", { type: "application/json" });
+  const audio = AUDIO.map((o, i) => new File([o.blob], res.recordings[i].file, { type: o.mime || "audio/webm" }));
+  const files = [file].concat(audio), msg = $("#msg");
+  try { if (navigator.canShare && navigator.canShare({ files })) { await navigator.share({ files, title: "Deniz – session 16 result" }); S.exported = true; save(); msg.textContent = "Shared ✓" + (audio.length ? " (with " + audio.length + " recordings)" : "") + ". When they arrive, you can clear the phone."; showClear(); return; } }
+  catch (e) { if (e && e.name === "AbortError") return; }
+  try {
+    files.forEach((f, i) => setTimeout(() => { const url = URL.createObjectURL(f), a = document.createElement("a"); a.href = url; a.download = f.name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 3000); }, i * 700));
+    S.exported = true; save(); msg.textContent = "Saved to Downloads ✓" + (audio.length ? " (results + " + audio.length + " recordings)" : "") + ". When they arrive, you can clear the phone."; showClear();
+  } catch (e) { msg.textContent = "Could not save. Try Copy."; }
+}
+
+/* ====================================================================
+   BOOT
+   ==================================================================== */
+function boot() {
+  if (S.started_at && !S.exported) { S.loads.push(now()); const lp = S.pauses[S.pauses.length - 1]; if (lp && lp.seconds == null) lp.seconds = "reloaded while paused"; save(); }
+  if (S.pos > 1 && S.pos < flow.length) {
+    inBoot = true;
+    screen("Parent", `<div class="emoji">💾</div><h1 style="font-size:24px">Session in progress</h1><p class="muted">Your answers are saved. Pick up where you stopped?</p>`,
+      `<button class="primary" data-act="cont">Continue ➜</button>
+       <div style="text-align:center;margin-top:14px"><button class="ghost" data-act="restart" style="min-height:36px;font-size:13px;border:0;background:none;text-decoration:underline">Start over (earlier answers are kept for the report)</button></div>`,
+      { cont: async () => { inBoot = false; if (S.ctx && S.ctx.record === "yes") await initMic(); wake(); go(); },
+        restart: () => { if (confirm("Start over from the beginning? Her earlier answers and recordings stay saved and are sent with the results.")) {
+          inBoot = false; const old = S; S = fresh();
+          S.archive = (old.archive || []).concat([{ at: now(), pos: old.pos, started_at: old.started_at, steps: old.steps, redo: old.redo, readLog: old.readLog }]);
+          S.takes = old.takes || {}; S.loads = old.loads || []; save(); go(); } } });
+    return;
+  }
+  go();
+}
+if (location.hash === "#test") window.__s16 = { pauseOn, pauseOff, get S() { return S; }, get AUDIO() { return AUDIO; }, buildResult, flow, STORY };
+audioLoad().finally(boot);
+})();
+</script>
+</body>
+</html>
