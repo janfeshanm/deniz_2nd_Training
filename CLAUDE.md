@@ -215,3 +215,12 @@ Schedule: daily sessions.
 - Session 17 (training, last before Re-check 3) is built from the Session 16 page. Adds "ou" (logged under ph7, diphthongs,
   as in the S14 check) with a rule screen (ou in the middle, ow at the end), a second writing button ➕ At the end (`endBtn`,
   `used_end_btn`) for three sentences, and the look-cover-write `tricky` step again (here, were; sp2).
+- Session 18 is **Re-check 3** (kind `recheck`), built from the Session 17 page with `check` / `single` switched on as in Session 13:
+  one level B story read once (`s18-read-beach`), 16 new words covering every pattern taught (items carry `gpc`; `summary.words.by_pattern`),
+  the four made-up words missed in the Session 14 check (`s18-alien`), 18 tricky words (the first 12 are the S8 / S13 set: `summary.tricky_same12`),
+  14 spellings with no retry (the first 10 are the S8 / S13 set: `summary.spell_same10`; `before` = her last spelling), a hearing step
+  (short u / a under ph1, ee / short i under ph5) and free writing with no frame or buttons. The parent is asked to tap every misread
+  word in the story and to count self-corrections, because the S16 audio showed more errors than were marked.
+- Audio review: when the transcript and the parent marks disagree, keep the status on the parent marks, add an `AUDIO` evidence note
+  to the skill, and check again at the next re-check. If one pass of the model loops on a phrase after a long pause, transcribe the read
+  in 30-second pieces.

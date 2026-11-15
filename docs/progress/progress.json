@@ -10,10 +10,10 @@
     "secure"
   ],
   "next_session": {
-    "number": 17,
-    "kind": "training",
-    "title": "Training 11 – ou + cold check ew/ue, -ted",
-    "url": "sessions/session-17.html"
+    "number": 18,
+    "kind": "recheck",
+    "title": "Re-check 3 – everything so far (compare with Sessions 8 and 13)",
+    "url": "sessions/session-18.html"
   },
   "sessions_completed": [
     1,
@@ -31,7 +31,8 @@
     13,
     14,
     15,
-    16
+    16,
+    17
   ],
   "history": [
     {
@@ -161,6 +162,14 @@
       "duration_min": 24,
       "feeling": "great",
       "summary": "Tired, but felt great. Story first read 93%, 20 wcpm → 45 after listening. Remembered igh a day later (read bright, tight, sight; spelled right) and spelled kicked; -ed: waited and wanted not read (the -ted ending). New ew/ue: read 5/5, spelled new, blue, grew. bug heard as bag again. Writing with the Then button: two sentences in order, but 'kit' for kite, 'gril', 'stick' for stuck. Quick words 4/6 (here, were not)."
+    },
+    {
+      "session": 17,
+      "title": "Training 11 – ou + cold check ew/ue, -ted",
+      "date": "2026-11-15",
+      "duration_min": 30,
+      "feeling": "great",
+      "summary": "Story first read 92%, 17 wcpm → 43 after listening, 0 errors. waited misread twice in the story ('went') but read in the word list later; flew not read. Tricky words better: friend, were, again quick, here slow. bug / bag heard right for the first time. New ou: read 4/5 (found), spelled out, loud, cloud. Cold spelling: glue, grew right; kite → 'kit', stuck → 'stike'. Writing: three sentences with capitals and full stops, but 'bik', 'he see', 'what home' and they do not tell the pictures. Page reloaded once; one 52 s pause."
     }
   ],
   "skills": {
@@ -234,6 +243,12 @@
           "correct": 1,
           "total": 1,
           "note": "net (short e) read among ew/ue words"
+        },
+        {
+          "session": 17,
+          "correct": 5,
+          "total": 5,
+          "note": "Short u / a by ear: bug, rug, bun, cut all right (bug right for the first time; S15, S16 heard as bag). cot read among ou words. Parent: heard u and a as different"
         }
       ]
     },
@@ -490,6 +505,12 @@
           "correct": 10,
           "total": 11,
           "note": "New ew / ue taught: hear 5/6 (grew → 'grue'), read 5/5 (new, blue, flew, glue, grew), right after teaching. Needs a cold check"
+        },
+        {
+          "session": 17,
+          "correct": 2,
+          "total": 3,
+          "note": "COLD ew/ue, a day later: clue (8 s), crew (7 s) read; drew not read (15 s). In the story: new, blue, blew read; flew not"
         }
       ]
     },
@@ -582,6 +603,12 @@
           "correct": 3,
           "total": 5,
           "note": "Y1 check: toy, cow, (noil, voy made-up) right; coin, loud, zout not read. oi/oy/ow partly, ou not yet (none taught)"
+        },
+        {
+          "session": 17,
+          "correct": 9,
+          "total": 10,
+          "note": "NEW ou, right after teaching: which spelling 5/5, read out, loud, round, mouth (found not read, 24 s), made-up zout read. Page was reloaded during the teaching step and the hear step was done twice (all right both times). Cold check at S18"
         }
       ]
     },
@@ -619,6 +646,18 @@
           "correct": 3,
           "total": 3,
           "note": "COLD (no reminder, 1 day later): bright, tight, sight read; also zigh. Spelled right cold. Parent: remembered igh without help"
+        },
+        {
+          "session": 16,
+          "correct": null,
+          "total": null,
+          "note": "AUDIO: in the story's first sentence 'night' sounded like 'like' on the cold read (rough transcript); igh words in the list were read right afterwards. Watch igh inside sentences"
+        },
+        {
+          "session": 17,
+          "correct": 1,
+          "total": 1,
+          "note": "'high' read inside the story on the cold read (after a 6 s wait)"
         }
       ]
     },
@@ -700,6 +739,12 @@
           "correct": 2,
           "total": 3,
           "note": "COLD: rained, hopped read; waited not read (17 s). 'wanted' also misread in both story reads: the /id/ ending (-ted) is the weak spot"
+        },
+        {
+          "session": 17,
+          "correct": 3,
+          "total": 3,
+          "note": "COLD -ted in the word list: waited, painted, melted all read (8-12 s). BUT 'waited' was misread twice in the story 10 minutes earlier (audio: 'went'), before the phone read it to her. Check again cold at S18"
         }
       ]
     },
@@ -737,6 +782,12 @@
           "correct": 2,
           "total": 2,
           "note": "Made-up zigh (igh) and prue (ue) read"
+        },
+        {
+          "session": 17,
+          "correct": 2,
+          "total": 2,
+          "note": "Made-up zew (cold, 15 s) and zout (6 s) read"
         }
       ]
     },
@@ -846,6 +897,18 @@
           "correct": 4,
           "total": 6,
           "note": "Quick words: have (3 s), people (3 s) instant; again 11 s, friend 8 s; here, were not read (both read in stories)"
+        },
+        {
+          "session": 16,
+          "correct": null,
+          "total": null,
+          "note": "AUDIO S15-S16: have, were and his are unreliable inside stories (have → 'had' / 'head', were needed several tries) even when read alone"
+        },
+        {
+          "session": 17,
+          "correct": 4,
+          "total": 4,
+          "note": "Quick words: friend 2 s, were 2 s, again 4 s instant; here 10 s (right but slow). In the story friend, were, here all read (about 3 s each)"
         }
       ]
     },
@@ -943,6 +1006,24 @@
           "correct": 37,
           "total": 40,
           "note": "Story 'Rex at night' (40 words): 93%; misread bed (once; read right later), wanted, star. Take 1 was a 4 s false start with no read logged, so take 2 read 1 counts as the first read. Parent: energy 'tired'"
+        },
+        {
+          "session": 15,
+          "correct": null,
+          "total": null,
+          "note": "AUDIO (transcribed 15 Nov, rough): first 12 words fluent; 'were' took 2-3 tries and 'kicked' was heard only as 'kid' on read 1 (not marked); read 2 'were' unclear, pal took four guesses (guessing from 'ball')"
+        },
+        {
+          "session": 16,
+          "correct": null,
+          "total": null,
+          "note": "AUDIO (transcribed 15 Nov, rough): read 1 was harder than marked. Besides bed, wanted, star the audio suggests night → 'like', 'Is that a' lost in a 16 s struggle, 'star up high' unclear, 'You have' → 'can you head': likely 6-8 errors, about 80-85%. Read 2 clean. Status kept on the parent marks; confirm at Re-check 3 (S18)"
+        },
+        {
+          "session": 17,
+          "correct": 36,
+          "total": 39,
+          "note": "Story 'The blue kite' (39 words), true cold read (1 take): 92%; misread flew, waited (twice). AUDIO: waited → 'went' (five tries); blew took 17 s via 'blue' (right); friend, were, here, high all read; marks and audio agree (3-5 errors)"
         }
       ]
     },
@@ -1028,6 +1109,12 @@
           "correct": null,
           "total": null,
           "note": "First read 20 wcpm (113 s, gaps up to 8.7 s, word by word); 45 wcpm after listening (+25, read 2 98%). Cold pace still 20-24"
+        },
+        {
+          "session": 17,
+          "correct": null,
+          "total": null,
+          "note": "First read 17 wcpm (130 s, 12 gaps of 2-7 s); 43 wcpm after listening (+26), 0 errors. Parent: still reads word by word. Cold pace S15-S17: 24, 20, 17"
         }
       ]
     },
@@ -1071,6 +1158,12 @@
           "correct": 2,
           "total": null,
           "note": "Self-corrections: 1 on read 1, 2 on read 2"
+        },
+        {
+          "session": 17,
+          "correct": 2,
+          "total": null,
+          "note": "Self-corrections: 1 on each read (audio: 'where… here'; 'a new kite, a new blue kite')"
         }
       ]
     },
@@ -1292,6 +1385,12 @@
           "correct": 2,
           "total": 2,
           "note": "Rex story: who jumped up, what the light was"
+        },
+        {
+          "session": 17,
+          "correct": 2,
+          "total": 2,
+          "note": "Blue kite story: colour of the kite, where it got stuck"
         }
       ]
     },
@@ -1373,6 +1472,12 @@
           "correct": 1,
           "total": 1,
           "note": "Rex story: why Mum said get back in bed"
+        },
+        {
+          "session": 17,
+          "correct": 1,
+          "total": 1,
+          "note": "Blue kite story: how Ben felt at the end (happy)"
         }
       ]
     },
@@ -1514,6 +1619,12 @@
           "correct": 1,
           "total": 1,
           "note": "With 'First' + the Then button: 'First the gril had a red kit. Then the kit got stick in a tree.' Two events in the right order (S15 second sentence was not a sequence)"
+        },
+        {
+          "session": 17,
+          "correct": null,
+          "total": null,
+          "note": "Three sentences with 'First' + the Then and At the end buttons: 'First the boy had a blue bik. Then he see a tree. At the end the boy what home.' Three events in order, but they do not tell the pictures (bike → plaster) and say little. 7.5 min, 24 deletes"
         }
       ]
     },
@@ -1605,6 +1716,12 @@
           "correct": null,
           "total": null,
           "note": "Two complete sentences, 15 words, 5.7 min, 6 deletions"
+        },
+        {
+          "session": 17,
+          "correct": 3,
+          "total": 3,
+          "note": "All three sentences start with a capital and end with a full stop"
         }
       ]
     },
@@ -1765,6 +1882,12 @@
           "correct": 0,
           "total": 1,
           "note": "'gos' for goes; 'in the home' for into the house"
+        },
+        {
+          "session": 17,
+          "correct": 0,
+          "total": 1,
+          "note": "'he see a tree' (saw); 'what home' for went home (also 'what' for went in S9)"
         }
       ]
     },
@@ -1950,6 +2073,12 @@
           "correct": null,
           "total": null,
           "note": "In free writing: stuck → 'stick' (short u/i)"
+        },
+        {
+          "session": 17,
+          "correct": 0,
+          "total": 1,
+          "note": "COLD: stuck → 'stike' (S16 writing: 'stick'); right on retry. Short u still written as i"
         }
       ]
     },
@@ -2035,6 +2164,12 @@
           "correct": 2,
           "total": 3,
           "note": "Re-check 2: said, with right (S8: 'say', 'wid'); because → 'boucse'"
+        },
+        {
+          "session": 17,
+          "correct": 2,
+          "total": 2,
+          "note": "Look-cover-write: here, were right first go (here took 17 s)"
         }
       ]
     },
@@ -2216,6 +2351,12 @@
           "correct": 8,
           "total": 9,
           "note": "ew/ue: tap spelling 5/6 (grew → grue), spelled new, blue, grew 3/3 (blue took 72 s)"
+        },
+        {
+          "session": 17,
+          "correct": 10,
+          "total": 11,
+          "note": "COLD: glue, grew right; kite → 'kit' (third time the magic e is dropped in kite/bike: S16 'kit', S17 writing 'bik'), right on retry. New ou: out, loud, cloud 3/3 and which-spelling 5/5"
         }
       ]
     },
@@ -2444,6 +2585,12 @@
           "correct": 8,
           "total": 8,
           "note": "Keyboard median 2.8 s per letter (S5 2.0, S6 1.6, S7 2.1, S8 2.3); p took 5.9 s. Not getting faster."
+        },
+        {
+          "session": 17,
+          "correct": null,
+          "total": null,
+          "note": "Parent: found letters faster on the keyboard"
         }
       ]
     },

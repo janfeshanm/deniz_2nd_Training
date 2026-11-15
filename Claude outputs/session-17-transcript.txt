@@ -1,0 +1,25 @@
+===== session-17 "The blue kite" (take 1) - whisper small.en, no prompt, transcribed 15 Nov 2026
+(rough child-speech transcript; the model tends to "hear" the right word; parent marks stay the main record.
+ Read 1 had to be transcribed in 30 s pieces: in one pass the model looped on "the kite" after the first long pause.)
+
+read 1 (cold, 130 s), heard with start times in seconds:
+  Ben(0, heard as "Van") had a new blue kite.(8) He(11) and(13) his(15) friend(18) were(21) at the "top".(23)
+  The wind,(25) blue,(32) blue,(42) and the kite.(47) "We"(50 / 66) up(71) high,(77) high,(79) then it(83) got,(86) got(91)
+  stuck(92) in a tree.(96) "Bin",(99) went,(103) went,(105) went,(107) went,(109) and(111) went.(112) Where…(118) here(121)
+  it(124) is(125) said(126) "that".(129)
+  Silences of 2 s or more: 12 (3.4, 3.5, 2.2, 4.2, 2.3, 6.9, 2.7, 5.3, 3.6, 3.4, 3.0, 3.0).
+read 2 (after listening, 54 s):
+  Ben had a new kite, a new blue kite. He and his friends were at the park. The wind blew and the kite flew up
+  "a pot". Then it got stuck in a tree. Ben waited and waited here. Here it is "set down".
+
+Notes:
+- First sentence fluent (8 s). friend, were and here all read in the story, slowly (3 s each) but right.
+- blew: about 17 s, said "blue" twice. The sound is right (parent marked it right); she got there by matching it to "blue".
+- flew: not read (heard as "we"; parent marked it). Then high after a 6 s wait, said twice: igh read inside a sentence.
+- park may have come out as "top" on read 1 (not marked; unclear).
+- waited → "went", tried five times, then "went and went" (parent marked both). She read waited in the word list
+  10 minutes later, after hearing the story read by the phone.
+- here: said "where" first, then "here" (self-correction; marked right).
+- Read 2: fluent, about one word a second. Self-corrected "a new kite, a new blue kite". "up high" unclear ("a pot").
+- Compared with S16 the cold read was just as slow (17 wcpm) but more accurate and the marks match the audio better:
+  3 marked errors, audio suggests 3 to 5 (flew, waited x2, perhaps park and Dad).

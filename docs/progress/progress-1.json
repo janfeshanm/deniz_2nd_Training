@@ -1,0 +1,2723 @@
+{
+  "schema": "deniz-progress/1",
+  "child": "Deniz",
+  "year": 2,
+  "updated": "2026-11-15",
+  "status_scale": [
+    "not_checked",
+    "not_yet",
+    "learning",
+    "secure"
+  ],
+  "next_session": {
+    "number": 18,
+    "kind": "recheck",
+    "title": "Re-check 3 – everything so far (compare with Sessions 8 and 13)",
+    "url": "sessions/session-18.html"
+  },
+  "sessions_completed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "history": [
+    {
+      "session": 1,
+      "title": "Baseline 1 – sounds and words",
+      "date": "2026-10-28",
+      "duration_min": 33,
+      "feeling": "great",
+      "summary": "All letter sounds and short-vowel words, digraphs and blends fine. Gaps: magic e, vowel teams, r-controlled, two-syllable and harder spellings; sight words 27/60 (tier 1 good); spelling 2/10, spells by sound. Got tired by the end."
+    },
+    {
+      "session": 2,
+      "title": "Baseline 2 – reading stories",
+      "date": "2026-10-29",
+      "duration_min": 17,
+      "feeling": "great",
+      "summary": "Understands everything she reads and hears (10/10). Reads early Year 1 text at 94%, Year 1 text 79% (too hard), slow (13–25 words/min). Misreads magic e, blends and tricky words in sentences."
+    },
+    {
+      "session": 3,
+      "title": "Baseline 3 – spelling and writing",
+      "date": "2026-10-30",
+      "duration_min": 31,
+      "feeling": "great",
+      "summary": "Spelling 8/18, by sound: uses ck instead of magic e (bick, meack, lick), short u as o (dock), tricky words wrong (sad, wid, wos). Magic e read 1/6. Writes full sentences with capital and full stop, but very slowly on the keyboard; recount was one sentence."
+    },
+    {
+      "session": 4,
+      "title": "Training 1 – magic e (a_e, i_e)",
+      "date": "2026-11-01",
+      "duration_min": 36,
+      "feeling": "great",
+      "summary": "Magic e clicked: 8/8 hearing, 8/8 reading, 5/5 spelling right after teaching (no ck). said/was/with right first go. Story 95% cold, pace 32 → 39 wcpm. One sentence took 9 minutes to type. Check she remembers next session."
+    },
+    {
+      "session": 5,
+      "title": "Training 2 – magic e (o_e, u_e) + want / what / are",
+      "date": "2026-11-01",
+      "duration_min": 26,
+      "feeling": "great",
+      "summary": "Remembered magic e cold (4/4 read, 2/2 spell). o_e/u_e 17/17. said/was/with kept; want/what/are 3/3. Story 92% but slow (21 wcpm), 'back' and 'was' still misread. Sentence with 'and' in 3 min. Keyboard ~2 s per letter."
+    },
+    {
+      "session": 6,
+      "title": "Training 3 – ai / ay + when / there / put + smooth phrases",
+      "date": "2026-11-01 to 11-03",
+      "duration_min": 22,
+      "feeling": "great",
+      "summary": "Remembered o_e/u_e and want/what/are cold. ai/ay 17/17 (hear, read, spell). when/there/put 3/3. Phrases 4/6 smooth. Story 94% at 24 wcpm, 35 after listening. Now sometimes uses the long sound for short words (fun → fine). Done in two sittings."
+    },
+    {
+      "session": 7,
+      "title": "Training 4 – ee / ea + long-or-short + could / would / should",
+      "date": "2026-11-04",
+      "duration_min": 33,
+      "feeling": "great",
+      "summary": "Remembered ai/ay and when/there/put cold. Long-or-short 8/8 (fun/fine fixed). Phrases 6/6 smooth. ee/ea read 6/6 but which spelling is still shaky (green/grean, sea/see). could/would/should 2/3 first go. Story 92%, 20 → 33 wcpm; 'all' (ball) is a new gap."
+    },
+    {
+      "session": 8,
+      "title": "Re-check 1 – everything so far",
+      "date": "2026-11-06",
+      "duration_min": 36,
+      "feeling": "great",
+      "summary": "No hints. Reads new magic-e and vowel-team words 12/13 (S1: 1/4). Year 1 story 95% at 21 wcpm (S2: 79% at 13). Free sentence fully correct. But spelling without cues slips back (mack, bic, wid, say: 4/10) and 5 of 12 tricky words aren't instant yet. Reading pace is the main gap."
+    },
+    {
+      "session": 9,
+      "title": "Training 5 – choose the pattern + oa / ow + fast tricky words",
+      "date": "2026-11-07",
+      "duration_min": 34,
+      "feeling": "great",
+      "summary": "Pattern sort 8/8 and mixed no-cue spelling 6/6 (the re-check gap closed in the session). oa/ow 15/15. Tricky words 10/12 but some slow. Story 96% but 14 wcpm cold. Two-sentence writing came out as one run-on sentence (laik, 'what' for went). 34 minutes: too long again; no recordings (page reloaded)."
+    },
+    {
+      "session": 10,
+      "title": "Training 6 – all + mixed spelling + two sentences",
+      "date": "2026-11-07",
+      "duration_min": 19,
+      "feeling": "great",
+      "summary": "19 minutes (shorter, as planned). oa/ow remembered cold 4/4. Mixed spelling with no sort first 6/6. 'all' 15/15 (hear, read, spell; bell read correctly). Two separate sentences with full stops ('ate a toast'). Story 97%, 22 → 61 wcpm after listening. Tricky words what and there still not instant."
+    },
+    {
+      "session": 11,
+      "title": "Training 7 – reading first + ar + tricky-word families",
+      "date": "2026-11-08",
+      "duration_min": 38,
+      "feeling": "great",
+      "summary": "Reading first (her request). Story 100% at 56 wcpm, 71 after listening, but NOT a cold read: parent says she read it several times, with reloads, before the scored read. Mixed spelling with no warm-up dropped to 3/6 (seat 'sit', kite 'kiat', coat 'cote'); sp3 back to learning. New ar 15/15. Three sentences with full stops. Tricky words in isolation 3/6 (when, what, here not yet) but read in the story. Recordings lost (page reloaded). About 38 min elapsed with long pauses; about 20 min of activity."
+    },
+    {
+      "session": 12,
+      "title": "Training 8 – reading first + or + which oh",
+      "date": "2026-11-08",
+      "duration_min": 31,
+      "feeling": "great",
+      "summary": "True cold story read (1 take): 95%, 20 wcpm; 50 after listening; 'here' read as 'there'. New or 15/15. Which-oh sort 6/6 then road, bone, grow 3/3. ee vs short i by ear 4/6 (seat, feet heard as short). Tricky words in phrases 6/6. Three sentences ('they play', 'ti'). Writing time includes a pause for phone charging. One comprehension answer changed after Back (first try wrong)."
+    },
+    {
+      "session": 13,
+      "title": "Re-check 2 – everything so far (compare with Session 8)",
+      "date": "2026-11-08",
+      "duration_min": 33,
+      "feeling": "great",
+      "summary": "Re-check vs S8: spelling of the same 10 words 9/10 (S8 4/10); tricky words same 12: 10/12 (S8 7/12); new words 11/14 (S8 12/13); ee vs short i 6/6. Cold story DOWN: 91%, 13 wcpm (S8 95%, 21): longer story, two untaught sounds (new, high), and short-vowel blend words (hill → 'hall', strong, stick, spot) missed. Free writing: one long sentence without the frame."
+    },
+    {
+      "session": 14,
+      "title": "Year 1 check – phonics screening style, common words, Year 1 spelling",
+      "date": "2026-11-10",
+      "duration_min": 31,
+      "feeling": "great",
+      "summary": "40-word Year 1 check 24/40 (reference: 28 expected by end of Year 1). Section 1 (digraphs, blends) 18/20; section 2 (oi oy ou ow ir ur er ew ue igh ar or) 6/20: ou, ur, ew, ue, igh not yet, and ar/or failed in made-up words. Endings: -ing, -es yes, -ed (wanted) no. Common words 22/30. Spelling 9/12 (8/12 first try): ck/ff/ll/ss and digraphs fine; boxes 'buxes', jumping 'joping', jumped 'juped' (short o/u mix-up). Question mark yes, capital no."
+    },
+    {
+      "session": 15,
+      "title": "Training 9 – short vowels + igh + -ed",
+      "date": "2026-11-14",
+      "duration_min": 28,
+      "feeling": "great",
+      "summary": "Cold story 92%, 24 wcpm (S13: 13) → 28 after listening. Short-vowel blend words she missed in S13-S14 all read (6/6) and spelled (jump, box, step, hut 4/4); by ear 5/6 (bug → bag). New igh 11/11 and -ed: read 5/6 (rained not), spelled jumped, played. Quick words 5/6 (again not; here 14 s). Writing: two sentences with capitals and full stops, but the second described the picture rather than what happened next."
+    },
+    {
+      "session": 16,
+      "title": "Training 10 – ew / ue + cold check igh, -ed",
+      "date": "2026-11-14",
+      "duration_min": 24,
+      "feeling": "great",
+      "summary": "Tired, but felt great. Story first read 93%, 20 wcpm → 45 after listening. Remembered igh a day later (read bright, tight, sight; spelled right) and spelled kicked; -ed: waited and wanted not read (the -ted ending). New ew/ue: read 5/5, spelled new, blue, grew. bug heard as bag again. Writing with the Then button: two sentences in order, but 'kit' for kite, 'gril', 'stick' for stuck. Quick words 4/6 (here, were not)."
+    },
+    {
+      "session": 17,
+      "title": "Training 11 – ou + cold check ew/ue, -ted",
+      "date": "2026-11-15",
+      "duration_min": 30,
+      "feeling": "great",
+      "summary": "Story first read 92%, 17 wcpm → 43 after listening, 0 errors. waited misread twice in the story ('went') but read in the word list later; flew not read. Tricky words better: friend, were, again quick, here slow. bug / bag heard right for the first time. New ou: read 4/5 (found), spelled out, loud, cloud. Cold spelling: glue, grew right; kite → 'kit', stuck → 'stike'. Writing: three sentences with capitals and full stops, but 'bik', 'he see', 'what home' and they do not tell the pictures. Page reloaded once; one 52 s pause."
+    }
+  ],
+  "skills": {
+    "ph1": {
+      "area": "phonics",
+      "name": "All single letter sounds, instantly",
+      "status": "secure",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 8,
+          "total": 8,
+          "note": "Hear a word, tap its first letter"
+        },
+        {
+          "session": 1,
+          "correct": 26,
+          "total": 26,
+          "note": "Letter sounds: all 26 given as sounds"
+        },
+        {
+          "session": 1,
+          "correct": 6,
+          "total": 6,
+          "note": "Short-vowel words (mat pig hot bun wet dig)"
+        },
+        {
+          "session": 2,
+          "correct": 6,
+          "total": 6,
+          "note": "Hear a word, tap first letter (b/d/p/q check), all correct"
+        },
+        {
+          "session": 2,
+          "correct": 9,
+          "total": 9,
+          "note": "Letter-sound re-check t g k b h y d p q: all sounds"
+        },
+        {
+          "session": 8,
+          "correct": 3,
+          "total": 3,
+          "note": "RE-CHECK (no hints): drum, chip, pond"
+        },
+        {
+          "session": 13,
+          "correct": 1,
+          "total": 1,
+          "note": "Re-check 2: chin read correctly"
+        },
+        {
+          "session": 15,
+          "correct": 5,
+          "total": 6,
+          "note": "Short vowels by ear: hot/hut, cup/cap, hill/hall, pan/pin, luck/lock right; bug heard as bag (u/a)"
+        },
+        {
+          "session": 15,
+          "correct": 1,
+          "total": 1,
+          "note": "hit (short i) read correctly among igh words"
+        },
+        {
+          "session": 16,
+          "correct": 3,
+          "total": 4,
+          "note": "Short u / a by ear: cup, hat, mud right; bug heard as bag again (same as S15)"
+        },
+        {
+          "session": 16,
+          "correct": 1,
+          "total": 1,
+          "note": "net (short e) read among ew/ue words"
+        },
+        {
+          "session": 17,
+          "correct": 5,
+          "total": 5,
+          "note": "Short u / a by ear: bug, rug, bun, cut all right (bug right for the first time; S15, S16 heard as bag). cot read among ou words. Parent: heard u and a as different"
+        }
+      ]
+    },
+    "ph2": {
+      "area": "phonics",
+      "name": "Consonant digraphs",
+      "status": "secure",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 6,
+          "total": 6,
+          "note": "Digraphs sh ch th"
+        },
+        {
+          "session": 14,
+          "correct": 6,
+          "total": 6,
+          "note": "Y1 CHECK: consonant digraphs sh ch th ng ck qu all read (ship, chop, thin, ring, duck, quiz), plus 5/5 in made-up words"
+        }
+      ]
+    },
+    "ph3": {
+      "area": "phonics",
+      "name": "Words with consonant blends",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 5,
+          "total": 6,
+          "note": "Blends in single words: missed nest"
+        },
+        {
+          "session": 2,
+          "correct": 4,
+          "total": 8,
+          "note": "Blends in stories: frog x4 read; swim, splash (story A), swam, crab (story B) misread. She read swim on its own in S1 but not in story A."
+        },
+        {
+          "session": 13,
+          "correct": 0,
+          "total": 4,
+          "note": "Short-vowel words with blends / double letters missed: spot (word list), stick, strong, hill ('hall') in the story. Possible spill-over from all/ar/or"
+        },
+        {
+          "session": 14,
+          "correct": 3,
+          "total": 4,
+          "note": "Y1 check blends: frog, hand, milk right; step not read (76 s). With S13 (hill, spot, stick, strong) short-vowel blend words are the weak spot"
+        },
+        {
+          "session": 15,
+          "correct": 6,
+          "total": 6,
+          "note": "Short-vowel blend words she missed in S13-S14 all read first try: step, spot, stick, strong, jump, hill. Cold check next session before calling it secure"
+        }
+      ]
+    },
+    "ph4": {
+      "area": "phonics",
+      "name": "Split digraphs (\"magic e\")",
+      "status": "secure",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 1,
+          "total": 4,
+          "note": "Magic e: read cake; time, hope, tune not read. Group stopped."
+        },
+        {
+          "session": 2,
+          "correct": 0,
+          "total": 4,
+          "note": "In story B misread made, wave, came, came (magic-e words in sentences)."
+        },
+        {
+          "session": 3,
+          "correct": 4,
+          "total": 6,
+          "note": "Hear a word, tap the spelling: missed kite (chose kit), tube (chose tub)"
+        },
+        {
+          "session": 3,
+          "correct": 1,
+          "total": 6,
+          "note": "Read magic-e words: only home; bike, make, cube, rope, game not read"
+        },
+        {
+          "session": 4,
+          "correct": 8,
+          "total": 8,
+          "note": "Hear and choose magic e or not (right after teaching)"
+        },
+        {
+          "session": 4,
+          "correct": 8,
+          "total": 8,
+          "note": "Read 8 words aloud: all 6 magic-e words and both short ones (right after teaching)"
+        },
+        {
+          "session": 5,
+          "correct": 4,
+          "total": 4,
+          "note": "COLD check (no reminder, new words): gate, hide, wipe, bake. Remembered from S4."
+        },
+        {
+          "session": 5,
+          "correct": 6,
+          "total": 6,
+          "note": "o_e/u_e: hear and choose"
+        },
+        {
+          "session": 5,
+          "correct": 6,
+          "total": 6,
+          "note": "o_e/u_e: read rope, bone, cute, tube + hop, cut Status secure: 90%+ in two sessions, including a cold check."
+        },
+        {
+          "session": 6,
+          "correct": 4,
+          "total": 4,
+          "note": "COLD check o_e/u_e (no reminder): hole, joke, nose, tune. In the story she read 'fun' as 'fine' both times (over-using the long sound)."
+        },
+        {
+          "session": 7,
+          "correct": 8,
+          "total": 8,
+          "note": "Long-or-short check: fun, fine, hope, hop, ran, rain, bake, bag all right. The S6 fun → fine slip is fixed."
+        },
+        {
+          "session": 8,
+          "correct": 4,
+          "total": 4,
+          "note": "RE-CHECK (no hints): New magic-e words cape, slide, stone, flute (S1 1/4, S3 1/6)."
+        },
+        {
+          "session": 13,
+          "correct": 3,
+          "total": 3,
+          "note": "Re-check 2 new words: grape, smile, globe (no hints)"
+        }
+      ]
+    },
+    "ph5": {
+      "area": "phonics",
+      "name": "Long vowel teams",
+      "status": "secure",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 3,
+          "total": 6,
+          "note": "Vowel teams: feet, play, team read; rain, boat, snow not"
+        },
+        {
+          "session": 2,
+          "correct": 0,
+          "total": 3,
+          "note": "Vowel teams re-check, parent-scored at 6-9 s per word: mail, coat, seed not read. Group stopped. She did read beach, day, sea inside story B, so she may know some vowel-team words by sight or from context, not the pattern."
+        },
+        {
+          "session": 6,
+          "correct": 6,
+          "total": 6,
+          "note": "ai/ay: hear and choose (right after teaching)"
+        },
+        {
+          "session": 6,
+          "correct": 6,
+          "total": 6,
+          "note": "ai/ay: read rain, play, tail, day, wait + ran"
+        },
+        {
+          "session": 7,
+          "correct": 4,
+          "total": 4,
+          "note": "COLD check ai/ay (no reminder): rail, say, paint, stay. Retained from S6."
+        },
+        {
+          "session": 7,
+          "correct": 4,
+          "total": 6,
+          "note": "ee/ea: hear and choose. Chose grean for green and leef for leaf: which spelling a word takes still has to be learned word by word."
+        },
+        {
+          "session": 7,
+          "correct": 6,
+          "total": 6,
+          "note": "ee/ea: read tree, seat, feet, eat, green + bed"
+        },
+        {
+          "session": 7,
+          "correct": 8,
+          "total": 8,
+          "note": "Long-or-short check (ai pairs ran/rain included)"
+        },
+        {
+          "session": 8,
+          "correct": 5,
+          "total": 6,
+          "note": "RE-CHECK (no hints): New vowel-team words: snail, tray, sweet, seal, sleep right; chain not read."
+        },
+        {
+          "session": 9,
+          "correct": 3,
+          "total": 4,
+          "note": "COLD ee/ea: seed, heat, week; bean not read"
+        },
+        {
+          "session": 9,
+          "correct": 6,
+          "total": 6,
+          "note": "oa/ow hear and choose"
+        },
+        {
+          "session": 9,
+          "correct": 6,
+          "total": 6,
+          "note": "oa/ow read: boat, snow, road, grow, toast + cot"
+        },
+        {
+          "session": 10,
+          "correct": 4,
+          "total": 4,
+          "note": "COLD (no reminder): read soap, load, blow, show (oa/ow): all correct"
+        },
+        {
+          "session": 12,
+          "correct": 4,
+          "total": 6,
+          "note": "Hear long ee vs short i: seat → picked 'sit', feet → 'fit'; sit, ship, sheep, fit right (the last ones quickly)"
+        },
+        {
+          "session": 13,
+          "correct": 5,
+          "total": 6,
+          "note": "Re-check 2 new words: stay, sheet, beach, toad, crow right; paint not read"
+        },
+        {
+          "session": 13,
+          "correct": 6,
+          "total": 6,
+          "note": "Re-check 2: long ee vs short i by ear 6/6 (S12: 4/6)"
+        },
+        {
+          "session": 14,
+          "correct": 0,
+          "total": 4,
+          "note": "Y1 check: ew and ue not yet (chew, blue, glew, prue): not taught. Does not change the taught ai/ay/ee/ea/oa/ow"
+        },
+        {
+          "session": 16,
+          "correct": 10,
+          "total": 11,
+          "note": "New ew / ue taught: hear 5/6 (grew → 'grue'), read 5/5 (new, blue, flew, glue, grew), right after teaching. Needs a cold check"
+        },
+        {
+          "session": 17,
+          "correct": 2,
+          "total": 3,
+          "note": "COLD ew/ue, a day later: clue (8 s), crew (7 s) read; drew not read (15 s). In the story: new, blue, blew read; flew not"
+        }
+      ]
+    },
+    "ph6": {
+      "area": "phonics",
+      "name": "R-controlled vowels",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 2,
+          "total": 6,
+          "note": "R-controlled: car, girl read; fork, turn, shark, storm not"
+        },
+        {
+          "session": 2,
+          "correct": 0,
+          "total": 3,
+          "note": "R-controlled vowels re-check, parent-scored at 6-9 s per word: farm, horn, fern not read. Group stopped."
+        },
+        {
+          "session": 10,
+          "correct": 6,
+          "total": 6,
+          "note": "NEW: 'all' (a says /or/ before ll): hear and pick 6/6 (ball/bol ...)"
+        },
+        {
+          "session": 10,
+          "correct": 6,
+          "total": 6,
+          "note": "'all' words read aloud: ball, tall, small, wall, fall + bell contrast, all correct. ar/or/er not yet taught"
+        },
+        {
+          "session": 11,
+          "correct": 6,
+          "total": 6,
+          "note": "NEW: ar, hear and pick (car/cah, park/pak ...)"
+        },
+        {
+          "session": 11,
+          "correct": 6,
+          "total": 6,
+          "note": "ar words read aloud: car, park, star, farm, dark + cat contrast, all correct"
+        },
+        {
+          "session": 12,
+          "correct": 6,
+          "total": 6,
+          "note": "NEW: or, hear and pick (fork/fok, corn/con ...)"
+        },
+        {
+          "session": 12,
+          "correct": 6,
+          "total": 6,
+          "note": "or words read aloud: fork, corn, short, storm + cot and car contrasts, all correct"
+        },
+        {
+          "session": 13,
+          "correct": 2,
+          "total": 3,
+          "note": "Re-check 2 new words: stall, torch right; shark not read"
+        },
+        {
+          "session": 14,
+          "correct": 2,
+          "total": 5,
+          "note": "Y1 check: bird, fern right; hurt, lirt, murn not read (ir/ur/er not taught); jarn (ar) and torb (or) made-up words not read"
+        }
+      ]
+    },
+    "ph7": {
+      "area": "phonics",
+      "name": "Diphthongs",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 3,
+          "total": 6,
+          "note": "Diphthongs: boy, cow, house read; out, coin, down not"
+        },
+        {
+          "session": 2,
+          "correct": null,
+          "total": null,
+          "note": "Not reached in S2 (the page skipped later groups after two stopped)."
+        },
+        {
+          "session": 14,
+          "correct": 3,
+          "total": 5,
+          "note": "Y1 check: toy, cow, (noil, voy made-up) right; coin, loud, zout not read. oi/oy/ow partly, ou not yet (none taught)"
+        },
+        {
+          "session": 17,
+          "correct": 9,
+          "total": 10,
+          "note": "NEW ou, right after teaching: which spelling 5/5, read out, loud, round, mouth (found not read, 24 s), made-up zout read. Page was reloaded during the teaching step and the hear step was done twice (all right both times). Cold check at S18"
+        }
+      ]
+    },
+    "ph8": {
+      "area": "phonics",
+      "name": "Trigraphs and quadgraphs",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 0,
+          "total": 6,
+          "note": "Trigraphs: light, high, catch, bridge, eight, fudge not read (skips count as wrong)"
+        },
+        {
+          "session": 2,
+          "correct": null,
+          "total": null,
+          "note": "Not reached in S2 (the page skipped later groups after two stopped)."
+        },
+        {
+          "session": 14,
+          "correct": 0,
+          "total": 2,
+          "note": "Y1 check: igh not yet (night, zight); also 'high' in the S13 story. Not taught"
+        },
+        {
+          "session": 15,
+          "correct": 8,
+          "total": 8,
+          "note": "igh taught: hear 4/4 (night, light, high, fight), read 4/4 (night, light, high, right), right after teaching. Needs a cold check"
+        },
+        {
+          "session": 16,
+          "correct": 3,
+          "total": 3,
+          "note": "COLD (no reminder, 1 day later): bright, tight, sight read; also zigh. Spelled right cold. Parent: remembered igh without help"
+        },
+        {
+          "session": 16,
+          "correct": null,
+          "total": null,
+          "note": "AUDIO: in the story's first sentence 'night' sounded like 'like' on the cold read (rough transcript); igh words in the list were read right afterwards. Watch igh inside sentences"
+        },
+        {
+          "session": 17,
+          "correct": 1,
+          "total": 1,
+          "note": "'high' read inside the story on the cold read (after a 6 s wait)"
+        }
+      ]
+    },
+    "ph9": {
+      "area": "phonics",
+      "name": "Less common spellings",
+      "status": "not_yet",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 0,
+          "total": 6,
+          "note": "Less common spellings: knee, write, phone, wrap, climb, ghost not read (skips count as wrong)"
+        },
+        {
+          "session": 2,
+          "correct": null,
+          "total": null,
+          "note": "Not reached in S2 (the page skipped later groups after two stopped)."
+        }
+      ]
+    },
+    "ph10": {
+      "area": "phonics",
+      "name": "Two-syllable words",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 0,
+          "total": 4,
+          "note": "Two-syllable: rabbit, sunset, window, picnic not read. Group stopped."
+        },
+        {
+          "session": 2,
+          "correct": null,
+          "total": null,
+          "note": "Not reached in S2 (the page skipped later groups after two stopped)."
+        },
+        {
+          "session": 14,
+          "correct": 2,
+          "total": 3,
+          "note": "Y1 check two-syllable words: rabbit, sunset right; picnic not read"
+        }
+      ]
+    },
+    "ph11": {
+      "area": "phonics",
+      "name": "Base words with endings",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 4,
+          "total": 6,
+          "note": "Endings: jumped, hopping, played, boxes read; smallest, carried not"
+        },
+        {
+          "session": 2,
+          "correct": null,
+          "total": null,
+          "note": "Not reached in S2 (the page skipped later groups after two stopped)."
+        },
+        {
+          "session": 14,
+          "correct": 2,
+          "total": 3,
+          "note": "Y1 check endings: jumping, boxes right; wanted (-ed) not read"
+        },
+        {
+          "session": 15,
+          "correct": 5,
+          "total": 6,
+          "note": "-ed taught (t / d / id): read jumped, wanted, played, kicked, landed; rained not read (ai + ed)"
+        },
+        {
+          "session": 16,
+          "correct": 2,
+          "total": 3,
+          "note": "COLD: rained, hopped read; waited not read (17 s). 'wanted' also misread in both story reads: the /id/ ending (-ted) is the weak spot"
+        },
+        {
+          "session": 17,
+          "correct": 3,
+          "total": 3,
+          "note": "COLD -ted in the word list: waited, painted, melted all read (8-12 s). BUT 'waited' was misread twice in the story 10 minutes earlier (audio: 'went'), before the phone read it to her. Check again cold at S18"
+        }
+      ]
+    },
+    "ph12": {
+      "area": "phonics",
+      "name": "Reads made-up words",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 5,
+          "total": 10,
+          "note": "Made-up words: sib, vop, chim, dack, perd read; blen, fape, loat, shub, trin not"
+        },
+        {
+          "session": 2,
+          "correct": null,
+          "total": null,
+          "note": "Not reached in S2 (the page skipped later groups after two stopped)."
+        },
+        {
+          "session": 14,
+          "correct": 11,
+          "total": 20,
+          "note": "Y1 check made-up words: section 1 9/10 (only grest missed); section 2 2/10 (noil, voy right; zout, lirt, murn, glew, prue, zight, jarn, torb not read). ar and or failed in made-up words though she reads real ar/or words"
+        },
+        {
+          "session": 15,
+          "correct": 3,
+          "total": 3,
+          "note": "Made-up frup, blat (short vowels) and kight (igh) read"
+        },
+        {
+          "session": 16,
+          "correct": 2,
+          "total": 2,
+          "note": "Made-up zigh (igh) and prue (ue) read"
+        },
+        {
+          "session": 17,
+          "correct": 2,
+          "total": 2,
+          "note": "Made-up zew (cold, 15 s) and zout (6 s) read"
+        }
+      ]
+    },
+    "fl1": {
+      "area": "fluency",
+      "name": "Instant high-frequency words",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 17,
+          "total": 20,
+          "note": "Tier 1: missed said, are, for; the rest quick"
+        },
+        {
+          "session": 1,
+          "correct": 10,
+          "total": 20,
+          "note": "Tier 2: missed when, what, there, would, could, friend, again, going, want, put; slow on come, little, people"
+        },
+        {
+          "session": 1,
+          "correct": 0,
+          "total": 20,
+          "note": "Tier 3 (thought, through, enough, always ... early): none read"
+        },
+        {
+          "session": 2,
+          "correct": null,
+          "total": null,
+          "note": "In story B misread with, little, water (high-frequency words in a sentence)."
+        },
+        {
+          "session": 4,
+          "correct": null,
+          "total": null,
+          "note": "said, was, with taught. In the story she twice read 'was' as 'has' and left out 'back'."
+        },
+        {
+          "session": 5,
+          "correct": null,
+          "total": null,
+          "note": "Tricky words taught so far: said, was, with, want, what, are. In the story she misread was (again) and have (read 2)."
+        },
+        {
+          "session": 6,
+          "correct": null,
+          "total": null,
+          "note": "In the story: misread 'put' (read 1) and 'what' (read 2; audio suggests 'wait' on read 1 too) although she spells both. Tricky words are known in isolation but not yet automatic in text."
+        },
+        {
+          "session": 7,
+          "correct": null,
+          "total": null,
+          "note": "Audio: could → 'can' on read 2; read 'could you' after a long pause on read 1."
+        },
+        {
+          "session": 8,
+          "correct": 7,
+          "total": 12,
+          "note": "RE-CHECK (no hints): Tricky words read straight away: said, was, with, are, when, put, should. Slow or wrong: want, what, there, could, would."
+        },
+        {
+          "session": 9,
+          "correct": 10,
+          "total": 12,
+          "note": "Tricky-word speed round: all but what and could marked straight away. Times were long for some (want 30 s, there 19 s, with 17 s), so not all are instant yet."
+        },
+        {
+          "session": 10,
+          "correct": 2,
+          "total": 4,
+          "note": "Slow tricky words read straight away: could, want yes (7 s, 14 s); what, there not yet"
+        },
+        {
+          "session": 11,
+          "correct": 3,
+          "total": 6,
+          "note": "Straight after word-family teaching: there, where, could yes; when, what, here not yet. In the story she read what, there, where correctly"
+        },
+        {
+          "session": 12,
+          "correct": 6,
+          "total": 6,
+          "note": "Tricky words inside phrases read smoothly (what is it, over here, when can we go, where is it, come here). But in the story 'here' was read as 'there' twice"
+        },
+        {
+          "session": 13,
+          "correct": 11,
+          "total": 14,
+          "note": "Re-check 2 tricky words alone: same 12 as S8 now 10/12 (S8: 7/12); with, want, here not straight away; when 7 s, come 9 s"
+        },
+        {
+          "session": 14,
+          "correct": 22,
+          "total": 30,
+          "note": "Y1 check 30 common words: by, have, once, little, were, again, friend, people not straight away; some 8 s"
+        },
+        {
+          "session": 15,
+          "correct": 5,
+          "total": 6,
+          "note": "Quick words: have, were, little, once, here read (have 5 s, were 5 s, here 14 s, so not instant); again not yet"
+        },
+        {
+          "session": 16,
+          "correct": 4,
+          "total": 6,
+          "note": "Quick words: have (3 s), people (3 s) instant; again 11 s, friend 8 s; here, were not read (both read in stories)"
+        },
+        {
+          "session": 16,
+          "correct": null,
+          "total": null,
+          "note": "AUDIO S15-S16: have, were and his are unreliable inside stories (have → 'had' / 'head', were needed several tries) even when read alone"
+        },
+        {
+          "session": 17,
+          "correct": 4,
+          "total": 4,
+          "note": "Quick words: friend 2 s, were 2 s, again 4 s instant; here 10 s (right but slow). In the story friend, were, here all read (about 3 s each)"
+        }
+      ]
+    },
+    "fl2": {
+      "area": "fluency",
+      "name": "Accurate on unseen text",
+      "status": "secure",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": 30,
+          "total": 32,
+          "note": "Story A (early Year 1 text): 94% accurate, instructional level. Missed swim, splash."
+        },
+        {
+          "session": 2,
+          "correct": 38,
+          "total": 48,
+          "note": "Story B (Year 1 text): 79% accurate, too hard (frustration). Missed swam, made, wave, came x2, filled, with, water, little, crab; 8 of the 10 errors were in the second half. Story C (Year 2 text) not attempted."
+        },
+        {
+          "session": 2,
+          "correct": null,
+          "total": null,
+          "note": "Audio check (speech-to-text, rough): story B may have more errors than marked: hole heard as 'hawk' and 'home', made as 'met/much', long struggles on 'a wave came' (~10 s) and 'crab came out of the' (~25 s). Story A: possibly 'sit' for sits and 'prone' for pond. Repeats words (went went, then then then)."
+        },
+        {
+          "session": 4,
+          "correct": 42,
+          "total": 44,
+          "note": "Jake's kite (early Year 1, 44 words), cold read: 95%. Misread Jake (once), fine (said 'fun')."
+        },
+        {
+          "session": 5,
+          "correct": 45,
+          "total": 49,
+          "note": "Duke and the bone (49 words), cold: 92%. Misread hid, was, glad, back. Read 2: 94% (Duke, have, back). 'back' misread in S4 and S5."
+        },
+        {
+          "session": 6,
+          "correct": 47,
+          "total": 50,
+          "note": "The train (50 words), cold: 94%. Misread and, put, Kate. Read 2: 88% (Kate ×3, sat, what, fun). Audio: 'to wait' read as 'two wet', fun → 'fine', bag → 'back'."
+        },
+        {
+          "session": 7,
+          "correct": 46,
+          "total": 50,
+          "note": "At the beach (50 words), cold: 92%. Misread ball, kick, Jean, to. Read 2: 94%. Audio: ball → 'bell' (the 'all' pattern isn't taught yet), kick took about 14 s, Jean → 'Jane'."
+        },
+        {
+          "session": 8,
+          "correct": 55,
+          "total": 58,
+          "note": "RE-CHECK (no hints): Cold Year 1 (level B) story 'At the park', read once: 95% (S2 Year 1 story: 79%). Misread wanted, saw, threw. Audio suggests saw → 'was' (reversal) and after → 'off'."
+        },
+        {
+          "session": 9,
+          "correct": 44,
+          "total": 46,
+          "note": "The boat (46 words), cold 96%. Misread out (both reads), began."
+        },
+        {
+          "session": 10,
+          "correct": 33,
+          "total": 34,
+          "note": "Story 'The ball' (34 words), cold read: 97%, 'what' misread (said 'when'), 1 self-correction"
+        },
+        {
+          "session": 11,
+          "correct": 39,
+          "total": 39,
+          "note": "UNRELIABLE (parent: she read the story several times and the page was reloaded before the scored read, so not a cold read). Story 'At the lake' (39 words) read FIRST, cold: 100%, 1 self-correction"
+        },
+        {
+          "session": 12,
+          "correct": 39,
+          "total": 41,
+          "note": "Story 'The dark park' (41 words), TRUE cold read (1 take, no reloads): 95%; here → 'there', star misread after a 12 s stall"
+        },
+        {
+          "session": 13,
+          "correct": 51,
+          "total": 56,
+          "note": "RE-CHECK 2 cold story 'The red kite' (56 words, level B), read once: 91% (S8 95%). Misread new (ew, not taught), hill ('hall'), high (igh, not taught), strong, stick"
+        },
+        {
+          "session": 15,
+          "correct": 36,
+          "total": 39,
+          "note": "Story 'Jack and the ball' (39 words), TRUE cold read (1 take, no reloads): 92%; misread his, have, back (back also missed in S4, S5)"
+        },
+        {
+          "session": 16,
+          "correct": 37,
+          "total": 40,
+          "note": "Story 'Rex at night' (40 words): 93%; misread bed (once; read right later), wanted, star. Take 1 was a 4 s false start with no read logged, so take 2 read 1 counts as the first read. Parent: energy 'tired'"
+        },
+        {
+          "session": 15,
+          "correct": null,
+          "total": null,
+          "note": "AUDIO (transcribed 15 Nov, rough): first 12 words fluent; 'were' took 2-3 tries and 'kicked' was heard only as 'kid' on read 1 (not marked); read 2 'were' unclear, pal took four guesses (guessing from 'ball')"
+        },
+        {
+          "session": 16,
+          "correct": null,
+          "total": null,
+          "note": "AUDIO (transcribed 15 Nov, rough): read 1 was harder than marked. Besides bed, wanted, star the audio suggests night → 'like', 'Is that a' lost in a 16 s struggle, 'star up high' unclear, 'You have' → 'can you head': likely 6-8 errors, about 80-85%. Read 2 clean. Status kept on the parent marks; confirm at Re-check 3 (S18)"
+        },
+        {
+          "session": 17,
+          "correct": 36,
+          "total": 39,
+          "note": "Story 'The blue kite' (39 words), true cold read (1 take): 92%; misread flew, waited (twice). AUDIO: waited → 'went' (five tries); blew took 17 s via 'blue' (right); friend, were, here, high all read; marks and audio agree (3-5 errors)"
+        }
+      ]
+    },
+    "fl3": {
+      "area": "fluency",
+      "name": "Comfortable pace",
+      "status": "not_yet",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": null,
+          "total": null,
+          "note": "Pace 25 words correct/min on story A and 13 on story B: well below a comfortable Year 2 pace."
+        },
+        {
+          "session": 4,
+          "correct": null,
+          "total": null,
+          "note": "Story pace 32 wcpm cold, 39 wcpm after hearing it (S2 cold level A: 25). Long pause on 'wind'."
+        },
+        {
+          "session": 5,
+          "correct": null,
+          "total": null,
+          "note": "Pace 21 wcpm cold, 20 after listening (no gain; S4 was 32 → 39). Reads word by word."
+        },
+        {
+          "session": 6,
+          "correct": null,
+          "total": null,
+          "note": "Pace 24 wcpm cold → 35 after listening (+11)."
+        },
+        {
+          "session": 7,
+          "correct": null,
+          "total": null,
+          "note": "Pace 20 wcpm cold → 33 after listening (+13). Cold pace has been flat across S4–S7 (32, 21, 24, 20)."
+        },
+        {
+          "session": 8,
+          "correct": null,
+          "total": null,
+          "note": "RE-CHECK (no hints): Year 1 story 21 wcpm cold (S2: 13). Still reads word by word; long pauses on some words."
+        },
+        {
+          "session": 9,
+          "correct": null,
+          "total": null,
+          "note": "Cold pace 14 wcpm (slowest so far); 31 after listening. Reads word by word; long pauses."
+        },
+        {
+          "session": 10,
+          "correct": null,
+          "total": null,
+          "note": "Cold 22 wcpm (90 s, 7 s stall before 'What'); 61 wcpm after hearing it read (+39). Parent: reads in phrases"
+        },
+        {
+          "session": 11,
+          "correct": null,
+          "total": null,
+          "note": "UNRELIABLE (parent: she read the story several times and the page was reloaded before the scored read, so not a cold read). Story read first (fresh): cold 56 wcpm (S10: 22), 71 after hearing it. Parent: reads in phrases. Easy decodable text, known patterns only"
+        },
+        {
+          "session": 12,
+          "correct": null,
+          "total": null,
+          "note": "True cold read 20 wcpm (118 s); 50 wcpm after hearing it. Confirms first-read pace 14-24 (S11's 56 was a practised read)"
+        },
+        {
+          "session": 13,
+          "correct": null,
+          "total": null,
+          "note": "RE-CHECK 2: 13 wcpm (231 s), word by word with 10-18 s gaps (S8: 21, S12: 20). Longer story, two untaught sounds"
+        },
+        {
+          "session": 15,
+          "correct": null,
+          "total": null,
+          "note": "Cold read 24 wcpm (90 s), 28 after listening (+4 only; S12 gained +30). Audio: one 10.6 s stall near 'have it back'. Read 2 marked 4 errors (pal, tom, jack, have) although read 1 got those names: faster but less careful"
+        },
+        {
+          "session": 16,
+          "correct": null,
+          "total": null,
+          "note": "First read 20 wcpm (113 s, gaps up to 8.7 s, word by word); 45 wcpm after listening (+25, read 2 98%). Cold pace still 20-24"
+        },
+        {
+          "session": 17,
+          "correct": null,
+          "total": null,
+          "note": "First read 17 wcpm (130 s, 12 gaps of 2-7 s); 43 wcpm after listening (+26), 0 errors. Parent: still reads word by word. Cold pace S15-S17: 24, 20, 17"
+        }
+      ]
+    },
+    "fl4": {
+      "area": "fluency",
+      "name": "Self-corrects",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": 0,
+          "total": 12,
+          "note": "No self-corrections recorded on 12 errors (confirm: the parent may not have marked them)."
+        },
+        {
+          "session": 2,
+          "correct": null,
+          "total": null,
+          "note": "Audio suggests at least one self-correction (crab: 'crap… Crab'), though none were marked. Status kept not_yet."
+        },
+        {
+          "session": 4,
+          "correct": null,
+          "total": null,
+          "note": "Audio: corrected herself twice (said Jack → Jake; I love → like), not marked by parent."
+        },
+        {
+          "session": 5,
+          "correct": 2,
+          "total": null,
+          "note": "Read 2: 2 self-corrections marked by parent."
+        },
+        {
+          "session": 8,
+          "correct": 1,
+          "total": null,
+          "note": "RE-CHECK (no hints): 1 self-correction marked"
+        },
+        {
+          "session": 9,
+          "correct": 2,
+          "total": null,
+          "note": "Self-corrections: 1 on read 1, 2 on read 2"
+        },
+        {
+          "session": 17,
+          "correct": 2,
+          "total": null,
+          "note": "Self-corrections: 1 on each read (audio: 'where… here'; 'a new kite, a new blue kite')"
+        }
+      ]
+    },
+    "fl5": {
+      "area": "fluency",
+      "name": "Reads in phrases",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": null,
+          "total": null,
+          "note": "Story B: parent ticked both 'reads word by word' and 'reads in phrases'; also points with a finger and needed a long time on some words."
+        },
+        {
+          "session": 6,
+          "correct": 4,
+          "total": 6,
+          "note": "Phrases read as one smooth chunk: was at the, got it back, in the rain, want to play. Not smooth: what is it, have a go."
+        },
+        {
+          "session": 7,
+          "correct": 6,
+          "total": 6,
+          "note": "All 6 tricky-word phrases smooth (what is it, put it on, have a go, there was a, when can we, could you see). S6: 4/6."
+        },
+        {
+          "session": 9,
+          "correct": 3,
+          "total": 4,
+          "note": "Phrases: want to go, what is it, would you like smooth; 'over there' not"
+        },
+        {
+          "session": 12,
+          "correct": 6,
+          "total": 6,
+          "note": "Short phrases read smoothly"
+        }
+      ]
+    },
+    "fl6": {
+      "area": "fluency",
+      "name": "Uses punctuation",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": null,
+          "total": null,
+          "note": "Story B: parent saw her pause at full stops."
+        },
+        {
+          "session": 5,
+          "correct": null,
+          "total": null,
+          "note": "Pauses at full stops (parent)."
+        }
+      ]
+    },
+    "fl7": {
+      "area": "fluency",
+      "name": "Expression matches meaning",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co1": {
+      "area": "comp",
+      "name": "Works out unknown words",
+      "status": "not_checked",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": 1,
+          "total": 1,
+          "note": "Listening story: knew 'thrilled'. Listening only, so status unchanged.",
+          "modality": "listening"
+        }
+      ]
+    },
+    "co2": {
+      "area": "comp",
+      "name": "Understands longer sentences",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co3": {
+      "area": "comp",
+      "name": "Tracks who \"he\", \"she\", \"it\", \"they\" refer to",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co4": {
+      "area": "comp",
+      "name": "Figurative language and wordplay",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co5": {
+      "area": "comp",
+      "name": "Retells in order",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": 1,
+          "total": 1,
+          "note": "Story A: what the frog did last",
+          "modality": "reading"
+        },
+        {
+          "session": 2,
+          "correct": 1,
+          "total": 1,
+          "note": "Listening story: what happened next",
+          "modality": "listening"
+        },
+        {
+          "session": 2,
+          "correct": 2,
+          "total": 3,
+          "note": "Put events in order: pictures and Ben sentences right; bath sentences out of order"
+        }
+      ]
+    },
+    "co6": {
+      "area": "comp",
+      "name": "Literal questions",
+      "status": "secure",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": 2,
+          "total": 2,
+          "note": "Story A literal questions (read herself)",
+          "modality": "reading"
+        },
+        {
+          "session": 2,
+          "correct": 2,
+          "total": 2,
+          "note": "Story B literal questions (read herself)",
+          "modality": "reading"
+        },
+        {
+          "session": 2,
+          "correct": 1,
+          "total": 1,
+          "note": "Listening story",
+          "modality": "listening"
+        },
+        {
+          "session": 4,
+          "correct": 2,
+          "total": 2,
+          "note": "Kite story questions"
+        },
+        {
+          "session": 5,
+          "correct": 2,
+          "total": 2,
+          "note": "Duke story questions"
+        },
+        {
+          "session": 6,
+          "correct": 3,
+          "total": 3,
+          "note": "Train story questions"
+        },
+        {
+          "session": 7,
+          "correct": 2,
+          "total": 2,
+          "note": "Beach story literal questions"
+        },
+        {
+          "session": 8,
+          "correct": 2,
+          "total": 2,
+          "note": "RE-CHECK (no hints): Park story literal questions Status secure: literal questions right in every story S2, S4–S8."
+        },
+        {
+          "session": 9,
+          "correct": 2,
+          "total": 2,
+          "note": "Boat story literal questions"
+        },
+        {
+          "session": 10,
+          "correct": 2,
+          "total": 2,
+          "note": "The ball: what Ben had, who got the ball back"
+        },
+        {
+          "session": 11,
+          "correct": 2,
+          "total": 2,
+          "note": "At the lake: where they went, what was by the tree"
+        },
+        {
+          "session": 12,
+          "correct": 1,
+          "total": 2,
+          "note": "Dark park: 'Where did they go?' first answer 'The beach', changed to 'The park' after Back (first try counted); car question right"
+        },
+        {
+          "session": 13,
+          "correct": 2,
+          "total": 2,
+          "note": "Re-check 2: kite story literal questions"
+        },
+        {
+          "session": 15,
+          "correct": 2,
+          "total": 2,
+          "note": "Jack story: who is Jack, where were they"
+        },
+        {
+          "session": 16,
+          "correct": 2,
+          "total": 2,
+          "note": "Rex story: who jumped up, what the light was"
+        },
+        {
+          "session": 17,
+          "correct": 2,
+          "total": 2,
+          "note": "Blue kite story: colour of the kite, where it got stuck"
+        }
+      ]
+    },
+    "co7": {
+      "area": "comp",
+      "name": "Inference",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": 1,
+          "total": 1,
+          "note": "Story B: why they swam (to cool down)",
+          "modality": "reading"
+        },
+        {
+          "session": 2,
+          "correct": 1,
+          "total": 1,
+          "note": "Listening story: why water the seeds",
+          "modality": "listening"
+        },
+        {
+          "session": 5,
+          "correct": 1,
+          "total": 1,
+          "note": "How did Duke feel at the end? Glad"
+        },
+        {
+          "session": 7,
+          "correct": 1,
+          "total": 1,
+          "note": "Why did Dad reach up? Right (inference)."
+        },
+        {
+          "session": 8,
+          "correct": 1,
+          "total": 1,
+          "note": "RE-CHECK (no hints): Why did the dog run after it? Right."
+        },
+        {
+          "session": 9,
+          "correct": 1,
+          "total": 1,
+          "note": "Why did they go home? Right."
+        },
+        {
+          "session": 10,
+          "correct": 1,
+          "total": 1,
+          "note": "The ball: how Ben felt (worried)"
+        },
+        {
+          "session": 11,
+          "correct": 1,
+          "total": 1,
+          "note": "At the lake: how Mia felt (excited)"
+        },
+        {
+          "session": 12,
+          "correct": 1,
+          "total": 1,
+          "note": "Dark park: why Gran said 'What a star you are' (Sam found her car)"
+        },
+        {
+          "session": 13,
+          "correct": 1,
+          "total": 1,
+          "note": "Re-check 2: why Ava hugged Dad (he got her kite back)"
+        },
+        {
+          "session": 15,
+          "correct": 1,
+          "total": 1,
+          "note": "Jack story: how Jack felt (happy)"
+        },
+        {
+          "session": 16,
+          "correct": 1,
+          "total": 1,
+          "note": "Rex story: why Mum said get back in bed"
+        },
+        {
+          "session": 17,
+          "correct": 1,
+          "total": 1,
+          "note": "Blue kite story: how Ben felt at the end (happy)"
+        }
+      ]
+    },
+    "co8": {
+      "area": "comp",
+      "name": "Non-fiction features",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co9": {
+      "area": "comp",
+      "name": "Main idea and summary",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co10": {
+      "area": "comp",
+      "name": "Forms an opinion",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co11": {
+      "area": "comp",
+      "name": "Notices when meaning breaks down",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co12": {
+      "area": "comp",
+      "name": "Predicts and checks",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "co13": {
+      "area": "comp",
+      "name": "Makes connections",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr1": {
+      "area": "writing",
+      "name": "Recount",
+      "status": "not_yet",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "Recount was one sentence: who she played with and where ('... and me we paly in the school'). No sequence of events."
+        }
+      ]
+    },
+    "wr2": {
+      "area": "writing",
+      "name": "Narrative (story)",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr3": {
+      "area": "writing",
+      "name": "Opinion",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr4": {
+      "area": "writing",
+      "name": "Procedure and information report",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr5": {
+      "area": "writing",
+      "name": "Plans before writing",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "Said her story out loud before typing."
+        }
+      ]
+    },
+    "wr6": {
+      "area": "writing",
+      "name": "Sequences ideas",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 2,
+          "correct": 2,
+          "total": 3,
+          "note": "Put sentences in order (2 of 3 sets right)"
+        },
+        {
+          "session": 7,
+          "correct": 2,
+          "total": 2,
+          "note": "Tile sentence with 'First … and then …' in order"
+        },
+        {
+          "session": 9,
+          "correct": null,
+          "total": null,
+          "note": "Asked for two sentences, First … Then …: wrote one long sentence: 'First they what to the laik and then and dad had to go in row and row.' Took 6.7 minutes at the end of the session."
+        },
+        {
+          "session": 10,
+          "correct": 1,
+          "total": 1,
+          "note": "First/Then frame: two events in order (ate toast, rode bike)"
+        },
+        {
+          "session": 11,
+          "correct": 1,
+          "total": 1,
+          "note": "First / Then / At the end: three events in order (car, park, ice cream)"
+        },
+        {
+          "session": 12,
+          "correct": 1,
+          "total": 1,
+          "note": "First / Then / At the end: three events in order (slide, rain, home)"
+        },
+        {
+          "session": 13,
+          "correct": 0,
+          "total": 1,
+          "note": "Without the First/Then frame she wrote one long sentence, not a sequence"
+        },
+        {
+          "session": 15,
+          "correct": 0,
+          "total": 1,
+          "note": "Only 'First' given: first sentence fine, but the second ('The tree is red.') describes the picture instead of saying what happened next (dog kicks ball into tree). Not yet a sequence without the Then cue"
+        },
+        {
+          "session": 16,
+          "correct": 1,
+          "total": 1,
+          "note": "With 'First' + the Then button: 'First the gril had a red kit. Then the kit got stick in a tree.' Two events in the right order (S15 second sentence was not a sequence)"
+        },
+        {
+          "session": 17,
+          "correct": null,
+          "total": null,
+          "note": "Three sentences with 'First' + the Then and At the end buttons: 'First the boy had a blue bik. Then he see a tree. At the end the boy what home.' Three events in order, but they do not tell the pictures (bike → plaster) and say little. 7.5 min, 24 deletes"
+        }
+      ]
+    },
+    "wr7": {
+      "area": "writing",
+      "name": "Paragraphs",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr8": {
+      "area": "writing",
+      "name": "Complete simple sentences",
+      "status": "secure",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "All 4 texts are complete sentences: 'The dog wos playing wid the bull in the tree.'"
+        },
+        {
+          "session": 4,
+          "correct": null,
+          "total": null,
+          "note": "'Jake has a red kite,he is playing with the kite in the lake.' Two clauses joined with a comma; 9 minutes to type 13 words using the word bank."
+        },
+        {
+          "session": 5,
+          "correct": 2,
+          "total": 2,
+          "note": "Tile sentences in the right order"
+        },
+        {
+          "session": 6,
+          "correct": 2,
+          "total": 2,
+          "note": "Tile sentences in order"
+        },
+        {
+          "session": 7,
+          "correct": 2,
+          "total": 2,
+          "note": "Tile sentences in order"
+        },
+        {
+          "session": 8,
+          "correct": null,
+          "total": null,
+          "note": "RE-CHECK (no hints): 'The dog had a ball and it got stuck in a tree.' Every word spelled right (S3 picture sentence: 'The dog wos playing wid the bull in the tree.'). Status secure: complete simple sentences in every task S3–S8."
+        },
+        {
+          "session": 9,
+          "correct": null,
+          "total": null,
+          "note": "Run-on sentence; 'what' for went, missing word (Joan/her) before dad."
+        },
+        {
+          "session": 10,
+          "correct": 2,
+          "total": 2,
+          "note": "Two separate complete sentences: 'First she ate a toast . Then she rode her bike.'"
+        },
+        {
+          "session": 11,
+          "correct": 3,
+          "total": 3,
+          "note": "Three separate complete sentences; 'went in to the car' (into)"
+        },
+        {
+          "session": 12,
+          "correct": 3,
+          "total": 3,
+          "note": "Three separate sentences: 'First they play on the slide. Then ti rained. At the end they went home.' (play for played; 'ti' typo for it)"
+        },
+        {
+          "session": 13,
+          "correct": 1,
+          "total": 1,
+          "note": "Re-check 2 free writing (no frame): 'The cat gos in the home in the rain and gets stuck in the ricks.' One complete sentence"
+        },
+        {
+          "session": 15,
+          "correct": null,
+          "total": null,
+          "note": "'First the dog had a ball. The tree is red.' Two complete sentences, 4.6 min, 7 deletions"
+        },
+        {
+          "session": 16,
+          "correct": null,
+          "total": null,
+          "note": "Two complete sentences, 15 words, 5.7 min, 6 deletions"
+        },
+        {
+          "session": 17,
+          "correct": 3,
+          "total": 3,
+          "note": "All three sentences start with a capital and end with a full stop"
+        }
+      ]
+    },
+    "wr9": {
+      "area": "writing",
+      "name": "Compound sentences",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "Uses 'and' only inside a list; no joined sentences."
+        },
+        {
+          "session": 4,
+          "correct": null,
+          "total": null,
+          "note": "Joined two ideas with a comma instead of 'and'."
+        },
+        {
+          "session": 5,
+          "correct": 2,
+          "total": 2,
+          "note": "Built 2 'and' sentences from tiles"
+        },
+        {
+          "session": 5,
+          "correct": null,
+          "total": null,
+          "note": "Own sentence: 'I like to play a game and ride bike.' Joined with and; left out 'my'. 3 minutes (S4 sentence took 9)."
+        },
+        {
+          "session": 6,
+          "correct": 2,
+          "total": 2,
+          "note": "Built 2 'and' sentences from tiles"
+        },
+        {
+          "session": 6,
+          "correct": null,
+          "total": null,
+          "note": "Own: 'On a wet day I play at home and play game in the rain.' Joined with and; left out 'a' before game. 3 minutes."
+        },
+        {
+          "session": 7,
+          "correct": 2,
+          "total": 2,
+          "note": "Built 'and' / 'and then' sentences from tiles"
+        },
+        {
+          "session": 7,
+          "correct": null,
+          "total": null,
+          "note": "Own: 'At the beach I ate and then I rest.' Used 'and then'. 4 minutes, 19 deletions."
+        },
+        {
+          "session": 8,
+          "correct": null,
+          "total": null,
+          "note": "RE-CHECK (no hints): Joined two ideas with 'and' with no prompt or frame."
+        },
+        {
+          "session": 9,
+          "correct": null,
+          "total": null,
+          "note": "Joined with 'and then', 'and' (overused)."
+        },
+        {
+          "session": 13,
+          "correct": 1,
+          "total": 1,
+          "note": "Joins two ideas with 'and'"
+        }
+      ]
+    },
+    "wr10": {
+      "area": "writing",
+      "name": "Complex sentences",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr11": {
+      "area": "writing",
+      "name": "Varied sentence openings",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr12": {
+      "area": "writing",
+      "name": "Noun groups",
+      "status": "not_yet",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "No describing words in her own sentences yet (the ball, the tree)."
+        }
+      ]
+    },
+    "wr13": {
+      "area": "writing",
+      "name": "Precise verbs",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr14": {
+      "area": "writing",
+      "name": "Adding detail",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "Picture sentence answers who, what and where."
+        },
+        {
+          "session": 4,
+          "correct": null,
+          "total": null,
+          "note": "Picture sentence: who, what, where."
+        },
+        {
+          "session": 8,
+          "correct": null,
+          "total": null,
+          "note": "RE-CHECK (no hints): Says what happens and where; no describing words yet."
+        }
+      ]
+    },
+    "wr15": {
+      "area": "writing",
+      "name": "Articles, pronouns, tense",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "'[names] and me we paly': doubled subject (me we), and present 'play' for past. 'wos playing' right tense."
+        },
+        {
+          "session": 7,
+          "correct": null,
+          "total": null,
+          "note": "Mixed tenses in one sentence: 'I ate and then I rest' (rest for rested)."
+        },
+        {
+          "session": 8,
+          "correct": null,
+          "total": null,
+          "note": "RE-CHECK (no hints): Past tense used consistently (had, got stuck)."
+        },
+        {
+          "session": 13,
+          "correct": 0,
+          "total": 1,
+          "note": "'gos' for goes; 'in the home' for into the house"
+        },
+        {
+          "session": 17,
+          "correct": 0,
+          "total": 1,
+          "note": "'he see a tree' (saw); 'what home' for went home (also 'what' for went in S9)"
+        }
+      ]
+    },
+    "wr16": {
+      "area": "writing",
+      "name": "Capital letters and full stops",
+      "status": "secure",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "Capital at start and full stop at end in all 4 texts."
+        },
+        {
+          "session": 4,
+          "correct": null,
+          "total": null,
+          "note": "Capital and full stop; no space after comma."
+        },
+        {
+          "session": 5,
+          "correct": null,
+          "total": null,
+          "note": "Capital and full stop."
+        },
+        {
+          "session": 6,
+          "correct": null,
+          "total": null,
+          "note": "Capital and full stop."
+        },
+        {
+          "session": 7,
+          "correct": null,
+          "total": null,
+          "note": "Capital and full stop."
+        },
+        {
+          "session": 8,
+          "correct": null,
+          "total": null,
+          "note": "RE-CHECK (no hints): Capital and full stop again: in every piece of writing since S3. Status secure."
+        },
+        {
+          "session": 10,
+          "correct": 2,
+          "total": 2,
+          "note": "Both lines start with a capital and end with a full stop (space before one stop)"
+        },
+        {
+          "session": 11,
+          "correct": 3,
+          "total": 3,
+          "note": "All three lines start with a capital and end with a full stop"
+        },
+        {
+          "session": 12,
+          "correct": 3,
+          "total": 3,
+          "note": "All three lines with capital and full stop"
+        },
+        {
+          "session": 13,
+          "correct": 1,
+          "total": 1,
+          "note": "Capital and full stop"
+        },
+        {
+          "session": 14,
+          "correct": 0,
+          "total": 1,
+          "note": "Same question: no capital at the start"
+        },
+        {
+          "session": 15,
+          "correct": 2,
+          "total": 2,
+          "note": "Both sentences: capital and full stop (only 'First' given)"
+        },
+        {
+          "session": 16,
+          "correct": 2,
+          "total": 2,
+          "note": "Both sentences: capital and full stop"
+        }
+      ]
+    },
+    "wr17": {
+      "area": "writing",
+      "name": "Question and exclamation marks",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 14,
+          "correct": 1,
+          "total": 1,
+          "note": "Y1 check question: 'what is your name?' ends with a question mark"
+        }
+      ]
+    },
+    "wr18": {
+      "area": "writing",
+      "name": "Commas in lists",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "Used commas in a list of names on her own."
+        }
+      ]
+    },
+    "wr19": {
+      "area": "writing",
+      "name": "Apostrophes",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr20": {
+      "area": "writing",
+      "name": "Speech marks",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "wr21": {
+      "area": "writing",
+      "name": "Re-reads and edits",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "Read her story back and fixed one word (chs → school)."
+        }
+      ]
+    },
+    "wr22": {
+      "area": "writing",
+      "name": "Uses feedback",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp1": {
+      "area": "spelling",
+      "name": "Segments words to spell",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 2,
+          "total": 3,
+          "note": "Typed: pig, ship right; jump→jomp"
+        },
+        {
+          "session": 3,
+          "correct": 5,
+          "total": 6,
+          "note": "Warm-up cat, sun, dog right (bed skipped); frog, shop right; crab→krab, with→wid are sound-right. Writes short u as o: duck→dock (and jump→jomp in S1)."
+        },
+        {
+          "session": 4,
+          "correct": 5,
+          "total": 5,
+          "note": "Hear a short-vowel word, tap its spelling: all right, including cup/bug/mud (u vs o)"
+        },
+        {
+          "session": 14,
+          "correct": 3,
+          "total": 3,
+          "note": "Y1 check: shop, chin, then spelled right (digraphs)"
+        },
+        {
+          "session": 15,
+          "correct": 4,
+          "total": 4,
+          "note": "Short-vowel spelling jump, box, step, hut all first try (S1 jump 'jomp', S14 boxes 'buxes')"
+        },
+        {
+          "session": 16,
+          "correct": null,
+          "total": null,
+          "note": "In free writing: stuck → 'stick' (short u/i)"
+        },
+        {
+          "session": 17,
+          "correct": 0,
+          "total": 1,
+          "note": "COLD: stuck → 'stike' (S16 writing: 'stick'); right on retry. Short u still written as i"
+        }
+      ]
+    },
+    "sp2": {
+      "area": "spelling",
+      "name": "High-frequency words",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 0,
+          "total": 3,
+          "note": "Typed: said→sad, because→becu, little→litl"
+        },
+        {
+          "session": 3,
+          "correct": 1,
+          "total": 7,
+          "note": "they right; said→sad (again), because→bcuse, with→wid; in sentences like→lick, friend→frens, was→wos"
+        },
+        {
+          "session": 4,
+          "correct": 3,
+          "total": 3,
+          "note": "said, was, with: look-cover-write, right first go (taught just before)"
+        },
+        {
+          "session": 5,
+          "correct": 3,
+          "total": 3,
+          "note": "said/was/with tap-the-spelling review (retained from S4)"
+        },
+        {
+          "session": 5,
+          "correct": 3,
+          "total": 3,
+          "note": "want, what, are: look-cover-write, right first go"
+        },
+        {
+          "session": 6,
+          "correct": 3,
+          "total": 3,
+          "note": "COLD tap-the-spelling: want, what, are (retained from S5)"
+        },
+        {
+          "session": 6,
+          "correct": 3,
+          "total": 3,
+          "note": "when, there, put: look-cover-write, right first go"
+        },
+        {
+          "session": 7,
+          "correct": 3,
+          "total": 3,
+          "note": "COLD tap-the-spelling: when, there, put (retained)"
+        },
+        {
+          "session": 7,
+          "correct": 2,
+          "total": 3,
+          "note": "could → 'cuold' then right; would, should first go"
+        },
+        {
+          "session": 8,
+          "correct": 0,
+          "total": 3,
+          "note": "RE-CHECK (no hints): said → 'say', with → 'wid' (same as S3), because → 'beuose'. She spelled said/with right in S4–S6 straight after practice, but not in free recall."
+        },
+        {
+          "session": 9,
+          "correct": 3,
+          "total": 3,
+          "note": "COLD tap-the-spelling: could, would, should (retained)"
+        },
+        {
+          "session": 9,
+          "correct": null,
+          "total": null,
+          "note": "In writing: 'what' typed for 'went'. A taught tricky word turning up in place of a similar-looking word."
+        },
+        {
+          "session": 13,
+          "correct": 2,
+          "total": 3,
+          "note": "Re-check 2: said, with right (S8: 'say', 'wid'); because → 'boucse'"
+        },
+        {
+          "session": 17,
+          "correct": 2,
+          "total": 2,
+          "note": "Look-cover-write: here, were right first go (here took 17 s)"
+        }
+      ]
+    },
+    "sp3": {
+      "area": "spelling",
+      "name": "Choosing vowel patterns",
+      "status": "secure",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 1,
+          "total": 3,
+          "note": "Typed: ship right; rain→ren, cake→ceck. Spells by sound, not by pattern."
+        },
+        {
+          "session": 3,
+          "correct": 3,
+          "total": 6,
+          "note": "home, tree, play right; make→meack, bike→bick, boat→bot. Uses ck for long-vowel words (also like→lick, park→porck): doesn't know magic e for spelling yet."
+        },
+        {
+          "session": 4,
+          "correct": 5,
+          "total": 5,
+          "note": "Spelled cake, bike, like, time, made on the first try (no ck), right after teaching"
+        },
+        {
+          "session": 5,
+          "correct": 2,
+          "total": 2,
+          "note": "COLD spelling: name, five (no reminder)"
+        },
+        {
+          "session": 5,
+          "correct": 5,
+          "total": 5,
+          "note": "Spelled rope, bone, note, cube, cute first try"
+        },
+        {
+          "session": 6,
+          "correct": 2,
+          "total": 2,
+          "note": "COLD spelling home, cube"
+        },
+        {
+          "session": 6,
+          "correct": 6,
+          "total": 6,
+          "note": "ai/ay: hear and choose the spelling (rain/rayn, play/plai …)"
+        },
+        {
+          "session": 6,
+          "correct": 5,
+          "total": 5,
+          "note": "Spelled rain, day, wait, play, train first try (train: 47 s, 7 deletions)"
+        },
+        {
+          "session": 7,
+          "correct": 2,
+          "total": 2,
+          "note": "COLD spelling: tail, say"
+        },
+        {
+          "session": 7,
+          "correct": 4,
+          "total": 6,
+          "note": "ee/ea hear-and-choose"
+        },
+        {
+          "session": 7,
+          "correct": 3,
+          "total": 5,
+          "note": "Spelled tree, eat, green; sea → 'see' (the other spelling of the same sound), feet → 'seat' (possibly misheard f as s; f was also her slowest key). Both right on retry."
+        },
+        {
+          "session": 8,
+          "correct": 5,
+          "total": 6,
+          "note": "RE-CHECK (no hints): Hear and choose: right except leaf (chose leef)"
+        },
+        {
+          "session": 8,
+          "correct": 4,
+          "total": 7,
+          "note": "RE-CHECK (no hints): Spelled home, rain (S1: ren), play, tree. make → 'mack', bike → 'bic' (back to the short-vowel/ck pattern when nothing cues magic e), boat → 'bote' (oa not taught; used magic e logically)."
+        },
+        {
+          "session": 9,
+          "correct": 8,
+          "total": 8,
+          "note": "Pattern sort: heard make, rain, day, bike, feet, home, sea, cute and tapped the right pattern for each"
+        },
+        {
+          "session": 9,
+          "correct": 6,
+          "total": 6,
+          "note": "MIXED no-cue spelling, first try: make, bike, rain, day, home, feet (S8 re-check: mack, bic). Straight after the pattern sort, so check again at the next re-check."
+        },
+        {
+          "session": 9,
+          "correct": 3,
+          "total": 3,
+          "note": "Spelled boat, snow, coat first try"
+        },
+        {
+          "session": 9,
+          "correct": null,
+          "total": null,
+          "note": "In writing: lake → 'laik' (used ai, today's earlier pattern, instead of a_e)."
+        },
+        {
+          "session": 10,
+          "correct": 6,
+          "total": 6,
+          "note": "Mixed spelling with NO pattern sort first: game, time, rope, rain, tree, boat, all first try"
+        },
+        {
+          "session": 10,
+          "correct": 3,
+          "total": 3,
+          "note": "Dictated -all words: ball, tall, call"
+        },
+        {
+          "session": 11,
+          "correct": 3,
+          "total": 6,
+          "note": "Mixed spelling, no warm-up (2nd time): small, snow, play right; seat → 'sit', kite → 'kiat', coat → 'cote'. All right on retry"
+        },
+        {
+          "session": 11,
+          "correct": 9,
+          "total": 9,
+          "note": "ar: hear and pick 6/6, dictated car, park, star 3/3"
+        },
+        {
+          "session": 12,
+          "correct": 6,
+          "total": 6,
+          "note": "Which oh? sort: boat, soap (oa), home, rope (o_e), snow, slow (ow)"
+        },
+        {
+          "session": 12,
+          "correct": 3,
+          "total": 3,
+          "note": "Spell new oh words right after the sort: road, bone, grow"
+        },
+        {
+          "session": 12,
+          "correct": 9,
+          "total": 9,
+          "note": "or: hear and pick 6/6, dictated fork, corn, short 3/3"
+        },
+        {
+          "session": 13,
+          "correct": 9,
+          "total": 10,
+          "note": "Re-check 2 spelling, NO sort and no retry: make, bike, home, rain, play, tree, boat, car, corn right; seat → 'seet' (right sound, other spelling). Same 10 as S8: 9/10 (S8: 4/10)"
+        },
+        {
+          "session": 15,
+          "correct": 7,
+          "total": 7,
+          "note": "igh: tap spelling 4/4 (night/nite ...), spell night, light, high 3/3 first try (right after teaching)"
+        },
+        {
+          "session": 16,
+          "correct": null,
+          "total": null,
+          "note": "In free writing: kite → 'kit' (twice; magic e dropped), girl → 'gril'. Patterns are right in dictation but not yet in her own writing"
+        },
+        {
+          "session": 16,
+          "correct": 1,
+          "total": 1,
+          "note": "COLD spelling: right (igh)"
+        },
+        {
+          "session": 16,
+          "correct": 8,
+          "total": 9,
+          "note": "ew/ue: tap spelling 5/6 (grew → grue), spelled new, blue, grew 3/3 (blue took 72 s)"
+        },
+        {
+          "session": 17,
+          "correct": 10,
+          "total": 11,
+          "note": "COLD: glue, grew right; kite → 'kit' (third time the magic e is dropped in kite/bike: S16 'kit', S17 writing 'bik'), right on retry. New ou: out, loud, cloud 3/3 and which-spelling 5/5"
+        }
+      ]
+    },
+    "sp4": {
+      "area": "spelling",
+      "name": "Double letters and ck",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 0,
+          "total": 1,
+          "note": "Typed: little→litl"
+        },
+        {
+          "session": 3,
+          "correct": 1,
+          "total": 3,
+          "note": "duck→dock (ck right, vowel wrong); bell→bel; little→litl in S1"
+        },
+        {
+          "session": 14,
+          "correct": 4,
+          "total": 5,
+          "note": "Y1 check spelling: back, off, bell, kiss right; duck first typed 'dukc' (fixed after Back)"
+        }
+      ]
+    },
+    "sp5": {
+      "area": "spelling",
+      "name": "tch and dge",
+      "status": "not_yet",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 0,
+          "total": 1,
+          "note": "Typed: catch→cach"
+        }
+      ]
+    },
+    "sp6": {
+      "area": "spelling",
+      "name": "Two-syllable words",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp7": {
+      "area": "spelling",
+      "name": "Plurals",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": 1,
+          "total": 1,
+          "note": "dogs"
+        },
+        {
+          "session": 14,
+          "correct": 1,
+          "total": 2,
+          "note": "Y1 check plurals: cats right; boxes → 'buxes' (short o heard as u)"
+        }
+      ]
+    },
+    "sp8": {
+      "area": "spelling",
+      "name": "-ed and -ing rules",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 0,
+          "total": 1,
+          "note": "Typed: kicked→kic"
+        },
+        {
+          "session": 3,
+          "correct": 1,
+          "total": 2,
+          "note": "playing right; jumped→jumot (and kicked→kic in S1)"
+        },
+        {
+          "session": 14,
+          "correct": 0,
+          "total": 2,
+          "note": "Y1 check: jumping → 'joping', jumped → 'juped' (short u/o mix-up and missing m before p); -ed added correctly in juped"
+        },
+        {
+          "session": 15,
+          "correct": 2,
+          "total": 2,
+          "note": "Spelled jumped, played first try right after teaching (S14: 'juped')"
+        },
+        {
+          "session": 16,
+          "correct": 1,
+          "total": 1,
+          "note": "COLD spelling: kicked right first try (S1 'kic')"
+        }
+      ]
+    },
+    "sp9": {
+      "area": "spelling",
+      "name": "-er and -est",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp10": {
+      "area": "spelling",
+      "name": "-ful, -y, -ly, -less",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp11": {
+      "area": "spelling",
+      "name": "Prefixes",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp12": {
+      "area": "spelling",
+      "name": "Compound words",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp13": {
+      "area": "spelling",
+      "name": "Contractions",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp14": {
+      "area": "spelling",
+      "name": "Common homophones",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "sp15": {
+      "area": "spelling",
+      "name": "Uses spelling strategies",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "hw1": {
+      "area": "handwriting",
+      "name": "Posture and grip",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "hw2": {
+      "area": "handwriting",
+      "name": "Correct letter formation",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "hw3": {
+      "area": "handwriting",
+      "name": "Letter sizes",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "hw4": {
+      "area": "handwriting",
+      "name": "Spacing",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "Spaces between words fine; missed spaces around commas in a list."
+        }
+      ]
+    },
+    "hw5": {
+      "area": "handwriting",
+      "name": "Fluent and automatic",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "hw6": {
+      "area": "handwriting",
+      "name": "Keyboard basics",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": 3,
+          "total": 4,
+          "note": "Typed all tasks; parent saw her hunt for letters. Very slow: 109–169 s per dictated sentence, 5.6 min for a 9-word recount."
+        },
+        {
+          "session": 4,
+          "correct": null,
+          "total": null,
+          "note": "Very slow typing: one sentence took 9 minutes (15 deletions)."
+        },
+        {
+          "session": 5,
+          "correct": 8,
+          "total": 8,
+          "note": "Keyboard game: all first key right; median 2.0 s per letter (slowest s 4.3, d 3.7, b 2.5). Baseline for tracking."
+        },
+        {
+          "session": 6,
+          "correct": 8,
+          "total": 8,
+          "note": "Keyboard game: median 1.6 s per letter (S5: 2.0 s)."
+        },
+        {
+          "session": 7,
+          "correct": 8,
+          "total": 8,
+          "note": "Keyboard game: median 2.1 s (new letters; f took 6.7 s). S5 2.0, S6 1.6."
+        },
+        {
+          "session": 8,
+          "correct": 8,
+          "total": 8,
+          "note": "RE-CHECK (no hints): Keyboard game median 2.3 s per letter (S5 2.0, S6 1.6, S7 2.1): flat. f 6.0 s, w 5.6 s slowest."
+        },
+        {
+          "session": 9,
+          "correct": 8,
+          "total": 8,
+          "note": "Keyboard median 2.8 s per letter (S5 2.0, S6 1.6, S7 2.1, S8 2.3); p took 5.9 s. Not getting faster."
+        },
+        {
+          "session": 17,
+          "correct": null,
+          "total": null,
+          "note": "Parent: found letters faster on the keyboard"
+        }
+      ]
+    },
+    "vo1": {
+      "area": "vocab",
+      "name": "Tier 1 everyday words",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 3,
+          "total": 3,
+          "note": "Parent-rated: knows hungry, tired, freezing"
+        }
+      ]
+    },
+    "vo2": {
+      "area": "vocab",
+      "name": "Tier 2 book words",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 1,
+          "correct": 5,
+          "total": 5,
+          "note": "Parent-rated: knows whisper, enormous, curious, gentle, borrow"
+        }
+      ]
+    },
+    "vo3": {
+      "area": "vocab",
+      "name": "Tier 3 subject words",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "vo4": {
+      "area": "vocab",
+      "name": "Synonyms and antonyms",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "vo5": {
+      "area": "vocab",
+      "name": "Word families and parts",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "vo6": {
+      "area": "vocab",
+      "name": "Multiple meanings and idioms",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "vo7": {
+      "area": "vocab",
+      "name": "Chooses precise words",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "li1": {
+      "area": "lit",
+      "name": "Wide reading",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "li2": {
+      "area": "lit",
+      "name": "Opinions with reasons",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "li3": {
+      "area": "lit",
+      "name": "Characters",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "li4": {
+      "area": "lit",
+      "name": "Author's language",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "li5": {
+      "area": "lit",
+      "name": "Writes like an author",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "ol1": {
+      "area": "oral",
+      "name": "Retells and explains clearly",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "ol2": {
+      "area": "oral",
+      "name": "Follows multi-step instructions",
+      "status": "not_checked",
+      "evidence": []
+    },
+    "ol3": {
+      "area": "oral",
+      "name": "Says sentences before writing",
+      "status": "learning",
+      "evidence": [
+        {
+          "session": 3,
+          "correct": null,
+          "total": null,
+          "note": "Said her story out loud before typing."
+        }
+      ]
+    },
+    "ol4": {
+      "area": "oral",
+      "name": "Asks questions to understand",
+      "status": "not_checked",
+      "evidence": []
+    }
+  },
+  "school_context": {
+    "eal_d_phase": "Emerging English (Semester 1 2026 report)",
+    "oral_interaction": "level 4 of 5 in all four areas",
+    "reading_and_responding": "level 2 of the numbered steps (scale B1–B3, 1, 2, 3) in all four areas",
+    "writing": "same as reading: level 2",
+    "teacher_notes": "Predicts events from a text read aloud; working towards picking key points from short spoken texts; spells by sound or visual features; beginning to write texts in a clear sequence.",
+    "pending": "Year 1 Phonics Screening Check result not yet received"
+  }
+}
