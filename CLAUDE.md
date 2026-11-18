@@ -224,3 +224,11 @@ Schedule: daily sessions.
 - Audio review: when the transcript and the parent marks disagree, keep the status on the parent marks, add an `AUDIO` evidence note
   to the skill, and check again at the next re-check. If one pass of the model loops on a phrase after a long pause, transcribe the read
   in 30-second pieces.
+- Re-check 3 result (S18): word-level skills up (same 12 tricky words 7 → 10 → 11, same 10 spellings 4 → 9 → 9), but story reading flat since S8
+  (about 90% on marks, 87% on audio, about 20 wcpm). The audio was below 90% again, so fl2 and sp3 went back to `learning`, ph6 to `not_yet` (ar / or).
+- Session 19 (training) is built from the Session 17 page (training engine; S18's re-check parts not needed). Story first, **70 words** (longer, passage text
+  23 px so it fits without scrolling), read twice. New: the `pick` step can show a sentence (`sent: true`, items carry `sent` and `say`; more than two options
+  wrap two per row) with `feedback: "wword"` (look-alike w-words went / want / what / were / was / saw, tips in `WTIP`; logged under fl1). New writing
+  **read back and fix** (`readBack: true`): after Done, the phone reads her text exactly as typed and she can edit it; the item keeps `first_text`,
+  `edited_after_reading`, `write_ms`, `fix_ms`, `first_stats`. ar / or re-taught (teach, rule, hear, read with jarn / torb, spell). Cold check of her S18 slips.
+  The parent wrap-up reminds about 10 minutes of book reading off the phone each day (the parent agreed to this on 18 Nov).
