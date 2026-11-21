@@ -236,5 +236,11 @@ Schedule: daily sessions.
   Cold pace still about 20 wcpm since S8, but repeated reading more than doubles it. want/went is the core w-word swap (story, pick step, quick words);
   pond -> 'puddle' (guessing by meaning). ar / or taught again and all right the same day (jarn, torb read for the first time): ph6 not_yet -> learning,
   check it cold in S20. Still not holding cold: queen, ou (sound, zoud), hut/hat by ear, boat/seat spelling. Read back and fix: she edits by sound
-  (icecrim -> icecreim). Audio transcribed with whisper.cpp (pywhispercpp) and the model in data/models/. progress.json next_session still points to 19
-  until Session 20 is built.
+  (icecrim -> icecreim). Audio transcribed with whisper.cpp (pywhispercpp) and the model in data/models/. progress.json next_session now points to 20.
+- Session 20 (training) is built from the Session 19 page (same engine, ids `s20-`). Story first, "The storm" (71 words), read twice; it carries
+  the S19 ar / or words (farm, dark, start, barn, storm, short) as a cold check in real text. Cold check: ar / or in new words (shark, horn, star, sport,
+  made-up zarp), queen, green, cloud; short u / a by ear (hut, mud, cut, fun); spelling park, corn, boat, seat. **want or went?**: 8 sentence items in the
+  `pick` step (`feedback: "wword"`), mostly want / went, with an intro screen (want has an a, went has an e). ou / ow re-taught (teach, rule, hear with
+  wrong spellings lowd / cou / rownd / nou / showt, read with made-up voud, spell out, loud, cow). `aiTip` / `teamSays` now say "ow" for cow, now, how, wow.
+  Look-cover-write dropped (3/3 in S19) to keep it near 25 min (S19 took 34). Tested end to end at 412×915 in headless Chrome (playwright): no script errors,
+  no sideways scroll, story fits without scrolling, result JSON checked.
