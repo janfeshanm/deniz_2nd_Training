@@ -257,3 +257,8 @@ Schedule: daily sessions.
   (sat, sang, ran, had, jumped, looked, played, kicked; `ed: true`). Read back and fix now asks her to point to each word and find ONE word to fix.
   No phonics teaching block and no hearing step (shorter). Summary keys: `past`, `past_read`. Tested end to end at 412×915 in headless Chrome: no errors,
   no sideways scroll.
+- Session 21 result (21 Nov, evening, 31 min): story 'The lost ball' read 1 cold 91% (audio agrees), 17 wcpm; read 2 99%, 49 wcpm (best gain).
+  5 of 6 story errors were ou / ow (out -> 'up', round, found, brown, down): ou does not hold in text even the day after re-teaching (cloud missed cold
+  3 times). Past tense fixed: sat, sang, kicked, looked, jumped right in the story; yesterday words 8/8 in sentences and 8/8 alone. ar / or cold 3/3.
+  Spelling: round -> 'roud', brown -> 'broun'. Read back with "find one word": changed 'prazate' -> 'prezet'. Status: ph11 learning -> secure.
+  Session 22 is the last training before Re-check 4 (S23). progress.json next_session stays 21 until Session 22 is built.

@@ -35,7 +35,8 @@
     17,
     18,
     19,
-    20
+    20,
+    21
   ],
   "history": [
     {
@@ -197,6 +198,14 @@
       "duration_min": 27,
       "feeling": "great",
       "summary": "Fresh, felt great, no pauses (27 min). Story 'The storm' (71 words) read 1 cold 93% on marks (went -> 'were', want, barn, loud, sat -> 'said'), audio about 90-93%, 19 wcpm; read 2 97%, 32 wcpm. Questions 3/3. Cold: ar / or 4/4 + zarp, queen (36 s) and green read, cloud not; hut/hat etc. 4/4 by ear; park, boat, seat right first try, corn -> 'cuen'. want or went? 7/8 (when -> went); quick words 6/6 (want 21 s). ou / ow after re-teach 14/14. Writing 2 sentences, 9 words, 4 min ('footboll', 'Then it rains'); no change after read back. No status changes."
+    },
+    {
+      "session": 21,
+      "title": "Training 14 – yesterday words, ou cold, read back and fix",
+      "date": "2026-11-21",
+      "duration_min": 31,
+      "feeling": "great",
+      "summary": "Evening session (about 21:37), fresh, felt great, no pauses (31 min, planned 20-25). Story 'The lost ball' (69 words) read 1 cold 91% (out -> 'up', round, found, brown, bush, down: 5 of 6 errors ou / ow), audio agrees, 17 wcpm; read 2 99%, 49 wcpm (+32). Questions 3/3. Past tense: all past words in the story right, yesterday words 8/8 in sentences, read 8/8 alone. Cold: sound, proud, zoud, barn, start, corn, saw read; cloud not (3rd time). Spelling shout, corn right; round -> 'roud', brown -> 'broun'. Quick words 5/6 (when not; want 4 s). Writing 2 sentences, 10 words ('birthbay', 'prazate' -> 'prezet' after read back). Status change: ph11 learning -> secure."
     }
   ],
   "skills": {
@@ -306,6 +315,12 @@
           "correct": 1,
           "total": 1,
           "note": "cut read"
+        },
+        {
+          "session": 21,
+          "correct": 4,
+          "total": 4,
+          "note": "Read sat, sang, ran, had right (S20 story sat -> 'sit'/'said', sang -> 'sing')"
         }
       ]
     },
@@ -689,6 +704,12 @@
           "correct": 4,
           "total": 4,
           "note": "COLD (taught S19): shark, horn, star, sport read. In the story dark, storm, short, farm read; start shaky ('straight'), barn not read"
+        },
+        {
+          "session": 21,
+          "correct": 3,
+          "total": 3,
+          "note": "COLD: barn, start (missed / shaky in the S20 story), corn read; park read in the story"
         }
       ]
     },
@@ -744,6 +765,12 @@
           "correct": 11,
           "total": 11,
           "note": "After the ou / ow re-teach: tap the spelling 5/5 (loud, cow, round, now, shout), read loud, mouth, found, round, cow, now 6/6"
+        },
+        {
+          "session": 21,
+          "correct": 2,
+          "total": 3,
+          "note": "COLD (taught S20): sound, proud read; cloud not (3rd time: S20, S21 cold). In the story out, round, found, brown, down all misread or not read: ou / ow not holding in text"
         }
       ]
     },
@@ -849,7 +876,7 @@
     "ph11": {
       "area": "phonics",
       "name": "Base words with endings",
-      "status": "learning",
+      "status": "secure",
       "evidence": [
         {
           "session": 1,
@@ -898,6 +925,12 @@
           "correct": 1,
           "total": 1,
           "note": "Cold: painted read (-ted)"
+        },
+        {
+          "session": 21,
+          "correct": 4,
+          "total": 4,
+          "note": "Read jumped, looked, played, kicked right, about 2.3 s each; kicked, looked, jumped right in the story too"
         }
       ]
     },
@@ -965,6 +998,12 @@
           "correct": 2,
           "total": 2,
           "note": "Made-up zarp (cold, ar) and voud (after re-teach, ou) read"
+        },
+        {
+          "session": 21,
+          "correct": 1,
+          "total": 1,
+          "note": "Made-up zoud read cold (not read in S19)"
         }
       ]
     },
@@ -1116,6 +1155,18 @@
           "correct": 6,
           "total": 6,
           "note": "Quick words all read: want (21 s, slow), went 8 s, when 7 s, what, were, there under 4 s. Story: went -> 'were', want misread"
+        },
+        {
+          "session": 21,
+          "correct": 1,
+          "total": 1,
+          "note": "saw read alone at once (3.6 s; heard as 'so' in S19 / S20 audio). Story: saw -> 'was', re-read"
+        },
+        {
+          "session": 21,
+          "correct": 5,
+          "total": 6,
+          "note": "Quick words: want (4 s; S20 21 s), went, saw, was, said read at once; when not (S20 pick when -> went)"
         }
       ]
     },
@@ -1249,6 +1300,12 @@
           "correct": 66,
           "total": 71,
           "note": "Training 13 'The storm' (71 words, level B), read 1 cold: 93% on parent marks (went, want, barn, loud, sat; 2 self-corrections). S19 94%. AUDIO: all 5 marks confirmed; went -> 'were', sat -> 'said'; also start -> 'straight' and saw -> 'so' (unclear) = about 90-93%. Read 2: 97% (sat -> 'sit', sang -> 'sing')"
+        },
+        {
+          "session": 21,
+          "correct": 63,
+          "total": 69,
+          "note": "Training 14 'The lost ball' (69 words, level B), read 1 cold: 91% on parent marks (out -> 'up', round, found, brown, bush, down; 2 self-corrections). AUDIO: all 6 marks confirmed; 5 of 6 are ou / ow words; saw -> 'was' re-read; 'Oh no said' unclear = about 90-91%. Past-tense words all right. Read 2: 99% (went left out)"
         }
       ]
     },
@@ -1358,6 +1415,12 @@
           "correct": null,
           "total": null,
           "note": "Read 1 19 wcpm on 71 words (S19 19, S18 20). Read 2 after model read 32 wcpm (+13; S19 +27). Reads in phrases, pauses at full stops; stalls of 9-14 s on dark, start, loud, sang, short"
+        },
+        {
+          "session": 21,
+          "correct": null,
+          "total": null,
+          "note": "Read 1 17 wcpm on 69 words (S20 19, S19 19). Read 2 after model read 49 wcpm (+32, best gain so far), in phrases. Stalls of 16-18 s at found and 'big brown bush'"
         }
       ]
     },
@@ -1664,6 +1727,12 @@
           "correct": 2,
           "total": 2,
           "note": "Two literal questions on 'The storm' (farm, barn), right"
+        },
+        {
+          "session": 21,
+          "correct": 2,
+          "total": 2,
+          "note": "Two literal questions on 'The lost ball' (park, bush), right"
         }
       ]
     },
@@ -1769,6 +1838,12 @@
           "correct": 1,
           "total": 1,
           "note": "Why Ava wanted to go home (the storm scared her), right"
+        },
+        {
+          "session": 21,
+          "correct": 1,
+          "total": 1,
+          "note": "Why Zoe jumped up and down (happy), right"
         }
       ]
     },
@@ -2209,6 +2284,12 @@
           "correct": null,
           "total": null,
           "note": "Writing 'Then it rains' (present after 'Yesterday'); story read 2 sat -> 'sit', sang -> 'sing'. Past tense not yet automatic"
+        },
+        {
+          "session": 21,
+          "correct": 8,
+          "total": 8,
+          "note": "Yesterday words in a sentence (phone says 'beep' for the gap): sat, sang, went, saw, ran, played, jumped, had all right. Writing: 'had' used right after 'Yesterday'; second sentence has no verb ('Then a prezet.')"
         }
       ]
     },
@@ -2363,6 +2444,12 @@
           "correct": null,
           "total": null,
           "note": "Read back and fix: no change (missed 'footboll' and 'rains'); 18 s"
+        },
+        {
+          "session": 21,
+          "correct": null,
+          "total": null,
+          "note": "Read back and fix (asked to find one word): she changed 'prazate' -> 'prezet' (closer, still wrong), 2.5 min, 5 deletes; 'birthbay' not found"
         }
       ]
     },
@@ -2750,6 +2837,12 @@
           "correct": 8,
           "total": 8,
           "note": "After ou / ow re-teach: tap spelling 5/5, dictated out, loud, cow 3/3"
+        },
+        {
+          "session": 21,
+          "correct": 2,
+          "total": 4,
+          "note": "Cold spelling: shout, corn right (corn 'cuen' in S20); round -> 'roud', brown -> 'broun' (ou / ow mixed; both right on retry)"
         }
       ]
     },
