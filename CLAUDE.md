@@ -261,4 +261,10 @@ Schedule: daily sessions.
   5 of 6 story errors were ou / ow (out -> 'up', round, found, brown, down): ou does not hold in text even the day after re-teaching (cloud missed cold
   3 times). Past tense fixed: sat, sang, kicked, looked, jumped right in the story; yesterday words 8/8 in sentences and 8/8 alone. ar / or cold 3/3.
   Spelling: round -> 'roud', brown -> 'broun'. Read back with "find one word": changed 'prazate' -> 'prezet'. Status: ph11 learning -> secure.
-  Session 22 is the last training before Re-check 4 (S23). progress.json next_session stays 21 until Session 22 is built.
+  Session 22 is the last training before Re-check 4 (S23). progress.json next_session now points to 22.
+- Session 22 (training, last before Re-check 4) is built from the Session 21 page (ids `s22-`). Story first, "The brown cow" (71 words, full of ou / ow:
+  out, brown, cow, loud, found, round, ground, shout, mouse, down), read twice. Cold check cloud, ground, clown, now, torch, march, when. ou or ow? with a new
+  rule card (ow before n: down, brown, town; `aiTip` / `teamSays` now cover -own), tap the spelling (6, wrong spellings broun / rownd / doun / clowd / toun /
+  fownd), ou / ow **phrases** (`phrase: true`, fl5), spell round, brown, cloud, down; when or went? (6 sentence items, `feedback: "wword"`); quick words.
+  Read-back checklist asks for a doing word in each sentence. Summary keys: `hear`, `phrases` (`not_smooth`), `spell`, `wpick`. Tested end to end at 412×915
+  in headless Chrome: no errors, no sideways scroll, story fits without scrolling.
