@@ -248,4 +248,12 @@ Schedule: daily sessions.
   (shark, horn, star, sport, zarp 5/5; dark, storm, short in the story; barn missed, start shaky). hut / hat by ear 4/4; boat, seat right first try.
   want or went? 7/8 (when -> went), want read but slow (21 s). ou / ow 14/14 after re-teach, but cloud (cold) and loud (story) not read before it.
   New pattern: past-tense words read or written in another form (sat -> 'said' / 'sit', sang -> 'sing', went -> 'were', "Then it rains").
-  Read back and fix: no change ('footboll' kept). No status changes. next_session stays 20 until Session 21 is built.
+  Read back and fix: no change ('footboll' kept). No status changes. next_session now points to 21.
+- Session 21 (training) is built from the Session 20 page (ids `s21-`). Story first, "The lost ball" (69 words), read twice, full of past-tense
+  words (went, had, kicked, looked, found, jumped, sat, saw, sang) and ou / ow (out, round, found, brown). Cold check: cloud, sound, proud, made-up zoud,
+  barn, start, corn, saw; cold spelling shout, round, brown, corn. NEW **yesterday words** (past tense, logged under wr15): a rule screen (sit → sat,
+  jump → jumped, go → went), a `pick` step with `sent: true` where the phone says the sentence with "beep" for the gap (items carry `say` with beep and
+  `full` with the word; the wword feedback speaks `full`, tips in `WTIP` as "Today I sit. Yesterday I sat."), then reading the past forms alone
+  (sat, sang, ran, had, jumped, looked, played, kicked; `ed: true`). Read back and fix now asks her to point to each word and find ONE word to fix.
+  No phonics teaching block and no hearing step (shorter). Summary keys: `past`, `past_read`. Tested end to end at 412×915 in headless Chrome: no errors,
+  no sideways scroll.
