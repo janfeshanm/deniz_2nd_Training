@@ -244,3 +244,8 @@ Schedule: daily sessions.
   wrong spellings lowd / cou / rownd / nou / showt, read with made-up voud, spell out, loud, cow). `aiTip` / `teamSays` now say "ow" for cow, now, how, wow.
   Look-cover-write dropped (3/3 in S19) to keep it near 25 min (S19 took 34). Tested end to end at 412×915 in headless Chrome (playwright): no script errors,
   no sideways scroll, story fits without scrolling, result JSON checked.
+- Session 20 result (21 Nov, 27 min): story 'The storm' read 1 cold 93% on marks (audio 90-93%), 19 wcpm; read 2 97%, 32 wcpm. ar / or held cold
+  (shark, horn, star, sport, zarp 5/5; dark, storm, short in the story; barn missed, start shaky). hut / hat by ear 4/4; boat, seat right first try.
+  want or went? 7/8 (when -> went), want read but slow (21 s). ou / ow 14/14 after re-teach, but cloud (cold) and loud (story) not read before it.
+  New pattern: past-tense words read or written in another form (sat -> 'said' / 'sit', sang -> 'sing', went -> 'were', "Then it rains").
+  Read back and fix: no change ('footboll' kept). No status changes. next_session stays 20 until Session 21 is built.

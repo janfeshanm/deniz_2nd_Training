@@ -34,7 +34,8 @@
     16,
     17,
     18,
-    19
+    19,
+    20
   ],
   "history": [
     {
@@ -188,6 +189,14 @@
       "duration_min": 34,
       "feeling": "great",
       "summary": "Fresh, felt great, no pauses (34 min, planned 25). Story 'The red hat' (70 words) read 1 cold 94% on marks (want -> 'went', pond -> 'puddle', that, was), audio about 90-94%, 19 wcpm; read 2 after model 99%, 46 wcpm. Questions 3/3. ar / or after re-teach: hear 4/5, read 8/8 incl. jarn, torb, spell 3/3. w-words in a sentence 4/6 (went and what -> 'want'); quick words 5/6 (want not). Cold: queen, sound, zoud not read; hut -> hat; boat -> 'bout', seat -> 'sit' again, stuck right. Writing 2 sentences, 12 words, 7 min; read back and changed 'icecrim' -> 'icecreim'. Status change: ph6 not_yet -> learning."
+    },
+    {
+      "session": 20,
+      "title": "Training 13 – want or went, ou / ow, ar / or cold",
+      "date": "2026-11-21",
+      "duration_min": 27,
+      "feeling": "great",
+      "summary": "Fresh, felt great, no pauses (27 min). Story 'The storm' (71 words) read 1 cold 93% on marks (went -> 'were', want, barn, loud, sat -> 'said'), audio about 90-93%, 19 wcpm; read 2 97%, 32 wcpm. Questions 3/3. Cold: ar / or 4/4 + zarp, queen (36 s) and green read, cloud not; hut/hat etc. 4/4 by ear; park, boat, seat right first try, corn -> 'cuen'. want or went? 7/8 (when -> went); quick words 6/6 (want 21 s). ou / ow after re-teach 14/14. Writing 2 sentences, 9 words, 4 min ('footboll', 'Then it rains'); no change after read back. No status changes."
     }
   ],
   "skills": {
@@ -285,6 +294,18 @@
           "correct": 1,
           "total": 1,
           "note": "cat read in the ar / or list"
+        },
+        {
+          "session": 20,
+          "correct": 4,
+          "total": 4,
+          "note": "Cold by ear: hut, mud, cut, fun all right (hut -> hat in S18 and S19)"
+        },
+        {
+          "session": 20,
+          "correct": 1,
+          "total": 1,
+          "note": "cut read"
         }
       ]
     },
@@ -571,6 +592,12 @@
           "correct": 1,
           "total": 2,
           "note": "Cold: sheep read; queen not read again (S18 too)"
+        },
+        {
+          "session": 20,
+          "correct": 2,
+          "total": 2,
+          "note": "Cold: queen read (36 s; missed S18 and S19), green read"
         }
       ]
     },
@@ -656,6 +683,12 @@
           "correct": 5,
           "total": 5,
           "note": "After re-teach, read start, storm, sharp, short, fork (start, storm missed in S18). Same-day after teaching; check cold next session"
+        },
+        {
+          "session": 20,
+          "correct": 4,
+          "total": 4,
+          "note": "COLD (taught S19): shark, horn, star, sport read. In the story dark, storm, short, farm read; start shaky ('straight'), barn not read"
         }
       ]
     },
@@ -699,6 +732,18 @@
           "correct": 1,
           "total": 2,
           "note": "Cold: shout read; sound not read (S18 read it slowly). ou not holding"
+        },
+        {
+          "session": 20,
+          "correct": 0,
+          "total": 1,
+          "note": "Cold: cloud not read (22 s). In the story loud not read"
+        },
+        {
+          "session": 20,
+          "correct": 11,
+          "total": 11,
+          "note": "After the ou / ow re-teach: tap the spelling 5/5 (loud, cow, round, now, shout), read loud, mouth, found, round, cow, now 6/6"
         }
       ]
     },
@@ -914,6 +959,12 @@
           "correct": 2,
           "total": 2,
           "note": "Made-up jarn, torb read after the ar / or re-teach (missed in S14 and S18)"
+        },
+        {
+          "session": 20,
+          "correct": 2,
+          "total": 2,
+          "note": "Made-up zarp (cold, ar) and voud (after re-teach, ou) read"
         }
       ]
     },
@@ -1053,6 +1104,18 @@
           "correct": 5,
           "total": 6,
           "note": "Quick words: went, what, were, saw, there read at once; want not (again, as S18). went 8 s, saw 7 s, there 6 s (S18 there 76 s). Story: want -> 'went'"
+        },
+        {
+          "session": 20,
+          "correct": 7,
+          "total": 8,
+          "note": "want or went? in a sentence: 7/8 (want 2/2, went 2/2, what, were, saw right; when -> 'went'). S19 4/6"
+        },
+        {
+          "session": 20,
+          "correct": 6,
+          "total": 6,
+          "note": "Quick words all read: want (21 s, slow), went 8 s, when 7 s, what, were, there under 4 s. Story: went -> 'were', want misread"
         }
       ]
     },
@@ -1180,6 +1243,12 @@
           "correct": 66,
           "total": 70,
           "note": "Training 12 'The red hat' (70 words, level B, longest so far), read 1 cold: 94% on parent marks (want, pond, that, was; 2 self-corrections). AUDIO: all 4 marks confirmed; pond -> 'puddle' (meaning guess), want -> 'went'; with, when, saw unclear = about 90-94%. Read 2 after model read: 99%"
+        },
+        {
+          "session": 20,
+          "correct": 66,
+          "total": 71,
+          "note": "Training 13 'The storm' (71 words, level B), read 1 cold: 93% on parent marks (went, want, barn, loud, sat; 2 self-corrections). S19 94%. AUDIO: all 5 marks confirmed; went -> 'were', sat -> 'said'; also start -> 'straight' and saw -> 'so' (unclear) = about 90-93%. Read 2: 97% (sat -> 'sit', sang -> 'sing')"
         }
       ]
     },
@@ -1283,6 +1352,12 @@
           "correct": null,
           "total": null,
           "note": "Read 1 19 wcpm on 70 words (S18 20, S8 21): pace still flat cold. Read 2 after the phone's model read 46 wcpm, in phrases (+27). Longest stall 15 s at 'Mia saw that'"
+        },
+        {
+          "session": 20,
+          "correct": null,
+          "total": null,
+          "note": "Read 1 19 wcpm on 71 words (S19 19, S18 20). Read 2 after model read 32 wcpm (+13; S19 +27). Reads in phrases, pauses at full stops; stalls of 9-14 s on dark, start, loud, sang, short"
         }
       ]
     },
@@ -1583,6 +1658,12 @@
           "correct": 2,
           "total": 2,
           "note": "Two literal questions on 'The red hat', right"
+        },
+        {
+          "session": 20,
+          "correct": 2,
+          "total": 2,
+          "note": "Two literal questions on 'The storm' (farm, barn), right"
         }
       ]
     },
@@ -1682,6 +1763,12 @@
           "correct": 1,
           "total": 1,
           "note": "Why Mia said 'What can we do?' (her hat blew away), right"
+        },
+        {
+          "session": 20,
+          "correct": 1,
+          "total": 1,
+          "note": "Why Ava wanted to go home (the storm scared her), right"
         }
       ]
     },
@@ -2116,6 +2203,12 @@
           "correct": null,
           "total": null,
           "note": "Writing: 'was', 'ate' right in past tense ('Yesterday the girl was at the slide. Then she ate an icecreim.'); no w-word slip"
+        },
+        {
+          "session": 20,
+          "correct": null,
+          "total": null,
+          "note": "Writing 'Then it rains' (present after 'Yesterday'); story read 2 sat -> 'sit', sang -> 'sing'. Past tense not yet automatic"
         }
       ]
     },
@@ -2264,6 +2357,12 @@
           "correct": null,
           "total": null,
           "note": "Read back and fix (phone read her text): she changed 'icecrim' to 'icecreim' (27 s, 3 deletes). Re-reads and edits by herself, but the fix was by sound, not to the right spelling (ice cream)"
+        },
+        {
+          "session": 20,
+          "correct": null,
+          "total": null,
+          "note": "Read back and fix: no change (missed 'footboll' and 'rains'); 18 s"
         }
       ]
     },
@@ -2639,6 +2738,18 @@
           "correct": 3,
           "total": 3,
           "note": "Dictated start, storm, farm right"
+        },
+        {
+          "session": 20,
+          "correct": 3,
+          "total": 4,
+          "note": "Cold spelling: park, boat, seat right first try (boat, seat wrong first try in S18 and S19); corn -> 'cuen' (right on retry)"
+        },
+        {
+          "session": 20,
+          "correct": 8,
+          "total": 8,
+          "note": "After ou / ow re-teach: tap spelling 5/5, dictated out, loud, cow 3/3"
         }
       ]
     },
