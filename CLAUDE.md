@@ -232,3 +232,9 @@ Schedule: daily sessions.
   **read back and fix** (`readBack: true`): after Done, the phone reads her text exactly as typed and she can edit it; the item keeps `first_text`,
   `edited_after_reading`, `write_ms`, `fix_ms`, `first_stats`. ar / or re-taught (teach, rule, hear, read with jarn / torb, spell). Cold check of her S18 slips.
   The parent wrap-up reminds about 10 minutes of book reading off the phone each day (the parent agreed to this on 18 Nov).
+- Session 19 result (21 Nov): story 'The red hat' read 1 cold 94% on marks (audio 90-94%), 19 wcpm; read 2 after the model read 99%, 46 wcpm.
+  Cold pace still about 20 wcpm since S8, but repeated reading more than doubles it. want/went is the core w-word swap (story, pick step, quick words);
+  pond -> 'puddle' (guessing by meaning). ar / or taught again and all right the same day (jarn, torb read for the first time): ph6 not_yet -> learning,
+  check it cold in S20. Still not holding cold: queen, ou (sound, zoud), hut/hat by ear, boat/seat spelling. Read back and fix: she edits by sound
+  (icecrim -> icecreim). Audio transcribed with whisper.cpp (pywhispercpp) and the model in data/models/. progress.json next_session still points to 19
+  until Session 20 is built.

@@ -2,7 +2,7 @@
   "schema": "deniz-progress/1",
   "child": "Deniz",
   "year": 2,
-  "updated": "2026-11-18",
+  "updated": "2026-11-21",
   "status_scale": [
     "not_checked",
     "not_yet",
@@ -33,7 +33,8 @@
     15,
     16,
     17,
-    18
+    18,
+    19
   ],
   "history": [
     {
@@ -179,6 +180,14 @@
       "duration_min": 30,
       "feeling": "great",
       "summary": "Fresh, felt great, no pauses. Story true cold read 91% on marks (audio about 87%), 20 wcpm (S13 91%/13, S8 95%/21); questions 3/3. New words 13/16 (queen, start, storm not); made-up zight, glew read, jarn, torb not: ar/or not secure. Tricky words 17/18, same 12: 11/12 (S8 7, S13 10); want not read, many slow. Spelling same 10: 9/10 (S8 4, S13 9; because right, boat -> 'bout'); seat -> 'sit', stuck -> 'stuk', kite and jumped right. By ear hut -> hat. Writing with no frame: two sentences, 'sew' for saw, 'sae' for sea. Status changes: fl2 and sp3 secure -> learning, ph6 learning -> not_yet."
+    },
+    {
+      "session": 19,
+      "title": "Training 12 – ar / or, look-alike w-words, read back and fix",
+      "date": "2026-11-21",
+      "duration_min": 34,
+      "feeling": "great",
+      "summary": "Fresh, felt great, no pauses (34 min, planned 25). Story 'The red hat' (70 words) read 1 cold 94% on marks (want -> 'went', pond -> 'puddle', that, was), audio about 90-94%, 19 wcpm; read 2 after model 99%, 46 wcpm. Questions 3/3. ar / or after re-teach: hear 4/5, read 8/8 incl. jarn, torb, spell 3/3. w-words in a sentence 4/6 (went and what -> 'want'); quick words 5/6 (want not). Cold: queen, sound, zoud not read; hut -> hat; boat -> 'bout', seat -> 'sit' again, stuck right. Writing 2 sentences, 12 words, 7 min; read back and changed 'icecrim' -> 'icecreim'. Status change: ph6 not_yet -> learning."
     }
   ],
   "skills": {
@@ -264,6 +273,18 @@
           "correct": 3,
           "total": 4,
           "note": "Re-check 3 by ear: bug, cap, mud right; hut heard as hat (S17 4/4)"
+        },
+        {
+          "session": 19,
+          "correct": 3,
+          "total": 4,
+          "note": "Cold by ear: hut heard as hat again (S18 too); cup, run, bun right"
+        },
+        {
+          "session": 19,
+          "correct": 1,
+          "total": 1,
+          "note": "cat read in the ar / or list"
         }
       ]
     },
@@ -544,13 +565,19 @@
           "correct": 6,
           "total": 7,
           "note": "Re-check 3: spray, dream, float, chew read; queen not read (12 s). By ear seat/sit, ship/sheep right"
+        },
+        {
+          "session": 19,
+          "correct": 1,
+          "total": 2,
+          "note": "Cold: sheep read; queen not read again (S18 too)"
         }
       ]
     },
     "ph6": {
       "area": "phonics",
       "name": "R-controlled vowels",
-      "status": "not_yet",
+      "status": "learning",
       "evidence": [
         {
           "session": 1,
@@ -617,6 +644,18 @@
           "correct": 1,
           "total": 5,
           "note": "Re-check 3: wall read; start, storm not read; made-up jarn, torb not read again (as S14). ar and or are not secure (0/4 today); all is fine. Status moved to not_yet"
+        },
+        {
+          "session": 19,
+          "correct": 4,
+          "total": 5,
+          "note": "After re-teach, by ear: farm, born, part, short right; card -> 'cord'"
+        },
+        {
+          "session": 19,
+          "correct": 5,
+          "total": 5,
+          "note": "After re-teach, read start, storm, sharp, short, fork (start, storm missed in S18). Same-day after teaching; check cold next session"
         }
       ]
     },
@@ -654,6 +693,12 @@
           "correct": 1,
           "total": 1,
           "note": "Re-check 3: sound read (20 s, slow)"
+        },
+        {
+          "session": 19,
+          "correct": 1,
+          "total": 2,
+          "note": "Cold: shout read; sound not read (S18 read it slowly). ou not holding"
         }
       ]
     },
@@ -802,6 +847,12 @@
           "correct": 1,
           "total": 1,
           "note": "Re-check 3: wanted read in the list (22 s; S16 not read)"
+        },
+        {
+          "session": 19,
+          "correct": 1,
+          "total": 1,
+          "note": "Cold: painted read (-ted)"
         }
       ]
     },
@@ -851,6 +902,18 @@
           "correct": 2,
           "total": 4,
           "note": "Re-check 3: the four made-up words missed in S14: zight, glew read; jarn, torb not (ar/or). S14 0/4"
+        },
+        {
+          "session": 19,
+          "correct": 0,
+          "total": 1,
+          "note": "Cold: made-up zoud not read (ou)"
+        },
+        {
+          "session": 19,
+          "correct": 2,
+          "total": 2,
+          "note": "Made-up jarn, torb read after the ar / or re-teach (missed in S14 and S18)"
         }
       ]
     },
@@ -978,6 +1041,18 @@
           "correct": 17,
           "total": 18,
           "note": "Re-check 3 tricky words alone: 17/18, first 12 = 11/12 (S13 10/12, S8 7/12). want not read (47 s). Slow: there 76 s, what 25 s, again 22 s, with 18 s, when 16 s, here 10 s. Accurate but not yet instant. AUDIO: went read as 'were' in the story"
+        },
+        {
+          "session": 19,
+          "correct": 4,
+          "total": 6,
+          "note": "Look-alike w-words in a sentence: went -> 'want', what -> 'want'; want, were, saw, was right. want is the word she reaches for"
+        },
+        {
+          "session": 19,
+          "correct": 5,
+          "total": 6,
+          "note": "Quick words: went, what, were, saw, there read at once; want not (again, as S18). went 8 s, saw 7 s, there 6 s (S18 there 76 s). Story: want -> 'went'"
         }
       ]
     },
@@ -1099,6 +1174,12 @@
           "correct": 51,
           "total": 56,
           "note": "Re-check 3: 'The little boat' (56 words, level B), true cold read, 1 take: 91% on parent marks (her, went, waves, ran, got; 2 self-corrections). S13 91%, S8 95%. AUDIO: all 5 marks confirmed; also 'the' left out, little -> 'letter', out -> 'over' (not marked) = about 7 errors, 87-88%. Second time the audio is below 90% (S16 80-85%), so status moved to learning"
+        },
+        {
+          "session": 19,
+          "correct": 66,
+          "total": 70,
+          "note": "Training 12 'The red hat' (70 words, level B, longest so far), read 1 cold: 94% on parent marks (want, pond, that, was; 2 self-corrections). AUDIO: all 4 marks confirmed; pond -> 'puddle' (meaning guess), want -> 'went'; with, when, saw unclear = about 90-94%. Read 2 after model read: 99%"
         }
       ]
     },
@@ -1196,6 +1277,12 @@
           "correct": null,
           "total": null,
           "note": "Re-check 3 cold read 20 wcpm (S13 13, S8 21, S2 13). Smoother than S13 (fewer long gaps) but pace flat since S8. Longest stall 15 s before 'waves'"
+        },
+        {
+          "session": 19,
+          "correct": null,
+          "total": null,
+          "note": "Read 1 19 wcpm on 70 words (S18 20, S8 21): pace still flat cold. Read 2 after the phone's model read 46 wcpm, in phrases (+27). Longest stall 15 s at 'Mia saw that'"
         }
       ]
     },
@@ -1490,6 +1577,12 @@
           "correct": 2,
           "total": 2,
           "note": "Re-check 3: two literal questions on the story she read herself, both right"
+        },
+        {
+          "session": 19,
+          "correct": 2,
+          "total": 2,
+          "note": "Two literal questions on 'The red hat', right"
         }
       ]
     },
@@ -1583,6 +1676,12 @@
           "correct": 1,
           "total": 1,
           "note": "Re-check 3: why Dad ran into the sea (to get the boat back), right"
+        },
+        {
+          "session": 19,
+          "correct": 1,
+          "total": 1,
+          "note": "Why Mia said 'What can we do?' (her hat blew away), right"
         }
       ]
     },
@@ -2011,6 +2110,12 @@
           "correct": null,
           "total": null,
           "note": "Re-check 3 writing: 'sew' for saw (past tense; S17 'see', S13 'gos')"
+        },
+        {
+          "session": 19,
+          "correct": null,
+          "total": null,
+          "note": "Writing: 'was', 'ate' right in past tense ('Yesterday the girl was at the slide. Then she ate an icecreim.'); no w-word slip"
         }
       ]
     },
@@ -2153,6 +2258,12 @@
           "correct": null,
           "total": null,
           "note": "Read her story back and fixed one word (chs → school)."
+        },
+        {
+          "session": 19,
+          "correct": null,
+          "total": null,
+          "note": "Read back and fix (phone read her text): she changed 'icecrim' to 'icecreim' (27 s, 3 deletes). Re-reads and edits by herself, but the fix was by sound, not to the right spelling (ice cream)"
         }
       ]
     },
@@ -2311,6 +2422,12 @@
           "correct": 3,
           "total": 3,
           "note": "Re-check 3: said, with, because right (because first time: S13 'boucse', S8 'beuose'); with took 46 s"
+        },
+        {
+          "session": 19,
+          "correct": 3,
+          "total": 3,
+          "note": "Look-cover-write went, want, saw: all right first go"
         }
       ]
     },
@@ -2504,6 +2621,24 @@
           "correct": 7,
           "total": 9,
           "note": "Re-check 3: make, bike, home, rain, play, tree, kite right; boat -> 'bout' (right in S13), seat -> 'sit'. Free writing: sea -> 'sae'. With the S16/S17 slips (kit, bik) vowel choices are not holding in her own writing, so status moved to learning"
+        },
+        {
+          "session": 19,
+          "correct": 1,
+          "total": 3,
+          "note": "Cold spelling: boat -> 'bout' and seat -> 'sit' again (both right on retry); sea right (S18 writing 'sae')"
+        },
+        {
+          "session": 19,
+          "correct": 4,
+          "total": 5,
+          "note": "ar / or by ear, tap the spelling: 4/5 (card -> cord)"
+        },
+        {
+          "session": 19,
+          "correct": 3,
+          "total": 3,
+          "note": "Dictated start, storm, farm right"
         }
       ]
     },
@@ -2535,6 +2670,12 @@
           "correct": 0,
           "total": 1,
           "note": "Re-check 3: stuck -> 'stuk' (ck)"
+        },
+        {
+          "session": 19,
+          "correct": 1,
+          "total": 1,
+          "note": "Cold: stuck right with ck (S18 'stuk')"
         }
       ]
     },
