@@ -272,4 +272,9 @@ Schedule: daily sessions.
   (audio 93-96%), 19 wcpm; read 2 100%, 41 wcpm. ou / ow in text much better (only loud missed; S21 missed most). Cold: cloud read at last; clown not.
   "ow before n" (brown, town) not yet: 'broun', 'toun'. when right alone and in sentences, but when -> 'what' in the story; quick words all read but slow
   (what 35 s). Writing: verbs in both sentences (swam, ate) and she fixed 'sooems' and 'watrmelen' herself after read back. No status changes.
-  Next: Session 23 = Re-check 4. progress.json next_session stays 22 until Session 23 is built.
+  Next: Session 23 = Re-check 4. progress.json next_session now points to 23.
+- Session 23 is **Re-check 4** (kind `recheck`), built from the Session 18 page (same steps, `check` / `single` on, ids `s23-`). Story "Under the tree"
+  (level B, 54 words, read once, no pattern loaded); 17 new words for every pattern taught (`summary.words.by_pattern`; adds ue, ou, ow); the same four
+  made-up words, the same 18 tricky words (`summary.tricky_same12` with s8 / s13 / s18 counts), the same 14 spellings (`before` = her S18 answer,
+  `same10` = the first 10) and the same 6 hearing items as S18; free writing about a new picture (kite, wind, tree), no frame. The wrap-up story table
+  compares with S18 / S13 / S8. The parent is asked to do it on its own day. Tested end to end at 412×915 in headless Chrome: no errors, no sideways scroll.
