@@ -2,7 +2,7 @@
   "schema": "deniz-progress/1",
   "child": "Deniz",
   "year": 2,
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "status_scale": [
     "not_checked",
     "not_yet",
@@ -36,7 +36,8 @@
     18,
     19,
     20,
-    21
+    21,
+    22
   ],
   "history": [
     {
@@ -206,6 +207,14 @@
       "duration_min": 31,
       "feeling": "great",
       "summary": "Evening session (about 21:37), fresh, felt great, no pauses (31 min, planned 20-25). Story 'The lost ball' (69 words) read 1 cold 91% (out -> 'up', round, found, brown, bush, down: 5 of 6 errors ou / ow), audio agrees, 17 wcpm; read 2 99%, 49 wcpm (+32). Questions 3/3. Past tense: all past words in the story right, yesterday words 8/8 in sentences, read 8/8 alone. Cold: sound, proud, zoud, barn, start, corn, saw read; cloud not (3rd time). Spelling shout, corn right; round -> 'roud', brown -> 'broun'. Quick words 5/6 (when not; want 4 s). Writing 2 sentences, 10 words ('birthbay', 'prazate' -> 'prezet' after read back). Status change: ph11 learning -> secure."
+    },
+    {
+      "session": 22,
+      "title": "Training 15 – ou / ow in text, ou or ow spelling, when",
+      "date": "2026-11-22",
+      "duration_min": 39,
+      "feeling": "great",
+      "summary": "Afternoon, fresh, felt great, proud and engaged. 39 min active plus one 26-min pause (between read 1 and the model read). Story 'The brown cow' (71 words) read 1 cold 96% (loud, when -> 'what', went), audio 93-96%, 19 wcpm; read 2 100%, 41 wcpm. Almost all ou / ow words right in the story (S21: most missed). Questions 3/3. Cold: cloud read at last, ground, now, torch, march, when; clown not. ou or ow? tap 4/6 and spelling 3/4: 'broun', 'toun' (ow before n not yet). Phrases 5/6 smooth. when or went? 6/6; quick words 6/6 but slow (what 35 s). Writing 'Yesterday a girl swam / Then she ate a watermelon.' – verbs in both, fixed 'sooems' and 'watrmelen' herself after read back. No status changes."
     }
   ],
   "skills": {
@@ -710,6 +719,12 @@
           "correct": 3,
           "total": 3,
           "note": "COLD: barn, start (missed / shaky in the S20 story), corn read; park read in the story"
+        },
+        {
+          "session": 22,
+          "correct": 2,
+          "total": 2,
+          "note": "COLD: torch, march read (ar / or held cold in S20, S21, S22)"
         }
       ]
     },
@@ -771,6 +786,24 @@
           "correct": 2,
           "total": 3,
           "note": "COLD (taught S20): sound, proud read; cloud not (3rd time: S20, S21 cold). In the story out, round, found, brown, down all misread or not read: ou / ow not holding in text"
+        },
+        {
+          "session": 22,
+          "correct": 3,
+          "total": 4,
+          "note": "COLD: cloud read at last (11 s; missed S19-S21), ground, now read; clown not (ow before n). In the story (cold) out, brown, cow, found, round, ground, shout, mouse, down right; only loud missed (S21: 5 of 6 errors ou / ow)"
+        },
+        {
+          "session": 22,
+          "correct": 4,
+          "total": 6,
+          "note": "After the ou / ow rule with the new 'ow before n' card: tap spelling 4/6 (brown -> 'broun', town -> 'toun'; round, down, cloud, found right)"
+        },
+        {
+          "session": 22,
+          "correct": 5,
+          "total": 6,
+          "note": "ou / ow phrases: 5/6 smooth ('out of the house' not)"
         }
       ]
     },
@@ -1167,6 +1200,24 @@
           "correct": 5,
           "total": 6,
           "note": "Quick words: want (4 s; S20 21 s), went, saw, was, said read at once; when not (S20 pick when -> went)"
+        },
+        {
+          "session": 22,
+          "correct": 1,
+          "total": 1,
+          "note": "Cold: when read alone (5.8 s; not read in S21)"
+        },
+        {
+          "session": 22,
+          "correct": 6,
+          "total": 6,
+          "note": "when or went? in a sentence 6/6 (3 when, went, what, want)"
+        },
+        {
+          "session": 22,
+          "correct": 6,
+          "total": 6,
+          "note": "Quick words all read, but slow: what 35 s, want 18 s, went 10 s, when 6 s; where, there under 5 s. Story: when -> 'what'"
         }
       ]
     },
@@ -1306,6 +1357,12 @@
           "correct": 63,
           "total": 69,
           "note": "Training 14 'The lost ball' (69 words, level B), read 1 cold: 91% on parent marks (out -> 'up', round, found, brown, bush, down; 2 self-corrections). AUDIO: all 6 marks confirmed; 5 of 6 are ou / ow words; saw -> 'was' re-read; 'Oh no said' unclear = about 90-91%. Past-tense words all right. Read 2: 99% (went left out)"
+        },
+        {
+          "session": 22,
+          "correct": 68,
+          "total": 71,
+          "note": "Training 15 'The brown cow' (71 words, level B), read 1 cold: 96% on parent marks (loud, when -> 'what', went; 1 self-correction), best since S8. AUDIO: marks confirmed; 'Ben and' -> 'Then' possible = about 93-96%. Read 2 100%"
         }
       ]
     },
@@ -1421,6 +1478,12 @@
           "correct": null,
           "total": null,
           "note": "Read 1 17 wcpm on 69 words (S20 19, S19 19). Read 2 after model read 49 wcpm (+32, best gain so far), in phrases. Stalls of 16-18 s at found and 'big brown bush'"
+        },
+        {
+          "session": 22,
+          "correct": null,
+          "total": null,
+          "note": "Read 1 19 wcpm on 71 words (flat since S8). Read 2 41 wcpm (+22) even after a 26-min pause before the model read. Stalls 6-12 s (loud, mouse, 'Dad gave a', 'ran ... down')"
         }
       ]
     },
@@ -1519,6 +1582,12 @@
           "correct": null,
           "total": null,
           "note": "Re-check 3: parent ticked 'reads word by word', 'pauses at full stops', 'needed a long time on some words'. Last sentence fluent"
+        },
+        {
+          "session": 22,
+          "correct": 5,
+          "total": 6,
+          "note": "Phrases read smoothly as one chunk 5/6 (a big brown cow, found it on the ground, a loud shout, sat down on the couch, a round cloud); 'out of the house' not"
         }
       ]
     },
@@ -1733,6 +1802,12 @@
           "correct": 2,
           "total": 2,
           "note": "Two literal questions on 'The lost ball' (park, bush), right"
+        },
+        {
+          "session": 22,
+          "correct": 2,
+          "total": 2,
+          "note": "Two literal questions on 'The brown cow', right"
         }
       ]
     },
@@ -1844,6 +1919,12 @@
           "correct": 1,
           "total": 1,
           "note": "Why Zoe jumped up and down (happy), right"
+        },
+        {
+          "session": 22,
+          "correct": 1,
+          "total": 1,
+          "note": "Why Dad shouted 'No' (cows don't wear hats), right"
         }
       ]
     },
@@ -2290,6 +2371,12 @@
           "correct": 8,
           "total": 8,
           "note": "Yesterday words in a sentence (phone says 'beep' for the gap): sat, sang, went, saw, ran, played, jumped, had all right. Writing: 'had' used right after 'Yesterday'; second sentence has no verb ('Then a prezet.')"
+        },
+        {
+          "session": 22,
+          "correct": null,
+          "total": null,
+          "note": "Writing: a doing word in both sentences, both past ('swam', 'ate') after the prompt asked for one"
         }
       ]
     },
@@ -2450,6 +2537,12 @@
           "correct": null,
           "total": null,
           "note": "Read back and fix (asked to find one word): she changed 'prazate' -> 'prezet' (closer, still wrong), 2.5 min, 5 deletes; 'birthbay' not found"
+        },
+        {
+          "session": 22,
+          "correct": null,
+          "total": null,
+          "note": "Read back and fix: changed 'sooems' -> 'swam' and 'watrmelen' -> 'watermelon' (both now right), 2 min; first full stop still missing"
         }
       ]
     },
@@ -2843,6 +2936,18 @@
           "correct": 2,
           "total": 4,
           "note": "Cold spelling: shout, corn right (corn 'cuen' in S20); round -> 'roud', brown -> 'broun' (ou / ow mixed; both right on retry)"
+        },
+        {
+          "session": 22,
+          "correct": 4,
+          "total": 6,
+          "note": "ou or ow? tap spelling 4/6: chose 'broun', 'toun' (ow before n not yet)"
+        },
+        {
+          "session": 22,
+          "correct": 3,
+          "total": 4,
+          "note": "Dictated round, cloud, down right; brown -> 'broun' again (right on retry)"
         }
       ]
     },

@@ -268,3 +268,8 @@ Schedule: daily sessions.
   fownd), ou / ow **phrases** (`phrase: true`, fl5), spell round, brown, cloud, down; when or went? (6 sentence items, `feedback: "wword"`); quick words.
   Read-back checklist asks for a doing word in each sentence. Summary keys: `hear`, `phrases` (`not_smooth`), `spell`, `wpick`. Tested end to end at 412×915
   in headless Chrome: no errors, no sideways scroll, story fits without scrolling.
+- Session 22 result (22 Nov, 39 min active + a 26-min pause between read 1 and the model read): story 'The brown cow' read 1 cold 96% on marks
+  (audio 93-96%), 19 wcpm; read 2 100%, 41 wcpm. ou / ow in text much better (only loud missed; S21 missed most). Cold: cloud read at last; clown not.
+  "ow before n" (brown, town) not yet: 'broun', 'toun'. when right alone and in sentences, but when -> 'what' in the story; quick words all read but slow
+  (what 35 s). Writing: verbs in both sentences (swam, ate) and she fixed 'sooems' and 'watrmelen' herself after read back. No status changes.
+  Next: Session 23 = Re-check 4. progress.json next_session stays 22 until Session 23 is built.
