@@ -278,3 +278,13 @@ Schedule: daily sessions.
   made-up words, the same 18 tricky words (`summary.tricky_same12` with s8 / s13 / s18 counts), the same 14 spellings (`before` = her S18 answer,
   `same10` = the first 10) and the same 6 hearing items as S18; free writing about a new picture (kite, wind, tree), no frame. The wrap-up story table
   compares with S18 / S13 / S8. The parent is asked to do it on its own day. Tested end to end at 412×915 in headless Chrome: no errors, no sideways scroll.
+- Session 23 result (Re-check 4, 24 Nov, morning, own day, 23 min): cold story 'Under the tree' 98% (under), 22 wcpm (S18 91% / 20, S13 91% / 13,
+  S8 95% / 21; audio 94-98%): best accuracy of the re-checks but pace still about 20 wcpm, word by word. Questions 3/3. New words 15/17 (bright, count
+  not read). Alien words 4/4 (S18 2/4). Tricky 17/18 (what not read), first 12 11/12. Spelling 12/14: boat -> 'bout' again, seat -> 'saet'.
+  By ear ship -> sheep. Free writing: 2 sentences, capitals and full stops, no help. Status: ph6, ph12, co7, sp2 -> secure.
+- Session 24 (training) is built from the Session 22 page (ids `s24-`). Story "The boat at night" (69 words: igh night, high, bright, lights; ou out,
+  count; what, under, ship, seat, boat, coat) read twice. Cold check bright, count, what, under, clown, boat, seat. igh rule (`RULE`, 3 cards) then igh
+  words read by the parent-scored `s24-igh` step (night, light, right, high, bright, fright, sight, alien vight; summary key `igh`). Hear and tap long ee
+  vs short i (ship/sheep, seat/sit, feel/fill, bin/bean, heat/hit; `aiTip` now gives a short-i tip). Phrases (fl5), spell boat, seat, night, count;
+  what or when? (`wpick`, mostly what); quick words what, come, again, here, with, when. Tested end to end at 412×915 in headless Chrome: no errors,
+  no sideways scroll. progress.json next_session now points to 24.

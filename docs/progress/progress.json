@@ -2,7 +2,7 @@
   "schema": "deniz-progress/1",
   "child": "Deniz",
   "year": 2,
-  "updated": "2026-11-22",
+  "updated": "2026-11-24",
   "status_scale": [
     "not_checked",
     "not_yet",
@@ -10,10 +10,10 @@
     "secure"
   ],
   "next_session": {
-    "number": 23,
-    "kind": "recheck",
-    "title": "Re-check 4 – everything so far",
-    "url": "sessions/session-23.html"
+    "number": 24,
+    "kind": "training",
+    "title": "Training 16 – igh, ou, what, ee or i, oa / ea spelling",
+    "url": "sessions/session-24.html"
   },
   "sessions_completed": [
     1,
@@ -37,7 +37,8 @@
     19,
     20,
     21,
-    22
+    22,
+    23
   ],
   "history": [
     {
@@ -215,6 +216,14 @@
       "duration_min": 39,
       "feeling": "great",
       "summary": "Afternoon, fresh, felt great, proud and engaged. 39 min active plus one 26-min pause (between read 1 and the model read). Story 'The brown cow' (71 words) read 1 cold 96% (loud, when -> 'what', went), audio 93-96%, 19 wcpm; read 2 100%, 41 wcpm. Almost all ou / ow words right in the story (S21: most missed). Questions 3/3. Cold: cloud read at last, ground, now, torch, march, when; clown not. ou or ow? tap 4/6 and spelling 3/4: 'broun', 'toun' (ow before n not yet). Phrases 5/6 smooth. when or went? 6/6; quick words 6/6 but slow (what 35 s). Writing 'Yesterday a girl swam / Then she ate a watermelon.' – verbs in both, fixed 'sooems' and 'watrmelen' herself after read back. No status changes."
+    },
+    {
+      "session": 23,
+      "title": "Re-check 4 – everything so far",
+      "date": "2026-11-24",
+      "duration_min": 23,
+      "feeling": "great",
+      "summary": "Morning, on its own day, fresh, felt great, proud and engaged; 23 min, one 12-s pause. Cold story 'Under the tree' (level B, 54 words, read once) 98% (under), 22 wcpm (S18 91%/20, S13 91%/13, S8 95%/21): best accuracy and pace of the four re-checks, but pace is still about 20 wcpm; audio about 94-98%, word by word, sounds out first. Questions 3/3. New words 15/17 (bright, count not read; all magic e, ay, ee, ea, oa, all, ar, or, ew, ue, ow, -ed right). Alien words 4/4 (S18 2/4). Tricky words 17/18 (what not read), first 12 11/12; slow come, again, here. Spelling 12/14, same 10 9/10: boat -> 'bout' again, seat -> 'saet'; stuck now right. By ear 5/6 (ship -> sheep). Free writing 2 sentences, 11 words, capitals and full stops, no help. Status changes: ph6, ph12, co7, sp2 -> secure."
     }
   ],
   "skills": {
@@ -330,6 +339,12 @@
           "correct": 4,
           "total": 4,
           "note": "Read sat, sang, ran, had right (S20 story sat -> 'sit'/'said', sang -> 'sing')"
+        },
+        {
+          "session": 23,
+          "correct": 4,
+          "total": 4,
+          "note": "Re-check 4 hear and tap: bug, cap, hut, mud right (hut/hat fixed)"
         }
       ]
     },
@@ -392,6 +407,12 @@
           "correct": 2,
           "total": 2,
           "note": "Re-check 3: plug, crisp read"
+        },
+        {
+          "session": 23,
+          "correct": 1,
+          "total": 1,
+          "note": "Re-check 4: crust"
         }
       ]
     },
@@ -483,6 +504,12 @@
           "correct": 3,
           "total": 3,
           "note": "Re-check 3 new words: flame, shine, broke read"
+        },
+        {
+          "session": 23,
+          "correct": 3,
+          "total": 3,
+          "note": "Re-check 4 new words: grape, smile, stone"
         }
       ]
     },
@@ -622,13 +649,25 @@
           "correct": 2,
           "total": 2,
           "note": "Cold: queen read (36 s; missed S18 and S19), green read"
+        },
+        {
+          "session": 23,
+          "correct": 6,
+          "total": 6,
+          "note": "Re-check 4 new words: tray, sweet, peach, toast, grew, glue all read"
+        },
+        {
+          "session": 23,
+          "correct": 1,
+          "total": 2,
+          "note": "Re-check 4 hear and tap: seat right; ship -> 'sheep'"
         }
       ]
     },
     "ph6": {
       "area": "phonics",
       "name": "R-controlled vowels",
-      "status": "learning",
+      "status": "secure",
       "evidence": [
         {
           "session": 1,
@@ -725,6 +764,12 @@
           "correct": 2,
           "total": 2,
           "note": "COLD: torch, march read (ar / or held cold in S20, S21, S22)"
+        },
+        {
+          "session": 23,
+          "correct": 3,
+          "total": 3,
+          "note": "Re-check 4 new words: small, yard, north (ar / or held cold S20-S23)"
         }
       ]
     },
@@ -804,6 +849,12 @@
           "correct": 5,
           "total": 6,
           "note": "ou / ow phrases: 5/6 smooth ('out of the house' not)"
+        },
+        {
+          "session": 23,
+          "correct": 1,
+          "total": 2,
+          "note": "Re-check 4: crown read; count not read"
         }
       ]
     },
@@ -859,6 +910,12 @@
           "correct": 2,
           "total": 2,
           "note": "Re-check 3: fright read (6 s); made-up zight read (4 s) - missed in S14"
+        },
+        {
+          "session": 23,
+          "correct": 0,
+          "total": 1,
+          "note": "Re-check 4: bright not read (alien zight read)"
         }
       ]
     },
@@ -964,13 +1021,19 @@
           "correct": 4,
           "total": 4,
           "note": "Read jumped, looked, played, kicked right, about 2.3 s each; kicked, looked, jumped right in the story too"
+        },
+        {
+          "session": 23,
+          "correct": 1,
+          "total": 1,
+          "note": "Re-check 4: landed"
         }
       ]
     },
     "ph12": {
       "area": "phonics",
       "name": "Reads made-up words",
-      "status": "learning",
+      "status": "secure",
       "evidence": [
         {
           "session": 1,
@@ -1037,6 +1100,12 @@
           "correct": 1,
           "total": 1,
           "note": "Made-up zoud read cold (not read in S19)"
+        },
+        {
+          "session": 23,
+          "correct": 4,
+          "total": 4,
+          "note": "Re-check 4: jarn, torb, zight, glew 4/4 (S14 0/4, S18 2/4)"
         }
       ]
     },
@@ -1218,6 +1287,12 @@
           "correct": 6,
           "total": 6,
           "note": "Quick words all read, but slow: what 35 s, want 18 s, went 10 s, when 6 s; where, there under 5 s. Story: when -> 'what'"
+        },
+        {
+          "session": 23,
+          "correct": 17,
+          "total": 18,
+          "note": "Re-check 4 tricky words straight away 17/18 (what not read); first 12 = 11/12 (S8 7, S13 10, S18 11). Slow: come 40 s, again 39 s, here 26 s, with 14 s"
         }
       ]
     },
@@ -1363,6 +1438,12 @@
           "correct": 68,
           "total": 71,
           "note": "Training 15 'The brown cow' (71 words, level B), read 1 cold: 96% on parent marks (loud, when -> 'what', went; 1 self-correction), best since S8. AUDIO: marks confirmed; 'Ben and' -> 'Then' possible = about 93-96%. Read 2 100%"
+        },
+        {
+          "session": 23,
+          "correct": 53,
+          "total": 54,
+          "note": "Re-check 4 cold read 'Under the tree' (level B, 54 words, read once): 98% (under), 22 wcpm, 1 self-correction. Audio: under not read (13 s gap); sat/there, them unclear -> about 94-98%. S18 91%/20, S13 91%/13, S8 95%/21"
         }
       ]
     },
@@ -1808,13 +1889,19 @@
           "correct": 2,
           "total": 2,
           "note": "Two literal questions on 'The brown cow', right"
+        },
+        {
+          "session": 23,
+          "correct": 2,
+          "total": 2,
+          "note": "Re-check 4: literal questions about the story she read herself"
         }
       ]
     },
     "co7": {
       "area": "comp",
       "name": "Inference",
-      "status": "learning",
+      "status": "secure",
       "evidence": [
         {
           "session": 2,
@@ -1925,6 +2012,12 @@
           "correct": 1,
           "total": 1,
           "note": "Why Dad shouted 'No' (cows don't wear hats), right"
+        },
+        {
+          "session": 23,
+          "correct": 1,
+          "total": 1,
+          "note": "Re-check 4: why did Ella give the dog her hat? right (inference right S19-S23)"
         }
       ]
     },
@@ -2078,6 +2171,12 @@
           "correct": null,
           "total": null,
           "note": "Re-check 3 free writing (no frame): 'The boy had a fishrod .And he sew a fish in the sae.' Two ideas in order (had a rod, saw a fish). S13 one long sentence, S8 one sentence"
+        },
+        {
+          "session": 23,
+          "correct": null,
+          "total": null,
+          "note": "Re-check 4 free writing about a picture, no frame: 'A girl had a kite. / Then it got on a tree.' 2 sentences, 11 words"
         }
       ]
     },
@@ -2181,6 +2280,12 @@
           "correct": 2,
           "total": 2,
           "note": "Re-check 3: two complete sentences without a frame (the counter saw one because of '.And')"
+        },
+        {
+          "session": 23,
+          "correct": null,
+          "total": null,
+          "note": "Re-check 4: both sentences with a capital and a full stop, no help"
         }
       ]
     },
@@ -2254,6 +2359,12 @@
           "correct": 1,
           "total": 1,
           "note": "Joins two ideas with 'and'"
+        },
+        {
+          "session": 23,
+          "correct": null,
+          "total": null,
+          "note": "Re-check 4: Then used to join the events"
         }
       ]
     },
@@ -2604,13 +2715,19 @@
           "correct": 1,
           "total": 1,
           "note": "Re-check 3: stuck -> 'stuk' (85 s, 9 deletes): every sound there (S17 'stike'); the miss is ck (sp4)"
+        },
+        {
+          "session": 23,
+          "correct": 1,
+          "total": 1,
+          "note": "Re-check 4: stuck right (S18 'stuk')"
         }
       ]
     },
     "sp2": {
       "area": "spelling",
       "name": "High-frequency words",
-      "status": "learning",
+      "status": "secure",
       "evidence": [
         {
           "session": 1,
@@ -2707,6 +2824,12 @@
           "correct": 3,
           "total": 3,
           "note": "Look-cover-write went, want, saw: all right first go"
+        },
+        {
+          "session": 23,
+          "correct": 3,
+          "total": 3,
+          "note": "Re-check 4: said, with, because right (also S18, S19)"
         }
       ]
     },
@@ -2948,6 +3071,12 @@
           "correct": 3,
           "total": 4,
           "note": "Dictated round, cloud, down right; brown -> 'broun' again (right on retry)"
+        },
+        {
+          "session": 23,
+          "correct": 7,
+          "total": 9,
+          "note": "Re-check 4 spelling: make, bike, home, rain, play, tree, kite right; boat -> 'bout' (as S18), seat -> 'saet' (S18 'sit')"
         }
       ]
     },
@@ -3066,6 +3195,12 @@
           "correct": 1,
           "total": 1,
           "note": "Re-check 3: jumped right (S14 'juped')"
+        },
+        {
+          "session": 23,
+          "correct": 1,
+          "total": 1,
+          "note": "Re-check 4: jumped right"
         }
       ]
     },
