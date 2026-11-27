@@ -288,3 +288,16 @@ Schedule: daily sessions.
   vs short i (ship/sheep, seat/sit, feel/fill, bin/bean, heat/hit; `aiTip` now gives a short-i tip). Phrases (fl5), spell boat, seat, night, count;
   what or when? (`wpick`, mostly what); quick words what, come, again, here, with, when. Tested end to end at 412×915 in headless Chrome: no errors,
   no sideways scroll. progress.json next_session now points to 24.
+- Session 24 result (27 Nov, morning, 30 min + a 2-min pause): the page reloaded during the first story read and Start over was used (take 1, 130 s,
+  not in readLog), so the scored read 1 was her second look: 'The boat at night' 96% (lots, count, under), 20 wcpm; read 2 99%, 46 wcpm. Cold check 7/7
+  (bright, count, what, under, clown, boat, seat). igh 8/8 after the rule (vight too). By ear heat -> 'hit'. Spelling boat -> 'bout' a 4th time (ou / oa
+  mix-up); seat right. what / when / want / went 6/6; quick words all read, faster. Writing: 2 sentences, past verbs, read back added 'the'. No status
+  changes. No whisper model in the cloud (HuggingFace blocked, model only on the computer): audio got a pause analysis only.
+- Session 25 (training) is built from the Session 24 page (ids `s25-`). Story "The goat on the road" (73 words: oa road, goat; ou out, loud, shout; bright,
+  what, come, again, here, under; girl, her, bird as a before-teaching baseline for er / ir) read twice; `STORY.sents` regex now keeps "said the girl." with
+  its quote. Writing with ➕ Then and ➕ At the end (three sentences). Cold check tight, might, mouth, shout, lots, under, what. **oa or ou?** rule card
+  (`renderRule(done, R)` now takes the rule object: `RULE_OA`, `RULE_ER`), a spelling `pick` (`s25-oaou`, boat/bout, loud/load …; summary `oaou`), spell
+  boat, coat, road, loud. Hear ee or short i with new pairs (heel/hill, feet/fit, peel/pill, seek/sick, heat/hit, leap/lip). NEW **er / ir / ur** (logged under
+  ph6): teach her, bird, turn; rule; read her, fern, girl, bird, first, turn, hurt, alien zirm (summary `er`); `TEAMS`, `aiTip`, `teamSays` cover er / ir / ur.
+  Phrases, quick words come, here, with, when, does, were. what-or-when pick dropped (6/6). Tested end to end at 412×915 in headless Chrome: no errors, no
+  sideways scroll, story fits. progress.json next_session now points to 25.
