@@ -301,3 +301,15 @@ Schedule: daily sessions.
   ph6): teach her, bird, turn; rule; read her, fern, girl, bird, first, turn, hurt, alien zirm (summary `er`); `TEAMS`, `aiTip`, `teamSays` cover er / ir / ur.
   Phrases, quick words come, here, with, when, does, were. what-or-when pick dropped (6/6). Tested end to end at 412×915 in headless Chrome: no errors, no
   sideways scroll, story fits. progress.json next_session now points to 25.
+- Session 25 result (28 Nov, midday, 43 min, page reloaded 3 times during writing): story 'The goat on the road' read 1 cold 97% (loud, goat), **28 wcpm**
+  (first clear rise in cold pace since S8); read 2 99%, 43 wcpm. Writing: three sentences on her own. Cold check 7/7 (tight, might held). oa or ou? 5/6
+  (toad -> toud); spelled boat, coat, road, loud 4/4. er / ir / ur 8/8 after teaching. Long ee vs short i by ear only 2/6 (both directions). Status: ph8, fl5 ->
+  secure. Audio: the whisper model was staged from the computer (`data/models/` there) and transcribed in the cloud with pywhispercpp; S24 audio showed
+  ship read as 'sheep', high -> 'hot', count -> 'crown'.
+- Session 26 (training) is built from the Session 25 page (ids `s26-`). Story "The bird at the farm" (74 words: er / ir / ur her, first, bird, hurt, turn;
+  ee / short i; toad, shout, does) read twice. Writing, three sentences. Cold check shirt, burn, church, alien vurt, loud, mouth, goat, does. **ee or i?**
+  re-taught: `RULE_EE` (smile and hold / quick), hear-and-tap with `twice: true, rate: 0.65` on the pick step (each word said twice, slowly), then
+  `s26-ee-read`: she reads ship, sheep, sit, seat, fill, feel, hit, heat aloud (parent listens for the vowel; summary `ee_read`). er / ir / ur **which spelling?**
+  pick (`s26-erpick`: bird/burd, girl/gerl, turn/tirn, her/hur, first/furst, hurt/hirt). Cold spelling boat, soap, cloud, sheep. Quick words does, come,
+  here, with, were, again. Phrases dropped (fl5 secure). Tested end to end at 412×915 in headless Chrome: no errors, no sideways scroll, story fits.
+  progress.json next_session now points to 26. Re-check 5 = Session 28.

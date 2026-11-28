@@ -2,7 +2,7 @@
   "schema": "deniz-progress/1",
   "child": "Deniz",
   "year": 2,
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "status_scale": [
     "not_checked",
     "not_yet",
@@ -10,10 +10,10 @@
     "secure"
   ],
   "next_session": {
-    "number": 25,
+    "number": 26,
     "kind": "training",
-    "title": "Training 17 – er / ir / ur, oa or ou (boat not bout), ee or i by ear",
-    "url": "sessions/session-25.html"
+    "title": "Training 18 – er / ir / ur again, long ee or short i (hear and say)",
+    "url": "sessions/session-26.html"
   },
   "sessions_completed": [
     1,
@@ -39,7 +39,8 @@
     21,
     22,
     23,
-    24
+    24,
+    25
   ],
   "history": [
     {
@@ -233,6 +234,14 @@
       "duration_min": 30,
       "feeling": "great",
       "summary": "Morning, fresh, felt great; 30 min active plus one 2-min pause (in writing). The page reloaded during the first story read and Start over was used, so the scored read 1 was her second look: 'The boat at night' (69 words) 96% (lots, count, under), 20 wcpm; read 2 99%, 46 wcpm (+26). Questions 3/3. Writing: 2 sentences, past doing words (kicked, broke), capitals and full stops; read back added 'the', 'widall' -> 'wole'. Cold check 7/7 (bright, count, what, under, clown, boat, seat). igh words 8/8 after the rule incl. alien vight. By ear ee / short i 5/6 (heat -> hit; ship fixed). Phrases 6/6. Spelling 3/4: boat -> 'bout' a 4th time (seat right). what / when / want / went 6/6. Quick words 6/6, faster (come 10 s, when 15 s). No status changes."
+    },
+    {
+      "session": 25,
+      "title": "Training 17 – er / ir / ur, oa or ou (boat not bout), ee or i by ear",
+      "date": "2026-11-28",
+      "duration_min": 43,
+      "feeling": "great",
+      "summary": "Midday, fresh, felt great, proud and engaged; 43 min wall clock, no pauses, but the page reloaded 3 times during writing. Story 'The goat on the road' (73 words) read 1 cold 97% (loud, goat), 28 wcpm: the first clear rise in cold pace since S8 (about 20); audio about 93-97%. Read 2 99%, 43 wcpm. Questions 3/3. Writing: three sentences on her own (washed, was, went), capitals and full stops. Cold check 7/7 (tight, might, mouth, shout, lots, under, what). oa or ou? 5/6 (toad -> toud) and spelling boat, coat, road, loud 4/4 (boat right first try). NEW er / ir / ur 8/8 after teaching (girl, her, bird right in the story before). Long ee vs short i by ear only 2/6 (picks the other vowel both ways). Phrases 6/6. Quick words 6/6, does 19 s. Status: ph8 (igh) and fl5 (phrases) -> secure."
     }
   ],
   "skills": {
@@ -360,6 +369,12 @@
           "correct": 5,
           "total": 6,
           "note": "Hear and tap ee vs short i (ship/sheep, seat/sit, feel/fill, bin/bean, heat/hit): heat -> 'hit'"
+        },
+        {
+          "session": 25,
+          "correct": 2,
+          "total": 6,
+          "note": "Hear ee vs short i (new pairs): hill -> heel, lip -> leap (short i heard as long), heat -> hit, seek -> sick. Listening contrast, likely first-language related"
         }
       ]
     },
@@ -688,6 +703,18 @@
           "correct": 5,
           "total": 6,
           "note": "Hear and tap long ee vs short i: ship, seat, feel, bin, sheep right (ship fixed); heat -> 'hit'"
+        },
+        {
+          "session": 25,
+          "correct": 5,
+          "total": 6,
+          "note": "oa or ou? tap the spelling: toad -> 'toud'"
+        },
+        {
+          "session": 25,
+          "correct": 2,
+          "total": 6,
+          "note": "Hear and tap long ee vs short i, new pairs: feet, pill right; heat -> hit, hill -> heel, seek -> sick, lip -> leap (picks the other vowel both ways). AUDIO S24: ship read as 'sheep' in the story"
         }
       ]
     },
@@ -797,6 +824,12 @@
           "correct": 3,
           "total": 3,
           "note": "Re-check 4 new words: small, yard, north (ar / or held cold S20-S23)"
+        },
+        {
+          "session": 25,
+          "correct": 8,
+          "total": 8,
+          "note": "NEW er / ir / ur: after teaching her, bird, turn, read her, fern, girl, bird, first, turn, hurt 7/7 (+ alien zirm). girl, her, bird already read right in the story before teaching"
         }
       ]
     },
@@ -888,13 +921,25 @@
           "correct": 2,
           "total": 2,
           "note": "COLD check: count (misread in the story earlier the same session), clown read (not read in S22); spelled count right"
+        },
+        {
+          "session": 25,
+          "correct": 2,
+          "total": 2,
+          "note": "COLD check: mouth (33 s), shout read; loud misread in the S25 story, out misread on read 2"
+        },
+        {
+          "session": 25,
+          "correct": 5,
+          "total": 6,
+          "note": "oa or ou? tap the right spelling after the rule: boat, loud, coat, road, shout right; toad -> 'toud'"
         }
       ]
     },
     "ph8": {
       "area": "phonics",
       "name": "Trigraphs and quadgraphs",
-      "status": "learning",
+      "status": "secure",
       "evidence": [
         {
           "session": 1,
@@ -961,6 +1006,12 @@
           "correct": 7,
           "total": 7,
           "note": "After the igh rule: night, light, right, high, bright, fright, sight 7/7, first try; spelled night right. Check igh in new words cold in S25"
+        },
+        {
+          "session": 25,
+          "correct": 2,
+          "total": 2,
+          "note": "COLD check: tight, might read (new igh words, the day after the igh rule); bright read in the S25 story"
         }
       ]
     },
@@ -1157,6 +1208,12 @@
           "correct": 1,
           "total": 1,
           "note": "Alien vight read (igh)"
+        },
+        {
+          "session": 25,
+          "correct": 1,
+          "total": 1,
+          "note": "Alien zirm read (ir)"
         }
       ]
     },
@@ -1362,6 +1419,18 @@
           "correct": 6,
           "total": 6,
           "note": "Quick words what, come, again, here, with, when all read; slow: come 10 s, here 8 s, with 8 s, when 15 s (S23 come 40 s, again 39 s, here 26 s)"
+        },
+        {
+          "session": 25,
+          "correct": 1,
+          "total": 1,
+          "note": "COLD check: what read"
+        },
+        {
+          "session": 25,
+          "correct": 6,
+          "total": 6,
+          "note": "Quick words come, here, with, when, does, were all read; slow: does 19 s, come 9 s, here 8 s, with 8 s"
         }
       ]
     },
@@ -1525,6 +1594,18 @@
           "correct": 1,
           "total": 1,
           "note": "COLD check: under read (misread in the story earlier the same session)"
+        },
+        {
+          "session": 25,
+          "correct": 71,
+          "total": 73,
+          "note": "Story 'The goat on the road' (73 words) read 1 cold, take 1: 97% (loud, goat; 1 self-correction), 28 wcpm. Read 2 99% (out), 43 wcpm. AUDIO (whisper): loud -> 'light', goat -> 'ground' (both marked); last sentence 'Here, goat, said the girl' unclear on the audio; did not -> 'didn't'; about 93-97%"
+        },
+        {
+          "session": 25,
+          "correct": 2,
+          "total": 2,
+          "note": "COLD check: lots, under read (misread in the S24 story)"
         }
       ]
     },
@@ -1652,6 +1733,12 @@
           "correct": null,
           "total": null,
           "note": "Read 1 20 wcpm on 69 words, and that was her second look (take 1 before a reload): cold pace still flat at about 20 wcpm since S8. Read 2 46 wcpm (+26). Parent: reads in phrases, pauses at full stops, sounds words out aloud first"
+        },
+        {
+          "session": 25,
+          "correct": null,
+          "total": null,
+          "note": "Read 1 cold 28 wcpm on 73 words: the first clear rise in cold pace (about 20 wcpm S8-S24). Read 2 43 wcpm (+15). Parent: pauses at full stops, sounds words out aloud first"
         }
       ]
     },
@@ -1713,7 +1800,7 @@
     "fl5": {
       "area": "fluency",
       "name": "Reads in phrases",
-      "status": "learning",
+      "status": "secure",
       "evidence": [
         {
           "session": 2,
@@ -1762,6 +1849,12 @@
           "correct": 6,
           "total": 6,
           "note": "Phrases read smoothly as one chunk 6/6 (a bright light, count to ten, under the bed, what a big ship, out in the boat, sit on the seat)"
+        },
+        {
+          "session": 25,
+          "correct": 6,
+          "total": 6,
+          "note": "Phrases read smoothly 6/6 (a girl and a bird, her first turn, a goat on the road, come here, what a loud shout, turn on the light)"
         }
       ]
     },
@@ -1994,6 +2087,12 @@
           "correct": 2,
           "total": 2,
           "note": "Literal questions about 'The boat at night'"
+        },
+        {
+          "session": 25,
+          "correct": 2,
+          "total": 2,
+          "note": "Literal questions about 'The goat on the road'"
         }
       ]
     },
@@ -2123,6 +2222,12 @@
           "correct": 1,
           "total": 1,
           "note": "Why did Sam sit under a coat? right"
+        },
+        {
+          "session": 25,
+          "correct": 1,
+          "total": 1,
+          "note": "Why did Dad shout? right (the goat ran away)"
         }
       ]
     },
@@ -2288,6 +2393,12 @@
           "correct": null,
           "total": null,
           "note": "Writing (picture, 'Yesterday' + Then): 'Yesterday a boy kicked the ball at the wole. / Then it broke.' 2 sentences, 12 words, in order"
+        },
+        {
+          "session": 25,
+          "correct": null,
+          "total": null,
+          "note": "Writing (picture, 'Yesterday'): 'Yesterday a girl washed her dog in the bath. / Then there was lots of bubbles. At the end they went out.' Three sentences in order, 21 words, with Then and At the end typed herself (buttons not used)"
         }
       ]
     },
@@ -2403,6 +2514,12 @@
           "correct": null,
           "total": null,
           "note": "Both sentences with a capital and a full stop"
+        },
+        {
+          "session": 25,
+          "correct": null,
+          "total": null,
+          "note": "All three sentences with a capital and a full stop"
         }
       ]
     },
@@ -2611,6 +2728,12 @@
           "correct": null,
           "total": null,
           "note": "A past doing word in both sentences (kicked, broke)"
+        },
+        {
+          "session": 25,
+          "correct": null,
+          "total": null,
+          "note": "Past doing words in all three sentences (washed, was, went); 'there was lots of' (was / were agreement)"
         }
       ]
     },
@@ -2783,6 +2906,12 @@
           "correct": null,
           "total": null,
           "note": "Read back and fix (115 s): added the missing 'the' (kicked ball -> kicked the ball) and changed 'widall' -> 'wole' (still not right: window / wall)"
+        },
+        {
+          "session": 25,
+          "correct": null,
+          "total": null,
+          "note": "Read back and fix (176 s): the page reloaded 3 times while she wrote, so first_text holds only 'Yesterday a girl w'; the change made after reading back can't be judged"
         }
       ]
     },
@@ -3212,6 +3341,12 @@
           "correct": 3,
           "total": 4,
           "note": "Spelling: seat, night, count right; boat -> 'bout' a 4th time (S18, S19, S23, S24; ou / oa mix-up), right on retry"
+        },
+        {
+          "session": 25,
+          "correct": 4,
+          "total": 4,
+          "note": "Spelling after the oa / ou rule: boat (first time right first try since S20), coat, road, loud"
         }
       ]
     },
